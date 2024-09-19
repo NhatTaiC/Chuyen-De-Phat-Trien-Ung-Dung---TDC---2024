@@ -7,16 +7,19 @@ Nguyen Quoc Luong
 Le Van Toan
 
 Noi dung cong viec:
-- [] 2 ban phan chia lai cac chuc nang theo users/admin
-- [] Noi voi 2 ban ve cach nop github (folder address, name.file)
-- [] Huong dan so ve cach trinh bay SRS
+- [x] 2 ban phan chia lai cac chuc nang theo users/admin
+- [x] Noi voi 2 ban ve cach nop github (folder address, name.file)
+- [x] Huong dan so ve cach trinh bay SRS
+- [x] Nop bai tren ggDrive
 
 /* Committed? */
-- [] Yes/No
+- [x] Yes/No
+- Tai_Name.docs
 
 
 /* Note */
 - Han nop bai truoc sang thu 6 (20-09-2024), file excel, 1 sheet tong, 3 sheet ca nhan (co bieu do TimeLine).
+- [] Chua chinh sua lai thoi gian thuc te Sprint ca nhan
 
 /* Khung SRS */
 - Trang bia
