@@ -9,9 +9,11 @@ Le Van Toan
 Noi dung cong viec:
 - [x] Chinh sua format file Nhom 2 - Lap ke hoach.xls
 - [x] Checked Mo Ta UD QLST
-- [] Checked DB UD QLST
+- [x] Checked DB UD QLST
 - [] Tao khung SRS cho UD QLST
-- [] Them files: DB UD QLST.txt
+- [x] Them files: DB UD QLST.txt
+- [x] Non-features functions cua Toan
+- [x] Checked TongHopChucNang.docx (Sx lai cac chuc nang cho UD QLST)
 
 /* Committed? */
 - [x] Yes/No

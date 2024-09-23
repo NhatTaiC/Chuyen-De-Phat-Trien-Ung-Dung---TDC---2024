@@ -3,9 +3,252 @@ Ngay: 23/09/2024
 Review
 
 ===== Data Tables =====
-Tai khoan(ma)
-- is_deleted: int
-- created_at: timestamp
-- updated_at: timestamp
+1.	TaiKhoan(
+id: int - pk,
+maTaiKhoan: string – notNull,
+tenTaiKhoan: string - notNull,
+matKhau: string - notNull,
+role: bit - notNull,
+is_deleted: bit - notNull,
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
 
-Log(id, log_name, model, model_id, data_olds, data_news, is_deleted, created_at, updated_at)
+
+2.	NhaCungCap(
+id: int – pk,
+maNhaCungCap: string - notNull,
+tenNhaCungCap: string - notNull,
+soDienThoai: string - notNull,
+diaChi: string - notNull,
+is_deleted: bit - notNull,
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+3.	LoaiHang(
+id: int – pk,
+maLoaiHang: string - notNull,
+tenLoaiHang: string - notNull, 
+is_deleted: bit - notNull,
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+
+4.	SanPham(
+id: int – pk,
+maSanPham: string - notNull, 
+tenSanPham: string - notNull,
+donViTinh: string - notNull, 
+donGia: float - notNull,
+ngaySanXuat: date - notNull,
+hanSuDung: date - notNull,
+anhSanPham: varbinary - notNull,
+idNhomHang: int – fk - notNull, 
+idNhaCungCap: int – fk - notNull,
+is_deleted: bit - notNull,
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+5.	KhachHang(
+id: int – pk,
+maKhachHang: string - notNull, 
+tenKhachHang: string - notNull,
+soDienThoai: string - notNull, 
+diaChi: string - notNull,
+diemTichLuy: float - notNull,
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+6.	LoaiNhanVien(
+id: int – pk,
+maLoaiNhanVien: string - notNull,
+tenLoaiNhanVien: string - notNull,
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+
+7.	NhanVien(
+id:int – pk,
+maNhanVien: string - notNull,
+tenNhanVien: string - notNull,
+soDienThoai: string - notNull, 
+diaChi: string - notNull, 
+laoDong: string – notNull, (Fulltime/Parttime)
+idLoaiNhanVien: int – fk - notNull,
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+8.	KhoHang(
+id: int - pk,
+idSanPham: int – fk - notNull,
+soLuong: int - notNull,
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+
+9.	PhieuNhap(
+id: int – pk,
+maPhieuNhap: string - notNull,
+idNhanVien: int – fk - notNull,
+ngayNhap: date - notNull, 
+thanhTien: float - notNull, (ko co don gia, so luong sao ra thanhTien?)
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+
+10. ChiTietPhieuNhap(
+id: int – pk,
+maChiTietPhieuNhap: string - notNull,
+soLuong: int - notNull,
+donGia: float - notNull,
+idPhieuNhap: int – fk - notNull, 
+idSanPham: int – fk - notNull,
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+
+11. KhuyenMai(
+id int,
+maKhuyenMai: string - notNull,
+tenKhuyenMai: string - notNull,
+giaTri: float - notNull,
+dieuKien: float – notNull, 
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+12. HoaDon(
+id:int – pk,
+maHoaDon: string - notNull,
+ngayLapHD: date - notNull, 
+gioLapHD: timestamp - notNull, 
+tongTien: float – notNull,
+thanhTien: float – notNull,
+idKhachHang: int – fk - notNull,
+idNhanVien: int – fk - notNull,
+idKhuyenMai: int – fk - notNull,
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+13. ChiTietHoaDon(
+id: int – pk,
+maChiTietHoaDon: string - notNull,
+soLuong: int - notNull, 
+idHoaDon: int – fk - notNull,
+idSanPham: int – fk - notNull, 
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+14. CaLam(
+id:int – pk,
+maCaLam: string - notNull,
+tenCaLam: string - notNull,
+gioBatDau: string - notNull,
+gioKetThuc: string - notNull,
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+15. LichLam(
+id: int – pk,
+maLichLam: string - notNull,
+ngayLam: date - notNull, 
+idNhanVien: int – fk - notNull,
+idCaLam: int – fk - notNull,
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+16. BangLuong(
+id: int – pk,
+maBangLuong: string - notNull, 
+ngayLanhLuong: date – notNull,
+tongGioLam: float - notNull,
+luong: float - notNull,
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+17. ChiTietBangLuong(
+id: int – pk,
+maChiTietLuong: string - notNull,
+ngay: date - notNull, (ngay gi???)
+soGioLamThucTe: float - notNull, 
+idNhanVien: int – fk - notNull,
+idBangLuong: int – fk – notNull,
+idLichLam: int – fk – notNull,
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+
+18. Log(
+id: int - notNull,
+log_name: string - notNull,
+model: string - notNull, 
+model_id: int - notNull,
+data_olds: string - notNull, 
+data_news: string - notNull,
+is_deleted: bit - notNull, 
+created_by: int – notNull,
+created_at: timetamp - notNull,
+updated_by: int – notNull,
+updated_at: timetamp - notNull)
+
+====== The End ======
