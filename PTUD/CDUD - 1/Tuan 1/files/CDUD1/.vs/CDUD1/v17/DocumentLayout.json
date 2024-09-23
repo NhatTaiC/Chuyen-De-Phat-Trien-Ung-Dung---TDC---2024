@@ -1,0 +1,151 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\chuyende\\doan\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tuan 1\\files\\cdud1\\cdud1\\inlichlam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\inlichlam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\chuyende\\doan\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tuan 1\\files\\cdud1\\cdud1\\baocaodoanhthutheonam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\baocaodoanhthutheonam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\chuyende\\doan\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tuan 1\\files\\cdud1\\cdud1\\baocaodoanhthutheothang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\baocaodoanhthutheothang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\chuyende\\doan\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tuan 1\\files\\cdud1\\cdud1\\lichlam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\lichlam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\chuyende\\doan\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tuan 1\\files\\cdud1\\cdud1\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\cdud1\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\chuyende\\doan\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tuan 1\\files\\cdud1\\cdud1\\khohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\khohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\chuyende\\doan\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tuan 1\\files\\cdud1\\cdud1\\trangchu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\trangchu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KhoHang.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\KhoHang.cs",
+              "RelativeDocumentMoniker": "CDUD1\\KhoHang.cs",
+              "ToolTip": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\KhoHang.cs [Design]",
+              "RelativeToolTip": "CDUD1\\KhoHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:10:24.926Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaoCaoDoanhThuTheoThang.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\BaoCaoDoanhThuTheoThang.cs",
+              "RelativeDocumentMoniker": "CDUD1\\BaoCaoDoanhThuTheoThang.cs",
+              "ToolTip": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\BaoCaoDoanhThuTheoThang.cs [Design]",
+              "RelativeToolTip": "CDUD1\\BaoCaoDoanhThuTheoThang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:33:52.21Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BaoCaoDoanhThuTheoNam.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\BaoCaoDoanhThuTheoNam.cs",
+              "RelativeDocumentMoniker": "CDUD1\\BaoCaoDoanhThuTheoNam.cs",
+              "ToolTip": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\BaoCaoDoanhThuTheoNam.cs [Design]",
+              "RelativeToolTip": "CDUD1\\BaoCaoDoanhThuTheoNam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:29:46.306Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InLichLam.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\InLichLam.cs",
+              "RelativeDocumentMoniker": "CDUD1\\InLichLam.cs",
+              "ToolTip": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\InLichLam.cs [Design]",
+              "RelativeToolTip": "CDUD1\\InLichLam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:22:27.111Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LichLam.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\LichLam.cs",
+              "RelativeDocumentMoniker": "CDUD1\\LichLam.cs",
+              "ToolTip": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\LichLam.cs [Design]",
+              "RelativeToolTip": "CDUD1\\LichLam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:18:00.93Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TrangChu.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\TrangChu.cs",
+              "RelativeDocumentMoniker": "CDUD1\\TrangChu.cs",
+              "ToolTip": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\TrangChu.cs [Design]",
+              "RelativeToolTip": "CDUD1\\TrangChu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:12:29.273Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TrangChu.cs",
+              "DocumentMoniker": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\TrangChu.cs",
+              "RelativeDocumentMoniker": "CDUD1\\TrangChu.cs",
+              "ToolTip": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\TrangChu.cs",
+              "RelativeToolTip": "CDUD1\\TrangChu.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAIA4wBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T02:28:03.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TrangChu.Designer.cs",
+              "DocumentMoniker": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\TrangChu.Designer.cs",
+              "RelativeDocumentMoniker": "CDUD1\\TrangChu.Designer.cs",
+              "ToolTip": "D:\\chuyende\\doan\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tuan 1\\files\\CDUD1\\CDUD1\\TrangChu.Designer.cs",
+              "RelativeToolTip": "CDUD1\\TrangChu.Designer.cs",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAgwO8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:16:32.177Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

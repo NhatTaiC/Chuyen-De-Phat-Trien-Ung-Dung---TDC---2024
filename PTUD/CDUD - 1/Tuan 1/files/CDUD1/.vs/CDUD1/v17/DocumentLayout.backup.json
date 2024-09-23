@@ -1,0 +1,198 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CDUD1\\CDUD1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\cdud1\\cdud1\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\cdud1\\cdud1\\lichlam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\lichlam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\cdud1\\cdud1\\calam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\calam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\CDUD1\\cdud1\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\cdud1\\cdud1\\nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\cdud1\\cdud1\\khohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\khohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\cdud1\\cdud1\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\cdud1\\cdud1\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\cdud1\\cdud1\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\cdud1\\cdud1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\cdud1\\cdud1\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LichLam.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\CDUD1\\CDUD1\\LichLam.cs",
+              "RelativeDocumentMoniker": "CDUD1\\LichLam.cs",
+              "ToolTip": "D:\\CDUD1\\CDUD1\\CDUD1\\LichLam.cs [Design]",
+              "RelativeToolTip": "CDUD1\\LichLam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:42:40.082Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CaLam.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\CDUD1\\CDUD1\\CaLam.cs",
+              "RelativeDocumentMoniker": "CDUD1\\CaLam.cs",
+              "ToolTip": "D:\\CDUD1\\CDUD1\\CDUD1\\CaLam.cs [Design]",
+              "RelativeToolTip": "CDUD1\\CaLam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:36:28.7Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "KhoHang.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\CDUD1\\CDUD1\\KhoHang.cs",
+              "RelativeDocumentMoniker": "CDUD1\\KhoHang.cs",
+              "ToolTip": "D:\\CDUD1\\CDUD1\\CDUD1\\KhoHang.cs [Design]",
+              "RelativeToolTip": "CDUD1\\KhoHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:27:32.087Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TrangChu.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\CDUD1\\CDUD1\\TrangChu.cs",
+              "RelativeDocumentMoniker": "CDUD1\\TrangChu.cs",
+              "ToolTip": "D:\\CDUD1\\CDUD1\\CDUD1\\TrangChu.cs [Design]",
+              "RelativeToolTip": "CDUD1\\TrangChu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T02:27:10.509Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DangNhap.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\CDUD1\\CDUD1\\DangNhap.cs",
+              "RelativeDocumentMoniker": "CDUD1\\DangNhap.cs",
+              "ToolTip": "D:\\CDUD1\\CDUD1\\CDUD1\\DangNhap.cs [Design]",
+              "RelativeToolTip": "CDUD1\\DangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T02:18:57.132Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SanPham.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\CDUD1\\CDUD1\\SanPham.cs",
+              "RelativeDocumentMoniker": "CDUD1\\SanPham.cs",
+              "ToolTip": "D:\\CDUD1\\CDUD1\\CDUD1\\SanPham.cs [Design]",
+              "RelativeToolTip": "CDUD1\\SanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:14:56.277Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NhaCungCap.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\CDUD1\\CDUD1\\NhaCungCap.cs",
+              "RelativeDocumentMoniker": "CDUD1\\NhaCungCap.cs",
+              "ToolTip": "D:\\CDUD1\\CDUD1\\CDUD1\\NhaCungCap.cs [Design]",
+              "RelativeToolTip": "CDUD1\\NhaCungCap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:10:22.869Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NhanVien.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\CDUD1\\CDUD1\\NhanVien.cs",
+              "RelativeDocumentMoniker": "CDUD1\\NhanVien.cs",
+              "ToolTip": "D:\\CDUD1\\CDUD1\\CDUD1\\NhanVien.cs [Design]",
+              "RelativeToolTip": "CDUD1\\NhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T02:58:48.969Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TaiKhoan.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\CDUD1\\CDUD1\\TaiKhoan.cs",
+              "RelativeDocumentMoniker": "CDUD1\\TaiKhoan.cs",
+              "ToolTip": "D:\\CDUD1\\CDUD1\\CDUD1\\TaiKhoan.cs [Design]",
+              "RelativeToolTip": "CDUD1\\TaiKhoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T02:50:38.539Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDUD1\\CDUD1\\CDUD1\\Program.cs",
+              "RelativeDocumentMoniker": "CDUD1\\Program.cs",
+              "ToolTip": "D:\\CDUD1\\CDUD1\\CDUD1\\Program.cs",
+              "RelativeToolTip": "CDUD1\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:03:02.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TrangChu.cs",
+              "DocumentMoniker": "D:\\CDUD1\\CDUD1\\CDUD1\\TrangChu.cs",
+              "RelativeDocumentMoniker": "CDUD1\\TrangChu.cs",
+              "ToolTip": "D:\\CDUD1\\CDUD1\\CDUD1\\TrangChu.cs",
+              "RelativeToolTip": "CDUD1\\TrangChu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T02:28:03.778Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
