@@ -1,0 +1,11 @@
+Thiet ke DB cho UD QLST
+Ngay: 23/09/2024
+Review
+
+===== Data Tables =====
+Tai khoan(ma)
+- is_deleted: int
+- created_at: timestamp
+- updated_at: timestamp
+
+Log(id, log_name, model, model_id, data_olds, data_news, is_deleted, created_at, updated_at)
