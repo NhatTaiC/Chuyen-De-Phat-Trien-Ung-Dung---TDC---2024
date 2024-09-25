@@ -7,11 +7,9 @@ Nguyen Quoc Luong
 Le Van Toan
 
 Noi dung cong viec:
-- [x] Them file Nhom 2 - Outline.docx
-- [x] Them file Research Paper.docx
-- [x] Them folder SRS
-- [x] Tao khung SRS cho UD QLST
-- [x] Them file Nhom 2 - SRS - PTUD - QLST.docx
+- [x] Chinh sua lai file Non-function_levantoan.docx
+- [x] Bo sung noi dung cho file SRS
+- [x] Them file LuongDatabase.docx
 
 
 /* Committed? */
