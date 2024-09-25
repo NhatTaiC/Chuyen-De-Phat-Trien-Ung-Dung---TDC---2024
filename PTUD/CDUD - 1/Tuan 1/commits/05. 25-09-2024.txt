@@ -1,96 +1,19 @@
 Chuyen De Phat Trien Ung Dung - TDC - 2024
-Tuan 1:
+Tuan: 2
 Ngay: 25/09/2024
-Nhom 2:
+Nhom: 2
 Chau Nhat Tai
 Nguyen Quoc Luong
 Le Van Toan
 
 Noi dung cong viec:
-- [x] Xoa QuanLySieuThi.mdf, QuanLySieuThi_log.mdf, Flint's.txt, luongtest.txt, Research Paper.docx, Nhom 2 - Outline Master - Tested.docx
+- [x] Them file NhatTai_FeatureFunctions.docx
+- [x] Cap nhat MSSV trong SRS
+- [x] Cap nhat noi dung feature functions
 
 
 /* Committed? */
-- [x] Yes/No
+- [] Yes/No
 
 
 /* Note */
-
-/* Khung SRS */
-- Trang bia
-- Muc luc
-- Muc luc hinh anh
-- Bang thay doi cac phien ban SRS
-- Bang phan chia viec
-- Noi dung SRS:
-
-I. Intro
-- Muc tieu va pham vi cua tai lieu SRS
-- Pham vi cua Project.
-- Nguoi doc muc tieu.
-- Tai lieu tham chieu.
-- Tom tat.
-
-II. High Level Requirement (Yeu cau muc do tong the)
-1. Feature Function
-+ Layout (Users/Admin)
-+ Feature Name -> UI (Users/Admin) -> Screen Description -> Workflow: table workflow/activity
-
-2. Non-feature Function:
-+ Enviroment, Capacity, Multitasking, Performance, Safe, Security,....
-+ External Requirement: User feedback, User rating, User discount point,.... (Legal requirements)
-
-III. Use-case Diagram
-1. Actors: Admin, User, Database
-2. Use-cases: CRUD member, Cart, CRUD stores,.. CRUD products
-3. Use-cases detail
-	3.1. Use-cases id
-	3.2. Use-cases Owner Name
-	3.3. Brief Description (mo ta kich ban ngan gon: admin lam duoc gi? user lam duoc gi?)
-	3.4. Flow of Event: Basic flow/Alternative flow
-	3.5. Special requirements
-	3.6. Pre-conditions
-	3.7. Post-conditions
-	3.9. Extension points: Searching, Printing,...
-
-IV. Data tables
-+ Design Data Tables: Data Types, Primary Keys, Foreign Keys,....
-
-IV. Documents External
-
-/* Cach viet SRS */
-1. Len Outline hoan chinh (Master Document - Word 2021)
-	1. Gioi thieu
-		1.1. Muc dich
-		1.2. Doi tuong du kien
-		1.3. Muc dich su dung
-		1.4. Pham vi
-		1.5. Dinh nghia va tu viet tat
-	2. Mo ta chung
-		2.1. Nhu cau nguoi dung
-		2.2 Gia dinh va su phu thuoc
-	3. Cac tinh nang va yeu cau cua he thong
-		3.1. Yeu cau ve chuc nang
-		3.2. Yeu cau ve giao dien ben ngoai
-		3.3. Tinh nang cua he thong
-		3.4. Cac yeu cau phi chuc nang
-		3.5. Yeu cau he thong (Cau hinh may)
-2. Xac dinh muc dich cua san pham
-	- Doi tuong su dung va muc dich su dung: Xac dinh ai trong to chuc cua ban se co quyen truy cap vao SRS. (Thuong la giam doc)
-	- Pham vi san pham: Tra loi ?: "Nhung loi ich ma san pham nay se mang lai la gi?".
-3. Mo ta chi tiet phan mem ban se xay dung
-	- Dua ra mo ta chi tiet ve nhung gi ban se xay dung:
-		+ San pham do la mot phan mem moi hay chi la tien ich bo sung cho phan mem da co?
-		+ San pham do co tich hop voi mot san pham khac hay ko?
-		+ San pham do duoc thiet ke cho ai?
-		+ Tai sao san pham do lai can thiet voi nguoi su dung?
-4. Cac yeu cau cu the ma phan mem can dap ung
-	- Yeu cau ve chuc nang
-		+ Yeu cau ve giao dien, bao gom:
-			1. Nguoi dung
-			2. Phan cung
-			3. Phan mem
-			4. Thong tin lien lac
-			5. Tinh nang he thong
-		+ Cac yeu cau phi chuc nang
-5. Gui SRS de phe duyet
