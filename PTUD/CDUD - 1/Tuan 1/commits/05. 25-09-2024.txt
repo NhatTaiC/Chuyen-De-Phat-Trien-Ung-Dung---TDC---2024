@@ -7,9 +7,7 @@ Nguyen Quoc Luong
 Le Van Toan
 
 Noi dung cong viec:
-- [x] Chinh sua lai file Non-function_levantoan.docx
-- [x] Bo sung noi dung cho file SRS
-- [x] Them file LuongDatabase.docx
+- [x] Xoa QuanLySieuThi.mdf, QuanLySieuThi_log.mdf, Flint's.txt, luongtest.txt, Research Paper.docx, Nhom 2 - Outline Master - Tested.docx
 
 
 /* Committed? */
