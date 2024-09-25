@@ -7,11 +7,7 @@ Nguyen Quoc Luong
 Le Van Toan
 
 Noi dung cong viec:
-- [x] Them file Nhom 2 - Outline.docx
-- [x] Them file Research Paper.docx
-- [x] Them folder SRS
-- [x] Tao khung SRS cho UD QLST
-- [x] Them file Nhom 2 - SRS - PTUD - QLST.docx
+- [x] Xoa QuanLySieuThi.mdf, QuanLySieuThi_log.mdf, Flint's.txt, luongtest.txt, Research Paper.docx, Nhom 2 - Outline Master - Tested.docx
 
 
 /* Committed? */
