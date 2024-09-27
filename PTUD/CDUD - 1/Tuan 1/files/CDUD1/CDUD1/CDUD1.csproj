@@ -90,17 +90,47 @@
     <Compile Include="InLichLam.Designer.cs">
       <DependentUpon>InLichLam.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhoHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KhoHang.Designer.cs">
       <DependentUpon>KhoHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhuyenMai.Designer.cs">
+      <DependentUpon>KhuyenMai.cs</DependentUpon>
+    </Compile>
     <Compile Include="LichLam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LichLam.Designer.cs">
       <DependentUpon>LichLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoaiHang.Designer.cs">
+      <DependentUpon>LoaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoaiKhachHang.Designer.cs">
+      <DependentUpon>LoaiKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoaiNhanVien.Designer.cs">
+      <DependentUpon>LoaiNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="NhaCungCap.cs">
       <SubType>Form</SubType>
@@ -113,6 +143,12 @@
     </Compile>
     <Compile Include="NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuNhap.Designer.cs">
+      <DependentUpon>PhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -152,17 +188,35 @@
     <EmbeddedResource Include="InLichLam.resx">
       <DependentUpon>InLichLam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhoHang.resx">
       <DependentUpon>KhoHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhuyenMai.resx">
+      <DependentUpon>KhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LichLam.resx">
       <DependentUpon>LichLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoaiHang.resx">
+      <DependentUpon>LoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoaiKhachHang.resx">
+      <DependentUpon>LoaiKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoaiNhanVien.resx">
+      <DependentUpon>LoaiNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhaCungCap.resx">
       <DependentUpon>NhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuNhap.resx">
+      <DependentUpon>PhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
