@@ -41,12 +41,14 @@
             this.txtTenNCC = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(651, 348);
+            this.btnSua.Location = new System.Drawing.Point(486, 338);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(160, 50);
             this.btnSua.TabIndex = 6;
@@ -55,7 +57,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(428, 348);
+            this.btnXoa.Location = new System.Drawing.Point(263, 338);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(160, 50);
             this.btnXoa.TabIndex = 7;
@@ -64,7 +66,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(227, 348);
+            this.btnThem.Location = new System.Drawing.Point(62, 338);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(160, 50);
             this.btnThem.TabIndex = 8;
@@ -87,7 +89,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(334, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(446, 39);
+            this.label1.Size = new System.Drawing.Size(431, 38);
             this.label1.TabIndex = 9;
             this.label1.Text = "QUẢN LÍ NHA CUNG CẤP";
             // 
@@ -159,11 +161,31 @@
             this.txtDiaChi.Size = new System.Drawing.Size(335, 22);
             this.txtDiaChi.TabIndex = 11;
             // 
+            // btnTim
+            // 
+            this.btnTim.Location = new System.Drawing.Point(674, 338);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(160, 50);
+            this.btnTim.TabIndex = 19;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Location = new System.Drawing.Point(859, 338);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(160, 50);
+            this.btnLamMoi.TabIndex = 18;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            // 
             // NhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 653);
+            this.Controls.Add(this.btnTim);
+            this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.txtTenNCC);
@@ -200,5 +222,7 @@
         private System.Windows.Forms.TextBox txtTenNCC;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.Button btnLamMoi;
     }
 }

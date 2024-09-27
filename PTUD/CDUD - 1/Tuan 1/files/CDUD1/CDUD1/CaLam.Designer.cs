@@ -42,12 +42,13 @@
             this.txtTenCaLam = new System.Windows.Forms.TextBox();
             this.cbGioBatDau = new System.Windows.Forms.ComboBox();
             this.cbGioKetThuc = new System.Windows.Forms.ComboBox();
+            this.btnTim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(533, 350);
+            this.btnSua.Location = new System.Drawing.Point(509, 342);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(160, 50);
             this.btnSua.TabIndex = 10;
@@ -56,7 +57,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(335, 350);
+            this.btnXoa.Location = new System.Drawing.Point(311, 342);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(160, 50);
             this.btnXoa.TabIndex = 11;
@@ -65,7 +66,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(134, 350);
+            this.btnThem.Location = new System.Drawing.Point(110, 342);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(160, 50);
             this.btnThem.TabIndex = 12;
@@ -84,7 +85,7 @@
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(731, 350);
+            this.btnLamMoi.Location = new System.Drawing.Point(871, 342);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(160, 50);
             this.btnLamMoi.TabIndex = 10;
@@ -97,7 +98,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(376, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 39);
+            this.label1.Size = new System.Drawing.Size(293, 38);
             this.label1.TabIndex = 13;
             this.label1.Text = "QUẢN LÍ CA LÀM";
             // 
@@ -171,11 +172,21 @@
             this.cbGioKetThuc.Size = new System.Drawing.Size(335, 24);
             this.cbGioKetThuc.TabIndex = 16;
             // 
+            // btnTim
+            // 
+            this.btnTim.Location = new System.Drawing.Point(686, 342);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(160, 50);
+            this.btnTim.TabIndex = 17;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            // 
             // CaLam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 653);
+            this.Controls.Add(this.btnTim);
             this.Controls.Add(this.cbGioKetThuc);
             this.Controls.Add(this.cbGioBatDau);
             this.Controls.Add(this.txtTenCaLam);
@@ -214,5 +225,6 @@
         private System.Windows.Forms.TextBox txtTenCaLam;
         private System.Windows.Forms.ComboBox cbGioBatDau;
         private System.Windows.Forms.ComboBox cbGioKetThuc;
+        private System.Windows.Forms.Button btnTim;
     }
 }

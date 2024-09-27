@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -42,6 +41,8 @@
             this.txtMaCaLam = new System.Windows.Forms.TextBox();
             this.dtbNgayLam = new System.Windows.Forms.DateTimePicker();
             this.txtMaNhanVien = new System.Windows.Forms.TextBox();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichLam)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,22 +52,13 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(369, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 39);
+            this.label1.Size = new System.Drawing.Size(323, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÍ LỊCH LÀM";
             // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Location = new System.Drawing.Point(732, 351);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(160, 50);
-            this.btnLamMoi.TabIndex = 14;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(534, 351);
+            this.btnSua.Location = new System.Drawing.Point(488, 343);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(160, 50);
             this.btnSua.TabIndex = 15;
@@ -75,7 +67,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(336, 351);
+            this.btnXoa.Location = new System.Drawing.Point(290, 343);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(160, 50);
             this.btnXoa.TabIndex = 16;
@@ -84,7 +76,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(135, 351);
+            this.btnThem.Location = new System.Drawing.Point(89, 343);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(160, 50);
             this.btnThem.TabIndex = 17;
@@ -170,11 +162,31 @@
             this.txtMaNhanVien.Size = new System.Drawing.Size(335, 22);
             this.txtMaNhanVien.TabIndex = 19;
             // 
+            // btnTim
+            // 
+            this.btnTim.Location = new System.Drawing.Point(676, 343);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(160, 50);
+            this.btnTim.TabIndex = 22;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Location = new System.Drawing.Point(861, 343);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(160, 50);
+            this.btnLamMoi.TabIndex = 21;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            // 
             // LichLam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 653);
+            this.Controls.Add(this.btnTim);
+            this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.dtbNgayLam);
             this.Controls.Add(this.txtMaNhanVien);
             this.Controls.Add(this.txtMaCaLam);
@@ -183,7 +195,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
@@ -200,7 +211,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
@@ -213,5 +223,7 @@
         private System.Windows.Forms.TextBox txtMaCaLam;
         private System.Windows.Forms.DateTimePicker dtbNgayLam;
         private System.Windows.Forms.TextBox txtMaNhanVien;
+        private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.Button btnLamMoi;
     }
 }

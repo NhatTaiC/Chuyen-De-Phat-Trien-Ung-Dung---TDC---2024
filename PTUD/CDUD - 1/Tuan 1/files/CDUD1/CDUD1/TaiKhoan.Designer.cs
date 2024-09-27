@@ -41,6 +41,8 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,7 +140,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(228, 349);
+            this.btnThem.Location = new System.Drawing.Point(57, 344);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(160, 50);
             this.btnThem.TabIndex = 4;
@@ -147,7 +149,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(429, 349);
+            this.btnXoa.Location = new System.Drawing.Point(258, 344);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(160, 50);
             this.btnXoa.TabIndex = 4;
@@ -156,18 +158,38 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(652, 349);
+            this.btnSua.Location = new System.Drawing.Point(481, 344);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(160, 50);
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             // 
+            // btnTim
+            // 
+            this.btnTim.Location = new System.Drawing.Point(677, 344);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(160, 50);
+            this.btnTim.TabIndex = 19;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Location = new System.Drawing.Point(862, 344);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(160, 50);
+            this.btnLamMoi.TabIndex = 18;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            // 
             // TaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 653);
+            this.Controls.Add(this.btnTim);
+            this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
@@ -204,5 +226,7 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.Button btnLamMoi;
     }
 }

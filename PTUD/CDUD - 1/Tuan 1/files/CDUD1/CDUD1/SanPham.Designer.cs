@@ -49,8 +49,9 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btnLoc = new System.Windows.Forms.Button();
             this.btnChonFile = new System.Windows.Forms.Button();
+            this.btnLoc = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHinhAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.SuspendLayout();
@@ -69,13 +70,13 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(362, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(358, 39);
+            this.label1.Size = new System.Drawing.Size(345, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÍ SẢN PHẨM";
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(492, 347);
+            this.btnSua.Location = new System.Drawing.Point(421, 349);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(160, 50);
             this.btnSua.TabIndex = 6;
@@ -84,7 +85,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(317, 347);
+            this.btnXoa.Location = new System.Drawing.Point(246, 349);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(160, 50);
             this.btnXoa.TabIndex = 7;
@@ -93,7 +94,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(149, 347);
+            this.btnThem.Location = new System.Drawing.Point(78, 349);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(160, 50);
             this.btnThem.TabIndex = 8;
@@ -231,15 +232,6 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(335, 22);
             this.dateTimePicker2.TabIndex = 11;
             // 
-            // btnLoc
-            // 
-            this.btnLoc.Location = new System.Drawing.Point(670, 347);
-            this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(160, 50);
-            this.btnLoc.TabIndex = 6;
-            this.btnLoc.Text = "Lọc";
-            this.btnLoc.UseVisualStyleBackColor = true;
-            // 
             // btnChonFile
             // 
             this.btnChonFile.Location = new System.Drawing.Point(808, 138);
@@ -249,11 +241,31 @@
             this.btnChonFile.Text = "Chọn File";
             this.btnChonFile.UseVisualStyleBackColor = true;
             // 
+            // btnLoc
+            // 
+            this.btnLoc.Location = new System.Drawing.Point(608, 349);
+            this.btnLoc.Name = "btnLoc";
+            this.btnLoc.Size = new System.Drawing.Size(160, 50);
+            this.btnLoc.TabIndex = 19;
+            this.btnLoc.Text = "Lọc";
+            this.btnLoc.UseVisualStyleBackColor = true;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Location = new System.Drawing.Point(793, 349);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(160, 50);
+            this.btnLamMoi.TabIndex = 18;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            // 
             // SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 653);
+            this.Controls.Add(this.btnLoc);
+            this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox5);
@@ -269,7 +281,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnChonFile);
-            this.Controls.Add(this.btnLoc);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
@@ -308,7 +319,8 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Button btnLoc;
         private System.Windows.Forms.Button btnChonFile;
+        private System.Windows.Forms.Button btnLoc;
+        private System.Windows.Forms.Button btnLamMoi;
     }
 }
