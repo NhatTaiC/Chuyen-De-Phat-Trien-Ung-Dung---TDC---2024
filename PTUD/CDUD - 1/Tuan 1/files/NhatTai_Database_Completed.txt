@@ -128,7 +128,6 @@ updated_at:datetime:notNull
 
 10. ChiTietPhieuNhap
 id:int:pk,
-maChiTietPhieuNhap:varchar(30):notNull,
 soLuong:int:notNull,
 donGia:float:notNull,
 idPhieuNhap:int:fk, 
@@ -173,7 +172,6 @@ updated_at:datetime:notNull
 
 13. ChiTietHoaDon
 id:int:pk,
-maChiTietHoaDon:varchar(30):notNull,
 soLuong:int:notNull, 
 idHoaDon:int:fk,
 idSanPham:int:fk, 
