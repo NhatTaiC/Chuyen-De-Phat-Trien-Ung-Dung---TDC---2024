@@ -1,0 +1,22 @@
+Chuyen De Phat Trien Ung Dung - TDC - 2024
+Tuan: 2
+Ngay: 29/09/2024
+De tai: Quan ly sieu thi
+Nhom: 2
+Chau Nhat Tai
+Nguyen Quoc Luong
+Le Van Toan
+
+Noi dung cong viec:
+- [x] Updated content for feature functions in SRS (12/19)
+- [x] Updated tonghopchucnang.docx
+- [x] Updated CDUD Project
+	1. [x] Added frmLog.cs
+
+
+/* Committed? */
+- [] Yes/No
+
+
+/* Note */
+H:\ Link nop GD 2,3: 30/09
