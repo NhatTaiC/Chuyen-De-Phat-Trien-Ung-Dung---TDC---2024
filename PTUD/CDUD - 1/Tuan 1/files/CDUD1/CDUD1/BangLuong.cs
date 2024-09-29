@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CDUD1
 {
-    public partial class PhieuNhap : Form
+    public partial class BangLuong : Form
     {
-        public PhieuNhap()
+        public BangLuong()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void BangLuong_Load(object sender, EventArgs e)
         {
 
         }

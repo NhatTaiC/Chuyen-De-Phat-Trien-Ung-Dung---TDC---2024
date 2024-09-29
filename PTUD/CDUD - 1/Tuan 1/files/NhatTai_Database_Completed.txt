@@ -3,7 +3,7 @@ Ngay: 26/09/2024
 Review By NhatTai
 
 ===== Data Tables =====
-1.	TaiKhoan
+1. TaiKhoan
 id:int:pk,
 maTaiKhoan:varchar(30):notNull,
 tenTaiKhoan:varchar(100):notNull,
@@ -16,7 +16,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-2.	NhaCungCap
+2. NhaCungCap
 id:int:pk,
 maNhaCungCap:varchar(30):notNull,
 tenNhaCungCap:nvarchar(100):notNull,
@@ -29,7 +29,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-3.	LoaiHang
+3. LoaiHang
 id:int:pk,
 maLoaiHang:varchar(30):notNull,
 tenLoaiHang:nvarchar(100)notNull, 
@@ -41,7 +41,7 @@ updated_at:datetime:notNull
 
 
 
-4.	SanPham
+4. SanPham
 id:int:pk,
 maSanPham:varchar(30):notNull, 
 tenSanPham:nvarchar(100):notNull,
@@ -59,7 +59,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-5.	KhachHang
+5. KhachHang
 id:int:pk,
 maKhachHang:varchar(30):notNull, 
 tenKhachHang:nvarchar(100):notNull,
@@ -73,7 +73,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-6.	LoaiNhanVien
+6. LoaiNhanVien
 id:int:pk,
 maLoaiNhanVien:varchar(30):notNull,
 tenLoaiNhanVien:nvarchar(100):notNull,
@@ -85,7 +85,7 @@ updated_at:datetime:notNull
 
 
 
-7.	NhanVien
+7. NhanVien
 id:int:pk,
 maNhanVien:varchar(30):notNull,
 tenNhanVien:nvarchar(100):notNull,
@@ -100,7 +100,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-8.	KhoHang
+8. KhoHang
 id:int:pk,
 idSanPham:int:fk,
 soLuong:int:notNull,
@@ -112,7 +112,7 @@ updated_at:datetime:notNull
 
 
 
-9.	PhieuNhap
+9. PhieuNhap
 id:int:pk,
 maPhieuNhap:varchar(30):notNull,
 idNhanVien:int:fk,
