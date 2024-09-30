@@ -8,11 +8,17 @@ Nguyen Quoc Luong
 Le Van Toan
 
 Noi dung cong viec:
-
+- [x] Added Sprint Week 3.txt in folder notes
+- [x] Added Link nop GD23.txt in folder notes
+- [x] Updated format SRS 1.1
+- [x] Added QuanLyLog FeatureFunction in SRS 1.1
+- [x] Added table thuatngu in SRS 1.1
+- [x] Updated NhatTai_FeatureFunction.docx
+- [x] Created Nhom 2 - SRS - PTUD - QLST.pdf
 
 
 /* Committed? */
-- [] Yes/No
+- [x] Yes/No
 
 
 /* Note */
