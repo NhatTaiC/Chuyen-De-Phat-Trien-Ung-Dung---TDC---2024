@@ -31,23 +31,23 @@
             this.tableLabel = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableFields = new System.Windows.Forms.TableLayoutPanel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.txtDataNew = new System.Windows.Forms.TextBox();
+            this.txtDataOld = new System.Windows.Forms.TextBox();
+            this.txtModelId = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtLogName = new System.Windows.Forms.TextBox();
-            this.txtModel = new System.Windows.Forms.TextBox();
-            this.txtModelId = new System.Windows.Forms.TextBox();
-            this.txtDataOld = new System.Windows.Forms.TextBox();
-            this.txtDataNew = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tableButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tableData = new System.Windows.Forms.TableLayoutPanel();
             this.dgvLog = new System.Windows.Forms.DataGridView();
             this.tableLabel.SuspendLayout();
@@ -112,6 +112,38 @@
             this.tableFields.Size = new System.Drawing.Size(505, 160);
             this.tableFields.TabIndex = 2;
             // 
+            // txtDataNew
+            // 
+            this.txtDataNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDataNew.Location = new System.Drawing.Point(125, 131);
+            this.txtDataNew.Name = "txtDataNew";
+            this.txtDataNew.Size = new System.Drawing.Size(377, 29);
+            this.txtDataNew.TabIndex = 4;
+            // 
+            // txtDataOld
+            // 
+            this.txtDataOld.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDataOld.Location = new System.Drawing.Point(125, 99);
+            this.txtDataOld.Name = "txtDataOld";
+            this.txtDataOld.Size = new System.Drawing.Size(377, 29);
+            this.txtDataOld.TabIndex = 3;
+            // 
+            // txtModelId
+            // 
+            this.txtModelId.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtModelId.Location = new System.Drawing.Point(125, 67);
+            this.txtModelId.Name = "txtModelId";
+            this.txtModelId.Size = new System.Drawing.Size(377, 29);
+            this.txtModelId.TabIndex = 2;
+            // 
+            // txtModel
+            // 
+            this.txtModel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtModel.Location = new System.Drawing.Point(125, 35);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(377, 29);
+            this.txtModel.TabIndex = 1;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -172,40 +204,8 @@
             this.txtLogName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtLogName.Location = new System.Drawing.Point(125, 3);
             this.txtLogName.Name = "txtLogName";
-            this.txtLogName.Size = new System.Drawing.Size(377, 24);
+            this.txtLogName.Size = new System.Drawing.Size(377, 29);
             this.txtLogName.TabIndex = 0;
-            // 
-            // txtModel
-            // 
-            this.txtModel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtModel.Location = new System.Drawing.Point(125, 35);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(377, 24);
-            this.txtModel.TabIndex = 1;
-            // 
-            // txtModelId
-            // 
-            this.txtModelId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtModelId.Location = new System.Drawing.Point(125, 67);
-            this.txtModelId.Name = "txtModelId";
-            this.txtModelId.Size = new System.Drawing.Size(377, 24);
-            this.txtModelId.TabIndex = 2;
-            // 
-            // txtDataOld
-            // 
-            this.txtDataOld.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDataOld.Location = new System.Drawing.Point(125, 99);
-            this.txtDataOld.Name = "txtDataOld";
-            this.txtDataOld.Size = new System.Drawing.Size(377, 24);
-            this.txtDataOld.TabIndex = 3;
-            // 
-            // txtDataNew
-            // 
-            this.txtDataNew.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDataNew.Location = new System.Drawing.Point(125, 131);
-            this.txtDataNew.Name = "txtDataNew";
-            this.txtDataNew.Size = new System.Drawing.Size(377, 24);
-            this.txtDataNew.TabIndex = 4;
             // 
             // tableButtons
             // 
@@ -225,39 +225,19 @@
             this.tableButtons.Name = "tableButtons";
             this.tableButtons.RowCount = 1;
             this.tableButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
             this.tableButtons.Size = new System.Drawing.Size(505, 79);
             this.tableButtons.TabIndex = 3;
             // 
-            // btnAdd
+            // btnExit
             // 
-            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAdd.Location = new System.Drawing.Point(3, 3);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(95, 73);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Thêm Dữ Liệu";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEdit.Location = new System.Drawing.Point(104, 3);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(95, 73);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Sửa Dữ Liệu";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnDel
-            // 
-            this.btnDel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDel.Location = new System.Drawing.Point(205, 3);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(95, 73);
-            this.btnDel.TabIndex = 2;
-            this.btnDel.Text = "Xóa Dữ Liệu";
-            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExit.Location = new System.Drawing.Point(407, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(95, 73);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Thoát Form";
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // btnReset
             // 
@@ -269,15 +249,35 @@
             this.btnReset.Text = "Làm Mới";
             this.btnReset.UseVisualStyleBackColor = true;
             // 
-            // btnExit
+            // btnDel
             // 
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExit.Location = new System.Drawing.Point(407, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(95, 73);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "Thoát Form";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnDel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDel.Location = new System.Drawing.Point(205, 3);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(95, 73);
+            this.btnDel.TabIndex = 2;
+            this.btnDel.Text = "Xóa Dữ Liệu";
+            this.btnDel.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEdit.Location = new System.Drawing.Point(104, 3);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(95, 73);
+            this.btnEdit.TabIndex = 1;
+            this.btnEdit.Text = "Sửa Dữ Liệu";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdd.Location = new System.Drawing.Point(3, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(95, 73);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Thêm Dữ Liệu";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // tableData
             // 
@@ -302,13 +302,14 @@
             this.dgvLog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvLog.Location = new System.Drawing.Point(3, 3);
             this.dgvLog.Name = "dgvLog";
+            this.dgvLog.RowHeadersWidth = 51;
             this.dgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLog.Size = new System.Drawing.Size(738, 342);
             this.dgvLog.TabIndex = 0;
             // 
             // frmLog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(744, 798);
             this.Controls.Add(this.tableData);
