@@ -117,7 +117,7 @@
             this.txtDataNew.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDataNew.Location = new System.Drawing.Point(125, 131);
             this.txtDataNew.Name = "txtDataNew";
-            this.txtDataNew.Size = new System.Drawing.Size(377, 29);
+            this.txtDataNew.Size = new System.Drawing.Size(377, 24);
             this.txtDataNew.TabIndex = 4;
             // 
             // txtDataOld
@@ -125,7 +125,7 @@
             this.txtDataOld.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDataOld.Location = new System.Drawing.Point(125, 99);
             this.txtDataOld.Name = "txtDataOld";
-            this.txtDataOld.Size = new System.Drawing.Size(377, 29);
+            this.txtDataOld.Size = new System.Drawing.Size(377, 24);
             this.txtDataOld.TabIndex = 3;
             // 
             // txtModelId
@@ -133,7 +133,7 @@
             this.txtModelId.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtModelId.Location = new System.Drawing.Point(125, 67);
             this.txtModelId.Name = "txtModelId";
-            this.txtModelId.Size = new System.Drawing.Size(377, 29);
+            this.txtModelId.Size = new System.Drawing.Size(377, 24);
             this.txtModelId.TabIndex = 2;
             // 
             // txtModel
@@ -141,7 +141,7 @@
             this.txtModel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtModel.Location = new System.Drawing.Point(125, 35);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(377, 29);
+            this.txtModel.Size = new System.Drawing.Size(377, 24);
             this.txtModel.TabIndex = 1;
             // 
             // label2
@@ -204,7 +204,7 @@
             this.txtLogName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtLogName.Location = new System.Drawing.Point(125, 3);
             this.txtLogName.Name = "txtLogName";
-            this.txtLogName.Size = new System.Drawing.Size(377, 29);
+            this.txtLogName.Size = new System.Drawing.Size(377, 24);
             this.txtLogName.TabIndex = 0;
             // 
             // tableButtons
@@ -286,7 +286,7 @@
             this.tableData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableData.Controls.Add(this.dgvLog, 0, 0);
             this.tableData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableData.Location = new System.Drawing.Point(0, 450);
+            this.tableData.Location = new System.Drawing.Point(0, 353);
             this.tableData.Name = "tableData";
             this.tableData.RowCount = 1;
             this.tableData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -309,9 +309,9 @@
             // 
             // frmLog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 798);
+            this.ClientSize = new System.Drawing.Size(744, 701);
             this.Controls.Add(this.tableData);
             this.Controls.Add(this.tableButtons);
             this.Controls.Add(this.tableFields);

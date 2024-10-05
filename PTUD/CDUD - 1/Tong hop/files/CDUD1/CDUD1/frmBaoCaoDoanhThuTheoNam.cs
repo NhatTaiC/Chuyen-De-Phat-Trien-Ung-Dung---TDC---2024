@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace CDUD1
 {
-    public partial class frmTrangChu : Form
+    public partial class frmBaoCaoDoanhThuTheoNam : Form
     {
-        public frmTrangChu()
+        public frmBaoCaoDoanhThuTheoNam()
         {
             InitializeComponent();
-        }
-
-        private void đanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inẤnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

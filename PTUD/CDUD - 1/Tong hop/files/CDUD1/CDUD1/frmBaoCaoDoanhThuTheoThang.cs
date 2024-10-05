@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CDUD1
 {
-    public partial class BangLuong : Form
+    public partial class frmBaoCaoDoanhThuTheoThang : Form
     {
-        public BangLuong()
+        public frmBaoCaoDoanhThuTheoThang()
         {
             InitializeComponent();
-        }
-
-        private void BangLuong_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

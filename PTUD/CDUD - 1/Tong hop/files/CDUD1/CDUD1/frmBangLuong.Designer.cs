@@ -1,6 +1,6 @@
 ﻿namespace CDUD1
 {
-    partial class BangLuong
+    partial class frmBangLuong
     {
         /// <summary>
         /// Required designer variable.

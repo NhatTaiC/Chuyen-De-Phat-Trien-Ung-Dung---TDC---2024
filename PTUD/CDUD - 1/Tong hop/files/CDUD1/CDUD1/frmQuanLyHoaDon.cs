@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CDUD1
 {
-    public partial class QuanLyHoaDon : Form
+    public partial class frmQuanLyHoaDon : Form
     {
-        public QuanLyHoaDon()
+        public frmQuanLyHoaDon()
         {
             InitializeComponent();
         }
