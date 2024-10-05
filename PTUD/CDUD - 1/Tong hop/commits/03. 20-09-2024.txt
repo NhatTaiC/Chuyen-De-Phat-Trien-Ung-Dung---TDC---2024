@@ -1,0 +1,20 @@
+Chuyen De Phat Trien Ung Dung - TDC - 2024
+Tuan 1:
+Ngay: 20/09/2024
+Nhom 2:
+Chau Nhat Tai
+Nguyen Quoc Luong
+Le Van Toan
+
+Noi dung cong viec:
+- [x] Bao cao ke hoach cho PTUD
+- [x] Chinh sua lai thoi gian cho ke hoach PTUD
++ Sprint Tong: 1 cot thoi gian uoc tinh
++ Sprint ca nhan chi co cong viec cua ca nhan thoi va thoi gian thuc te
+- [x] Them file mo ta de tai cua Toan
+
+/* Committed? */
+- [x] Yes/No
+
+
+/* Note */

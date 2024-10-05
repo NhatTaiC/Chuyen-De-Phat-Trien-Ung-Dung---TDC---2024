@@ -1,0 +1,27 @@
+Chuyen De Phat Trien Ung Dung - TDC - 2024
+Tuan: 3
+Ngay: 02/10/2024
+De tai: Quan ly sieu thi
+Nhom: 2
+Chau Nhat Tai
+Nguyen Quoc Luong
+Le Van Toan
+
+Noi dung cong viec:
+- [x] Added DB_Diagram.jpg
+- [x] Updated SRS 1.2 - Updated Database Tables (18/18)
+- [x] Added PhanTichDb_LeVanToan.docx
+- [x] Added FeatureFuncMain.docx
+- [x] Checked SRS 1.2 - Chapter 1, 2 & 4
+- [x] Checked SanPham table have DonGia?
+- [x] Formated SRS 1.2 - Completed Chapter 4: Database Design
+- [x] Changed Tuan 1 -> Tong hop
+- [x] Changed name commits 10. 01-10-2024.txt to 10. 02-10-2024.txt
+
+
+
+/* Committed? */
+- [x] Yes/No
+
+
+/* Note */

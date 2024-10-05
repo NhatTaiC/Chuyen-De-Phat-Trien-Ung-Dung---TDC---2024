@@ -1,0 +1,28 @@
+Chuyen De Phat Trien Ung Dung - TDC - 2024
+Tuan: 3
+Ngay: 29/09/2024
+De tai: Quan ly sieu thi
+Nhom: 2
+Chau Nhat Tai
+Nguyen Quoc Luong
+Le Van Toan
+
+Noi dung cong viec:
+- [x] Updated content for feature functions in SRS (15/16)
+- [x] Updated tonghopchucnang.docx
+- [x] Modified NhatTai_Database_Completed.txt
+- [x] Added NhatTai_FeatureFunction.docx
+- [x] Updated CDUD Project
+	1. [x] Added frmLog.cs, Custom, Screenshot frm
+
+
+/* Committed? */
+- [x] Yes/No
+
+
+/* Note */
+H:\ Link nop GD 2,3: 30/09
+- [x] Da xong 15/16 chuc nang chinh cua UD
+	- [] Thieu UI frmLog, mo ta, luong xu ly.
+	- [] Thieu UI frmMain trong SRS
+	- [] Sua frmName, cac Component (dung tableLayout)
