@@ -41,5 +41,15 @@ namespace CDUD1
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmPhieuNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

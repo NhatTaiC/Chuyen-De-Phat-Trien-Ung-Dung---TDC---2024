@@ -17,7 +17,7 @@ namespace CDUD1
             InitializeComponent();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void frmBanHang_Load(object sender, EventArgs e)
         {
 
         }
