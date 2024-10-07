@@ -1,0 +1,24 @@
+Chuyen De Phat Trien Ung Dung - TDC - 2024
+Tuan: 3
+Ngay: 30/09/2024
+De tai: Quan ly sieu thi
+Nhom: 2
+Chau Nhat Tai
+Nguyen Quoc Luong
+Le Van Toan
+
+Noi dung cong viec:
+- [x] Added Sprint Week 3.txt in folder notes
+- [x] Added Link nop GD23.txt in folder notes
+- [x] Updated format SRS 1.1
+- [x] Added QuanLyLog FeatureFunction in SRS 1.1
+- [x] Added table thuatngu in SRS 1.1
+- [x] Updated NhatTai_FeatureFunction.docx
+- [x] Created Nhom 2 - SRS - PTUD - QLST.pdf
+
+
+/* Committed? */
+- [x] Yes/No
+
+
+/* Note */
