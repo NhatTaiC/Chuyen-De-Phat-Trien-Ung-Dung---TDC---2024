@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CDUD1
 {
-    public partial class BaoCaoDoanhThuTheoNam : Form
+    public partial class frmBaoCaoDoanhThuTheoThang : Form
     {
-        public BaoCaoDoanhThuTheoNam()
+        public frmBaoCaoDoanhThuTheoThang()
         {
             InitializeComponent();
         }

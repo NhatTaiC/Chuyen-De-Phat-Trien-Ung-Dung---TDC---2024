@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CDUD1
 {
-    public partial class BangLuong : Form
+    public partial class frmBanHang : Form
     {
-        public BangLuong()
+        public frmBanHang()
         {
             InitializeComponent();
         }
 
-        private void BangLuong_Load(object sender, EventArgs e)
+        private void frmBanHang_Load(object sender, EventArgs e)
         {
 
         }

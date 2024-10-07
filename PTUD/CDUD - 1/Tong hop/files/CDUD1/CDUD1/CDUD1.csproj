@@ -54,29 +54,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BangLuong.cs">
+    <Compile Include="frmBangLuong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BangLuong.Designer.cs">
-      <DependentUpon>BangLuong.cs</DependentUpon>
+    <Compile Include="frmBangLuong.Designer.cs">
+      <DependentUpon>frmBangLuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="BanHang.cs">
+    <Compile Include="frmBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BanHang.Designer.cs">
-      <DependentUpon>BanHang.cs</DependentUpon>
+    <Compile Include="frmBanHang.Designer.cs">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaoCaoDoanhThuTheoNam.cs">
+    <Compile Include="frmBaoCaoDoanhThuTheoNam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCaoDoanhThuTheoNam.Designer.cs">
-      <DependentUpon>BaoCaoDoanhThuTheoNam.cs</DependentUpon>
+    <Compile Include="frmBaoCaoDoanhThuTheoNam.Designer.cs">
+      <DependentUpon>frmBaoCaoDoanhThuTheoNam.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaoCaoDoanhThuTheoThang.cs">
+    <Compile Include="frmBaoCaoDoanhThuTheoThang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCaoDoanhThuTheoThang.Designer.cs">
-      <DependentUpon>BaoCaoDoanhThuTheoThang.cs</DependentUpon>
+    <Compile Include="frmBaoCaoDoanhThuTheoThang.Designer.cs">
+      <DependentUpon>frmBaoCaoDoanhThuTheoThang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCaLam.cs">
       <SubType>Form</SubType>
@@ -95,12 +95,6 @@
     </Compile>
     <Compile Include="frmLog.Designer.cs">
       <DependentUpon>frmLog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InLichLam.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InLichLam.Designer.cs">
-      <DependentUpon>InLichLam.cs</DependentUpon>
     </Compile>
     <Compile Include="frmKhachHang.cs">
       <SubType>Form</SubType>
@@ -156,19 +150,19 @@
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="PhieuNhap.cs">
+    <Compile Include="frmPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PhieuNhap.Designer.cs">
-      <DependentUpon>PhieuNhap.cs</DependentUpon>
+    <Compile Include="frmPhieuNhap.Designer.cs">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyHoaDon.cs">
+    <Compile Include="frmQuanLyHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyHoaDon.Designer.cs">
-      <DependentUpon>QuanLyHoaDon.cs</DependentUpon>
+    <Compile Include="frmQuanLyHoaDon.Designer.cs">
+      <DependentUpon>frmQuanLyHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSanPham.cs">
       <SubType>Form</SubType>
@@ -182,23 +176,23 @@
     <Compile Include="frmTaiKhoan.Designer.cs">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTrangChu.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTrangChu.Designer.cs">
-      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BangLuong.resx">
-      <DependentUpon>BangLuong.cs</DependentUpon>
+    <EmbeddedResource Include="frmBangLuong.resx">
+      <DependentUpon>frmBangLuong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BanHang.resx">
-      <DependentUpon>BanHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmBanHang.resx">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaoCaoDoanhThuTheoNam.resx">
-      <DependentUpon>BaoCaoDoanhThuTheoNam.cs</DependentUpon>
+    <EmbeddedResource Include="frmBaoCaoDoanhThuTheoNam.resx">
+      <DependentUpon>frmBaoCaoDoanhThuTheoNam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaoCaoDoanhThuTheoThang.resx">
-      <DependentUpon>BaoCaoDoanhThuTheoThang.cs</DependentUpon>
+    <EmbeddedResource Include="frmBaoCaoDoanhThuTheoThang.resx">
+      <DependentUpon>frmBaoCaoDoanhThuTheoThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCaLam.resx">
       <DependentUpon>frmCaLam.cs</DependentUpon>
@@ -208,9 +202,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLog.resx">
       <DependentUpon>frmLog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InLichLam.resx">
-      <DependentUpon>InLichLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
@@ -239,8 +230,8 @@
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PhieuNhap.resx">
-      <DependentUpon>PhieuNhap.cs</DependentUpon>
+    <EmbeddedResource Include="frmPhieuNhap.resx">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -252,8 +243,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="QuanLyHoaDon.resx">
-      <DependentUpon>QuanLyHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanLyHoaDon.resx">
+      <DependentUpon>frmQuanLyHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>
@@ -261,8 +252,8 @@
     <EmbeddedResource Include="frmTaiKhoan.resx">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTrangChu.resx">
-      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

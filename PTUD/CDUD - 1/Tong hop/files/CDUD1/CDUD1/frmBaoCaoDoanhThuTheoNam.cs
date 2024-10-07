@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CDUD1
 {
-    public partial class BanHang : Form
+    public partial class frmBaoCaoDoanhThuTheoNam : Form
     {
-        public BanHang()
+        public frmBaoCaoDoanhThuTheoNam()
         {
             InitializeComponent();
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
