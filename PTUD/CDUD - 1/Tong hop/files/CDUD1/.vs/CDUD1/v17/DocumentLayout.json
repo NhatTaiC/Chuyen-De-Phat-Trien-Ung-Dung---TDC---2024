@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmtaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmtaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmtaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -19,55 +27,47 @@
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmbanhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmbaocaodoanhthutheothang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmbaocaodoanhthutheothang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmbaocaodoanhthutheothang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmkhohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmkhohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmkhohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmkhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmkhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmkhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmlichlam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmlichlam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmlichlam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmloaihang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmloaihang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmloaihang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmloaikhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmloaikhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmloaikhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmloainhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmloainhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmloainhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -79,11 +79,11 @@
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\frmlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\frmlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\frmlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|d:\\cdud1\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 1\\tong hop\\files\\cdud1\\cdud1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\cdud1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{173A7BB3-87E3-43C6-A500-31AC722490B5}|CDUD1\\CDUD1.csproj|solutionrelative:cdud1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -106,47 +106,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "frmBaoCaoDoanhThuTheoThang.cs [Design]",
-              "DocumentMoniker": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmBaoCaoDoanhThuTheoThang.cs",
-              "RelativeDocumentMoniker": "CDUD1\\frmBaoCaoDoanhThuTheoThang.cs",
-              "ToolTip": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmBaoCaoDoanhThuTheoThang.cs [Design]",
-              "RelativeToolTip": "CDUD1\\frmBaoCaoDoanhThuTheoThang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T00:50:18.708Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmDangNhap.cs [Design]",
-              "DocumentMoniker": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmDangNhap.cs",
-              "RelativeDocumentMoniker": "CDUD1\\frmDangNhap.cs",
-              "ToolTip": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmDangNhap.cs [Design]",
-              "RelativeToolTip": "CDUD1\\frmDangNhap.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T00:47:54.764Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmBanHang.cs [Design]",
-              "DocumentMoniker": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmBanHang.cs",
-              "RelativeDocumentMoniker": "CDUD1\\frmBanHang.cs",
-              "ToolTip": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmBanHang.cs [Design]",
-              "RelativeToolTip": "CDUD1\\frmBanHang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T10:38:26.619Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "frmBangLuong.cs [Design]",
               "DocumentMoniker": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmBangLuong.cs",
               "RelativeDocumentMoniker": "CDUD1\\frmBangLuong.cs",
@@ -158,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "frmSanPham.cs [Design]",
               "DocumentMoniker": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmSanPham.cs",
               "RelativeDocumentMoniker": "CDUD1\\frmSanPham.cs",
@@ -170,7 +134,55 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmCaLam.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmCaLam.cs",
+              "RelativeDocumentMoniker": "CDUD1\\frmCaLam.cs",
+              "ToolTip": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmCaLam.cs [Design]",
+              "RelativeToolTip": "CDUD1\\frmCaLam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T00:36:32.734Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmDangNhap.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmDangNhap.cs",
+              "RelativeDocumentMoniker": "CDUD1\\frmDangNhap.cs",
+              "ToolTip": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmDangNhap.cs [Design]",
+              "RelativeToolTip": "CDUD1\\frmDangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T00:47:54.764Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmBanHang.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmBanHang.cs",
+              "RelativeDocumentMoniker": "CDUD1\\frmBanHang.cs",
+              "ToolTip": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmBanHang.cs [Design]",
+              "RelativeToolTip": "CDUD1\\frmBanHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T10:38:26.619Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmBaoCaoDoanhThuTheoThang.cs [Design]",
+              "DocumentMoniker": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmBaoCaoDoanhThuTheoThang.cs",
+              "RelativeDocumentMoniker": "CDUD1\\frmBaoCaoDoanhThuTheoThang.cs",
+              "ToolTip": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmBaoCaoDoanhThuTheoThang.cs [Design]",
+              "RelativeToolTip": "CDUD1\\frmBaoCaoDoanhThuTheoThang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T00:50:18.708Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "frmTaiKhoan.cs [Design]",
               "DocumentMoniker": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmTaiKhoan.cs",
               "RelativeDocumentMoniker": "CDUD1\\frmTaiKhoan.cs",
@@ -226,18 +238,6 @@
               "RelativeToolTip": "CDUD1\\frmLichLam.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T00:48:03.15Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmCaLam.cs [Design]",
-              "DocumentMoniker": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmCaLam.cs",
-              "RelativeDocumentMoniker": "CDUD1\\frmCaLam.cs",
-              "ToolTip": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\frmCaLam.cs [Design]",
-              "RelativeToolTip": "CDUD1\\frmCaLam.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T00:36:32.734Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -356,10 +356,8 @@
               "RelativeDocumentMoniker": "CDUD1\\CaLam.Designer.cs",
               "ToolTip": "D:\\CDUD1\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 1\\Tong hop\\files\\CDUD1\\CDUD1\\CaLam.Designer.cs",
               "RelativeToolTip": "CDUD1\\CaLam.Designer.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAANYAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T00:37:45.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T00:37:45.829Z"
             },
             {
               "$type": "Document",
