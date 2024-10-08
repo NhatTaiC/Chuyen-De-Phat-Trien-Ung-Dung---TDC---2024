@@ -8,11 +8,12 @@ Nguyen Quoc Luong
 Le Van Toan
 
 Noi dung cong viec:
-- [x] Update SRS 1.4: Added Chapter 3: Use-Case
+- [x] Update SRS 1.0: Added Chapter 3: Use-Case
 - [x] Update UI BanHang, PhieuNhap, HoaDon, BangLuong
-- [x] Added 5/15 Use-Case
+- [x] Added 10/15 Use-Case
 - [x] Updated Muc luc & Muc luc hinh
 - [x] Updated file PDF SRS
+- [x] Updated files. mdf, changed table NhomHang -> LoaiHang
 
 
 /* Committed? */
