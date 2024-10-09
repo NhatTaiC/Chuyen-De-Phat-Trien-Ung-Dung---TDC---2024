@@ -121,7 +121,7 @@
   <data name="guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAe8AAAHtCAYAAAAwQfbGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAA/7JJREFUeF60/YV/HFe67Q/P3/G7955zZiaJHTOILFmWZTEzW2RJFthismyZLTMz
+        wAAADsABataJCQAA/7JJREFUeF60/YV/HFe67Q/P3/G7955zZiaJHTOILFmWZTEzW2RJFthismyZLTMz
         MzMzM4eZJhnIJJkJmiTDetfaVaVuyXaSuZ/7jmelqkHd1VW7nu+zNv7h6dOncOkJ9dhWq9HjZ21offYU
         j548xeOHrZhaU4t0Ly9k9euD9G5dkNbtdaR07YKk115D4qtdEP9KF8T9qaut1xHzx9cR9d9dLP1XF8Ty
         ceyfuln644sVR8VTCXxPAj8j8c/dkEQl//l1qqut116oVL6ng3g8Ga90o16nuhplvtYFWV1eR3bXrsjr
@@ -10271,5 +10271,8 @@
   </metadata>
   <metadata name="Anh.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>

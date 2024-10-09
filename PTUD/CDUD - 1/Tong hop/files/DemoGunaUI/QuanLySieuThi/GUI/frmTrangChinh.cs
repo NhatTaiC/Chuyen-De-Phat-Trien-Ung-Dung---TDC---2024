@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmNhanVien : Form
+    public partial class frmTrangChinh : Form
     {
-        public frmNhanVien()
+        public frmTrangChinh()
         {
             InitializeComponent();
-        }
-
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
