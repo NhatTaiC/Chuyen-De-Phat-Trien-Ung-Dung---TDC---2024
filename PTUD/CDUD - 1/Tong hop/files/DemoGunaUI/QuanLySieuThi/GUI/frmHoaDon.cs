@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmLoaiKhachHang : Form
+    public partial class frmHoaDon : Form
     {
-        public frmLoaiKhachHang()
+        public frmHoaDon()
         {
             InitializeComponent();
         }

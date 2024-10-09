@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cbQuyen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.btnLamMoi = new Guna.UI2.WinForms.Guna2Button();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
@@ -44,7 +45,6 @@
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtMaTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cbQuyen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvCaLam = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MaTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,8 +84,24 @@
             this.guna2GroupBox3.Text = "Quản lí tài khoản";
             this.guna2GroupBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // cbQuyen
+            // 
+            this.cbQuyen.BackColor = System.Drawing.Color.Transparent;
+            this.cbQuyen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQuyen.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbQuyen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbQuyen.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbQuyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbQuyen.ItemHeight = 30;
+            this.cbQuyen.Location = new System.Drawing.Point(324, 225);
+            this.cbQuyen.Name = "cbQuyen";
+            this.cbQuyen.Size = new System.Drawing.Size(196, 36);
+            this.cbQuyen.TabIndex = 3;
+            // 
             // btnThoat
             // 
+            this.btnThoat.BorderRadius = 3;
             this.btnThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -272,21 +288,6 @@
             this.guna2HtmlLabel5.TabIndex = 9;
             this.guna2HtmlLabel5.Text = "Mã tài khoản";
             // 
-            // cbQuyen
-            // 
-            this.cbQuyen.BackColor = System.Drawing.Color.Transparent;
-            this.cbQuyen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbQuyen.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbQuyen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbQuyen.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbQuyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbQuyen.ItemHeight = 30;
-            this.cbQuyen.Location = new System.Drawing.Point(324, 225);
-            this.cbQuyen.Name = "cbQuyen";
-            this.cbQuyen.Size = new System.Drawing.Size(196, 36);
-            this.cbQuyen.TabIndex = 3;
-            // 
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -387,7 +388,7 @@
             this.Controls.Add(this.guna2GroupBox3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTaiKhoan";
             this.Text = "Quản lí tài khoản";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
