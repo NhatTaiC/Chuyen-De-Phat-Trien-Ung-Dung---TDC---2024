@@ -184,7 +184,7 @@
             // 
             // btnTaoPhieu
             // 
-            this.btnTaoPhieu.Location = new System.Drawing.Point(22, 376);
+            this.btnTaoPhieu.Location = new System.Drawing.Point(34, 332);
             this.btnTaoPhieu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTaoPhieu.Name = "btnTaoPhieu";
             this.btnTaoPhieu.Size = new System.Drawing.Size(91, 36);
@@ -271,7 +271,7 @@
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txtMaPhieuNhap);
-            this.groupBox2.Location = new System.Drawing.Point(22, 133);
+            this.groupBox2.Location = new System.Drawing.Point(34, 89);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(625, 227);
             this.groupBox2.TabIndex = 96;
