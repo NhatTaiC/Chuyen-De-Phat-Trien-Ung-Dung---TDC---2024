@@ -249,4 +249,16 @@ created_at:datetime:notNull,
 updated_by:int:notNull,
 updated_at:datetime:notNull
 
+19. ChiNhanh
+id:int:pk,
+maChiNhanh:varchar(30):notNull,
+tenChiNhanh:nvarchar(100):notNull,
+diaChi:nvarchar(100):notNull,
+soDienThoai:varchar(10):notNull,
+is_deleted:bit:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
 ====== The End ======

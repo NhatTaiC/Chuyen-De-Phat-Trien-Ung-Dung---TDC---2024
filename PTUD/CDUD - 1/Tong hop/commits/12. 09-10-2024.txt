@@ -8,13 +8,20 @@ Nguyen Quoc Luong
 Le Van Toan
 
 Noi dung cong viec:
-- [x] Update SRS 1.0: Added Chapter 3: Use-Case
-- [x] Added 16/16 Use-Case
-- [x] Updated Muc luc & Muc luc hinh
-- [x] Updated file PDF SRS
-- [x] Changed name *.png/.jpg in folder PTUD UseCase Diagram
-- [x] Updated NhatTai_UseCase.docx
-- [x] Added folder img
+- [x] Updated NhatTai_Database_Completed.txt (Added table ChiNhanh)
+- [x] Updated mdf database (Added final diagram)
+- [x] Sreenshot db_diagram (Added to Chapter 4: Diagram DB)
+- [x] Added table ChiNhanh to SRS (Chapter 4: DB)
+- [x] Added UC16 - CRUD ChiNhanh.png in folder PTUD UseCase Digram
+- [x] Changed UC16 - BanHang -> UC17 - BanHang
+- [x] Updated Chapter 3: UseCase (Added UC16 - CRUD ChiNhanh)
+- [x] Added GiaBan to SanPham in SRS
+- [x] Updated Muc luc, muc luc hinh
+- [x] Updated file pdf SRS 1.0
+- [x] Updated moi truong cai dat in SRS
+- [x] Updated bang thuat ngu in SRS
+- [] Updated all new UI
+
 
 
 /* Committed? */
