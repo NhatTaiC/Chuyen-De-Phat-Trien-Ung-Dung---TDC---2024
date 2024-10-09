@@ -162,7 +162,7 @@
             this.txtTenLoaiNhanVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenLoaiNhanVien.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTenLoaiNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenLoaiNhanVien.Location = new System.Drawing.Point(324, 119);
+            this.txtTenLoaiNhanVien.Location = new System.Drawing.Point(332, 175);
             this.txtTenLoaiNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenLoaiNhanVien.Name = "txtTenLoaiNhanVien";
             this.txtTenLoaiNhanVien.PasswordChar = '\0';
@@ -177,7 +177,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(124, 126);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(132, 182);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(142, 21);
             this.guna2HtmlLabel6.TabIndex = 11;
@@ -196,7 +196,7 @@
             this.txtMaLoaiNhanVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaLoaiNhanVien.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtMaLoaiNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaLoaiNhanVien.Location = new System.Drawing.Point(324, 58);
+            this.txtMaLoaiNhanVien.Location = new System.Drawing.Point(332, 114);
             this.txtMaLoaiNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaLoaiNhanVien.Name = "txtMaLoaiNhanVien";
             this.txtMaLoaiNhanVien.PasswordChar = '\0';
@@ -211,7 +211,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.White;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(124, 65);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(132, 121);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(135, 21);
             this.guna2HtmlLabel5.TabIndex = 9;
@@ -262,7 +262,7 @@
             this.dgvCaLam.Location = new System.Drawing.Point(0, 39);
             this.dgvCaLam.Name = "dgvCaLam";
             this.dgvCaLam.RowHeadersVisible = false;
-            this.dgvCaLam.Size = new System.Drawing.Size(550, 585);
+            this.dgvCaLam.Size = new System.Drawing.Size(550, 572);
             this.dgvCaLam.TabIndex = 0;
             this.dgvCaLam.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCaLam.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -305,7 +305,7 @@
             this.Controls.Add(this.guna2GroupBox3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLoaiNhanVien";
             this.Text = "Quản lí loại nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
