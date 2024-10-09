@@ -13,7 +13,7 @@ namespace CDUD1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmKhoHang());
+            Application.Run(new frmMain());
         }
     }
 }
