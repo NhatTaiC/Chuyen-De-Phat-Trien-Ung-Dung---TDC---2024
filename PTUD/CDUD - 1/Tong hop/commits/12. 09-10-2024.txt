@@ -1,0 +1,24 @@
+Chuyen De Phat Trien Ung Dung - TDC - 2024
+Tuan: 4
+Ngay: 09/10/2024
+De tai: Quan ly sieu thi
+Nhom: 2
+Chau Nhat Tai
+Nguyen Quoc Luong
+Le Van Toan
+
+Noi dung cong viec:
+- [x] Update SRS 1.0: Added Chapter 3: Use-Case
+- [x] Added 16/16 Use-Case
+- [x] Updated Muc luc & Muc luc hinh
+- [x] Updated file PDF SRS
+- [x] Changed name *.png/.jpg in folder PTUD UseCase Diagram
+- [x] Updated NhatTai_UseCase.docx
+- [x] Added folder img
+
+
+/* Committed? */
+- [x] Yes/No
+
+
+/* Note */
