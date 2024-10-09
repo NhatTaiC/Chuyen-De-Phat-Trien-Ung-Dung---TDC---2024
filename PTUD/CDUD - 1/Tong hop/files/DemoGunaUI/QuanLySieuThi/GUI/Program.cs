@@ -1,8 +1,4 @@
-﻿using CDUD1;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace GUI
@@ -17,7 +13,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmChiNhanh());
+            Application.Run(new frmBanHang());
         }
     }
 }
