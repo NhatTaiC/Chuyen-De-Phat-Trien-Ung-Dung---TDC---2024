@@ -20,8 +20,12 @@ Noi dung cong viec:
 - [x] Updated file pdf SRS 1.0
 - [x] Updated moi truong cai dat in SRS
 - [x] Updated bang thuat ngu in SRS
-- [] Updated all new UI
-
+- [x] Changed frmTrangChinh.cs -> frmMain.cs
+- [x] Changed frmThanhToan.cs -> frmBanHang.cs
+- [x] Changed all name img in folder UI moi, Added some img
+- [x] Updated all new UI
+		UI01 -> UI13, UI17
+=> Completed SRS 1.0
 
 
 /* Committed? */

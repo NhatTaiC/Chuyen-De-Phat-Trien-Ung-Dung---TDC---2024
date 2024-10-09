@@ -16,5 +16,15 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGiaTri_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
