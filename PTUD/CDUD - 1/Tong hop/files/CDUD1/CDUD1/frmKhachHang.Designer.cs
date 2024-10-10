@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhachHang));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,19 +40,18 @@
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtDiemTichLuy = new System.Windows.Forms.TextBox();
-            this.btnLoc = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.dgvLoaiHang = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.btnThoat = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiHang)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -160,61 +160,6 @@
             this.txtDiemTichLuy.Size = new System.Drawing.Size(459, 28);
             this.txtDiemTichLuy.TabIndex = 2;
             // 
-            // btnLoc
-            // 
-            this.btnLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoc.Location = new System.Drawing.Point(732, 4);
-            this.btnLoc.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(220, 69);
-            this.btnLoc.TabIndex = 31;
-            this.btnLoc.Text = "Lọc";
-            this.btnLoc.UseVisualStyleBackColor = true;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.Location = new System.Drawing.Point(986, 4);
-            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(220, 69);
-            this.btnLamMoi.TabIndex = 30;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(475, 4);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(220, 69);
-            this.btnSua.TabIndex = 27;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(234, 4);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(220, 69);
-            this.btnXoa.TabIndex = 28;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(3, 4);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(220, 69);
-            this.btnThem.TabIndex = 29;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
             // dgvLoaiHang
             // 
             this.dgvLoaiHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -254,39 +199,77 @@
             this.panel2.Size = new System.Drawing.Size(803, 286);
             this.panel2.TabIndex = 33;
             // 
-            // panel3
+            // toolStrip1
             // 
-            this.panel3.Controls.Add(this.btnThem);
-            this.panel3.Controls.Add(this.btnXoa);
-            this.panel3.Controls.Add(this.btnSua);
-            this.panel3.Controls.Add(this.btnLoc);
-            this.panel3.Controls.Add(this.btnLamMoi);
-            this.panel3.Location = new System.Drawing.Point(140, 420);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1217, 82);
-            this.panel3.TabIndex = 34;
+            this.toolStrip1.BackColor = System.Drawing.Color.White;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.btnThoat});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1488, 27);
+            this.toolStrip1.TabIndex = 108;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(70, 24);
+            this.toolStripButton1.Text = "Thêm";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(59, 28);
+            this.toolStripButton2.Text = "Xóa";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(58, 28);
+            this.toolStripButton3.Text = "Sửa";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(71, 28);
+            this.btnThoat.Text = "Thoát";
             // 
             // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1488, 898);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvLoaiHang);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmKhachHang";
-            this.Text = "KhachHang";
+            this.Text = "Quản lí khách hàng";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiHang)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -303,14 +286,13 @@
         private System.Windows.Forms.TextBox txtSoDienThoai;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtDiemTichLuy;
-        private System.Windows.Forms.Button btnLoc;
-        private System.Windows.Forms.Button btnLamMoi;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgvLoaiHang;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton btnThoat;
     }
 }

@@ -286,7 +286,7 @@
             this.tableData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableData.Controls.Add(this.dgvLog, 0, 0);
             this.tableData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableData.Location = new System.Drawing.Point(0, 450);
+            this.tableData.Location = new System.Drawing.Point(0, 353);
             this.tableData.Name = "tableData";
             this.tableData.RowCount = 1;
             this.tableData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -311,7 +311,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 798);
+            this.ClientSize = new System.Drawing.Size(744, 701);
             this.Controls.Add(this.tableData);
             this.Controls.Add(this.tableButtons);
             this.Controls.Add(this.tableFields);
