@@ -1,0 +1,42 @@
+Task 1: Thiết kế Data Tables (Trước T4 (02-10-2024))
+Người làm: Nhóm 2
+Yêu cầu:
+1. Tạo file HoTen_DataTable.docx/.txt.
+2. Dựa trên nội dung file NhatTai_Database_Completed.txt làm theo nội dung sau: (Tổng cộng 18 Data Tables)
+    1. Toàn sẽ làm từ bảng 1 → bảng 6.
+    2. Lượng sẽ làm từ bảng 7 → bảng 12.
+    3. Tài sẽ làm từ bảng 13 → bảng 18.
+3. Format: (Tạo file riêng cho format, tổng hợp vào SRS sau)
+    1. Tên bảng
+        1. Bảng mô tả dữ liệu (kẻ bảng rồi trình bày ra)
+        2. Phân tích bảng dữ liệu (gồm PK, FK, các ràng buộc như nvarchar bao nhiêu kí tự? có null/not null? kiểu dữ liệu dạng số hay time?,…)
+
+==============
+
+Small Task Extra: Bổ sung SRS (Trước T4 (02-10-2024))
+Người làm: Toàn
+Yêu cầu:
+Cập nhật file UpdateFeature_LeVanToan thêm UI frmMain và miêu tả UI
+
+==============
+
+Task 2: Thiết kế Use-Case Diagrams (Tạm thời chưa tới)
+
+==============
+
+Task 3: Sửa lại UI (Có thể để cuối tuần làm)
+Người làm: Toàn, Lượng
+Yêu cầu:
+1. Sửa lại tên các form theo format: frmTenForm.cs
+2. Sửa lại các controls:
+    1. Bỏ controls vào Panels (Chia layout trong form)
+    2. Chỉnh sửa attribute Dock: Fill/Bottom cho controls
+    3. Đặt tên biến cho controls
+    4. Sắp xếp tab order
+    5. Test form
+    6. Lock controls
+3. Sửa lại design UI nếu cần (Phiếu nhập/Chi tiết phiếu nhập, Bảng lương/Chi tiết bảng lương)
+Phần việc:
+Dựa trên thứ tự chức năng trong file SRS (Bỏ frmDangNhap)
+1. Toàn: chức năng 2 - 7
+2. Lượng: chức năng 8 - 15
