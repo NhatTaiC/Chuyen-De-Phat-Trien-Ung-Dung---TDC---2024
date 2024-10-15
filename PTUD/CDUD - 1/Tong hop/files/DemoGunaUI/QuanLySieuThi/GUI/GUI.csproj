@@ -61,6 +61,12 @@
     <Compile Include="frmBangLuong.Designer.cs">
       <DependentUpon>frmBangLuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChiNhanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiNhanh.Designer.cs">
+      <DependentUpon>frmChiNhanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +79,11 @@
     <Compile Include="frmPhieuNhap.Designer.cs">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThanhToan.cs">
+    <Compile Include="frmBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThanhToan.Designer.cs">
-      <DependentUpon>frmThanhToan.cs</DependentUpon>
+    <Compile Include="frmBanHang.Designer.cs">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCaLam.cs">
       <SubType>Form</SubType>
@@ -162,14 +168,17 @@
     <EmbeddedResource Include="frmBangLuong.resx">
       <DependentUpon>frmBangLuong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmChiNhanh.resx">
+      <DependentUpon>frmChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhieuNhap.resx">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThanhToan.resx">
-      <DependentUpon>frmThanhToan.cs</DependentUpon>
+    <EmbeddedResource Include="frmBanHang.resx">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCaLam.resx">
       <DependentUpon>frmCaLam.cs</DependentUpon>
@@ -254,6 +263,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reset.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
