@@ -8,8 +8,8 @@ Nguyen Quoc Luong
 Le Van Toan
 
 Noi dung cong viec:
-- [x] Updated file .mdf
-- [x] Added QLST_Scripts.sql
+- [x] Added/Updated NhatTai_Database_Completed.txt
+- [x] Updated Nhom2 - CDUD - Sprints.xlsx
 
 
 /* Committed? */
