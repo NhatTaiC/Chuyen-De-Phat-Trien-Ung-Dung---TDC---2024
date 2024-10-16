@@ -11,6 +11,7 @@ Noi dung cong viec:
 - [x] Updated .mdf
 - [x] Updates QLST_Scripts.sql
 - [x] Added Src Code PTUD
+- [x] Deleted .mdf
 
 
 /* Committed? */
