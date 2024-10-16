@@ -99,7 +99,7 @@
             this.cbQuyen.Items.AddRange(new object[] {
             "Admin"});
             this.cbQuyen.Location = new System.Drawing.Point(65, 259);
-            this.cbQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbQuyen.Margin = new System.Windows.Forms.Padding(2);
             this.cbQuyen.Name = "cbQuyen";
             this.cbQuyen.Size = new System.Drawing.Size(226, 36);
             this.cbQuyen.TabIndex = 3;
@@ -115,7 +115,7 @@
             this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
             this.btnDangNhap.Location = new System.Drawing.Point(113, 312);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(135, 37);
             this.btnDangNhap.TabIndex = 4;
@@ -183,7 +183,9 @@
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDangNhap";
             this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

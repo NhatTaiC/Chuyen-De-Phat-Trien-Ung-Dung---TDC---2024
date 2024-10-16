@@ -79,11 +79,11 @@
     <Compile Include="frmPhieuNhap.Designer.cs">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThanhToan.cs">
+    <Compile Include="frmBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThanhToan.Designer.cs">
-      <DependentUpon>frmThanhToan.cs</DependentUpon>
+    <Compile Include="frmBanHang.Designer.cs">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCaLam.cs">
       <SubType>Form</SubType>
@@ -133,11 +133,11 @@
     <Compile Include="frmLoaiNhanVien.Designer.cs">
       <DependentUpon>frmLoaiNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTrangChinh.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTrangChinh.Designer.cs">
-      <DependentUpon>frmTrangChinh.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhaCungCap.cs">
       <SubType>Form</SubType>
@@ -177,8 +177,8 @@
     <EmbeddedResource Include="frmPhieuNhap.resx">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThanhToan.resx">
-      <DependentUpon>frmThanhToan.cs</DependentUpon>
+    <EmbeddedResource Include="frmBanHang.resx">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCaLam.resx">
       <DependentUpon>frmCaLam.cs</DependentUpon>
@@ -204,8 +204,8 @@
     <EmbeddedResource Include="frmLoaiNhanVien.resx">
       <DependentUpon>frmLoaiNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTrangChinh.resx">
-      <DependentUpon>frmTrangChinh.cs</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhaCungCap.resx">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
