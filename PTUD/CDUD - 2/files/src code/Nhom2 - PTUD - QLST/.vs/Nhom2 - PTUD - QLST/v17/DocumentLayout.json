@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitHub\\NhatTaiC\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{018E5499-3B78-4BCC-AFCD-13AA3F1F400C}|DAL\\DAL.csproj|d:\\github\\nhattaic\\chuyen-de-phat-trien-ung-dung---tdc---2024\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\dal\\qlst.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{018E5499-3B78-4BCC-AFCD-13AA3F1F400C}|DAL\\DAL.csproj|solutionrelative:dal\\qlst.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QLST.dbml",
+              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\DAL\\QLST.dbml",
+              "RelativeDocumentMoniker": "DAL\\QLST.dbml",
+              "ToolTip": "D:\\GitHub\\NhatTaiC\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\DAL\\QLST.dbml",
+              "RelativeToolTip": "DAL\\QLST.dbml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
+              "WhenOpened": "2024-10-16T03:03:10.352Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
