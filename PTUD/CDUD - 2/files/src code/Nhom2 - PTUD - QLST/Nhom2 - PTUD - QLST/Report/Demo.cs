@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Nhom2___PTUD___QLST.Reports {
+namespace Nhom2___PTUD___QLST.Report {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace Nhom2___PTUD___QLST.Reports {
         
         public override string FullResourceName {
             get {
-                return "Nhom2___PTUD___QLST.Reports.Demo.rpt";
+                return "Nhom2___PTUD___QLST.Report.Demo.rpt";
             }
             set {
                 // Do nothing
