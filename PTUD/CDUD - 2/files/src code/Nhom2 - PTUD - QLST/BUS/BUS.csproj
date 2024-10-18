@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{846F4996-FB6D-4865-A0FB-E0CE8D47B227}</ProjectGuid>
+    <ProjectGuid>{E18C83C1-32A8-4714-A20F-F5C7E5C8C90C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BUS</RootNamespace>
@@ -46,11 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{018e5499-3b78-4bcc-afcd-13aa3f1f400c}</Project>
+      <Project>{9e21d61b-e577-46be-948c-e5912b867582}</Project>
       <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{9159c4f8-379d-427e-99b4-6f5e4dbedbe4}</Project>
+      <Project>{0ad3c320-ded4-47e9-81d3-fdb973b2bfbd}</Project>
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>

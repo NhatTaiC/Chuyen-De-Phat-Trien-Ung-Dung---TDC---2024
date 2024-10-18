@@ -63,10 +63,10 @@
     <Type Name="ChiTietBangLuong">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaChiTietBangLuong" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="SoGioCongThucTe" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="idBangLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="idNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="idLichLam" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="SoGioCongThucTe" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -79,9 +79,9 @@
   <Table Name="dbo.ChiTietHoaDon" Member="ChiTietHoaDons">
     <Type Name="ChiTietHoaDon">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="idHoaDon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="idSanPham" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -94,10 +94,10 @@
   <Table Name="dbo.ChiTietPhieuNhap" Member="ChiTietPhieuNhaps">
     <Type Name="ChiTietPhieuNhap">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="idPhieuNhap" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="idSanPham" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="DonGia" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="idPhieuNhap" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idSanPham" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -111,13 +111,13 @@
     <Type Name="HoaDon">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaHoaDon" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="idNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="idKhachHang" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="NgayLapHD" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="GioLapHD" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
-      <Column Name="idKhuyenMai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="TongTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="ThanhTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="idKhachHang" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idKhuyenMai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -147,8 +147,8 @@
   <Table Name="dbo.KhoHang" Member="KhoHangs">
     <Type Name="KhoHang">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="idSanPham" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idSanPham" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -175,9 +175,9 @@
     <Type Name="LichLam">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaLichLam" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NgayLam" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="idNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="idCaLam" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="NgayLam" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -197,13 +197,12 @@
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="updated_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="updated_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Association Name="LoaiHang_SanPham" Member="SanPhams" ThisKey="id" OtherKey="idNhomHang" Type="SanPham" />
+      <Association Name="LoaiHang_SanPham" Member="SanPhams" ThisKey="id" OtherKey="idLoaiHang" Type="SanPham" />
     </Type>
   </Table>
   <Table Name="dbo.LoaiNhanVien" Member="LoaiNhanViens">
     <Type Name="LoaiNhanVien">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="idLoaiNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="TenLoaiNhanVien" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="is_deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -247,9 +246,9 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="TenNhanVien" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="idLoaiNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="SoDienThoai" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idLoaiNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="idTaiKhoan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -268,9 +267,9 @@
     <Type Name="PhieuNhap">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaPhieuNhap" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="idNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="NgayNhap" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="ThanhTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="idNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -285,13 +284,13 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaSanPham" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="TenSanPham" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="idNhomHang" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="DonViTinh" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="DonGia" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="idNhaCungCap" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="NgaySanXuat" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="HanSuDung" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="AnhSanPham" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="idLoaiHang" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idNhaCungCap" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -301,7 +300,7 @@
       <Association Name="SanPham_ChiTietPhieuNhap" Member="ChiTietPhieuNhaps" ThisKey="id" OtherKey="idSanPham" Type="ChiTietPhieuNhap" />
       <Association Name="SanPham_KhoHang" Member="KhoHangs" ThisKey="id" OtherKey="idSanPham" Type="KhoHang" />
       <Association Name="NhaCungCap_SanPham" Member="NhaCungCap" ThisKey="idNhaCungCap" OtherKey="id" Type="NhaCungCap" IsForeignKey="true" />
-      <Association Name="LoaiHang_SanPham" Member="LoaiHang" ThisKey="idNhomHang" OtherKey="id" Type="LoaiHang" IsForeignKey="true" />
+      <Association Name="LoaiHang_SanPham" Member="LoaiHang" ThisKey="idLoaiHang" OtherKey="id" Type="LoaiHang" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

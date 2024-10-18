@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{018E5499-3B78-4BCC-AFCD-13AA3F1F400C}</ProjectGuid>
+    <ProjectGuid>{9E21D61B-E577-46BE-948C-E5912B867582}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL</RootNamespace>
@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{9159c4f8-379d-427e-99b4-6f5e4dbedbe4}</Project>
+      <Project>{0ad3c320-ded4-47e9-81d3-fdb973b2bfbd}</Project>
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
