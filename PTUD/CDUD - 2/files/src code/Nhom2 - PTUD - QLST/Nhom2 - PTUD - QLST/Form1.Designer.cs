@@ -38,20 +38,20 @@
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(357, 292);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(165, 183);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(95, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(49, 15);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "TaiKhoan";
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(357, 437);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(165, 306);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(89, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(46, 15);
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "MatKhau";
             // 
@@ -66,7 +66,7 @@
             this.txtTaiKhoan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTaiKhoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTaiKhoan.Location = new System.Drawing.Point(912, 236);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(295, 146);
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(18, 16, 18, 16);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.PasswordChar = '\0';
@@ -86,7 +86,7 @@
             this.txtMatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMatKhau.Location = new System.Drawing.Point(912, 383);
+            this.txtMatKhau.Location = new System.Drawing.Point(295, 269);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(18, 16, 18, 16);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '\0';
@@ -105,7 +105,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = global::Nhom2___PTUD___QLST.Properties.Resources.enter;
             this.guna2Button1.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2Button1.Location = new System.Drawing.Point(843, 809);
+            this.guna2Button1.Location = new System.Drawing.Point(260, 428);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(540, 115);
@@ -115,9 +115,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 33F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2400, 1142);
+            this.ClientSize = new System.Drawing.Size(1444, 881);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
