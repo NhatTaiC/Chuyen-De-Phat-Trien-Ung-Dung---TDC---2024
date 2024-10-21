@@ -24,5 +24,15 @@ namespace BUS
         {
             return dal_tk.LayDSTK();
         }
+
+        public IQueryable LayDSTK_TheoQuyen()
+        {
+            return dal_tk.LayDSTK_TheoQuyen();
+        }
+
+        public int GetRole(string taiKhoan, string matKhau)
+        {
+            return dal_tk.GetRole(taiKhoan, matKhau);
+        }
     }
 }
