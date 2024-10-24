@@ -176,8 +176,8 @@ updated_at:datetime:notNull
 14. HoaDon
 id:int:pk,
 maHoaDon:varchar(30):null,
-ngayLapHD:date:notNull, 
-gioLapHD:timestamp:notNull, 
+ngayLapHD:datetime:notNull, 
+gioLapHD:datetime:notNull, 
 tongTien:float:notNull,
 thanhTien:float:notNull,
 idKhachHang:int:fk,

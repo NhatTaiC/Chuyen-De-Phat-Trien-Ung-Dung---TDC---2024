@@ -168,5 +168,19 @@ namespace Nhom2___PTUD___QLST
                 ActForm("frmNhanVien");
             }
         }
+
+        private void khuyếnMãiToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmKhuyenMai"))
+            {
+                frmKhuyenMai f = new frmKhuyenMai();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmKhuyenMai");
+            }
+        }
     }
 }
