@@ -2,6 +2,8 @@
 -- TaiKhoan
 INSERT INTO TaiKhoan (TenTaiKhoan, MatKhau, Quyen, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
+('admin', '123456', 0, 0, 0, GETDATE(), 0, GETDATE()),
+('user', '123456', 1, 0, 0, GETDATE(), 0, GETDATE()),
 ('TK001', '123456', 0, 0, 0, GETDATE(), 0, GETDATE()),
 ('TK002', '123456', 1, 0, 0, GETDATE(), 0, GETDATE()),
 ('TK003', '123456', 1, 0, 0, GETDATE(), 0, GETDATE()),

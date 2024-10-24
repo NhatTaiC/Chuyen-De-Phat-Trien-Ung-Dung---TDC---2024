@@ -18,7 +18,7 @@ VALUES
 ('NCC001', N'Công ty Thực Phẩm Sạch', '0901234567', N'123 Đường ABC, Quận 1, TP.HCM', 0, 0, GETDATE(), 0, GETDATE());
 
 -- Insert into SanPham
-INSERT INTO SanPham (MaSanPham, TenSanPham, idNhomHang, DonViTinh, DonGia, idNhaCungCap, NgaySanXuat, HanSuDung, AnhSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
+INSERT INTO SanPham (MaSanPham, TenSanPham, idLoaiHang, DonViTinh, DonGia, idNhaCungCap, NgaySanXuat, HanSuDung, AnhSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES 
 -- Rau củ quả (idNhomHang = 1)
 ('SP001', N'Cà chua', 1, N'Kg', 20000, 1, '2024-09-01', '2024-09-15', NULL, 0, 0, GETDATE(), 0, GETDATE()),
@@ -46,7 +46,7 @@ VALUES
 ('SP015', N'Rau hộp', 5, N'Hộp', 35000, 1, '2024-07-15', '2025-07-15', NULL, 0, 0, GETDATE(), 0, GETDATE());
 
 -- Insert into SanPham
-INSERT INTO SanPham (MaSanPham, TenSanPham, idNhomHang, DonViTinh, DonGia, idNhaCungCap, NgaySanXuat, HanSuDung, AnhSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
+INSERT INTO SanPham (MaSanPham, TenSanPham, idLoaiHang, DonViTinh, DonGia, idNhaCungCap, NgaySanXuat, HanSuDung, AnhSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES 
 -- Gia vị (idNhomHang = 6)
 ('SP016', N'Muối', 6, N'Gói', 5000, 1, '2024-08-01', '2025-08-01', NULL, 0, 0, GETDATE(), 0, GETDATE()),

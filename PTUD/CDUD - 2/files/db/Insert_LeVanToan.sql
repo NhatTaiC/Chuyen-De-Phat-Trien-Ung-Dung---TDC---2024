@@ -30,17 +30,41 @@ VALUES
 go
 select * from NhaCungCap
 go
-INSERT INTO PhieuNhap(MaPhieuNhap, idNhanVien, idNhaCungCap, NgayNhap,ThanhTien, is_deleted, created_by, created_at, updated_by, updated_at)
+INSERT INTO PhieuNhap(MaPhieuNhap, NgayNhap, ThanhTien, idNhanVien, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
-('PN01', 1, 1, 2024-10-15, 30000,0, 0, 2024-10-15, 0, 2024-10-15),
-('PN02', 1, 1, 2024-10-15, 50000,0, 0, 2024-10-15, 0, 2024-10-15),
-('PN03', 1, 1, 2024-10-15, 300000,0, 0, 2024-10-15, 0, 2024-10-15),
-('PN04', 1, 1, 2024-10-15, 3000000,0, 0, 2024-10-15, 0, 2024-10-15),
-('PN05', 1, 1, 2024-10-15, 30000,0, 0, 2024-10-15, 0, 2024-10-15),
-('PN06', 1, 1, 2024-10-15, 30000,0, 0, 2024-10-15, 0, 2024-10-15),
-('PN07', 1, 1, 2024-10-15, 30000,0, 0, 2024-10-15, 0, 2024-10-15),
-('PN08', 1, 1, 2024-10-15, 30000,0, 0, 2024-10-15, 0, 2024-10-15),
-('PN09', 1, 1, 2024-10-15, 30000,0, 0, 2024-10-15, 0, 2024-10-15),
-('PN010', 1, 1, 2024-10-15, 30000,0, 0, 2024-10-15, 0, 2024-10-15);
+('PN01', '2024-10-15', 30000, 1, 0, 0, '2024-10-15', 0, '2024-10-15'),
+('PN02', '2024-10-15', 50000, 1, 0, 0, '2024-10-15', 0, '2024-10-15'),
+('PN03', '2024-10-15', 300000, 1, 0, 0, '2024-10-15', 0, '2024-10-15'),
+('PN04', '2024-10-15', 3000000, 1, 0, 0, '2024-10-15', 0, '2024-10-15'),
+('PN05', '2024-10-15', 30000, 1, 0, 0, '2024-10-15', 0, '2024-10-15'),
+('PN06', '2024-10-15', 30000, 1, 0, 0, '2024-10-15', 0, '2024-10-15'),
+('PN07', '2024-10-15', 30000, 1, 0, 0, '2024-10-15', 0, '2024-10-15'),
+('PN08', '2024-10-15', 30000, 1, 0, 0, '2024-10-15', 0, '2024-10-15'),
+('PN09', '2024-10-15', 30000, 1, 0, 0, '2024-10-15', 0, '2024-10-15'),
+('PN10', '2024-10-15', 30000, 1, 0, 0, '2024-10-15', 0, '2024-10-15');
+
 go
 select * from PhieuNhap
+
+INSERT INTO [dbo].[CaLam] (MaCaLam, TenCaLam, GioBatDau, GioKetThuc, is_deleted, created_by, created_at, updated_by, updated_at)
+VALUES
+('CL01', N'Ca Sáng', '06:00', '14:00', 0, 1, GETDATE(), 1, GETDATE()),
+('CL02', N'Ca Chiều', '14:00', '22:00', 0, 1, GETDATE(), 1, GETDATE()),
+('CL03', N'Ca Đêm', '22:00', '06:00', 0, 1, GETDATE(), 1, GETDATE()),
+('CL04', N'Ca Hành Chính', '08:00', '17:00', 0, 1, GETDATE(), 1, GETDATE());
+
+INSERT INTO [dbo].[LichLam] (MaLichLam, NgayLam, idNhanVien, idCaLam, is_deleted, created_by, created_at, updated_by, updated_at)
+VALUES
+('LL01', '2024-10-25', 1, 1, 0, 1, GETDATE(), 1, GETDATE()),
+('LL02', '2024-10-25', 2, 2, 0, 1, GETDATE(), 1, GETDATE()),
+('LL03', '2024-10-26', 3, 3, 0, 1, GETDATE(), 1, GETDATE()),
+('LL04', '2024-10-27', 4, 4, 0, 1, GETDATE(), 1, GETDATE());
+
+
+INSERT INTO [dbo].[ChiTietPhieuNhap] (SoLuong, DonGia, idPhieuNhap, idSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
+VALUES
+(10, 15000, 1, 1, 0, 1, GETDATE(), 1, GETDATE()),
+(20, 20000, 2, 2, 0, 1, GETDATE(), 1, GETDATE()),
+(15, 30000, 3, 3, 0, 1, GETDATE(), 1, GETDATE()),
+(5, 50000, 4, 4, 0, 1, GETDATE(), 1, GETDATE()),
+(8, 10000, 5, 5, 0, 1, GETDATE(), 1, GETDATE());

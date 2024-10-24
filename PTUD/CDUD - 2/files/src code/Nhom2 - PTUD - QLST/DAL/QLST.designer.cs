@@ -1478,13 +1478,13 @@ namespace DAL
 		
 		private string _MaChiTietBangLuong;
 		
+		private double _SoGioCongThucTe;
+		
 		private int _idBangLuong;
 		
 		private int _idNhanVien;
 		
 		private int _idLichLam;
-		
-		private double _SoGioCongThucTe;
 		
 		private int _is_deleted;
 		
@@ -1508,14 +1508,14 @@ namespace DAL
     partial void OnidChanged();
     partial void OnMaChiTietBangLuongChanging(string value);
     partial void OnMaChiTietBangLuongChanged();
+    partial void OnSoGioCongThucTeChanging(double value);
+    partial void OnSoGioCongThucTeChanged();
     partial void OnidBangLuongChanging(int value);
     partial void OnidBangLuongChanged();
     partial void OnidNhanVienChanging(int value);
     partial void OnidNhanVienChanged();
     partial void OnidLichLamChanging(int value);
     partial void OnidLichLamChanged();
-    partial void OnSoGioCongThucTeChanging(double value);
-    partial void OnSoGioCongThucTeChanged();
     partial void Onis_deletedChanging(int value);
     partial void Onis_deletedChanged();
     partial void Oncreated_byChanging(int value);
@@ -1571,6 +1571,26 @@ namespace DAL
 					this._MaChiTietBangLuong = value;
 					this.SendPropertyChanged("MaChiTietBangLuong");
 					this.OnMaChiTietBangLuongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoGioCongThucTe", DbType="Float NOT NULL")]
+		public double SoGioCongThucTe
+		{
+			get
+			{
+				return this._SoGioCongThucTe;
+			}
+			set
+			{
+				if ((this._SoGioCongThucTe != value))
+				{
+					this.OnSoGioCongThucTeChanging(value);
+					this.SendPropertyChanging();
+					this._SoGioCongThucTe = value;
+					this.SendPropertyChanged("SoGioCongThucTe");
+					this.OnSoGioCongThucTeChanged();
 				}
 			}
 		}
@@ -1639,26 +1659,6 @@ namespace DAL
 					this._idLichLam = value;
 					this.SendPropertyChanged("idLichLam");
 					this.OnidLichLamChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoGioCongThucTe", DbType="Float NOT NULL")]
-		public double SoGioCongThucTe
-		{
-			get
-			{
-				return this._SoGioCongThucTe;
-			}
-			set
-			{
-				if ((this._SoGioCongThucTe != value))
-				{
-					this.OnSoGioCongThucTeChanging(value);
-					this.SendPropertyChanging();
-					this._SoGioCongThucTe = value;
-					this.SendPropertyChanged("SoGioCongThucTe");
-					this.OnSoGioCongThucTeChanged();
 				}
 			}
 		}
@@ -1860,11 +1860,11 @@ namespace DAL
 		
 		private int _id;
 		
+		private int _SoLuong;
+		
 		private int _idHoaDon;
 		
 		private int _idSanPham;
-		
-		private int _SoLuong;
 		
 		private int _is_deleted;
 		
@@ -1886,12 +1886,12 @@ namespace DAL
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
+    partial void OnSoLuongChanging(int value);
+    partial void OnSoLuongChanged();
     partial void OnidHoaDonChanging(int value);
     partial void OnidHoaDonChanged();
     partial void OnidSanPhamChanging(int value);
     partial void OnidSanPhamChanged();
-    partial void OnSoLuongChanging(int value);
-    partial void OnSoLuongChanged();
     partial void Onis_deletedChanging(int value);
     partial void Onis_deletedChanged();
     partial void Oncreated_byChanging(int value);
@@ -1927,6 +1927,26 @@ namespace DAL
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int NOT NULL")]
+		public int SoLuong
+		{
+			get
+			{
+				return this._SoLuong;
+			}
+			set
+			{
+				if ((this._SoLuong != value))
+				{
+					this.OnSoLuongChanging(value);
+					this.SendPropertyChanging();
+					this._SoLuong = value;
+					this.SendPropertyChanged("SoLuong");
+					this.OnSoLuongChanged();
 				}
 			}
 		}
@@ -1975,26 +1995,6 @@ namespace DAL
 					this._idSanPham = value;
 					this.SendPropertyChanged("idSanPham");
 					this.OnidSanPhamChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int NOT NULL")]
-		public int SoLuong
-		{
-			get
-			{
-				return this._SoLuong;
-			}
-			set
-			{
-				if ((this._SoLuong != value))
-				{
-					this.OnSoLuongChanging(value);
-					this.SendPropertyChanging();
-					this._SoLuong = value;
-					this.SendPropertyChanged("SoLuong");
-					this.OnSoLuongChanged();
 				}
 			}
 		}
@@ -2196,13 +2196,13 @@ namespace DAL
 		
 		private int _id;
 		
-		private int _idPhieuNhap;
-		
-		private int _idSanPham;
-		
 		private int _SoLuong;
 		
 		private double _DonGia;
+		
+		private int _idPhieuNhap;
+		
+		private int _idSanPham;
 		
 		private int _is_deleted;
 		
@@ -2224,14 +2224,14 @@ namespace DAL
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnidPhieuNhapChanging(int value);
-    partial void OnidPhieuNhapChanged();
-    partial void OnidSanPhamChanging(int value);
-    partial void OnidSanPhamChanged();
     partial void OnSoLuongChanging(int value);
     partial void OnSoLuongChanged();
     partial void OnDonGiaChanging(double value);
     partial void OnDonGiaChanged();
+    partial void OnidPhieuNhapChanging(int value);
+    partial void OnidPhieuNhapChanged();
+    partial void OnidSanPhamChanging(int value);
+    partial void OnidSanPhamChanged();
     partial void Onis_deletedChanging(int value);
     partial void Onis_deletedChanged();
     partial void Oncreated_byChanging(int value);
@@ -2267,6 +2267,46 @@ namespace DAL
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int NOT NULL")]
+		public int SoLuong
+		{
+			get
+			{
+				return this._SoLuong;
+			}
+			set
+			{
+				if ((this._SoLuong != value))
+				{
+					this.OnSoLuongChanging(value);
+					this.SendPropertyChanging();
+					this._SoLuong = value;
+					this.SendPropertyChanged("SoLuong");
+					this.OnSoLuongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonGia", DbType="Float NOT NULL")]
+		public double DonGia
+		{
+			get
+			{
+				return this._DonGia;
+			}
+			set
+			{
+				if ((this._DonGia != value))
+				{
+					this.OnDonGiaChanging(value);
+					this.SendPropertyChanging();
+					this._DonGia = value;
+					this.SendPropertyChanged("DonGia");
+					this.OnDonGiaChanged();
 				}
 			}
 		}
@@ -2315,46 +2355,6 @@ namespace DAL
 					this._idSanPham = value;
 					this.SendPropertyChanged("idSanPham");
 					this.OnidSanPhamChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int NOT NULL")]
-		public int SoLuong
-		{
-			get
-			{
-				return this._SoLuong;
-			}
-			set
-			{
-				if ((this._SoLuong != value))
-				{
-					this.OnSoLuongChanging(value);
-					this.SendPropertyChanging();
-					this._SoLuong = value;
-					this.SendPropertyChanged("SoLuong");
-					this.OnSoLuongChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonGia", DbType="Float NOT NULL")]
-		public double DonGia
-		{
-			get
-			{
-				return this._DonGia;
-			}
-			set
-			{
-				if ((this._DonGia != value))
-				{
-					this.OnDonGiaChanging(value);
-					this.SendPropertyChanging();
-					this._DonGia = value;
-					this.SendPropertyChanged("DonGia");
-					this.OnDonGiaChanged();
 				}
 			}
 		}
@@ -2558,19 +2558,19 @@ namespace DAL
 		
 		private string _MaHoaDon;
 		
-		private int _idNhanVien;
-		
-		private int _idKhachHang;
-		
 		private System.DateTime _NgayLapHD;
 		
 		private System.Data.Linq.Binary _GioLapHD;
 		
-		private int _idKhuyenMai;
-		
 		private double _TongTien;
 		
 		private double _ThanhTien;
+		
+		private int _idKhachHang;
+		
+		private int _idKhuyenMai;
+		
+		private int _idNhanVien;
 		
 		private int _is_deleted;
 		
@@ -2598,20 +2598,20 @@ namespace DAL
     partial void OnidChanged();
     partial void OnMaHoaDonChanging(string value);
     partial void OnMaHoaDonChanged();
-    partial void OnidNhanVienChanging(int value);
-    partial void OnidNhanVienChanged();
-    partial void OnidKhachHangChanging(int value);
-    partial void OnidKhachHangChanged();
     partial void OnNgayLapHDChanging(System.DateTime value);
     partial void OnNgayLapHDChanged();
     partial void OnGioLapHDChanging(System.Data.Linq.Binary value);
     partial void OnGioLapHDChanged();
-    partial void OnidKhuyenMaiChanging(int value);
-    partial void OnidKhuyenMaiChanged();
     partial void OnTongTienChanging(double value);
     partial void OnTongTienChanged();
     partial void OnThanhTienChanging(double value);
     partial void OnThanhTienChanged();
+    partial void OnidKhachHangChanging(int value);
+    partial void OnidKhachHangChanged();
+    partial void OnidKhuyenMaiChanging(int value);
+    partial void OnidKhuyenMaiChanged();
+    partial void OnidNhanVienChanging(int value);
+    partial void OnidNhanVienChanged();
     partial void Onis_deletedChanging(int value);
     partial void Onis_deletedChanged();
     partial void Oncreated_byChanging(int value);
@@ -2673,54 +2673,6 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNhanVien", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int idNhanVien
-		{
-			get
-			{
-				return this._idNhanVien;
-			}
-			set
-			{
-				if ((this._idNhanVien != value))
-				{
-					if (this._NhanVien.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidNhanVienChanging(value);
-					this.SendPropertyChanging();
-					this._idNhanVien = value;
-					this.SendPropertyChanged("idNhanVien");
-					this.OnidNhanVienChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKhachHang", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int idKhachHang
-		{
-			get
-			{
-				return this._idKhachHang;
-			}
-			set
-			{
-				if ((this._idKhachHang != value))
-				{
-					if (this._KhachHang.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidKhachHangChanging(value);
-					this.SendPropertyChanging();
-					this._idKhachHang = value;
-					this.SendPropertyChanged("idKhachHang");
-					this.OnidKhachHangChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLapHD", DbType="Date NOT NULL", UpdateCheck=UpdateCheck.Never)]
 		public System.DateTime NgayLapHD
 		{
@@ -2761,30 +2713,6 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKhuyenMai", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int idKhuyenMai
-		{
-			get
-			{
-				return this._idKhuyenMai;
-			}
-			set
-			{
-				if ((this._idKhuyenMai != value))
-				{
-					if (this._KhuyenMai.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidKhuyenMaiChanging(value);
-					this.SendPropertyChanging();
-					this._idKhuyenMai = value;
-					this.SendPropertyChanged("idKhuyenMai");
-					this.OnidKhuyenMaiChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Float NOT NULL", UpdateCheck=UpdateCheck.Never)]
 		public double TongTien
 		{
@@ -2821,6 +2749,78 @@ namespace DAL
 					this._ThanhTien = value;
 					this.SendPropertyChanged("ThanhTien");
 					this.OnThanhTienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKhachHang", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public int idKhachHang
+		{
+			get
+			{
+				return this._idKhachHang;
+			}
+			set
+			{
+				if ((this._idKhachHang != value))
+				{
+					if (this._KhachHang.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidKhachHangChanging(value);
+					this.SendPropertyChanging();
+					this._idKhachHang = value;
+					this.SendPropertyChanged("idKhachHang");
+					this.OnidKhachHangChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKhuyenMai", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public int idKhuyenMai
+		{
+			get
+			{
+				return this._idKhuyenMai;
+			}
+			set
+			{
+				if ((this._idKhuyenMai != value))
+				{
+					if (this._KhuyenMai.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidKhuyenMaiChanging(value);
+					this.SendPropertyChanging();
+					this._idKhuyenMai = value;
+					this.SendPropertyChanged("idKhuyenMai");
+					this.OnidKhuyenMaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNhanVien", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public int idNhanVien
+		{
+			get
+			{
+				return this._idNhanVien;
+			}
+			set
+			{
+				if ((this._idNhanVien != value))
+				{
+					if (this._NhanVien.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidNhanVienChanging(value);
+					this.SendPropertyChanging();
+					this._idNhanVien = value;
+					this.SendPropertyChanged("idNhanVien");
+					this.OnidNhanVienChanged();
 				}
 			}
 		}
@@ -3387,9 +3387,9 @@ namespace DAL
 		
 		private int _id;
 		
-		private int _idSanPham;
-		
 		private int _SoLuong;
+		
+		private int _idSanPham;
 		
 		private int _is_deleted;
 		
@@ -3409,10 +3409,10 @@ namespace DAL
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnidSanPhamChanging(int value);
-    partial void OnidSanPhamChanged();
     partial void OnSoLuongChanging(int value);
     partial void OnSoLuongChanged();
+    partial void OnidSanPhamChanging(int value);
+    partial void OnidSanPhamChanged();
     partial void Onis_deletedChanging(int value);
     partial void Onis_deletedChanged();
     partial void Oncreated_byChanging(int value);
@@ -3451,6 +3451,26 @@ namespace DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int NOT NULL")]
+		public int SoLuong
+		{
+			get
+			{
+				return this._SoLuong;
+			}
+			set
+			{
+				if ((this._SoLuong != value))
+				{
+					this.OnSoLuongChanging(value);
+					this.SendPropertyChanging();
+					this._SoLuong = value;
+					this.SendPropertyChanged("SoLuong");
+					this.OnSoLuongChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idSanPham", DbType="Int NOT NULL")]
 		public int idSanPham
 		{
@@ -3471,26 +3491,6 @@ namespace DAL
 					this._idSanPham = value;
 					this.SendPropertyChanged("idSanPham");
 					this.OnidSanPhamChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int NOT NULL")]
-		public int SoLuong
-		{
-			get
-			{
-				return this._SoLuong;
-			}
-			set
-			{
-				if ((this._SoLuong != value))
-				{
-					this.OnSoLuongChanging(value);
-					this.SendPropertyChanging();
-					this._SoLuong = value;
-					this.SendPropertyChanged("SoLuong");
-					this.OnSoLuongChanged();
 				}
 			}
 		}
@@ -3942,11 +3942,11 @@ namespace DAL
 		
 		private string _MaLichLam;
 		
+		private System.DateTime _NgayLam;
+		
 		private int _idNhanVien;
 		
 		private int _idCaLam;
-		
-		private System.DateTime _NgayLam;
 		
 		private int _is_deleted;
 		
@@ -3970,12 +3970,12 @@ namespace DAL
     partial void OnidChanged();
     partial void OnMaLichLamChanging(string value);
     partial void OnMaLichLamChanged();
+    partial void OnNgayLamChanging(System.DateTime value);
+    partial void OnNgayLamChanged();
     partial void OnidNhanVienChanging(int value);
     partial void OnidNhanVienChanged();
     partial void OnidCaLamChanging(int value);
     partial void OnidCaLamChanged();
-    partial void OnNgayLamChanging(System.DateTime value);
-    partial void OnNgayLamChanged();
     partial void Onis_deletedChanging(int value);
     partial void Onis_deletedChanged();
     partial void Oncreated_byChanging(int value);
@@ -4035,6 +4035,26 @@ namespace DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLam", DbType="Date NOT NULL")]
+		public System.DateTime NgayLam
+		{
+			get
+			{
+				return this._NgayLam;
+			}
+			set
+			{
+				if ((this._NgayLam != value))
+				{
+					this.OnNgayLamChanging(value);
+					this.SendPropertyChanging();
+					this._NgayLam = value;
+					this.SendPropertyChanged("NgayLam");
+					this.OnNgayLamChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNhanVien", DbType="Int NOT NULL")]
 		public int idNhanVien
 		{
@@ -4079,26 +4099,6 @@ namespace DAL
 					this._idCaLam = value;
 					this.SendPropertyChanged("idCaLam");
 					this.OnidCaLamChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLam", DbType="Date NOT NULL")]
-		public System.DateTime NgayLam
-		{
-			get
-			{
-				return this._NgayLam;
-			}
-			set
-			{
-				if ((this._NgayLam != value))
-				{
-					this.OnNgayLamChanging(value);
-					this.SendPropertyChanging();
-					this._NgayLam = value;
-					this.SendPropertyChanged("NgayLam");
-					this.OnNgayLamChanged();
 				}
 			}
 		}
@@ -4504,7 +4504,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiHang_SanPham", Storage="_SanPhams", ThisKey="id", OtherKey="idNhomHang")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiHang_SanPham", Storage="_SanPhams", ThisKey="id", OtherKey="idLoaiHang")]
 		public EntitySet<SanPham> SanPhams
 		{
 			get
@@ -4558,8 +4558,6 @@ namespace DAL
 		
 		private int _id;
 		
-		private int _idLoaiNhanVien;
-		
 		private string _TenLoaiNhanVien;
 		
 		private bool _is_deleted;
@@ -4580,8 +4578,6 @@ namespace DAL
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnidLoaiNhanVienChanging(int value);
-    partial void OnidLoaiNhanVienChanged();
     partial void OnTenLoaiNhanVienChanging(string value);
     partial void OnTenLoaiNhanVienChanged();
     partial void Onis_deletedChanging(bool value);
@@ -4618,26 +4614,6 @@ namespace DAL
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idLoaiNhanVien", DbType="Int NOT NULL")]
-		public int idLoaiNhanVien
-		{
-			get
-			{
-				return this._idLoaiNhanVien;
-			}
-			set
-			{
-				if ((this._idLoaiNhanVien != value))
-				{
-					this.OnidLoaiNhanVienChanging(value);
-					this.SendPropertyChanging();
-					this._idLoaiNhanVien = value;
-					this.SendPropertyChanged("idLoaiNhanVien");
-					this.OnidLoaiNhanVienChanged();
 				}
 			}
 		}
@@ -5404,11 +5380,11 @@ namespace DAL
 		
 		private string _TenNhanVien;
 		
-		private int _idLoaiNhanVien;
-		
 		private string _SoDienThoai;
 		
 		private string _DiaChi;
+		
+		private int _idLoaiNhanVien;
 		
 		private int _idTaiKhoan;
 		
@@ -5444,12 +5420,12 @@ namespace DAL
     partial void OnMaNhanVienChanged();
     partial void OnTenNhanVienChanging(string value);
     partial void OnTenNhanVienChanged();
-    partial void OnidLoaiNhanVienChanging(int value);
-    partial void OnidLoaiNhanVienChanged();
     partial void OnSoDienThoaiChanging(string value);
     partial void OnSoDienThoaiChanged();
     partial void OnDiaChiChanging(string value);
     partial void OnDiaChiChanged();
+    partial void OnidLoaiNhanVienChanging(int value);
+    partial void OnidLoaiNhanVienChanged();
     partial void OnidTaiKhoanChanging(int value);
     partial void OnidTaiKhoanChanged();
     partial void Onis_deletedChanging(int value);
@@ -5535,30 +5511,6 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idLoaiNhanVien", DbType="Int NOT NULL")]
-		public int idLoaiNhanVien
-		{
-			get
-			{
-				return this._idLoaiNhanVien;
-			}
-			set
-			{
-				if ((this._idLoaiNhanVien != value))
-				{
-					if (this._LoaiNhanVien.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidLoaiNhanVienChanging(value);
-					this.SendPropertyChanging();
-					this._idLoaiNhanVien = value;
-					this.SendPropertyChanged("idLoaiNhanVien");
-					this.OnidLoaiNhanVienChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoDienThoai", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
 		public string SoDienThoai
 		{
@@ -5595,6 +5547,30 @@ namespace DAL
 					this._DiaChi = value;
 					this.SendPropertyChanged("DiaChi");
 					this.OnDiaChiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idLoaiNhanVien", DbType="Int NOT NULL")]
+		public int idLoaiNhanVien
+		{
+			get
+			{
+				return this._idLoaiNhanVien;
+			}
+			set
+			{
+				if ((this._idLoaiNhanVien != value))
+				{
+					if (this._LoaiNhanVien.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidLoaiNhanVienChanging(value);
+					this.SendPropertyChanging();
+					this._idLoaiNhanVien = value;
+					this.SendPropertyChanged("idLoaiNhanVien");
+					this.OnidLoaiNhanVienChanged();
 				}
 			}
 		}
@@ -5922,11 +5898,11 @@ namespace DAL
 		
 		private string _MaPhieuNhap;
 		
-		private int _idNhanVien;
-		
 		private System.DateTime _NgayNhap;
 		
 		private double _ThanhTien;
+		
+		private int _idNhanVien;
 		
 		private int _is_deleted;
 		
@@ -5950,12 +5926,12 @@ namespace DAL
     partial void OnidChanged();
     partial void OnMaPhieuNhapChanging(string value);
     partial void OnMaPhieuNhapChanged();
-    partial void OnidNhanVienChanging(int value);
-    partial void OnidNhanVienChanged();
     partial void OnNgayNhapChanging(System.DateTime value);
     partial void OnNgayNhapChanged();
     partial void OnThanhTienChanging(double value);
     partial void OnThanhTienChanged();
+    partial void OnidNhanVienChanging(int value);
+    partial void OnidNhanVienChanged();
     partial void Onis_deletedChanging(int value);
     partial void Onis_deletedChanged();
     partial void Oncreated_byChanging(int value);
@@ -6015,30 +5991,6 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNhanVien", DbType="Int NOT NULL")]
-		public int idNhanVien
-		{
-			get
-			{
-				return this._idNhanVien;
-			}
-			set
-			{
-				if ((this._idNhanVien != value))
-				{
-					if (this._NhanVien.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidNhanVienChanging(value);
-					this.SendPropertyChanging();
-					this._idNhanVien = value;
-					this.SendPropertyChanged("idNhanVien");
-					this.OnidNhanVienChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayNhap", DbType="Date NOT NULL")]
 		public System.DateTime NgayNhap
 		{
@@ -6075,6 +6027,30 @@ namespace DAL
 					this._ThanhTien = value;
 					this.SendPropertyChanged("ThanhTien");
 					this.OnThanhTienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNhanVien", DbType="Int NOT NULL")]
+		public int idNhanVien
+		{
+			get
+			{
+				return this._idNhanVien;
+			}
+			set
+			{
+				if ((this._idNhanVien != value))
+				{
+					if (this._NhanVien.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidNhanVienChanging(value);
+					this.SendPropertyChanging();
+					this._idNhanVien = value;
+					this.SendPropertyChanged("idNhanVien");
+					this.OnidNhanVienChanged();
 				}
 			}
 		}
@@ -6271,19 +6247,19 @@ namespace DAL
 		
 		private string _TenSanPham;
 		
-		private int _idNhomHang;
-		
 		private string _DonViTinh;
 		
 		private double _DonGia;
-		
-		private int _idNhaCungCap;
 		
 		private System.DateTime _NgaySanXuat;
 		
 		private System.DateTime _HanSuDung;
 		
 		private System.Data.Linq.Binary _AnhSanPham;
+		
+		private int _idLoaiHang;
+		
+		private int _idNhaCungCap;
 		
 		private int _is_deleted;
 		
@@ -6315,20 +6291,20 @@ namespace DAL
     partial void OnMaSanPhamChanged();
     partial void OnTenSanPhamChanging(string value);
     partial void OnTenSanPhamChanged();
-    partial void OnidNhomHangChanging(int value);
-    partial void OnidNhomHangChanged();
     partial void OnDonViTinhChanging(string value);
     partial void OnDonViTinhChanged();
     partial void OnDonGiaChanging(double value);
     partial void OnDonGiaChanged();
-    partial void OnidNhaCungCapChanging(int value);
-    partial void OnidNhaCungCapChanged();
     partial void OnNgaySanXuatChanging(System.DateTime value);
     partial void OnNgaySanXuatChanged();
     partial void OnHanSuDungChanging(System.DateTime value);
     partial void OnHanSuDungChanged();
     partial void OnAnhSanPhamChanging(System.Data.Linq.Binary value);
     partial void OnAnhSanPhamChanged();
+    partial void OnidLoaiHangChanging(int value);
+    partial void OnidLoaiHangChanged();
+    partial void OnidNhaCungCapChanging(int value);
+    partial void OnidNhaCungCapChanged();
     partial void Onis_deletedChanging(int value);
     partial void Onis_deletedChanged();
     partial void Oncreated_byChanging(int value);
@@ -6411,30 +6387,6 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNhomHang", DbType="Int NOT NULL")]
-		public int idNhomHang
-		{
-			get
-			{
-				return this._idNhomHang;
-			}
-			set
-			{
-				if ((this._idNhomHang != value))
-				{
-					if (this._LoaiHang.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidNhomHangChanging(value);
-					this.SendPropertyChanging();
-					this._idNhomHang = value;
-					this.SendPropertyChanged("idNhomHang");
-					this.OnidNhomHangChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonViTinh", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
 		public string DonViTinh
 		{
@@ -6471,30 +6423,6 @@ namespace DAL
 					this._DonGia = value;
 					this.SendPropertyChanged("DonGia");
 					this.OnDonGiaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNhaCungCap", DbType="Int NOT NULL")]
-		public int idNhaCungCap
-		{
-			get
-			{
-				return this._idNhaCungCap;
-			}
-			set
-			{
-				if ((this._idNhaCungCap != value))
-				{
-					if (this._NhaCungCap.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidNhaCungCapChanging(value);
-					this.SendPropertyChanging();
-					this._idNhaCungCap = value;
-					this.SendPropertyChanged("idNhaCungCap");
-					this.OnidNhaCungCapChanged();
 				}
 			}
 		}
@@ -6539,7 +6467,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AnhSanPham", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AnhSanPham", DbType="VarBinary(MAX)", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary AnhSanPham
 		{
 			get
@@ -6555,6 +6483,54 @@ namespace DAL
 					this._AnhSanPham = value;
 					this.SendPropertyChanged("AnhSanPham");
 					this.OnAnhSanPhamChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idLoaiHang", DbType="Int NOT NULL")]
+		public int idLoaiHang
+		{
+			get
+			{
+				return this._idLoaiHang;
+			}
+			set
+			{
+				if ((this._idLoaiHang != value))
+				{
+					if (this._LoaiHang.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidLoaiHangChanging(value);
+					this.SendPropertyChanging();
+					this._idLoaiHang = value;
+					this.SendPropertyChanged("idLoaiHang");
+					this.OnidLoaiHangChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNhaCungCap", DbType="Int NOT NULL")]
+		public int idNhaCungCap
+		{
+			get
+			{
+				return this._idNhaCungCap;
+			}
+			set
+			{
+				if ((this._idNhaCungCap != value))
+				{
+					if (this._NhaCungCap.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidNhaCungCapChanging(value);
+					this.SendPropertyChanging();
+					this._idNhaCungCap = value;
+					this.SendPropertyChanged("idNhaCungCap");
+					this.OnidNhaCungCapChanged();
 				}
 			}
 		}
@@ -6732,7 +6708,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiHang_SanPham", Storage="_LoaiHang", ThisKey="idNhomHang", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiHang_SanPham", Storage="_LoaiHang", ThisKey="idLoaiHang", OtherKey="id", IsForeignKey=true)]
 		public LoaiHang LoaiHang
 		{
 			get
@@ -6755,11 +6731,11 @@ namespace DAL
 					if ((value != null))
 					{
 						value.SanPhams.Add(this);
-						this._idNhomHang = value.id;
+						this._idLoaiHang = value.id;
 					}
 					else
 					{
-						this._idNhomHang = default(int);
+						this._idLoaiHang = default(int);
 					}
 					this.SendPropertyChanged("LoaiHang");
 				}
