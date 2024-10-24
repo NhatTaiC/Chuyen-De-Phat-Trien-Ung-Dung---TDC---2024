@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLySieuThi" Class="QLSTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=QuanLySieuThi;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QuanLySieuThiConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=QuanLySieuThi;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QuanLySieuThiConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BangLuong" Member="BangLuongs">
     <Type Name="BangLuong">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -59,6 +59,24 @@
       <Column Name="updated_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.ChiTietBangLuong" Member="ChiTietBangLuongs">
+    <Type Name="ChiTietBangLuong">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaChiTietBangLuong" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="SoGioCongThucTe" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="NgayLam" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idBangLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idLichLam" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="updated_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="BangLuong_ChiTietBangLuong" Member="BangLuong" ThisKey="idBangLuong" OtherKey="id" Type="BangLuong" IsForeignKey="true" />
+      <Association Name="NhanVien_ChiTietBangLuong" Member="NhanVien" ThisKey="idNhanVien" OtherKey="id" Type="NhanVien" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.ChiTietHoaDon" Member="ChiTietHoaDons">
     <Type Name="ChiTietHoaDon">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -94,8 +112,8 @@
     <Type Name="HoaDon">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaHoaDon" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="NgayLapHD" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="GioLapHD" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="NgayLapHD" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="GioLapHD" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="TongTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="ThanhTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="idKhachHang" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -239,10 +257,10 @@
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="updated_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="updated_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="NhanVien_ChiTietBangLuong" Member="ChiTietBangLuongs" ThisKey="id" OtherKey="idNhanVien" Type="ChiTietBangLuong" />
       <Association Name="NhanVien_HoaDon" Member="HoaDons" ThisKey="id" OtherKey="idNhanVien" Type="HoaDon" />
       <Association Name="NhanVien_LichLam" Member="LichLams" ThisKey="id" OtherKey="idNhanVien" Type="LichLam" />
       <Association Name="NhanVien_PhieuNhap" Member="PhieuNhaps" ThisKey="id" OtherKey="idNhanVien" Type="PhieuNhap" />
-      <Association Name="NhanVien_ChiTietBangLuong" Member="ChiTietBangLuongs" ThisKey="id" OtherKey="idNhanVien" Type="ChiTietBangLuong" />
       <Association Name="LoaiNhanVien_NhanVien" Member="LoaiNhanVien" ThisKey="idLoaiNhanVien" OtherKey="id" Type="LoaiNhanVien" IsForeignKey="true" />
       <Association Name="TaiKhoan_NhanVien" Member="TaiKhoan" ThisKey="idTaiKhoan" OtherKey="id" Type="TaiKhoan" IsForeignKey="true" />
     </Type>
@@ -285,24 +303,6 @@
       <Association Name="SanPham_KhoHang" Member="KhoHangs" ThisKey="id" OtherKey="idSanPham" Type="KhoHang" />
       <Association Name="NhaCungCap_SanPham" Member="NhaCungCap" ThisKey="idNhaCungCap" OtherKey="id" Type="NhaCungCap" IsForeignKey="true" />
       <Association Name="LoaiHang_SanPham" Member="LoaiHang" ThisKey="idLoaiHang" OtherKey="id" Type="LoaiHang" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.ChiTietBangLuong" Member="ChiTietBangLuongs">
-    <Type Name="ChiTietBangLuong">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="MaChiTietBangLuong" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="SoGioCongThucTe" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="idBangLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="idNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="idLichLam" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="updated_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="NgayLam" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="BangLuong_ChiTietBangLuong" Member="BangLuong" ThisKey="idBangLuong" OtherKey="id" Type="BangLuong" IsForeignKey="true" />
-      <Association Name="NhanVien_ChiTietBangLuong" Member="NhanVien" ThisKey="idNhanVien" OtherKey="id" Type="NhanVien" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
