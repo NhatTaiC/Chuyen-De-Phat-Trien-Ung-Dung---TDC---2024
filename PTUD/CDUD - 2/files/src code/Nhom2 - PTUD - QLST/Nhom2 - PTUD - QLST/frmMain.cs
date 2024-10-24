@@ -5,6 +5,7 @@
  * 21/10/2024
  */
 using GUI;
+using Nhom2___PTUD___QLST.VanToan;
 using System.Windows.Forms;
 
 namespace Nhom2___PTUD___QLST
@@ -251,6 +252,90 @@ namespace Nhom2___PTUD___QLST
             else
             {
                 ActForm("frmKhoHang");
+            }
+        }
+
+        private void nhàCungCấpToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmNhaCungCap"))
+            {
+                frmNhaCungCap f = new frmNhaCungCap();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmNhaCungCap");
+            }
+        }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmKhachHang"))
+            {
+                frmKhachHang f = new frmKhachHang();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmKhachHang");
+            }
+        }
+
+        private void phiếuNhậpToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmPhieuNhap"))
+            {
+                frmPhieuNhap f = new frmPhieuNhap();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmPhieuNhap");
+            }
+        }
+
+        private void chiTiếtPhiếuNhậpToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmChiTietPhieuNhap"))
+            {
+                frmChiTietPhieuNhap f = new frmChiTietPhieuNhap();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmChiTietPhieuNhap");
+            }
+        }
+
+        private void caLàmToolStripMenuItem1_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmCaLam"))
+            {
+                frmCaLam f = new frmCaLam();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmCaLam");
+            }
+        }
+
+        private void lịchLàmToolStripMenuItem1_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmLichLam"))
+            {
+                frmLichLam f = new frmLichLam();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmLichLam");
             }
         }
     }

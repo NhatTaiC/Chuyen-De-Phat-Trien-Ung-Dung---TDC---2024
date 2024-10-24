@@ -160,6 +160,42 @@
       <DependentUpon>Demo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="VanToan\frmCaLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VanToan\frmCaLam.Designer.cs">
+      <DependentUpon>frmCaLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VanToan\frmChiTietPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VanToan\frmChiTietPhieuNhap.Designer.cs">
+      <DependentUpon>frmChiTietPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VanToan\frmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VanToan\frmKhachHang.Designer.cs">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VanToan\frmLichLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VanToan\frmLichLam.Designer.cs">
+      <DependentUpon>frmLichLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VanToan\frmNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VanToan\frmNhaCungCap.Designer.cs">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VanToan\frmPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VanToan\frmPhieuNhap.Designer.cs">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="VanToan\frmVanToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +260,24 @@
     <EmbeddedResource Include="Report\Demo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Demo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VanToan\frmCaLam.resx">
+      <DependentUpon>frmCaLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VanToan\frmChiTietPhieuNhap.resx">
+      <DependentUpon>frmChiTietPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VanToan\frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VanToan\frmLichLam.resx">
+      <DependentUpon>frmLichLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VanToan\frmNhaCungCap.resx">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VanToan\frmPhieuNhap.resx">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
