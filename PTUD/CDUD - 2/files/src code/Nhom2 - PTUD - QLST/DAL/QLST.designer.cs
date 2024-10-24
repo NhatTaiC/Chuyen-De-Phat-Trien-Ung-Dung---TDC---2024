@@ -90,7 +90,7 @@ namespace DAL
     #endregion
 		
 		public QLSTDataContext() : 
-				base(global::DAL.Properties.Settings.Default.QuanLySieuThiConnectionString, mappingSource)
+				base(global::DAL.Properties.Settings.Default.QuanLySieuThiConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1480,6 +1480,8 @@ namespace DAL
 		
 		private double _SoGioCongThucTe;
 		
+		private System.Nullable<System.DateTime> _NgayLam;
+		
 		private int _idBangLuong;
 		
 		private int _idNhanVien;
@@ -1510,6 +1512,8 @@ namespace DAL
     partial void OnMaChiTietBangLuongChanged();
     partial void OnSoGioCongThucTeChanging(double value);
     partial void OnSoGioCongThucTeChanged();
+    partial void OnNgayLamChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgayLamChanged();
     partial void OnidBangLuongChanging(int value);
     partial void OnidBangLuongChanged();
     partial void OnidNhanVienChanging(int value);
@@ -1591,6 +1595,26 @@ namespace DAL
 					this._SoGioCongThucTe = value;
 					this.SendPropertyChanged("SoGioCongThucTe");
 					this.OnSoGioCongThucTeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLam", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NgayLam
+		{
+			get
+			{
+				return this._NgayLam;
+			}
+			set
+			{
+				if ((this._NgayLam != value))
+				{
+					this.OnNgayLamChanging(value);
+					this.SendPropertyChanging();
+					this._NgayLam = value;
+					this.SendPropertyChanged("NgayLam");
+					this.OnNgayLamChanged();
 				}
 			}
 		}
@@ -2560,7 +2584,7 @@ namespace DAL
 		
 		private System.DateTime _NgayLapHD;
 		
-		private System.Data.Linq.Binary _GioLapHD;
+		private System.DateTime _GioLapHD;
 		
 		private double _TongTien;
 		
@@ -2600,7 +2624,7 @@ namespace DAL
     partial void OnMaHoaDonChanged();
     partial void OnNgayLapHDChanging(System.DateTime value);
     partial void OnNgayLapHDChanged();
-    partial void OnGioLapHDChanging(System.Data.Linq.Binary value);
+    partial void OnGioLapHDChanging(System.DateTime value);
     partial void OnGioLapHDChanged();
     partial void OnTongTienChanging(double value);
     partial void OnTongTienChanged();
@@ -2633,7 +2657,7 @@ namespace DAL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id
 		{
 			get
@@ -2653,7 +2677,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaHoaDon", DbType="VarChar(30)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaHoaDon", DbType="VarChar(30)")]
 		public string MaHoaDon
 		{
 			get
@@ -2673,7 +2697,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLapHD", DbType="Date NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLapHD", DbType="DateTime NOT NULL")]
 		public System.DateTime NgayLapHD
 		{
 			get
@@ -2693,8 +2717,8 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioLapHD", AutoSync=AutoSync.Always, DbType="rowversion NOT NULL", CanBeNull=false, IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary GioLapHD
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioLapHD", DbType="DateTime NOT NULL")]
+		public System.DateTime GioLapHD
 		{
 			get
 			{
@@ -2713,7 +2737,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Float NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Float NOT NULL")]
 		public double TongTien
 		{
 			get
@@ -2733,7 +2757,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Float NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Float NOT NULL")]
 		public double ThanhTien
 		{
 			get
@@ -2753,7 +2777,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKhachHang", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKhachHang", DbType="Int NOT NULL")]
 		public int idKhachHang
 		{
 			get
@@ -2777,7 +2801,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKhuyenMai", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKhuyenMai", DbType="Int NOT NULL")]
 		public int idKhuyenMai
 		{
 			get
@@ -2801,7 +2825,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNhanVien", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNhanVien", DbType="Int NOT NULL")]
 		public int idNhanVien
 		{
 			get
@@ -2825,7 +2849,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_is_deleted", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_is_deleted", DbType="Int NOT NULL")]
 		public int is_deleted
 		{
 			get
@@ -2845,7 +2869,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_created_by", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_created_by", DbType="Int NOT NULL")]
 		public int created_by
 		{
 			get
@@ -2865,7 +2889,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_created_at", DbType="DateTime NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_created_at", DbType="DateTime NOT NULL")]
 		public System.DateTime created_at
 		{
 			get
@@ -2885,7 +2909,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_updated_by", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_updated_by", DbType="Int NOT NULL")]
 		public int updated_by
 		{
 			get
@@ -2905,7 +2929,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_updated_at", DbType="DateTime NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_updated_at", DbType="DateTime NOT NULL")]
 		public System.DateTime updated_at
 		{
 			get

@@ -53,7 +53,20 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-5. SanPham - Luong
+5. NhaCungCap - Toan
+id:int:pk,
+maNhaCungCap:varchar(30):null,
+tenNhaCungCap:nvarchar(100):notNull,
+soDienThoai:varchar(10):notNull,
+diaChi:nvarchar(100):notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+6. SanPham - Luong
 id:int:pk,
 maSanPham:varchar(30):null, 
 tenSanPham:nvarchar(100):notNull,
@@ -71,23 +84,10 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-6. KhoHang - Luong
+7. KhoHang - Luong
 id:int:pk,
 idSanPham:int:fk,
 soLuong:int:notNull,
-is_deleted:int:notNull,
-created_by:int:notNull,
-created_at:datetime:notNull,
-updated_by:int:notNull,
-updated_at:datetime:notNull
-
-
-7. NhaCungCap - Toan
-id:int:pk,
-maNhaCungCap:varchar(30):null,
-tenNhaCungCap:nvarchar(100):notNull,
-soDienThoai:varchar(10):notNull,
-diaChi:nvarchar(100):notNull,
 is_deleted:int:notNull,
 created_by:int:notNull,
 created_at:datetime:notNull,
@@ -159,6 +159,7 @@ created_by:int:notNull,
 created_at:datetime:notNull,
 updated_by:int:notNull,
 updated_at:datetime:notNull
+
 
 13. KhuyenMai - Tai
 id:int:pk,

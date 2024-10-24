@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLySieuThi" Class="QLSTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=QuanLySieuThi;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QuanLySieuThiConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=QuanLySieuThi;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QuanLySieuThiConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BangLuong" Member="BangLuongs">
     <Type Name="BangLuong">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -64,6 +64,7 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaChiTietBangLuong" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="SoGioCongThucTe" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="NgayLam" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="idBangLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="idNhanVien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="idLichLam" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -111,8 +112,8 @@
     <Type Name="HoaDon">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaHoaDon" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="NgayLapHD" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="GioLapHD" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="NgayLapHD" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="GioLapHD" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="TongTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="ThanhTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="idKhachHang" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
