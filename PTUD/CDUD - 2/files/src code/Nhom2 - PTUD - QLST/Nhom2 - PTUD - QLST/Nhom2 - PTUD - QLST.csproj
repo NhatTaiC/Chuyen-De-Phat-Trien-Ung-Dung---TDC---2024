@@ -86,6 +86,12 @@
     <Compile Include="NhatTai\frmHoaDon.Designer.cs">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhatTai\frmHoaDon_Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhatTai\frmHoaDon_Default.Designer.cs">
+      <DependentUpon>frmHoaDon_Default.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhatTai\frmKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhatTai\frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhatTai\frmHoaDon_Default.resx">
+      <DependentUpon>frmHoaDon_Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhatTai\frmKhuyenMai.resx">
       <DependentUpon>frmKhuyenMai.cs</DependentUpon>
