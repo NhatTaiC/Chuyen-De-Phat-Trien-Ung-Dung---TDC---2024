@@ -22,19 +22,19 @@ namespace Nhom2___PTUD___QLST
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //// Mở frmFlash lên trước
+            //// Open frmFlash
             //frmFlash f = new frmFlash();
             //f.ShowDialog();
 
-            //// Xác thực frmFlash == OK
+            //// frmFlash == OK
             //if (f.DialogResult == DialogResult.OK)
             //{
-            //    // Mở frmDangNhap
+            //    // Open frmDangNhap
             //    frmDangNhap fDN = new frmDangNhap();
             //    fDN.ShowDialog();
             //}
 
-            Application.Run(new frmTaiKhoan());
+            Application.Run(new frmMain());
         }
     }
 }

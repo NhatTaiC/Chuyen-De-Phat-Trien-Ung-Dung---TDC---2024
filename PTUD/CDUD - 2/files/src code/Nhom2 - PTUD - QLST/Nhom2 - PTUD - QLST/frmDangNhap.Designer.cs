@@ -106,9 +106,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(108, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 18);
+            this.label1.Size = new System.Drawing.Size(274, 18);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Chào mừng đến với ứng dụng";
+            this.label1.Text = "Chào mừng đến với ứng dụng QLST\r\n";
             // 
             // label2
             // 

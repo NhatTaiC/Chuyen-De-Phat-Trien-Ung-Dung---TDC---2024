@@ -36,26 +36,20 @@ namespace Nhom2___PTUD___QLST
         // btnDangNhap_Click
         private void btnDangNhap_Click(object sender, System.EventArgs e)
         {
+            // Initialize Variables
             string taiKhoan = txtTaiKhoan.Text.Trim();
             string matKhau = txtMatKhau.Text.Trim();
 
             // Verify Account
             if (bus_tk.CheckTaiKhoan(taiKhoan, matKhau))
             {
-                //MessageBox.Show("Đăng nhập thành công!", "Thông báo",
-                //    MessageBoxButtons.OK,
-                //    MessageBoxIcon.Information);
-
-                //MessageBox.Show(bus_tk.GetRole(taiKhoan, matKhau).ToString(), "Thông báo",
-                //    MessageBoxButtons.OK,
-                //    MessageBoxIcon.Information);
-
-
                 int quyen = bus_tk.GetRole(taiKhoan, matKhau);
 
                 // Mở frmMain
                 frmMain f = new frmMain(taiKhoan, quyen);
                 f.ShowDialog();
+
+                // Đóng frmDangNhap
                 this.Close();
             }
             else

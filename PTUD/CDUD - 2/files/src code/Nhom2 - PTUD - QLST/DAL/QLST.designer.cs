@@ -698,7 +698,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhau", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhau", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
 		public string MatKhau
 		{
 			get
@@ -4558,9 +4558,11 @@ namespace DAL
 		
 		private int _id;
 		
+		private string _MaLoaiNhanVien;
+		
 		private string _TenLoaiNhanVien;
 		
-		private bool _is_deleted;
+		private int _is_deleted;
 		
 		private int _created_by;
 		
@@ -4578,9 +4580,11 @@ namespace DAL
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
+    partial void OnMaLoaiNhanVienChanging(string value);
+    partial void OnMaLoaiNhanVienChanged();
     partial void OnTenLoaiNhanVienChanging(string value);
     partial void OnTenLoaiNhanVienChanged();
-    partial void Onis_deletedChanging(bool value);
+    partial void Onis_deletedChanging(int value);
     partial void Onis_deletedChanged();
     partial void Oncreated_byChanging(int value);
     partial void Oncreated_byChanged();
@@ -4618,7 +4622,27 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenLoaiNhanVien", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoaiNhanVien", DbType="VarChar(30)")]
+		public string MaLoaiNhanVien
+		{
+			get
+			{
+				return this._MaLoaiNhanVien;
+			}
+			set
+			{
+				if ((this._MaLoaiNhanVien != value))
+				{
+					this.OnMaLoaiNhanVienChanging(value);
+					this.SendPropertyChanging();
+					this._MaLoaiNhanVien = value;
+					this.SendPropertyChanged("MaLoaiNhanVien");
+					this.OnMaLoaiNhanVienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenLoaiNhanVien", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string TenLoaiNhanVien
 		{
 			get
@@ -4638,8 +4662,8 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_is_deleted", DbType="Bit NOT NULL")]
-		public bool is_deleted
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_is_deleted", DbType="Int NOT NULL")]
+		public int is_deleted
 		{
 			get
 			{
@@ -6467,7 +6491,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AnhSanPham", DbType="VarBinary(MAX)", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AnhSanPham", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary AnhSanPham
 		{
 			get

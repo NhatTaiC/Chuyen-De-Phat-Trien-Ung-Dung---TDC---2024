@@ -17,23 +17,9 @@ namespace Nhom2___PTUD___QLST
             InitializeComponent();
         }
 
-        //// Initialize Variables
-        //public static SqlConnection Con; // Khai báo đối tượng kết nối DB
-
-        //// Function OpenConnect()
-        //public void OpenConnect()
-        //{
-        //    // Mở kết nối DB
-        //    Con = new SqlConnection();
-        //    Con.ConnectionString = Properties.Settings.Default.tspConnect;
-        //    Con.Open();
-        //}
-
         // frmFlashForm_Load
         private void frmFlashForm_Load(object sender, EventArgs e)
         {
-            //// Mở kết nối DB
-            //OpenConnect();
         }
 
         // timer1_Tick
