@@ -13,7 +13,7 @@ namespace BUS
     {
         // Fields
         private DAL_TaiKhoan dal_tk = new DAL_TaiKhoan();
-
+        private DatabaseAccess dbAccess = new DatabaseAccess();
         // Methods
         public bool CheckTaiKhoan(string taiKhoan, string matKhau)
         {
@@ -23,6 +23,11 @@ namespace BUS
         public IQueryable LayDSTK()
         {
             return dal_tk.LayDSTK();
+        }
+        //làm mới lại database
+        public void ResetData()
+        {
+            
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DTO;
+using GUI;
+using System;
 using System.Windows.Forms;
 
 namespace Nhom2___PTUD___QLST
@@ -13,7 +15,7 @@ namespace Nhom2___PTUD___QLST
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmBangLuong());
         }
     }
 }
