@@ -3,7 +3,7 @@ Ngay: 26/09/2024
 Review By NhatTai
 
 ===== Data Tables =====
-1. TaiKhoan
+1. TaiKhoan - Tai
 id:int:pk,
 maTaiKhoan:varchar(30):null,
 tenTaiKhoan:varchar(100):notNull,
@@ -16,7 +16,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-2. LoaiNhanVien
+2. LoaiNhanVien - Tai
 id:int:pk,
 maLoaiNhanVien:varchar(30):null,
 tenLoaiNhanVien:nvarchar(100):notNull,
@@ -27,7 +27,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-3. NhanVien
+3. NhanVien - Tai
 id:int:pk,
 maNhanVien:varchar(30):null,
 tenNhanVien:nvarchar(100):notNull,
@@ -42,7 +42,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-4. LoaiHang
+4. LoaiHang - Luong
 id:int:pk,
 maLoaiHang:varchar(30):null,
 tenLoaiHang:nvarchar(100)notNull, 
@@ -53,7 +53,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-5. SanPham
+5. SanPham - Luong
 id:int:pk,
 maSanPham:varchar(30):null, 
 tenSanPham:nvarchar(100):notNull,
@@ -71,7 +71,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-6. KhoHang
+6. KhoHang - Luong
 id:int:pk,
 idSanPham:int:fk,
 soLuong:int:notNull,
@@ -82,7 +82,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-7. NhaCungCap
+7. NhaCungCap - Toan
 id:int:pk,
 maNhaCungCap:varchar(30):null,
 tenNhaCungCap:nvarchar(100):notNull,
@@ -95,7 +95,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-8. KhachHang
+8. KhachHang - Toan
 id:int:pk,
 maKhachHang:varchar(30):null, 
 tenKhachHang:nvarchar(100):notNull,
@@ -109,7 +109,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-9. PhieuNhap
+9. PhieuNhap - Toan
 id:int:pk,
 maPhieuNhap:varchar(30):null,
 idNhanVien:int:fk,
@@ -122,7 +122,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-10. ChiTietPhieuNhap
+10. ChiTietPhieuNhap - Toan
 id:int:pk,
 soLuong:int:notNull,
 donGia:float:notNull,
@@ -135,7 +135,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-11. CaLam
+11. CaLam - Toan
 id:int:pk,
 maCaLam:varchar(30):null,
 tenCaLam:nvarchar(100):notNull,
@@ -148,7 +148,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-12. LichLam
+12. LichLam - Toan
 id:int:pk,
 maLichLam:varchar(30):null,
 ngayLam:date:notNull, 
@@ -160,7 +160,7 @@ created_at:datetime:notNull,
 updated_by:int:notNull,
 updated_at:datetime:notNull
 
-13. KhuyenMai
+13. KhuyenMai - Tai
 id:int:pk,
 maKhuyenMai:varchar(30):null,
 tenKhuyenMai:nvarchar(100):notNull,
@@ -173,7 +173,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-14. HoaDon
+14. HoaDon - Tai
 id:int:pk,
 maHoaDon:varchar(30):null,
 ngayLapHD:datetime:notNull, 
@@ -190,7 +190,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-15. ChiTietHoaDon
+15. ChiTietHoaDon - Tai
 id:int:pk,
 soLuong:int:notNull, 
 idHoaDon:int:fk,
@@ -202,7 +202,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-16. BangLuong
+16. BangLuong - Luong
 id:int:pk,
 maBangLuong:varchar(30):null, 
 ngayLanhLuong:date:notNull,
@@ -215,7 +215,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-17. ChiTietBangLuong
+17. ChiTietBangLuong - Luong
 id:int:pk,
 maChiTietLuong:varchar(30):null,
 ngay:date:notNull,
@@ -230,7 +230,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-18. ChiNhanh
+18. ChiNhanh - Luong
 id:int:pk,
 maChiNhanh:varchar(30):null,
 tenChiNhanh:nvarchar(100):notNull,
@@ -243,7 +243,7 @@ updated_by:int:notNull,
 updated_at:datetime:notNull
 
 
-19. Log
+19. Log - Tai
 id:int:pk,
 log_name:nvarchar(100):notNull,
 model:nvarchar(100):notNull, 

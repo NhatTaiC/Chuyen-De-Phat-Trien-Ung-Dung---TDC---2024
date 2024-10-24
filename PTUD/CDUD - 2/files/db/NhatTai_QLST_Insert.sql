@@ -60,19 +60,34 @@ VALUES
 ('KM010', N'Giảm giá kỷ niệm', 100.0, 0, 0, GETDATE(), 0, GETDATE());
 GO
 
+-- KhachHang
+INSERT INTO KhachHang (MaKhachHang, TenKhachHang, SoDienThoai, Diem, is_deleted, created_by, created_at, updated_by, updated_at)
+VALUES 
+('KH00',N'Khách vãng lai','0123456789', 0, 0, 0, GETDATE(), 0, GETDATE()),
+('KH01',N'Hồ Nhật Tâm','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE()),
+('KH02',N'Trần Hoàng Diệu','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE()),
+('KH03',N'Võ Nguyên Giáp','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE()),
+('KH04',N'Phạm Ngũ Lão','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE()),
+('KH05',N'Nguyễn Thị Thập','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE()),
+('KH06',N'Lư Gia Khang','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE()),
+('KH07',N'Phạm Kim Ngân','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE()),
+('KH08',N'Hồ Hải','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE()),
+('KH09',N'Nguyễn Thị Thủy','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE()),
+('KH010',N'Khuất Văn Khang','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE()),
+('KH011',N'Hoàng Anh Tuấn','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE());
+GO
+
 -- HoaDon
-/*
 INSERT INTO HoaDon (MaHoaDon, NgayLapHD, GioLapHD, TongTien, ThanhTien, idKhachHang, idKhuyenMai, idNhanVien, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 ('HD001', GETDATE(), GETDATE(), 0, 0, 1, 5, 3, 0, 0, GETDATE(), 0, GETDATE()),
-('HD002', GETDATE(), GETDATE(), 0, 0, 2, 6, 7, 0, 0, GETDATE(), 0, GETDATE()),
-('HD003', GETDATE(), GETDATE(), 0, 0, 3, 4, 2, 0, 0, GETDATE(), 0, GETDATE()),
-('HD004', GETDATE(), GETDATE(), 0, 0, 4, 9, 8, 0, 0, GETDATE(), 0, GETDATE()),
-('HD005', GETDATE(), GETDATE(), 0, 0, 5, 3, 6, 0, 0, GETDATE(), 0, GETDATE()),
-('HD006', GETDATE(), GETDATE(), 0, 0, 6, 1, 9, 0, 0, GETDATE(), 0, GETDATE()),
-('HD007', GETDATE(), GETDATE(), 0, 0, 7, 10, 4, 0, 0, GETDATE(), 0, GETDATE()),
-('HD008', GETDATE(), GETDATE(), 0, 0, 8, 2, 5, 0, 0, GETDATE(), 0, GETDATE()),
-('HD009', GETDATE(), GETDATE(), 0, 0, 9, 8, 1, 0, 0, GETDATE(), 0, GETDATE()),
-('HD010', GETDATE(), GETDATE(), 0, 0, 10, 7, 10, 0, 0, GETDATE(), 0, GETDATE());
+('HD002', GETDATE(), GETDATE(), 0, 0, 1, 6, 7, 0, 0, GETDATE(), 0, GETDATE()),
+('HD003', GETDATE(), GETDATE(), 0, 0, 1, 4, 2, 0, 0, GETDATE(), 0, GETDATE()),
+('HD004', GETDATE(), GETDATE(), 0, 0, 1, 9, 8, 0, 0, GETDATE(), 0, GETDATE()),
+('HD005', GETDATE(), GETDATE(), 0, 0, 1, 3, 6, 0, 0, GETDATE(), 0, GETDATE()),
+('HD006', GETDATE(), GETDATE(), 0, 0, 1, 1, 9, 0, 0, GETDATE(), 0, GETDATE()),
+('HD007', GETDATE(), GETDATE(), 0, 0, 1, 10, 4, 0, 0, GETDATE(), 0, GETDATE()),
+('HD008', GETDATE(), GETDATE(), 0, 0, 1, 2, 5, 0, 0, GETDATE(), 0, GETDATE()),
+('HD009', GETDATE(), GETDATE(), 0, 0, 1, 8, 1, 0, 0, GETDATE(), 0, GETDATE()),
+('HD010', GETDATE(), GETDATE(), 0, 0, 1, 7, 10, 0, 0, GETDATE(), 0, GETDATE());
 GO
-*/
