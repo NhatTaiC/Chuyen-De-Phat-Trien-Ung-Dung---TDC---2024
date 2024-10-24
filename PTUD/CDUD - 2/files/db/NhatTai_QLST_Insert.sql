@@ -44,3 +44,35 @@ INSERT INTO NhanVien (MaNhanVien, TenNhanVien, idLoaiNhanVien, SoDienThoai, DiaC
 ('NV009', N'Vũ Văn I', 1, '0913751930', N'Số 466 đường ABC, Quận 1', 9, 0, 0, GETDATE(), 0, GETDATE()),
 ('NV010', N'Bùi Thị K', 10, '0961054267', N'Số 909 đường ABC, Quận 2', 10, 0, 0, GETDATE(), 0, GETDATE());
 GO
+
+-- KhuyenMai
+INSERT INTO KhuyenMai (MaKhuyenMai, TenKhuyenMai, GiaTri, is_deleted, created_by, created_at, updated_by, updated_at)
+VALUES 
+('KM001', N'Giảm giá 10%', 10.0, 0, 0, GETDATE(), 0, GETDATE()),
+('KM002', N'Giảm giá 20%', 20.0, 0, 0, GETDATE(), 0, GETDATE()),
+('KM003', N'Khuyến mãi đặc biệt', 30.0, 0, 0, GETDATE(), 0, GETDATE()),
+('KM004', N'Ưu đãi mùa hè', 40.0, 0, 0, GETDATE(), 0, GETDATE()),
+('KM005', N'Mua 1 tặng 1', 50.0, 0, 0, GETDATE(), 0, GETDATE()),
+('KM006', N'Giảm giá cuối tuần', 60.0, 0, 0, GETDATE(), 0, GETDATE()),
+('KM007', N'Ưu đãi sinh nhật', 70.0, 0, 0, GETDATE(), 0, GETDATE()),
+('KM008', N'Giảm giá Black Friday', 80.0, 0, 0, GETDATE(), 0, GETDATE()),
+('KM009', N'Khuyến mãi tháng 10', 90.0, 0, 0, GETDATE(), 0, GETDATE()),
+('KM010', N'Giảm giá kỷ niệm', 100.0, 0, 0, GETDATE(), 0, GETDATE());
+GO
+
+-- HoaDon
+/*
+INSERT INTO HoaDon (MaHoaDon, NgayLapHD, GioLapHD, TongTien, ThanhTien, idKhachHang, idKhuyenMai, idNhanVien, is_deleted, created_by, created_at, updated_by, updated_at)
+VALUES
+('HD001', GETDATE(), GETDATE(), 0, 0, 1, 5, 3, 0, 0, GETDATE(), 0, GETDATE()),
+('HD002', GETDATE(), GETDATE(), 0, 0, 2, 6, 7, 0, 0, GETDATE(), 0, GETDATE()),
+('HD003', GETDATE(), GETDATE(), 0, 0, 3, 4, 2, 0, 0, GETDATE(), 0, GETDATE()),
+('HD004', GETDATE(), GETDATE(), 0, 0, 4, 9, 8, 0, 0, GETDATE(), 0, GETDATE()),
+('HD005', GETDATE(), GETDATE(), 0, 0, 5, 3, 6, 0, 0, GETDATE(), 0, GETDATE()),
+('HD006', GETDATE(), GETDATE(), 0, 0, 6, 1, 9, 0, 0, GETDATE(), 0, GETDATE()),
+('HD007', GETDATE(), GETDATE(), 0, 0, 7, 10, 4, 0, 0, GETDATE(), 0, GETDATE()),
+('HD008', GETDATE(), GETDATE(), 0, 0, 8, 2, 5, 0, 0, GETDATE(), 0, GETDATE()),
+('HD009', GETDATE(), GETDATE(), 0, 0, 9, 8, 1, 0, 0, GETDATE(), 0, GETDATE()),
+('HD010', GETDATE(), GETDATE(), 0, 0, 10, 7, 10, 0, 0, GETDATE(), 0, GETDATE());
+GO
+*/

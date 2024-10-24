@@ -96,13 +96,13 @@ namespace Nhom2___PTUD___QLST
             }
 
             // Checked soDT
-            if (CheckNumber2(soDT))
+            if (CheckNumber(soDT))
             {
                 count += 1;
             }
             else
             {
-                MessageBox.Show($"Số điện thoại: [{soDT}] không quá 20 kí tự!",
+                MessageBox.Show($"Số điện thoại: [{soDT}] không quá 20 kí tự và phải nhập số!",
                     "Thông báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -128,39 +128,21 @@ namespace Nhom2___PTUD___QLST
             return false;
         }
 
-        public bool CheckNumber(string soDT)
+        public bool CheckNumber(string name)
         {
-            if (soDT == null)
+            if (name == null)
             {
                 return false;
             }
 
-            for (int i = 0; i < soDT.Length; i++)
-            {
-                if (soDT[i] >= 'a' && soDT[i] <= 'z' || soDT[i] >= 'A' && soDT[i] <= 'Z')
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        public bool CheckNumber2(string soDT)
-        {
-            if (soDT == null)
+            if (name.Length > 20)
             {
                 return false;
             }
 
-            if (soDT.Length > 20)
+            for (int i = 0; i < name.Length; i++)
             {
-                return false;
-            }
-
-            for (int i = 0; i < soDT.Length; i++)
-            {
-                if (soDT[i] >= 'a' && soDT[i] <= 'z' || soDT[i] >= 'A' && soDT[i] <= 'Z')
+                if (name[i] >= 'a' && name[i] <= 'z' || name[i] >= 'A' && name[i] <= 'Z')
                 {
                     return false;
                 }
