@@ -4,6 +4,7 @@
  * frmMain.cs
  * 21/10/2024
  */
+using GUI;
 using System.Windows.Forms;
 
 namespace Nhom2___PTUD___QLST
@@ -180,6 +181,76 @@ namespace Nhom2___PTUD___QLST
             else
             {
                 ActForm("frmKhuyenMai");
+            }
+        }
+
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmSanPham"))
+            {
+                frmSanPham f = new frmSanPham();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmSanPham");
+            }
+        }
+
+        private void loạiHàngToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmLoaiHang"))
+            {
+                frmLoaiHang f = new frmLoaiHang();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmLoaiHang");
+            }
+        }
+
+        private void bảngLươngToolStripMenuItem1_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmBangLuong"))
+            {
+                frmBangLuong f = new frmBangLuong();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmBangLuong");
+            }
+        }
+
+        private void chiNhánhToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmChiNhanh"))
+            {
+                frmChiNhanh f = new frmChiNhanh();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmChiNhanh");
+            }
+        }
+
+        private void khoHàngToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmKhoHang"))
+            {
+                frmKhoHang f = new frmKhoHang();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmKhoHang");
             }
         }
     }

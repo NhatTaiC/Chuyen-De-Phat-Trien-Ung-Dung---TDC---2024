@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DTO
+{
+    public class DTO_ChiTietBangLuong
+    {
+        private int id;
+        private float soGioCongThucTe;
+        private int idBangLuong;
+        private int idLichLam;
+        private int idNhanVien;
+        private DateTime ngayLam;
+
+        public DTO_ChiTietBangLuong(float soGioCongThucTe, int idBangLuong, int idLichLam, int idNhanVien, DateTime ngayLam)
+        {
+            this.soGioCongThucTe = soGioCongThucTe;
+            this.idBangLuong = idBangLuong;
+            this.idLichLam = idLichLam;
+            this.idNhanVien = idNhanVien;
+            this.ngayLam = ngayLam;
+        }
+
+        public DTO_ChiTietBangLuong(int id, float soGioCongThucTe, int idBangLuong, int idLichLam, int idNhanVien, DateTime ngayLam)
+        {
+            this.id = id;
+            this.soGioCongThucTe = soGioCongThucTe;
+            this.idBangLuong = idBangLuong;
+            this.idLichLam = idLichLam;
+            this.idNhanVien = idNhanVien;
+            this.ngayLam = ngayLam;
+        }
+
+        public int Id { get => id; set => id = value; }
+        public float SoGioCongThucTe { get => soGioCongThucTe; set => soGioCongThucTe = value; }
+        public int IdBangLuong { get => idBangLuong; set => idBangLuong = value; }
+        public int IdLichLam { get => idLichLam; set => idLichLam = value; }
+        public int IdNhanVien { get => idNhanVien; set => idNhanVien = value; }
+        public DateTime NgayLam { get => ngayLam; set => ngayLam = value; }
+    }
+}

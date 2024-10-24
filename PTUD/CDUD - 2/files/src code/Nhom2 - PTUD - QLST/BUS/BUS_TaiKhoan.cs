@@ -14,7 +14,7 @@ namespace BUS
     {
         // Fields
         private DAL_TaiKhoan dal_tk = new DAL_TaiKhoan();
-
+        private DatabaseAccess dbAccess = new DatabaseAccess();
         // Methods
         public bool CheckTaiKhoan(string taiKhoan, string matKhau)
         {
@@ -59,6 +59,11 @@ namespace BUS
         public void DelTK(int id)
         {
             dal_tk.DelTK(id);
+        }
+        //làm mới lại database
+        public void ResetData()
+        {
+            
         }
     }
 }

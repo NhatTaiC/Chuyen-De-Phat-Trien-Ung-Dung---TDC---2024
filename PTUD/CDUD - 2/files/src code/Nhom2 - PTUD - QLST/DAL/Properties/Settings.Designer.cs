@@ -33,5 +33,16 @@ namespace DAL.Properties {
                 return ((string)(this["QuanLySieuThiConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=QuanLySieuThi;Integrated Security=True;E" +
+            "ncrypt=True;TrustServerCertificate=True")]
+        public string QuanLySieuThiConnectionString1 {
+            get {
+                return ((string)(this["QuanLySieuThiConnectionString1"]));
+            }
+        }
     }
 }

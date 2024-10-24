@@ -41,9 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="BUS_KhuyenMai.cs" />
     <Compile Include="BUS_LoaiNhanVien.cs" />
     <Compile Include="BUS_NhanVien.cs" />
+=======
+    <Compile Include="BUS_BangLuong.cs" />
+    <Compile Include="BUS_ChiNhanh.cs" />
+    <Compile Include="BUS_ChiTietBangLuong.cs" />
+    <Compile Include="BUS_KhoHang.cs" />
+    <Compile Include="BUS_LoaiHang.cs" />
+    <Compile Include="BUS_SanPham.cs" />
+>>>>>>> QuocLuong
     <Compile Include="BUS_TaiKhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

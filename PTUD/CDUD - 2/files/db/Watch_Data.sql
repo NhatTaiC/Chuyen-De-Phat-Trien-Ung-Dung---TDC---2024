@@ -1,3 +1,5 @@
+use QuanLySieuThi
+
 select * from TaiKhoan
 
 select * from LoaiNhanVien
