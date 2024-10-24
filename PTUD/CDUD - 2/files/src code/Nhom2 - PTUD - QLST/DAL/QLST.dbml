@@ -20,7 +20,7 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaTaiKhoan" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="TenTaiKhoan" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="MatKhau" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="Quyen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -203,8 +203,9 @@
   <Table Name="dbo.LoaiNhanVien" Member="LoaiNhanViens">
     <Type Name="LoaiNhanVien">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TenLoaiNhanVien" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="is_deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MaLoaiNhanVien" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TenLoaiNhanVien" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="is_deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="updated_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
