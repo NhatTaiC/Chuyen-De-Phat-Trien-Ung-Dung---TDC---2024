@@ -79,8 +79,8 @@ namespace DAL
                 // Cập nhật tổng số giờ công cho bảng lương tương ứng
                 bangluongcapnhat.TongGioCong = tongGioCong;
 
-                // Cập nhật lương (ví dụ với hệ số lương là 100.000 VND cho mỗi giờ làm)
-                bangluongcapnhat.Luong = tongGioCong * 100000;
+                // Cập nhật lương (ví dụ với hệ số lương là 50.000 VND cho mỗi giờ làm)
+                bangluongcapnhat.Luong = tongGioCong * 50000;
 
                 da.Db.SubmitChanges();
               

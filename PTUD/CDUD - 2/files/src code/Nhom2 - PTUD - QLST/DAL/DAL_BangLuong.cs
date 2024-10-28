@@ -42,11 +42,13 @@ namespace DAL
                             b.ThangNam,
                             b.TongGioCong,
                             b.Luong,
+                            b.MaBangLuong,
                             ct.idNhanVien
                         } into g
                         select new
                         {
                             g.Key.id,
+                            g.Key.MaBangLuong,
                             g.Key.ThangNam,
                             g.Key.TongGioCong,
                             g.Key.Luong,

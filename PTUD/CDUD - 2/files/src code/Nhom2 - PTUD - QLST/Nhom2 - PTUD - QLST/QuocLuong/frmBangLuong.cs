@@ -133,6 +133,9 @@ namespace GUI
             cbLichLam.Enabled = true;
             cbNhanVien.Enabled = true;
             txtMaPhieuNhap.ReadOnly = false;
+            txtGioCong.Clear();
+            txtLuong.Clear();
+            txtMaPhieuNhap.Clear();
 
         }
 
@@ -272,5 +275,14 @@ namespace GUI
                 txtGioCong.Focus();
             }
         }
-    }
+
+		private void btnThoat_Click(object sender, EventArgs e)
+		{
+            DialogResult rs = MessageBox.Show("Bạn chắc thoát không?","Thoát",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes) 
+            {
+                this.Close();
+            }
+		}
+	}
 }
