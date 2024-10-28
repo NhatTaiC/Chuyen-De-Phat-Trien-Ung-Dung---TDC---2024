@@ -34,6 +34,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,11 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_CaLam.cs" />
+    <Compile Include="DAL_ChiTietPhieuNhap.cs" />
+    <Compile Include="DAL_KhachHang.cs" />
+    <Compile Include="DAL_KhuyenMai.cs" />
+    <Compile Include="DAL_LichLam.cs" />
+    <Compile Include="DAL_LoaiNhanVien.cs" />
+    <Compile Include="DAL_NhaCungCap.cs" />
+    <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_BangLuong.cs" />
     <Compile Include="DAL_ChiNhanh.cs" />
     <Compile Include="DAL_ChiTietBangLuong.cs" />
     <Compile Include="DAL_KhoHang.cs" />
     <Compile Include="DAL_LoaiHang.cs" />
+    <Compile Include="DAL_PhieuNhap.cs" />
     <Compile Include="DAL_SanPham.cs" />
     <Compile Include="DAL_TaiKhoan.cs" />
     <Compile Include="DatabaseAccess.cs" />

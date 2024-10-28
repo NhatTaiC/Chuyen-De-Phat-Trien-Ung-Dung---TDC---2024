@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Nhom2___PTUD___QLST.NhatTai
 {
-    public partial class frmNhatTai : Form
+    public partial class frmHoaDon : Form
     {
-        public frmNhatTai()
+        public frmHoaDon()
         {
             InitializeComponent();
         }

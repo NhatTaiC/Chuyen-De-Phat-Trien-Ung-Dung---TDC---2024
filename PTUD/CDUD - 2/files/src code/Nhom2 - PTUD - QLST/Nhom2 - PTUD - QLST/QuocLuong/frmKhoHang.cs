@@ -106,5 +106,19 @@ namespace GUI
             txtSoLuong.Clear();
             LoadKhoHang();
         }
-    }
+
+		private void btnThoat_Click(object sender, EventArgs e)
+		{
+			DialogResult rs = MessageBox.Show("Bạn chắc thoát không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (rs == DialogResult.Yes)
+			{
+				this.Close();
+			}
+		}
+
+		private void btnLamMoi_Click(object sender, EventArgs e)
+		{
+			LamMoi();
+		}
+	}
 }
