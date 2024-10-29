@@ -20,10 +20,8 @@ namespace DAL
             try
             {
                 return (from ct in da.Db.ChiTietBangLuongs
-                        join nv in da.Db.NhanViens
-                        on ct.idNhanVien equals nv.id
                         where ct.is_deleted == 0
-                        select new { ct.id, ct.idBangLuong, nv.TenNhanVien,ct.NgayLam, ct.SoGioCongThucTe });
+                        select new { ct.id, ct.idBangLuong, ct.NgayLam, ct.SoGioCongThucTe });
             }
             catch (Exception ex)
             {
@@ -38,10 +36,9 @@ namespace DAL
             try
             {
                 return (from ct in da.Db.ChiTietBangLuongs
-                        join nv in da.Db.NhanViens
-                        on ct.idNhanVien equals nv.id
+                        //on ct.idNhanVien equals nv.id
                         where ct.is_deleted == 0 && ct.idBangLuong == idBangLuong
-                        select new { ct.id, ct.idBangLuong,nv.TenNhanVien, ct.NgayLam, ct.SoGioCongThucTe});
+                        select new { ct.id, ct.idBangLuong, ct.NgayLam, ct.SoGioCongThucTe});
             }
             catch (Exception ex)
             {
@@ -59,7 +56,7 @@ namespace DAL
             {
                     ChiTietBangLuong chi = new ChiTietBangLuong{ 
                         idBangLuong = ctbl.IdBangLuong,
-                        idNhanVien = ctbl.IdNhanVien,
+                        //idNhanVien = ctbl.IdNhanVien,
                         idLichLam = ctbl.IdLichLam,
                         SoGioCongThucTe = ctbl.SoGioCongThucTe,
                         NgayLam = ctbl.NgayLam,
