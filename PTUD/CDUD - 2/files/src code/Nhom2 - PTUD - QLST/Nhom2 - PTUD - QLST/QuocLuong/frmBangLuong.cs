@@ -32,17 +32,27 @@ namespace GUI
 
         private void frmBangLuong_Load(object sender, EventArgs e)
         {
-            //Tải dữ liệu bang lương
-            LoadDSBangLuong();
-            //tải dữ liệu chi tiết bảng lương
-            LoadDSChiTietBangLuong();
-            //load combobox
-            LoadCbNhanVien();
-            //btn luu
-            btnLuu.Enabled = false;
-            btnHuy.Enabled = false;
-            //cb lich lam
-            LoadCBLichLam();
+
+            try
+            {
+                //Tải dữ liệu bang lương
+                LoadDSBangLuong();
+                //tải dữ liệu chi tiết bảng lương
+                LoadDSChiTietBangLuong();
+                //load combobox
+                LoadCbNhanVien();
+                //btn luu
+                btnLuu.Enabled = false;
+                btnHuy.Enabled = false;
+                //cb lich lam
+                LoadCBLichLam();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
 
         }
         //load cb lich làm
@@ -61,6 +71,7 @@ namespace GUI
             dgvBangLuong.Columns["TongGioCong"].HeaderText = "Tổng giờ công";
             dgvBangLuong.Columns["Luong"].HeaderText = "Lương";
             dgvBangLuong.Columns["ThangNam"].HeaderText = "Tháng/Năm";
+            dgvBangLuong.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
             //format
             dgvBangLuong.Columns["ThangNam"].DefaultCellStyle.Format = "MM/yyyy";
             //ẩn cột
@@ -72,16 +83,15 @@ namespace GUI
         //lay danh sách bảng lương có điều kiện
         private void LoadDSBangLuong(int idNhanVien)
         {
+            //lay danh sách bảng lương ko có điều kiện
             dgvBangLuong.DataSource = bus_bangluong.LayDSBangLuong(idNhanVien);
             //dổi tên cột
-            //dgvBangLuong.Columns["id"].HeaderText = "Mã bảng lương";
             dgvBangLuong.Columns["TongGioCong"].HeaderText = "Tổng giờ công";
             dgvBangLuong.Columns["Luong"].HeaderText = "Lương";
             dgvBangLuong.Columns["ThangNam"].HeaderText = "Tháng/Năm";
-            dgvBangLuong.Columns["TenNhanVien"].HeaderText = "Tên nhân viêns";    
+            dgvBangLuong.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
             //format
             dgvBangLuong.Columns["ThangNam"].DefaultCellStyle.Format = "MM/yyyy";
-            //dgvBangLuong.Columns["id"].Visible = false;
             //ẩn cột
             dgvBangLuong.Columns["id"].Visible = false;
             dgvBangLuong.Columns["idNhanVien"].Visible = false;
@@ -145,22 +155,31 @@ namespace GUI
 
         private void dgvBangLuong_Click(object sender, EventArgs e)
         {
-
-            if (dgvBangLuong.Rows.Count > 0)
+            try
             {
-                //lấy dòng đang click
-                int dong = dgvBangLuong.CurrentRow.Index;
-                //điền thông tin lên textbox
-                txtLuong.Text = dgvBangLuong.Rows[dong].Cells["Luong"].Value.ToString();
-                //txtTenChiNhanh.Text = dgvChiNhanh.Rows[dong].Cells["TenChiNhanh"].Value.ToString();
-                //txtDiaChi.Text = dgvChiNhanh.Rows[dong].Cells["DiaChi"].Value.ToString();
-                //txtSoDienThoai.Text = dgvChiNhanh.Rows[dong].Cells["SoDienThoai"].Value.ToString();
-                //gán id cho currnentID
-                currentIDBangLuong = int.Parse(dgvBangLuong.Rows[dong].Cells["id"].Value.ToString());
-                //load danh sách chi tiet bang lương có điều kiện
-                LoadDSChiTietBangLuong(currentIDBangLuong);
-                txtMaPhieuNhap.Text = dgvBangLuong.Rows[dong].Cells["MaBangLuong"].Value.ToString();
+                if (dgvBangLuong.Rows.Count > 0)
+                {
+                    //lấy dòng đang click
+                    int dong = dgvBangLuong.CurrentRow.Index;
+                    //điền thông tin lên textbox
+                    txtLuong.Text = dgvBangLuong.Rows[dong].Cells["Luong"].Value.ToString();
+                    //txtTenChiNhanh.Text = dgvChiNhanh.Rows[dong].Cells["TenChiNhanh"].Value.ToString();
+                    //txtDiaChi.Text = dgvChiNhanh.Rows[dong].Cells["DiaChi"].Value.ToString();
+                    //txtSoDienThoai.Text = dgvChiNhanh.Rows[dong].Cells["SoDienThoai"].Value.ToString();
+                    //gán id cho currnentID
+                    currentIDBangLuong = int.Parse(dgvBangLuong.Rows[dong].Cells["id"].Value.ToString());
+                    //load danh sách chi tiet bang lương có điều kiện
+                    LoadDSChiTietBangLuong(currentIDBangLuong);
+                    txtMaPhieuNhap.Text = dgvBangLuong.Rows[dong].Cells["MaBangLuong"].Value.ToString();
+                    cbNhanVien.SelectedValue = int.Parse(dgvBangLuong.Rows[dong].Cells["idNhanVien"].Value.ToString());
+                }
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
 
 
@@ -289,5 +308,5 @@ namespace GUI
                 this.Close();
             }
 		}
-	}
+    }
 }
