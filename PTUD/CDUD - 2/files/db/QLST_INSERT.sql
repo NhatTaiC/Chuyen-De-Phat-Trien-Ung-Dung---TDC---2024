@@ -260,90 +260,90 @@ GO
 
 --Bảng lương
 -- Thêm dữ liệu tổng lương cho tháng 9/2024
-INSERT INTO BangLuong (MaBangLuong,ThangNam, TongGioCong, Luong, is_deleted, created_by, created_at, updated_by, updated_at)
+INSERT INTO BangLuong (MaBangLuong,idNhanVien,ThangNam, TongGioCong, Luong, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
-('BL001','2024-09-01', 176, 15000000, 0, 0, GETDATE(), 0, GETDATE()),  -- Nhân viên 1, 22 ngày * 8 giờ
-('BL002','2024-09-01', 160, 14000000, 0, 0, GETDATE(), 0, GETDATE()),  -- Nhân viên 2, 20 ngày * 8 giờ
-('BL003','2024-09-01', 144, 13000000, 0, 0, GETDATE(), 0, GETDATE());  -- Nhân viên 3, 18 ngày * 8 giờ
+('BL001',1,'2024-09-01', 176, 15000000, 0, 0, GETDATE(), 0, GETDATE()),  -- Nhân viên 1, 22 ngày * 8 giờ
+('BL002',2,'2024-09-01', 160, 14000000, 0, 0, GETDATE(), 0, GETDATE()),  -- Nhân viên 2, 20 ngày * 8 giờ
+('BL003',3,'2024-09-01', 144, 13000000, 0, 0, GETDATE(), 0, GETDATE());  -- Nhân viên 3, 18 ngày * 8 giờ
 GO
 
 -- chi tiết bảng lương
 -- Nhân viên 1, làm đủ 22 ngày
-INSERT INTO ChiTietBangLuong (SoGioCongThucTe, idBangLuong, idNhanVien, idLichLam, NgayLam, is_deleted, created_by, created_at, updated_by, updated_at)
+INSERT INTO ChiTietBangLuong (SoGioCongThucTe, idBangLuong, idLichLam, NgayLam, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
-(8, 1, 1, 101, '2024-09-01', 0, 0, GETDATE(), 0, GETDATE()),  -- 01/09/2024
-(8, 1, 1, 102, '2024-09-02', 0, 0, GETDATE(), 0, GETDATE()),  -- 02/09/2024
-(8, 1, 1, 103, '2024-09-03', 0, 0, GETDATE(), 0, GETDATE()),  -- 03/09/2024
-(8, 1, 1, 104, '2024-09-04', 0, 0, GETDATE(), 0, GETDATE()),  -- 04/09/2024
-(8, 1, 1, 105, '2024-09-05', 0, 0, GETDATE(), 0, GETDATE()),  -- 05/09/2024
-(8, 1, 1, 106, '2024-09-06', 0, 0, GETDATE(), 0, GETDATE()),  -- 06/09/2024
-(8, 1, 1, 107, '2024-09-07', 0, 0, GETDATE(), 0, GETDATE()),  -- 07/09/2024
-(8, 1, 1, 108, '2024-09-08', 0, 0, GETDATE(), 0, GETDATE()),  -- 08/09/2024
-(8, 1, 1, 109, '2024-09-09', 0, 0, GETDATE(), 0, GETDATE()),  -- 09/09/2024
-(8, 1, 1, 110, '2024-09-10', 0, 0, GETDATE(), 0, GETDATE()),  -- 10/09/2024
-(8, 1, 1, 111, '2024-09-11', 0, 0, GETDATE(), 0, GETDATE()),  -- 11/09/2024
-(8, 1, 1, 112, '2024-09-12', 0, 0, GETDATE(), 0, GETDATE()),  -- 12/09/2024
-(8, 1, 1, 113, '2024-09-13', 0, 0, GETDATE(), 0, GETDATE()),  -- 13/09/2024
-(8, 1, 1, 114, '2024-09-14', 0, 0, GETDATE(), 0, GETDATE()),  -- 14/09/2024
-(8, 1, 1, 115, '2024-09-15', 0, 0, GETDATE(), 0, GETDATE()),  -- 15/09/2024
-(8, 1, 1, 116, '2024-09-16', 0, 0, GETDATE(), 0, GETDATE()),  -- 16/09/2024
-(8, 1, 1, 117, '2024-09-17', 0, 0, GETDATE(), 0, GETDATE()),  -- 17/09/2024
-(8, 1, 1, 118, '2024-09-18', 0, 0, GETDATE(), 0, GETDATE()),  -- 18/09/2024
-(8, 1, 1, 119, '2024-09-19', 0, 0, GETDATE(), 0, GETDATE()),  -- 19/09/2024
-(8, 1, 1, 120, '2024-09-20', 0, 0, GETDATE(), 0, GETDATE()),  -- 20/09/2024
-(8, 1, 1, 121, '2024-09-21', 0, 0, GETDATE(), 0, GETDATE()),  -- 21/09/2024
-(8, 1, 1, 122, '2024-09-22', 0, 0, GETDATE(), 0, GETDATE());  -- 22/09/2024
+(8, 1, 101, '2024-09-01', 0, 0, GETDATE(), 0, GETDATE()),  -- 01/09/2024
+(8, 1, 102, '2024-09-02', 0, 0, GETDATE(), 0, GETDATE()),  -- 02/09/2024
+(8, 1, 103, '2024-09-03', 0, 0, GETDATE(), 0, GETDATE()),  -- 03/09/2024
+(8, 1, 104, '2024-09-04', 0, 0, GETDATE(), 0, GETDATE()),  -- 04/09/2024
+(8, 1, 105, '2024-09-05', 0, 0, GETDATE(), 0, GETDATE()),  -- 05/09/2024
+(8, 1, 106, '2024-09-06', 0, 0, GETDATE(), 0, GETDATE()),  -- 06/09/2024
+(8, 1, 107, '2024-09-07', 0, 0, GETDATE(), 0, GETDATE()),  -- 07/09/2024
+(8, 1, 108, '2024-09-08', 0, 0, GETDATE(), 0, GETDATE()),  -- 08/09/2024
+(8, 1, 109, '2024-09-09', 0, 0, GETDATE(), 0, GETDATE()),  -- 09/09/2024
+(8, 1, 110, '2024-09-10', 0, 0, GETDATE(), 0, GETDATE()),  -- 10/09/2024
+(8, 1, 111, '2024-09-11', 0, 0, GETDATE(), 0, GETDATE()),  -- 11/09/2024
+(8, 1, 112, '2024-09-12', 0, 0, GETDATE(), 0, GETDATE()),  -- 12/09/2024
+(8, 1, 113, '2024-09-13', 0, 0, GETDATE(), 0, GETDATE()),  -- 13/09/2024
+(8, 1, 114, '2024-09-14', 0, 0, GETDATE(), 0, GETDATE()),  -- 14/09/2024
+(8, 1, 115, '2024-09-15', 0, 0, GETDATE(), 0, GETDATE()),  -- 15/09/2024
+(8, 1, 116, '2024-09-16', 0, 0, GETDATE(), 0, GETDATE()),  -- 16/09/2024
+(8, 1, 117, '2024-09-17', 0, 0, GETDATE(), 0, GETDATE()),  -- 17/09/2024
+(8, 1, 118, '2024-09-18', 0, 0, GETDATE(), 0, GETDATE()),  -- 18/09/2024
+(8, 1, 119, '2024-09-19', 0, 0, GETDATE(), 0, GETDATE()),  -- 19/09/2024
+(8, 1, 120, '2024-09-20', 0, 0, GETDATE(), 0, GETDATE()),  -- 20/09/2024
+(8, 1, 121, '2024-09-21', 0, 0, GETDATE(), 0, GETDATE()),  -- 21/09/2024
+(8, 1, 122, '2024-09-22', 0, 0, GETDATE(), 0, GETDATE());  -- 22/09/2024
 GO
 
 -- Nhân viên 2, nghỉ 2 ngày, làm 20 ngày
-INSERT INTO ChiTietBangLuong (SoGioCongThucTe, idBangLuong, idNhanVien, idLichLam, NgayLam, is_deleted, created_by, created_at, updated_by, updated_at)
+INSERT INTO ChiTietBangLuong (SoGioCongThucTe, idBangLuong, idLichLam, NgayLam, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
-(8, 2, 2, 101, '2024-09-01', 0, 0, GETDATE(), 0, GETDATE()),  -- 01/09/2024
+(8, 2, 101, '2024-09-01', 0, 0, GETDATE(), 0, GETDATE()),  -- 01/09/2024
 -- nghỉ ngày 02/09/2024
-(8, 2, 2, 103, '2024-09-03', 0, 0, GETDATE(), 0, GETDATE()),  -- 03/09/2024
-(8, 2, 2, 104, '2024-09-04', 0, 0, GETDATE(), 0, GETDATE()),  -- 04/09/2024
-(8, 2, 2, 105, '2024-09-05', 0, 0, GETDATE(), 0, GETDATE()),  -- 05/09/2024
-(8, 2, 2, 106, '2024-09-06', 0, 0, GETDATE(), 0, GETDATE()),  -- 06/09/2024
-(8, 2, 2, 107, '2024-09-07', 0, 0, GETDATE(), 0, GETDATE()),  -- 07/09/2024
-(8, 2, 2, 108, '2024-09-08', 0, 0, GETDATE(), 0, GETDATE()),  -- 08/09/2024
-(8, 2, 2, 109, '2024-09-09', 0, 0, GETDATE(), 0, GETDATE()),  -- 09/09/2024
-(8, 2, 2, 110, '2024-09-10', 0, 0, GETDATE(), 0, GETDATE()),  -- 10/09/2024
-(8, 2, 2, 111, '2024-09-11', 0, 0, GETDATE(), 0, GETDATE()),  -- 11/09/2024
-(8, 2, 2, 112, '2024-09-12', 0, 0, GETDATE(), 0, GETDATE()),  -- 12/09/2024
-(8, 2, 2, 113, '2024-09-13', 0, 0, GETDATE(), 0, GETDATE()),  -- 13/09/2024
-(8, 2, 2, 114, '2024-09-14', 0, 0, GETDATE(), 0, GETDATE()),  -- 14/09/2024
-(8, 2, 2, 115, '2024-09-15', 0, 0, GETDATE(), 0, GETDATE()),  -- 15/09/2024
-(8, 2, 2, 116, '2024-09-16', 0, 0, GETDATE(), 0, GETDATE()),  -- 16/09/2024
-(8, 2, 2, 117, '2024-09-17', 0, 0, GETDATE(), 0, GETDATE()),  -- 17/09/2024
-(8, 2, 2, 118, '2024-09-18', 0, 0, GETDATE(), 0, GETDATE()),  -- 18/09/2024
-(8, 2, 2, 119, '2024-09-19', 0, 0, GETDATE(), 0, GETDATE()),  -- 19/09/2024
-(8, 2, 2, 120, '2024-09-20', 0, 0, GETDATE(), 0, GETDATE()),  -- 20/09/2024
-(8, 2, 2, 121, '2024-09-21', 0, 0, GETDATE(), 0, GETDATE());  -- 21/09/2024
+(8, 2, 103, '2024-09-03', 0, 0, GETDATE(), 0, GETDATE()),  -- 03/09/2024
+(8, 2, 104, '2024-09-04', 0, 0, GETDATE(), 0, GETDATE()),  -- 04/09/2024
+(8, 2, 105, '2024-09-05', 0, 0, GETDATE(), 0, GETDATE()),  -- 05/09/2024
+(8, 2, 106, '2024-09-06', 0, 0, GETDATE(), 0, GETDATE()),  -- 06/09/2024
+(8, 2, 107, '2024-09-07', 0, 0, GETDATE(), 0, GETDATE()),  -- 07/09/2024
+(8, 2, 108, '2024-09-08', 0, 0, GETDATE(), 0, GETDATE()),  -- 08/09/2024
+(8, 2, 109, '2024-09-09', 0, 0, GETDATE(), 0, GETDATE()),  -- 09/09/2024
+(8, 2, 110, '2024-09-10', 0, 0, GETDATE(), 0, GETDATE()),  -- 10/09/2024
+(8, 2, 111, '2024-09-11', 0, 0, GETDATE(), 0, GETDATE()),  -- 11/09/2024
+(8, 2, 112, '2024-09-12', 0, 0, GETDATE(), 0, GETDATE()),  -- 12/09/2024
+(8, 2, 113, '2024-09-13', 0, 0, GETDATE(), 0, GETDATE()),  -- 13/09/2024
+(8, 2, 114, '2024-09-14', 0, 0, GETDATE(), 0, GETDATE()),  -- 14/09/2024
+(8, 2, 115, '2024-09-15', 0, 0, GETDATE(), 0, GETDATE()),  -- 15/09/2024
+(8, 2, 116, '2024-09-16', 0, 0, GETDATE(), 0, GETDATE()),  -- 16/09/2024
+(8, 2, 117, '2024-09-17', 0, 0, GETDATE(), 0, GETDATE()),  -- 17/09/2024
+(8, 2, 118, '2024-09-18', 0, 0, GETDATE(), 0, GETDATE()),  -- 18/09/2024
+(8, 2, 119, '2024-09-19', 0, 0, GETDATE(), 0, GETDATE()),  -- 19/09/2024
+(8, 2, 120, '2024-09-20', 0, 0, GETDATE(), 0, GETDATE()),  -- 20/09/2024
+(8, 2, 121, '2024-09-21', 0, 0, GETDATE(), 0, GETDATE());  -- 21/09/2024
 GO
 
 -- Nhân viên 3, nghỉ 4 ngày, làm 18 ngày
-INSERT INTO ChiTietBangLuong (SoGioCongThucTe, idBangLuong, idNhanVien, idLichLam, NgayLam, is_deleted, created_by, created_at, updated_by, updated_at)
+INSERT INTO ChiTietBangLuong (SoGioCongThucTe, idBangLuong, idLichLam, NgayLam, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
-(8, 3, 3, 101, '2024-09-01', 0, 0, GETDATE(), 0, GETDATE()),  -- 01/09/2024
+(8, 3, 101, '2024-09-01', 0, 0, GETDATE(), 0, GETDATE()),  -- 01/09/2024
 -- nghỉ ngày 02/09/2024, 03/09/2024
-(8, 3, 3, 104, '2024-09-04', 0, 0, GETDATE(), 0, GETDATE()),  -- 04/09/2024
-(8, 3, 3, 105, '2024-09-05', 0, 0, GETDATE(), 0, GETDATE()),  -- 05/09/2024
-(8, 3, 3, 106, '2024-09-06', 0, 0, GETDATE(), 0, GETDATE()),  -- 06/09/2024
-(8, 3, 3, 107, '2024-09-07', 0, 0, GETDATE(), 0, GETDATE()),  -- 07/09/2024
-(8, 3, 3, 108, '2024-09-08', 0, 0, GETDATE(), 0, GETDATE()),  -- 08/09/2024
-(8, 3, 3, 109, '2024-09-09', 0, 0, GETDATE(), 0, GETDATE()),  -- 09/09/2024
--- nghỉ ngày 10/09/2024
-(8, 3, 3, 111, '2024-09-11', 0, 0, GETDATE(), 0, GETDATE()),  -- 11/09/2024
-(8, 3, 3, 112, '2024-09-12', 0, 0, GETDATE(), 0, GETDATE()),  -- 12/09/2024
-(8, 3, 3, 113, '2024-09-13', 0, 0, GETDATE(), 0, GETDATE()),  -- 13/09/2024
-(8, 3, 3, 114, '2024-09-14', 0, 0, GETDATE(), 0, GETDATE()),  -- 14/09/2024
-(8, 3, 3, 115, '2024-09-15', 0, 0, GETDATE(), 0, GETDATE()),  -- 15/09/2024
-(8, 3, 3, 116, '2024-09-16', 0, 0, GETDATE(), 0, GETDATE()),  -- 16/09/2024
-(8, 3, 3, 117, '2024-09-17', 0, 0, GETDATE(), 0, GETDATE()),  -- 17/09/2024
-(8, 3, 3, 118, '2024-09-18', 0, 0, GETDATE(), 0, GETDATE()),  -- 18/09/2024
-(8, 3, 3, 119, '2024-09-19', 0, 0, GETDATE(), 0, GETDATE()),  -- 19/09/2024
-(8, 3, 3, 120, '2024-09-20', 0, 0, GETDATE(), 0, GETDATE());  -- 20/09/2024
-GO
+(8, 3, 104, '2024-09-04', 0, 0, GETDATE(), 0, GETDATE()),  -- 04/09/2024
+(8, 3, 105, '2024-09-05', 0, 0, GETDATE(), 0, GETDATE()),  -- 05/09/2024
+(8, 3, 106, '2024-09-06', 0, 0, GETDATE(), 0, GETDATE()),  -- 06/09/2024
+(8, 3, 107, '2024-09-07', 0, 0, GETDATE(), 0, GETDATE()),  -- 07/09/2024
+(8, 3, 108, '2024-09-08', 0, 0, GETDATE(), 0, GETDATE()),  -- 08/09/2024
+(8, 3, 109, '2024-09-09', 0, 0, GETDATE(), 0, GETDATE()),  -- 09/09/2024
+(8, 3, 110, '2024-09-10', 0, 0, GETDATE(), 0, GETDATE()),  -- 10/09/2024
+(8, 3, 111, '2024-09-11', 0, 0, GETDATE(), 0, GETDATE()),  -- 11/09/2024
+(8, 3, 112, '2024-09-12', 0, 0, GETDATE(), 0, GETDATE()),  -- 12/09/2024
+(8, 3, 113, '2024-09-13', 0, 0, GETDATE(), 0, GETDATE()),  -- 13/09/2024
+(8, 3, 114, '2024-09-14', 0, 0, GETDATE(), 0, GETDATE()),  -- 14/09/2024
+(8, 3, 115, '2024-09-15', 0, 0, GETDATE(), 0, GETDATE()),  -- 15/09/2024
+-- nghỉ ngày 16/09/2024
+(8, 3, 117, '2024-09-17', 0, 0, GETDATE(), 0, GETDATE()),  -- 17/09/2024
+(8, 3, 118, '2024-09-18', 0, 0, GETDATE(), 0, GETDATE()),  -- 18/09/2024
+(8, 3, 119, '2024-09-19', 0, 0, GETDATE(), 0, GETDATE()),  -- 19/09/2024
+(8, 3, 120, '2024-09-20', 0, 0, GETDATE(), 0, GETDATE());  -- 20/09/2024
+Go
 
 -- ChiNhanh
 INSERT INTO ChiNhanh ( MaChiNhanh, TenChiNhanh, DiaChi, SoDienThoai, is_deleted, created_by, created_at, updated_by, updated_at)

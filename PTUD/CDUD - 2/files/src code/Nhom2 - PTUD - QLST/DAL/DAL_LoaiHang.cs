@@ -29,6 +29,14 @@ namespace DAL
                 if(data == null)
                 {
                     //loại hàng được thêm
+                    if(loaihangdto.MaLoaiHang.Length > 30)
+                    {
+                        throw new Exception("Mã loại hàng không quá 30 kí tự!");
+                    }
+                    if (loaihangdto.TenLoaiHang.Length > 50)
+                    {
+                        throw new Exception("Tên loại hàng không quá 50 kí tự!");
+                    }             
                     LoaiHang lh = new LoaiHang();
                     lh.MaLoaiHang = loaihangdto.MaLoaiHang;
                     lh.TenLoaiHang = loaihangdto.TenLoaiHang;
@@ -38,6 +46,8 @@ namespace DAL
                     lh.updated_by = 0;
                     da.Db.LoaiHangs.InsertOnSubmit(lh);
                     da.Db.SubmitChanges();
+
+
                 }
                 else
                 {
@@ -75,7 +85,18 @@ namespace DAL
                 //kiểm tra mã loại hàng có tồn tại chưa
                 var lh = da.Db.LoaiHangs.FirstOrDefault(dt => dt.id == loaihangdto.Id);
                 if (lh != null)
-                {      
+                {
+                    //loại hàng được thêm
+                    if (loaihangdto.MaLoaiHang.Length > 30)
+                    {
+                        throw new Exception("Mã loại hàng không quá 30 kí tự!");
+                    }
+
+                    if (loaihangdto.TenLoaiHang.Length > 50)
+                    {
+                        throw new Exception("Tên loại hàng không quá 50 kí tự!");
+                    }
+
                     lh.MaLoaiHang = loaihangdto.MaLoaiHang;
                     lh.TenLoaiHang = loaihangdto.TenLoaiHang;
                     lh.updated_at = DateTime.Now;

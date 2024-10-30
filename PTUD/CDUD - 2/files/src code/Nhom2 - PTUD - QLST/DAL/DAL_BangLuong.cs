@@ -18,9 +18,20 @@ namespace DAL
         {
             try
             {
-                return from lh in da.Db.BangLuongs
-                       where lh.is_deleted == 0
-                       select new { lh.id,lh.MaBangLuong, lh.ThangNam, lh.TongGioCong, lh.Luong };
+                return (from b in da.Db.BangLuongs
+                        join nv in da.Db.NhanViens
+                        on b.idNhanVien equals nv.id
+                        where b.is_deleted == 0
+                        select new
+                        {
+                            b.id,
+                            nv.TenNhanVien,
+                            b.MaBangLuong,
+                            b.ThangNam,
+                            b.TongGioCong,
+                            b.Luong,
+                            b.idNhanVien
+                        });
             }
             catch (Exception ex) 
             {
@@ -34,25 +45,18 @@ namespace DAL
             try
             {
                 return (from b in da.Db.BangLuongs
-                        join ct in da.Db.ChiTietBangLuongs on b.id equals ct.idBangLuong
-                        where ct.idNhanVien == idNhanVien && ct.is_deleted == 0 && b.is_deleted == 0
-                        group ct by new
+                        join nv in da.Db.NhanViens
+                        on b.idNhanVien equals nv.id
+                        where b.idNhanVien == idNhanVien && b.is_deleted == 0
+                        select new
                         {
                             b.id,
+                            nv.TenNhanVien,
+                            b.MaBangLuong,
                             b.ThangNam,
                             b.TongGioCong,
                             b.Luong,
-                            b.MaBangLuong,
-                            ct.idNhanVien
-                        } into g
-                        select new
-                        {
-                            g.Key.id,
-                            g.Key.MaBangLuong,
-                            g.Key.ThangNam,
-                            g.Key.TongGioCong,
-                            g.Key.Luong,
-                            g.Key.idNhanVien
+                            b.idNhanVien
                         });
             }
             catch (Exception ex)

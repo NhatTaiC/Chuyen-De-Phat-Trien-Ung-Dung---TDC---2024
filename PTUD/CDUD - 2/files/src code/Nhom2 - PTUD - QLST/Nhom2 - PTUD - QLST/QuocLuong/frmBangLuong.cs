@@ -32,17 +32,27 @@ namespace GUI
 
         private void frmBangLuong_Load(object sender, EventArgs e)
         {
-            //Tải dữ liệu bang lương
-            LoadDSBangLuong();
-            //tải dữ liệu chi tiết bảng lương
-            LoadDSChiTietBangLuong();
-            //load combobox
-            LoadCbNhanVien();
-            //btn luu
-            btnLuu.Enabled = false;
-            btnHuy.Enabled = false;
-            //cb lich lam
-            LoadCBLichLam();
+
+            try
+            {
+                //Tải dữ liệu bang lương
+                LoadDSBangLuong();
+                //tải dữ liệu chi tiết bảng lương
+                LoadDSChiTietBangLuong();
+                //load combobox
+                LoadCbNhanVien();
+                //btn luu
+                btnLuu.Enabled = false;
+                btnHuy.Enabled = false;
+                //cb lich lam
+                LoadCBLichLam();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
 
         }
         //load cb lich làm
@@ -58,29 +68,34 @@ namespace GUI
             //lay danh sách bảng lương ko có điều kiện
             dgvBangLuong.DataSource = bus_bangluong.LayDSBangLuong();
             //dổi tên cột
-            dgvBangLuong.Columns["id"].HeaderText = "Mã bảng lương";
             dgvBangLuong.Columns["TongGioCong"].HeaderText = "Tổng giờ công";
             dgvBangLuong.Columns["Luong"].HeaderText = "Lương";
             dgvBangLuong.Columns["ThangNam"].HeaderText = "Tháng/Năm";
+            dgvBangLuong.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
             //format
             dgvBangLuong.Columns["ThangNam"].DefaultCellStyle.Format = "MM/yyyy";
             //ẩn cột
             dgvBangLuong.Columns["id"].Visible = false;
+            dgvBangLuong.Columns["idNhanVien"].Visible = false;
+            dgvBangLuong.Columns["MaBangLuong"].Visible = false;
 
         }
         //lay danh sách bảng lương có điều kiện
         private void LoadDSBangLuong(int idNhanVien)
         {
+            //lay danh sách bảng lương ko có điều kiện
             dgvBangLuong.DataSource = bus_bangluong.LayDSBangLuong(idNhanVien);
             //dổi tên cột
-            dgvBangLuong.Columns["id"].HeaderText = "Mã bảng lương";
             dgvBangLuong.Columns["TongGioCong"].HeaderText = "Tổng giờ công";
             dgvBangLuong.Columns["Luong"].HeaderText = "Lương";
             dgvBangLuong.Columns["ThangNam"].HeaderText = "Tháng/Năm";
+            dgvBangLuong.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
             //format
             dgvBangLuong.Columns["ThangNam"].DefaultCellStyle.Format = "MM/yyyy";
-            //dgvBangLuong.Columns["id"].Visible = false;
             //ẩn cột
+            dgvBangLuong.Columns["id"].Visible = false;
+            dgvBangLuong.Columns["idNhanVien"].Visible = false;
+            dgvBangLuong.Columns["MaBangLuong"].Visible = false;
 
         }
         //lay danh sách chi tiết bảng lương ko có điều kiện
@@ -88,7 +103,6 @@ namespace GUI
         {
             dgvChiTietBangLuong.DataSource = bus_chitietbangluong.LayDSCTBangLuong();
             //dổi tên cột
-            dgvChiTietBangLuong.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
             dgvChiTietBangLuong.Columns["NgayLam"].HeaderText = "Ngày làm";
             dgvChiTietBangLuong.Columns["SoGioCongThucTe"].HeaderText = "Giờ công thực tế";
             //format
@@ -97,13 +111,13 @@ namespace GUI
             //ẩn cột
             dgvChiTietBangLuong.Columns["id"].Visible = false;
             dgvChiTietBangLuong.Columns["idBangLuong"].Visible = false;
+            
         }
         //lay danh sách chi tiết bảng lương có điều kiện
         private void LoadDSChiTietBangLuong(int idBangLuong)
         {
             dgvChiTietBangLuong.DataSource = bus_chitietbangluong.LayDSCTBangLuong(idBangLuong);
             //dổi tên cột
-            dgvChiTietBangLuong.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
             dgvChiTietBangLuong.Columns["NgayLam"].HeaderText = "Ngày làm";
             dgvChiTietBangLuong.Columns["SoGioCongThucTe"].HeaderText = "Giờ công thực tế";
             //format
@@ -141,22 +155,31 @@ namespace GUI
 
         private void dgvBangLuong_Click(object sender, EventArgs e)
         {
-
-            if (dgvBangLuong.Rows.Count > 0)
+            try
             {
-                //lấy dòng đang click
-                int dong = dgvBangLuong.CurrentRow.Index;
-                //điền thông tin lên textbox
-                txtLuong.Text = dgvBangLuong.Rows[dong].Cells["Luong"].Value.ToString();
-                //txtTenChiNhanh.Text = dgvChiNhanh.Rows[dong].Cells["TenChiNhanh"].Value.ToString();
-                //txtDiaChi.Text = dgvChiNhanh.Rows[dong].Cells["DiaChi"].Value.ToString();
-                //txtSoDienThoai.Text = dgvChiNhanh.Rows[dong].Cells["SoDienThoai"].Value.ToString();
-                //gán id cho currnentID
-                currentIDBangLuong = int.Parse(dgvBangLuong.Rows[dong].Cells["id"].Value.ToString());
-                //load danh sách chi tiet bang lương có điều kiện
-                LoadDSChiTietBangLuong(currentIDBangLuong);
-                txtMaPhieuNhap.Text = dgvBangLuong.Rows[dong].Cells["MaBangLuong"].Value.ToString();
+                if (dgvBangLuong.Rows.Count > 0)
+                {
+                    //lấy dòng đang click
+                    int dong = dgvBangLuong.CurrentRow.Index;
+                    //điền thông tin lên textbox
+                    txtLuong.Text = dgvBangLuong.Rows[dong].Cells["Luong"].Value.ToString();
+                    //txtTenChiNhanh.Text = dgvChiNhanh.Rows[dong].Cells["TenChiNhanh"].Value.ToString();
+                    //txtDiaChi.Text = dgvChiNhanh.Rows[dong].Cells["DiaChi"].Value.ToString();
+                    //txtSoDienThoai.Text = dgvChiNhanh.Rows[dong].Cells["SoDienThoai"].Value.ToString();
+                    //gán id cho currnentID
+                    currentIDBangLuong = int.Parse(dgvBangLuong.Rows[dong].Cells["id"].Value.ToString());
+                    //load danh sách chi tiet bang lương có điều kiện
+                    LoadDSChiTietBangLuong(currentIDBangLuong);
+                    txtMaPhieuNhap.Text = dgvBangLuong.Rows[dong].Cells["MaBangLuong"].Value.ToString();
+                    cbNhanVien.SelectedValue = int.Parse(dgvBangLuong.Rows[dong].Cells["idNhanVien"].Value.ToString());
+                }
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
 
 
@@ -202,7 +225,7 @@ namespace GUI
             txtGioCong.Enabled = false;
             txtLuong.Enabled = false;
             cbLichLam.Enabled = false;
-            cbNhanVien.Enabled = false;
+            //cbNhanVien.Enabled = false;
             btnThemChiTiet.Enabled = false;
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
@@ -218,7 +241,7 @@ namespace GUI
                 {
                     if (txtMaPhieuNhap.Text.Length > 0)
                     {
-                        bus_bangluong.ThemBangLuong(new DTO_BangLuong(txtMaPhieuNhap.Text, dtNgayNhap.Value, 0, 0));
+                        bus_bangluong.ThemBangLuong(new DTO_BangLuong(txtMaPhieuNhap.Text, dtNgayNhap.Value, 0, 0, int.Parse(cbNhanVien.SelectedValue.ToString())));
                         MessageBox.Show("Thêm thành công!!");
                         LamMoi();
                     }
@@ -233,7 +256,7 @@ namespace GUI
                 {
                     if (txtMaPhieuNhap.Text.Length > 0 && txtGioCong.Text.Length > 0)
                     {
-                        bus_chitietbangluong.ThemChiTietbangLuong(new DTO_ChiTietBangLuong(float.Parse(txtGioCong.Text), currentIDBangLuong, int.Parse(cbLichLam.SelectedValue.ToString()), int.Parse(cbNhanVien.SelectedValue.ToString()), dtNgayNhap.Value));
+                        bus_chitietbangluong.ThemChiTietbangLuong(new DTO_ChiTietBangLuong(float.Parse(txtGioCong.Text), currentIDBangLuong, int.Parse(cbLichLam.SelectedValue.ToString()), dtNgayNhap.Value));
                         MessageBox.Show("Thêm thành công!!");
                         LamMoi();
                     }
@@ -258,6 +281,7 @@ namespace GUI
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
             checkbtn = false;
+            cbNhanVien.Enabled = false;
             txtMaPhieuNhap.ReadOnly = true;
         }
 
@@ -284,5 +308,5 @@ namespace GUI
                 this.Close();
             }
 		}
-	}
+    }
 }
