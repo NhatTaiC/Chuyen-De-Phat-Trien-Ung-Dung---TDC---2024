@@ -338,5 +338,19 @@ namespace Nhom2___PTUD___QLST
                 ActForm("frmLichLam");
             }
         }
+
+        private void logToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmLog"))
+            {
+                frmLog f = new frmLog();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmLog");
+            }
+        }
     }
 }

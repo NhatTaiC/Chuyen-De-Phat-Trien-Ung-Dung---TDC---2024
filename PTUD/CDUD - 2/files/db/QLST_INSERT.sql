@@ -62,7 +62,7 @@ VALUES
 ('LH010', N'Đồ ăn nhanh', 0, 0, GETDATE(), 0, GETDATE());
 GO
 
--- 5. Insert into NhaCungCap
+-- 5. NhaCungCap
 INSERT INTO NhaCungCap(MaNhaCungCap, TenNhaCungCap, SoDienThoai, DiaChi,is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 ('NCC01',N'LG','0123456789',N'23/7 Võ Văn Ngân',0, 0, GETDATE(), 0, GETDATE()),
@@ -77,7 +77,7 @@ VALUES
 ('NCC010',N'Sạch','0123456789',N'2 Đường 21',0, 0, GETDATE(), 0, GETDATE());
 GO
 
--- 6. Insert into SanPham
+-- 6. SanPham
 INSERT INTO SanPham (MaSanPham, TenSanPham, idLoaiHang, DonViTinh, DonGia, idNhaCungCap, NgaySanXuat, HanSuDung, AnhSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES 
 -- Rau củ quả (idNhomHang = 1)
@@ -135,7 +135,7 @@ VALUES
 ('SP030', N'Xúc xích', 10, N'Kg', 120000, 1, '2024-08-10', '2025-08-10', NULL, 0, 0, GETDATE(), 0, GETDATE());
 GO
 
--- 7. dữ liệu kho hàng
+-- 7. KhoHang
 INSERT INTO KhoHang(idSanPham, SoLuong, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES 
 (1, 100, 0, 0, GETDATE(), 0, GETDATE()),
@@ -260,7 +260,7 @@ VALUES
 ('HD010', GETDATE(), GETDATE(), 0, 0, 1, 7, 10, 0, 0, GETDATE(), 0, GETDATE());
 GO
 
--- 15. HoaDon
+-- 15. ChiTietHoaDon
 INSERT INTO ChiTietHoaDon (SoLuong, idHoaDon, idSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 (5, 3, 7, 0, 0, GetDate(), 0, GetDate()),
@@ -275,7 +275,7 @@ VALUES
 (8, 9, 10, 0, 0, GetDate(), 0, GetDate());
 GO
 
--- 16. Bảng lương
+-- 16. BangLuong
 -- Thêm dữ liệu tổng lương cho tháng 9/2024
 INSERT INTO BangLuong (MaBangLuong,idNhanVien,ThangNam, TongGioCong, Luong, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
@@ -284,7 +284,7 @@ VALUES
 ('BL003',3,'2024-09-01', 144, 13000000, 0, 0, GETDATE(), 0, GETDATE());  -- Nhân viên 3, 18 ngày * 8 giờ
 GO
 
--- 17. chi tiết bảng lương
+-- 17. ChiTietBangLuong
 -- Nhân viên 1, làm đủ 22 ngày
 INSERT INTO ChiTietBangLuong (SoGioCongThucTe, idBangLuong, idLichLam, NgayLam, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
@@ -373,16 +373,16 @@ VALUES
 GO
 
 -- 19. Log
-INSERT INTO Log (log_name, model, data_olds, data_news, is_deleted, created_by, created_at, updated_by, updated_at)
+INSERT INTO Log (log_name, model, model_id, data_olds, data_news, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
-('LOG_NAME_01', 'MODEL_01', 'DATA_OLDS_01', 'DATA_NEWS_01', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_02', 'MODEL_02', 'DATA_OLDS_02', 'DATA_NEWS_02', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_03', 'MODEL_03', 'DATA_OLDS_03', 'DATA_NEWS_03', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_04', 'MODEL_04', 'DATA_OLDS_04', 'DATA_NEWS_04', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_05', 'MODEL_05', 'DATA_OLDS_05', 'DATA_NEWS_05', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_06', 'MODEL_06', 'DATA_OLDS_06', 'DATA_NEWS_06', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_07', 'MODEL_07', 'DATA_OLDS_07', 'DATA_NEWS_07', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_08', 'MODEL_08', 'DATA_OLDS_08', 'DATA_NEWS_08', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_09', 'MODEL_09', 'DATA_OLDS_09', 'DATA_NEWS_09', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_10', 'MODEL_10', 'DATA_OLDS_10', 'DATA_NEWS_10', 0, 0, GETDATE(), 0, GETDATE());
+('LOG_NAME_01', 'MODEL_01', 1, 'DATA_OLDS_01', 'DATA_NEWS_01', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_02', 'MODEL_02', 2, 'DATA_OLDS_02', 'DATA_NEWS_02', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_03', 'MODEL_03', 3, 'DATA_OLDS_03', 'DATA_NEWS_03', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_04', 'MODEL_04', 4, 'DATA_OLDS_04', 'DATA_NEWS_04', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_05', 'MODEL_05', 5, 'DATA_OLDS_05', 'DATA_NEWS_05', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_06', 'MODEL_06', 6, 'DATA_OLDS_06', 'DATA_NEWS_06', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_07', 'MODEL_07', 7, 'DATA_OLDS_07', 'DATA_NEWS_07', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_08', 'MODEL_08', 8, 'DATA_OLDS_08', 'DATA_NEWS_08', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_09', 'MODEL_09', 9, 'DATA_OLDS_09', 'DATA_NEWS_09', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_10', 'MODEL_10', 10, 'DATA_OLDS_10', 'DATA_NEWS_10', 0, 0, GETDATE(), 0, GETDATE());
 GO

@@ -87,7 +87,7 @@ namespace DAL
                          {
                              Quyen = tk.Quyen
                          }).FirstOrDefault();
-            return query.Quyen;
+            return (int)query.Quyen;
         }
 
         public void AddTK(DTO_TaiKhoan taiKhoan)
