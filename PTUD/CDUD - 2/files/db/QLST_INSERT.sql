@@ -1,5 +1,7 @@
 ﻿USE QuanLySieuThi;
--- TaiKhoan
+GO
+
+-- 1. TaiKhoan
 INSERT INTO TaiKhoan (MaTaiKhoan, TenTaiKhoan, MatKhau, Quyen, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 ('admin', 'admin', '123456', 0, 0, 0, GETDATE(), 0, GETDATE()),
@@ -16,7 +18,7 @@ VALUES
 ('TK010', 'TK010', '123456', 1, 0, 0, GETDATE(), 0, GETDATE());
 GO
 
--- LoaiNhanVien
+-- 2. LoaiNhanVien
 INSERT INTO LoaiNhanVien (MaLoaiNhanVien, TenLoaiNhanVien, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES 
 ('LNV001', N'Quản lý', 0, 0, GETDATE(), 0, GETDATE()),
@@ -31,7 +33,7 @@ VALUES
 ('LNV010', N'Hỗ trợ kỹ thuật', 0, 0, GETDATE(), 0, GETDATE());
 GO
 
--- NhanVien
+-- 3. NhanVien
 INSERT INTO NhanVien (MaNhanVien, TenNhanVien, idLoaiNhanVien, SoDienThoai, DiaChi, idTaiKhoan, is_deleted, created_by, created_at, updated_by, updated_at) VALUES
 ('NV001', N'Nguyễn Văn A', 5, '0974292158', N'Số 920 đường ABC, Quận 2', 1, 0, 0, GETDATE(), 0, GETDATE()),
 ('NV002', N'Trần Thị B', 4, '0944077427', N'Số 455 đường ABC, Quận 3', 2, 0, 0, GETDATE(), 0, GETDATE()),
@@ -45,7 +47,7 @@ INSERT INTO NhanVien (MaNhanVien, TenNhanVien, idLoaiNhanVien, SoDienThoai, DiaC
 ('NV010', N'Bùi Thị K', 10, '0961054267', N'Số 909 đường ABC, Quận 2', 10, 0, 0, GETDATE(), 0, GETDATE());
 GO
 
---LoaiHang
+-- 4. LoaiHang
 INSERT INTO LoaiHang (MaLoaiHang, TenLoaiHang, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES 
 ('LH001', N'Rau củ quả', 0, 0, GETDATE(), 0, GETDATE()),
@@ -60,7 +62,7 @@ VALUES
 ('LH010', N'Đồ ăn nhanh', 0, 0, GETDATE(), 0, GETDATE());
 GO
 
--- Insert into NhaCungCap
+-- 5. NhaCungCap
 INSERT INTO NhaCungCap(MaNhaCungCap, TenNhaCungCap, SoDienThoai, DiaChi,is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 ('NCC01',N'LG','0123456789',N'23/7 Võ Văn Ngân',0, 0, GETDATE(), 0, GETDATE()),
@@ -75,7 +77,7 @@ VALUES
 ('NCC010',N'Sạch','0123456789',N'2 Đường 21',0, 0, GETDATE(), 0, GETDATE());
 GO
 
--- Insert into SanPham
+-- 6. SanPham
 INSERT INTO SanPham (MaSanPham, TenSanPham, idLoaiHang, DonViTinh, DonGia, idNhaCungCap, NgaySanXuat, HanSuDung, AnhSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES 
 -- Rau củ quả (idNhomHang = 1)
@@ -133,7 +135,7 @@ VALUES
 ('SP030', N'Xúc xích', 10, N'Kg', 120000, 1, '2024-08-10', '2025-08-10', NULL, 0, 0, GETDATE(), 0, GETDATE());
 GO
 
--- dữ liệu kho hàng
+-- 7. KhoHang
 INSERT INTO KhoHang(idSanPham, SoLuong, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES 
 (1, 100, 0, 0, GETDATE(), 0, GETDATE()),
@@ -168,7 +170,7 @@ VALUES
 (30, 470, 0, 0, GETDATE(), 0, GETDATE())
 GO
 
--- KhachHang
+-- 8. KhachHang
 INSERT INTO KhachHang (MaKhachHang, TenKhachHang, SoDienThoai, Diem, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES 
 ('KH00',N'Khách vãng lai','0123456789', 0, 0, 0, GETDATE(), 0, GETDATE()),
@@ -185,7 +187,7 @@ VALUES
 ('KH011',N'Hoàng Anh Tuấn','0123456789', 100, 0, 0, GETDATE(), 0, GETDATE());
 GO
 
--- PhieuNhap
+-- 9. PhieuNhap
 INSERT INTO PhieuNhap(MaPhieuNhap, NgayNhap, ThanhTien, idNhanVien, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 ('PN01', '2024-10-15', 30000, 1, 0, 0, '2024-10-15', 0, '2024-10-15'),
@@ -200,7 +202,7 @@ VALUES
 ('PN10', '2024-10-15', 30000, 1, 0, 0, '2024-10-15', 0, '2024-10-15');
 GO
 
--- ChiTietPhieuNhap
+-- 10. ChiTietPhieuNhap
 INSERT INTO [dbo].[ChiTietPhieuNhap] (SoLuong, DonGia, idPhieuNhap, idSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 (10, 15000, 1, 1, 0, 1, GETDATE(), 1, GETDATE()),
@@ -210,7 +212,7 @@ VALUES
 (8, 10000, 5, 5, 0, 1, GETDATE(), 1, GETDATE());
 GO
 
--- CaLam
+-- 11. CaLam
 INSERT INTO [dbo].[CaLam] (MaCaLam, TenCaLam, GioBatDau, GioKetThuc, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 ('CL01', N'Ca Sáng', '06:00', '14:00', 0, 1, GETDATE(), 1, GETDATE()),
@@ -219,7 +221,7 @@ VALUES
 ('CL04', N'Ca Hành Chính', '08:00', '17:00', 0, 1, GETDATE(), 1, GETDATE());
 GO
 
--- LichLam
+-- 12. LichLam
 INSERT INTO [dbo].[LichLam] (MaLichLam, NgayLam, idNhanVien, idCaLam, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 ('LL01', '2024-10-25', 1, 1, 0, 1, GETDATE(), 1, GETDATE()),
@@ -228,7 +230,7 @@ VALUES
 ('LL04', '2024-10-27', 4, 4, 0, 1, GETDATE(), 1, GETDATE());
 GO
 
--- KhuyenMai
+-- 13. KhuyenMai
 INSERT INTO KhuyenMai (MaKhuyenMai, TenKhuyenMai, GiaTri, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES 
 ('KM001', N'Giảm giá 10%', 10.0, 0, 0, GETDATE(), 0, GETDATE()),
@@ -243,7 +245,7 @@ VALUES
 ('KM010', N'Giảm giá kỷ niệm', 100.0, 0, 0, GETDATE(), 0, GETDATE());
 GO
 
--- HoaDon
+-- 14. HoaDon
 INSERT INTO HoaDon (MaHoaDon, NgayLapHD, GioLapHD, TongTien, ThanhTien, idKhachHang, idKhuyenMai, idNhanVien, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 ('HD001', GETDATE(), GETDATE(), 0, 0, 1, 5, 3, 0, 0, GETDATE(), 0, GETDATE()),
@@ -258,7 +260,22 @@ VALUES
 ('HD010', GETDATE(), GETDATE(), 0, 0, 1, 7, 10, 0, 0, GETDATE(), 0, GETDATE());
 GO
 
---Bảng lương
+-- 15. ChiTietHoaDon
+INSERT INTO ChiTietHoaDon (SoLuong, idHoaDon, idSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
+VALUES
+(5, 3, 7, 0, 0, GetDate(), 0, GetDate()),
+(2, 1, 4, 0, 0, GetDate(), 0, GetDate()),
+(7, 4, 1, 0, 0, GetDate(), 0, GetDate()),
+(3, 6, 8, 0, 0, GetDate(), 0, GetDate()),
+(9, 2, 3, 0, 0, GetDate(), 0, GetDate()),
+(6, 7, 5, 0, 0, GetDate(), 0, GetDate()),
+(1, 5, 9, 0, 0, GetDate(), 0, GetDate()),
+(4, 8, 2, 0, 0, GetDate(), 0, GetDate()),
+(10, 10, 6, 0, 0, GetDate(), 0, GetDate()),
+(8, 9, 10, 0, 0, GetDate(), 0, GetDate());
+GO
+
+-- 16. BangLuong
 -- Thêm dữ liệu tổng lương cho tháng 9/2024
 INSERT INTO BangLuong (MaBangLuong,idNhanVien,ThangNam, TongGioCong, Luong, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
@@ -267,7 +284,7 @@ VALUES
 ('BL003',3,'2024-09-01', 144, 13000000, 0, 0, GETDATE(), 0, GETDATE());  -- Nhân viên 3, 18 ngày * 8 giờ
 GO
 
--- chi tiết bảng lương
+-- 17. ChiTietBangLuong
 -- Nhân viên 1, làm đủ 22 ngày
 INSERT INTO ChiTietBangLuong (SoGioCongThucTe, idBangLuong, idLichLam, NgayLam, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
@@ -345,7 +362,7 @@ VALUES
 (8, 3, 120, '2024-09-20', 0, 0, GETDATE(), 0, GETDATE());  -- 20/09/2024
 Go
 
--- ChiNhanh
+-- 18. ChiNhanh
 INSERT INTO ChiNhanh ( MaChiNhanh, TenChiNhanh, DiaChi, SoDienThoai, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 ('CN001', N'Chi Nhánh Hà Nội', N'Số 1 Đường A, Hà Nội', '0123456789', 0, 0, GETDATE(), 0, GETDATE()),
@@ -353,4 +370,19 @@ VALUES
 ('CN003', N'Chi Nhánh Đà Nẵng', N'Số 15 Đường C, Đà Nẵng', '0912345678', 0, 0, GETDATE(), 0, GETDATE()),
 ('CN004', N'Chi Nhánh Hải Phòng', N'Số 20 Đường D, Hải Phòng', '0901234567', 0, 0, GETDATE(), 0, GETDATE()),
 ('CN005', N'Chi Nhánh Cần Thơ', N'Số 25 Đường E, Cần Thơ', '0998765432', 0, 0, GETDATE(), 0, GETDATE());
+GO
+
+-- 19. Log
+INSERT INTO Log (log_name, model, model_id, data_olds, data_news, is_deleted, created_by, created_at, updated_by, updated_at)
+VALUES
+('LOG_NAME_01', 'MODEL_01', 1, 'DATA_OLDS_01', 'DATA_NEWS_01', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_02', 'MODEL_02', 2, 'DATA_OLDS_02', 'DATA_NEWS_02', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_03', 'MODEL_03', 3, 'DATA_OLDS_03', 'DATA_NEWS_03', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_04', 'MODEL_04', 4, 'DATA_OLDS_04', 'DATA_NEWS_04', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_05', 'MODEL_05', 5, 'DATA_OLDS_05', 'DATA_NEWS_05', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_06', 'MODEL_06', 6, 'DATA_OLDS_06', 'DATA_NEWS_06', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_07', 'MODEL_07', 7, 'DATA_OLDS_07', 'DATA_NEWS_07', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_08', 'MODEL_08', 8, 'DATA_OLDS_08', 'DATA_NEWS_08', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_09', 'MODEL_09', 9, 'DATA_OLDS_09', 'DATA_NEWS_09', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_10', 'MODEL_10', 10, 'DATA_OLDS_10', 'DATA_NEWS_10', 0, 0, GETDATE(), 0, GETDATE());
 GO

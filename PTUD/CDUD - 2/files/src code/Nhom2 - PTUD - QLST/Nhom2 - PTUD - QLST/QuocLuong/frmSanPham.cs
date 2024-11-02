@@ -34,6 +34,7 @@ namespace GUI
         {
             try
             {
+                 guna2GroupBox3.Text = string.Empty;
                 //mặc định combobox select dữ liệu đầu
                 //cbNhaCungCap.SelectedIndex = 0;
                 //cbMaNhomHang.SelectedIndex = 0;
@@ -43,6 +44,11 @@ namespace GUI
                 LoadCBNhaCungCap();
                 //gọi load danh sách sản phẩm
                 LoadDSSanPham();
+                //custom
+                dtpHanSuDung.CustomFormat = "dd/MM/yyyy";
+                dtpNgaySanXuat.CustomFormat = "dd/MM/yyyy";
+                dtpHanSuDung.MinDate = dtpNgaySanXuat.Value;
+                
             }
             catch (Exception ex)
             {
@@ -203,44 +209,53 @@ namespace GUI
 
         private void dgvSanPham_Click(object sender, EventArgs e)
         {
-            //lấy dòng đang click
-            int dong = dgvSanPham.CurrentRow.Index;
-            //điền thông tin lên textbox
-            txtMaSanPham.Text = dgvSanPham.Rows[dong].Cells["MaSanPham"].Value.ToString();
-            txtTenSanPham.Text = dgvSanPham.Rows[dong].Cells["TenSanPham"].Value.ToString();
-            txtDonViTinh.Text = dgvSanPham.Rows[dong].Cells["DonViTinh"].Value.ToString();
-            txtDonGia.Text = dgvSanPham.Rows[dong].Cells["DonGia"].Value.ToString();
-            cbMaNhomHang.SelectedValue = int.Parse(dgvSanPham.Rows[dong].Cells["idLoaiHang"].Value.ToString());
-            cbNhaCungCap.SelectedValue = int.Parse(dgvSanPham.Rows[dong].Cells["idNhaCungCap"].Value.ToString());
-            dtpHanSuDung.Text = dgvSanPham.Rows[dong].Cells["HanSuDung"].Value.ToString();
-            dtpNgaySanXuat.Text = dgvSanPham.Rows[dong].Cells["NgaySanXuat"].Value.ToString();
-            
-           
-            //đổi binary thành ảnh
-            var data = dgvSanPham.Rows[dong].Cells["AnhSanPham"].Value;
-            // Kiểm tra kiểu dữ liệu của imageData
-            if (data != null)
+            try
             {
-                if (data is System.Data.Linq.Binary binaryData)
+                //lấy dòng đang click
+                int dong = dgvSanPham.CurrentRow.Index;
+                //điền thông tin lên textbox
+                txtMaSanPham.Text = dgvSanPham.Rows[dong].Cells["MaSanPham"].Value.ToString();
+                txtTenSanPham.Text = dgvSanPham.Rows[dong].Cells["TenSanPham"].Value.ToString();
+                txtDonViTinh.Text = dgvSanPham.Rows[dong].Cells["DonViTinh"].Value.ToString();
+                txtDonGia.Text = dgvSanPham.Rows[dong].Cells["DonGia"].Value.ToString();
+                cbMaNhomHang.SelectedValue = int.Parse(dgvSanPham.Rows[dong].Cells["idLoaiHang"].Value.ToString());
+                cbNhaCungCap.SelectedValue = int.Parse(dgvSanPham.Rows[dong].Cells["idNhaCungCap"].Value.ToString());
+                dtpNgaySanXuat.Text = dgvSanPham.Rows[dong].Cells["NgaySanXuat"].Value.ToString();
+                dtpHanSuDung.Text = dgvSanPham.Rows[dong].Cells["HanSuDung"].Value.ToString();
+
+                //đổi binary thành ảnh
+                var data = dgvSanPham.Rows[dong].Cells["AnhSanPham"].Value;
+                // Kiểm tra kiểu dữ liệu của imageData
+                if (data != null)
                 {
-                    byte[] byteArray = binaryData.ToArray(); // Chuyển đổi sang byte array
-                    //gán giá trị để kiểm tra
-                    imageData = byteArray;
-                    using (MemoryStream ms = new MemoryStream(byteArray))
+                    if (data is System.Data.Linq.Binary binaryData)
                     {
-                        Image image = Image.FromStream(ms);
-                        imgSanPham.Image = image; // Gán hình ảnh vào PictureBox
+                        byte[] byteArray = binaryData.ToArray(); // Chuyển đổi sang byte array
+                                                                 //gán giá trị để kiểm tra
+                        imageData = byteArray;
+                        using (MemoryStream ms = new MemoryStream(byteArray))
+                        {
+                            Image image = Image.FromStream(ms);
+                            imgSanPham.Image = image; // Gán hình ảnh vào PictureBox
+                        }
                     }
                 }
+                else
+                {
+                    imgSanPham.Image = null;
+                }
+
+                //lấy id click
+                currentID = int.Parse(dgvSanPham.Rows[dong].Cells["id"].Value.ToString());
+                //MessageBox.Show(currentID.ToString());
             }
-            else
+            catch (Exception ex)
             {
-                imgSanPham.Image= null;
+
+                //thông báo khi có lỗi xảy ra
+                MessageBox.Show(ex.Message, "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
-            //lấy id click
-            currentID = int.Parse(dgvSanPham.Rows[dong].Cells["id"].Value.ToString());
-            //MessageBox.Show(currentID.ToString());
         }
         //hàm ép binray sang ảnh
         public static Image ConvertToImage(System.Data.Linq.Binary iBinary)
@@ -326,5 +341,10 @@ namespace GUI
 		{
 			LamMoi();
 		}
-	}
+
+        private void dtpNgaySanXuat_ValueChanged(object sender, EventArgs e)
+        {
+            dtpHanSuDung.MinDate = dtpNgaySanXuat.Value;
+        }
+    }
 }

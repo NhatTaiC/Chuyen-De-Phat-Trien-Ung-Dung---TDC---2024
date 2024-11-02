@@ -28,6 +28,22 @@ namespace DAL
                 var data = da.Db.ChiNhanhs.SingleOrDefault(cn => cn.MaChiNhanh == chiNhanh.MaChiNhanh);
                 if (data == null) 
                 {
+                    if(chiNhanh.SoDienThoai.Length < 10 || chiNhanh.SoDienThoai.Length > 11)
+                    {
+                        throw new Exception("Số diên thoại không hợp lệ!");
+                    }
+                    if (chiNhanh.MaChiNhanh.Length > 30)
+                    {
+                        throw new Exception("Mã chi nhánh không quá 30 kí tự!");
+                    }
+                    if (chiNhanh.TenChiNhanh.Length > 50)
+                    {
+                        throw new Exception("Tên chi nhánh không quá 50 kí tự!");
+                    }
+                    if(chiNhanh.DiaChi.Length > 50)
+                    {
+                        throw new Exception("Địa chỉ nhánh không quá 50 kí tự!");
+                    }
                     ChiNhanh chi = new ChiNhanh();
                     chi.MaChiNhanh = chiNhanh.MaChiNhanh;
                     chi.TenChiNhanh = chiNhanh.TenChiNhanh;
@@ -73,6 +89,22 @@ namespace DAL
         {
             try
             {
+                if (chiNhanh.SoDienThoai.Length < 10 || chiNhanh.SoDienThoai.Length > 11)
+                {
+                    throw new Exception("Số điện thoại không hợp lệ!");
+                }
+                if (chiNhanh.MaChiNhanh.Length > 30)
+                {
+                    throw new Exception("Mã chi nhánh không quá 30 kí tự!");
+                }
+                if (chiNhanh.TenChiNhanh.Length > 50)
+                {
+                    throw new Exception("Tên chi nhánh không quá 50 kí tự!");
+                }
+                if (chiNhanh.DiaChi.Length > 50)
+                {
+                    throw new Exception("Địa chỉ nhánh không quá 50 kí tự!");
+                }
                 var data = da.Db.ChiNhanhs.FirstOrDefault(dt => dt.id == chiNhanh.Id && dt.is_deleted == 0);
                 data.MaChiNhanh = chiNhanh.MaChiNhanh;
                 data.TenChiNhanh = chiNhanh.TenChiNhanh;

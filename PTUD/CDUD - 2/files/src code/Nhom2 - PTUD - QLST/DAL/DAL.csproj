@@ -49,6 +49,7 @@
     <Compile Include="DAL_KhuyenMai.cs" />
     <Compile Include="DAL_LichLam.cs" />
     <Compile Include="DAL_LoaiNhanVien.cs" />
+    <Compile Include="DAL_Log.cs" />
     <Compile Include="DAL_NhaCungCap.cs" />
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_BangLuong.cs" />
