@@ -43,9 +43,22 @@ namespace DTO
             this.giaTri = giaTri;
         }
 
+        public DTO_KhuyenMai(int id, string tenKhuyenMai, float giaTri)
+        {
+            this.id = id;
+            this.tenKhuyenMai = tenKhuyenMai;
+            this.giaTri = giaTri;
+        }
+
         public DTO_KhuyenMai(string maKhuyenMai, string tenKhuyenMai, float giaTri)
         {
             this.maKhuyenMai = maKhuyenMai;
+            this.tenKhuyenMai = tenKhuyenMai;
+            this.giaTri = giaTri;
+        }
+
+        public DTO_KhuyenMai(string tenKhuyenMai, float giaTri)
+        {
             this.tenKhuyenMai = tenKhuyenMai;
             this.giaTri = giaTri;
         }

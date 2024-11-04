@@ -65,9 +65,12 @@ namespace DAL
                 // Added new record loainhanvien
                 if (query == null)
                 {
+                    // Checked max(id) record in table LoaiNhanVien
+                    var query2 = da.Db.LoaiNhanViens.OrderByDescending(lnv => lnv.id).FirstOrDefault();
+
                     da.Db.LoaiNhanViens.InsertOnSubmit(new LoaiNhanVien
                     {
-                        MaLoaiNhanVien = loaiNhanVien.MaLoaiNV,
+                        MaLoaiNhanVien = query2.id < 10 ? "LNV00" + (query2.id + 1) : "LNV0" + (query2.id + 1),
                         TenLoaiNhanVien = loaiNhanVien.TenLoaiNV,
                         is_deleted = 0,
                         created_at = DateTime.Now,
@@ -117,7 +120,6 @@ namespace DAL
                     LoaiNhanVien lnv_update = da.Db.LoaiNhanViens.Single(lnv => lnv.id == loaiNhanVien.Id);
 
                     // Updated lnv_update
-                    lnv_update.MaLoaiNhanVien = loaiNhanVien.MaLoaiNV;
                     lnv_update.TenLoaiNhanVien = loaiNhanVien.TenLoaiNV;
                     lnv_update.is_deleted = loaiNhanVien.Is_deleted;
                     lnv_update.created_by = 0;

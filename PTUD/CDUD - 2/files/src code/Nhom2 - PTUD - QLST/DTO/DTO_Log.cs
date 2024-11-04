@@ -58,6 +58,23 @@ namespace DTO
             this.data_news = data_news;
         }
 
+        public DTO_Log(int id, string model, int model_id, string data_olds, string data_news)
+        {
+            this.id = id;
+            this.model = model;
+            this.model_id = model_id;
+            this.data_olds = data_olds;
+            this.data_news = data_news;
+        }
+
+        public DTO_Log(string model, int model_id, string data_olds, string data_news)
+        {
+            this.model = model;
+            this.model_id = model_id;
+            this.data_olds = data_olds;
+            this.data_news = data_news;
+        }
+
         // Properties
         public int Id { get => id; set => id = value; }
         public string Log_name { get => log_name; set => log_name = value; }

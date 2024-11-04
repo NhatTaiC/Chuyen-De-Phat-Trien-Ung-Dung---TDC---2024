@@ -40,9 +40,12 @@ namespace DAL
                 // Checked log != null
                 if (log != null)
                 {
+                    // Get max(id) from table log
+                    var query2 = da.Db.Logs.OrderByDescending(l => l.id).FirstOrDefault();
+
                     da.Db.Logs.InsertOnSubmit(new Log
                     {
-                        log_name = log.Log_name,
+                        log_name = query2.id < 10 ? "LOG_NAME_0" + (query2.id + 1) : "LOG_NAME_" + (query2.id + 1),
                         model = log.Model,
                         model_id = log.Model_id,
                         data_olds = log.Data_olds,
@@ -95,7 +98,6 @@ namespace DAL
                 if (query.FirstOrDefault() != null)
                 {
                     Log log_update = da.Db.Logs.SingleOrDefault(lo => lo.id == log.Id);
-                    log_update.log_name = log.Log_name;
                     log_update.model = log.Model;
                     log_update.model_id = log.Model_id;
                     log_update.data_olds = log.Data_olds;

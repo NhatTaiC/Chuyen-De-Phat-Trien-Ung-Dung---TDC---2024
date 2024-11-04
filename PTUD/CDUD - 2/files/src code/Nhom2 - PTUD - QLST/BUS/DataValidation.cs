@@ -34,13 +34,19 @@ namespace BUS
         {
             this.str_name = name;
             this.str_length = strlength;
+
             if (str_name != string.Empty && name.Length <= strlength)
             {
                 return true;
             }
+
             return false;
         }
 
+        /*
+         * CheckNumber & return bool
+         * Checked by name, strlength
+         */
         public bool CheckNumber(string name, int strlength)
         {
             this.str_name = name;
@@ -52,6 +58,65 @@ namespace BUS
             }
 
             if (str_name.Length > str_length)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < str_name.Length; i++)
+            {
+                if (str_name[i] >= 'a' && str_name[i] <= 'z' || str_name[i] >= 'A' && str_name[i] <= 'Z')
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        /*
+         * CheckNumber2 & return bool
+         * Checked by name, strlength & int.Parse(name) > 100
+         */
+        public bool CheckNumber2(string name, int strlength)
+        {
+            this.str_name = name;
+            this.str_length = strlength;
+
+            if (str_name == null)
+            {
+                return false;
+            }
+
+            if (str_name.Length > str_length)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < str_name.Length; i++)
+            {
+                if (str_name[i] >= 'a' && str_name[i] <= 'z' || str_name[i] >= 'A' && str_name[i] <= 'Z')
+                {
+                    return false;
+                }
+            }
+
+            if (int.Parse(name) > 100)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        /*
+         * CheckNumber3 & return bool
+         * Checked by name
+         */
+        public bool CheckNumber3(string name)
+        {
+            this.str_name = name;
+
+            if (str_name == null)
             {
                 return false;
             }

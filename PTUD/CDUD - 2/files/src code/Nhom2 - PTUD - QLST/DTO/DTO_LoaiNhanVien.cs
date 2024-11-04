@@ -46,6 +46,17 @@ namespace DTO
             this.tenLoaiNV = tenLoaiNV;
         }
 
+        public DTO_LoaiNhanVien(int id, string tenLoaiNV)
+        {
+            this.id = id;
+            this.tenLoaiNV = tenLoaiNV;
+        }
+
+        public DTO_LoaiNhanVien(string tenLoaiNV)
+        {
+            this.tenLoaiNV = tenLoaiNV;
+        }
+
         // Properties
         public int Id { get => id; set => id = value; }
         public string MaLoaiNV { get => maLoaiNV; set => maLoaiNV = value; }

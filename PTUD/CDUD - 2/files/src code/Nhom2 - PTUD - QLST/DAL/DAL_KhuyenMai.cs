@@ -42,9 +42,12 @@ namespace DAL
 
                 if (query == null)
                 {
+                    // Get max(id) record in table KhuyenMai
+                    var query1 = da.Db.KhuyenMais.OrderByDescending(km => km.id).FirstOrDefault();
+
                     da.Db.KhuyenMais.InsertOnSubmit(new KhuyenMai
                     {
-                        MaKhuyenMai = khuyenMai.MaKhuyenMai,
+                        MaKhuyenMai = query1.id < 10 ? "KM00" + (query1.id + 1) : "KM0" + (query1.id + 1),
                         TenKhuyenMai = khuyenMai.TenKhuyenMai,
                         GiaTri = khuyenMai.GiaTri,
                         is_deleted = 0,
@@ -93,7 +96,6 @@ namespace DAL
                     KhuyenMai km_update = da.Db.KhuyenMais.Single(km => km.id == khuyenMai.Id);
 
                     // Updated km_update
-                    km_update.MaKhuyenMai = khuyenMai.MaKhuyenMai;
                     km_update.TenKhuyenMai = khuyenMai.TenKhuyenMai;
                     km_update.GiaTri = khuyenMai.GiaTri;
                     km_update.is_deleted = khuyenMai.Is_deleted;
