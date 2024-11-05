@@ -12,7 +12,6 @@ namespace DAL
         private QLSTDataContext db = new QLSTDataContext();
         private string serverName = ".\\SQLEXPRESS";
         private string dbName = "QuanLySieuThi";
-
         // Constructors
         public DatabaseAccess(QLSTDataContext db, string serverName, string dbName)
         {

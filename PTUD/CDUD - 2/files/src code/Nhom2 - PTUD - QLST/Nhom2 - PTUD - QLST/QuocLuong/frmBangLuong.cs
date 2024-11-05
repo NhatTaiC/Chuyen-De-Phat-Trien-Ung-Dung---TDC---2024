@@ -157,7 +157,7 @@ namespace GUI
         {
             try
             {
-                if (dgvBangLuong.Rows.Count > 0)
+                if (dgvBangLuong.CurrentCell != null)
                 {
                     //lấy dòng đang click
                     int dong = dgvBangLuong.CurrentRow.Index;

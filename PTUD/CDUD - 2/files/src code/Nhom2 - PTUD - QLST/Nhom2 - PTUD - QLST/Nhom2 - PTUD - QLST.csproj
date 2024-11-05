@@ -130,6 +130,12 @@
     <Compile Include="QuocLuong\frmBangLuong.Designer.cs">
       <DependentUpon>frmBangLuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuocLuong\frmBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuocLuong\frmBanHang.Designer.cs">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuocLuong\frmChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuocLuong\frmBangLuong.resx">
       <DependentUpon>frmBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuocLuong\frmBanHang.resx">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuocLuong\frmChiNhanh.resx">
       <DependentUpon>frmChiNhanh.cs</DependentUpon>

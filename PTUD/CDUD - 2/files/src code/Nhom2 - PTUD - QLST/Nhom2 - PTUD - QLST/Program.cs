@@ -35,7 +35,7 @@ namespace Nhom2___PTUD___QLST
             //    fDN.ShowDialog();
             //}
 
-            Application.Run(new frmBangLuong());
+            Application.Run(new frmBanHang());
         }
     }
 }

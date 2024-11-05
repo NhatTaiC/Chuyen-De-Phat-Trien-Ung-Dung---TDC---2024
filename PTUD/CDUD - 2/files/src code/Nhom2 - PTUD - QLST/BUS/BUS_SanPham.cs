@@ -33,5 +33,9 @@ namespace BUS
         {
             dal_sp.SuaSanPham(sanPham);
         }
+        public List<DTO_SanPhamKhoHang> ListSanPham()
+        {
+            return dal_sp.ListSanPham();
+        }
     }
 }
