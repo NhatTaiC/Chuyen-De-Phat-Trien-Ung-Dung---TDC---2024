@@ -37,5 +37,9 @@ namespace BUS
         {
             return dal_sp.ListSanPham();
         }
+        //public List<DTO_SanPhamKhoHang> ListTimKiemSanPhamBangMa(string tukhoa)
+        //{
+        //    return dal_sp.ListTimKiemSanPhamBangMa(tukhoa);
+        //}
     }
 }
