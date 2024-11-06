@@ -35,5 +35,20 @@ namespace BUS
         {
             dal_log.DelLog(id);
         }
+
+        public void AddLog2(DTO_Log log)
+        {
+            dal_log.AddLog2(log);
+        }
+
+        public void UpdateLog2(DTO_Log log)
+        {
+            dal_log.UpdateLog2(log);
+        }
+
+        public void AddLog3(DTO_Log log)
+        {
+            dal_log.AddLog3(log);
+        }
     }
 }

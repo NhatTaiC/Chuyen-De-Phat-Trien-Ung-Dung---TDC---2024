@@ -22,11 +22,12 @@ namespace Nhom2___PTUD___QLST
         BUS_NhanVien bus_nv = new BUS_NhanVien();
         BUS_LoaiNhanVien bus_lnv = new BUS_LoaiNhanVien();
         BUS_TaiKhoan bus_tk = new BUS_TaiKhoan();
+        DataValidation dv = new DataValidation();
 
         public void LoadData()
         {
             // Others
-            txtMaNhanVien.Focus();
+            txtTenNhanVien.Focus();
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
@@ -34,8 +35,9 @@ namespace Nhom2___PTUD___QLST
             // dgvNV
             dgvNV.DataSource = bus_nv.GetListNV();
             dgvNV.Columns["id"].Visible = false;
-            //dgvNV.Columns["idLoaiNhanVien"].Visible = false;
-            //dgvNV.Columns["idTaiKhoan"].Visible = false;
+            dgvNV.Columns["idLoaiNhanVien"].Visible = false;
+            dgvNV.Columns["idTaiKhoan"].Visible = false;
+            dgvNV.Columns["MaNhanVien"].Visible = false;
             dgvNV.Columns["MaNhanVien"].HeaderText = "Mã nhân viên";
             dgvNV.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
             dgvNV.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
@@ -56,7 +58,6 @@ namespace Nhom2___PTUD___QLST
 
         public void Reset()
         {
-            txtMaNhanVien.Clear();
             txtTenNhanVien.Clear();
             txtSoDienThoai.Clear();
             txtDiaChi.Clear();
@@ -64,96 +65,51 @@ namespace Nhom2___PTUD___QLST
             LoadData();
         }
 
-        public bool CheckData(string maNhanVien, string tenNhanVien, string soDT, string diaChi)
+        public bool CheckData(string tenNhanVien, string soDT, string diaChi)
         {
             // Initialize Variables
             int count = 0;
 
-            // Checked maNhanVien
-            if (CheckString(maNhanVien, 30))
-            {
-                count += 1;
-            }
-            else
-            {
-                MessageBox.Show($"Mã nhân viên: [{maNhanVien}] không quá 30 kí tự!",
-                    "Thông báo",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-            }
-
             // Checked tenNhanVien
-            if (CheckString(tenNhanVien, 100))
+            if (dv.CheckString(tenNhanVien, 100))
             {
                 count += 1;
             }
             else
             {
-                MessageBox.Show($"Tên nhân viên: [{tenNhanVien}] không quá 100 kí tự!",
+                MessageBox.Show($"Tên nhân viên không quá 100 kí tự!",
                     "Thông báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
 
             // Checked soDT
-            if (CheckNumber(soDT))
+            if (dv.CheckNumber(soDT, 10))
             {
                 count += 1;
             }
             else
             {
-                MessageBox.Show($"Số điện thoại: [{soDT}] không quá 20 kí tự và phải nhập số!",
+                MessageBox.Show($"Số điện thoại không quá 10 kí tự và phải nhập số!",
                     "Thông báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
 
             // Checked diaChi
-            if (CheckString(diaChi, 100))
+            if (dv.CheckString(diaChi, 100))
             {
                 count += 1;
             }
             else
             {
-                MessageBox.Show($"Địa chỉ: [{diaChi}] không quá 100 kí tự!",
+                MessageBox.Show($"Địa chỉ không quá 100 kí tự!",
                     "Thông báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
 
-            if (count == 4)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public bool CheckNumber(string name)
-        {
-            if (name == null)
-            {
-                return false;
-            }
-
-            if (name.Length > 20)
-            {
-                return false;
-            }
-
-            for (int i = 0; i < name.Length; i++)
-            {
-                if (name[i] >= 'a' && name[i] <= 'z' || name[i] >= 'A' && name[i] <= 'Z')
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        public bool CheckString(string name, int strlength)
-        {
-            if (name != string.Empty && name.Length <= strlength)
+            if (count == 3)
             {
                 return true;
             }
@@ -199,7 +155,6 @@ namespace Nhom2___PTUD___QLST
                 // Get row index selected
                 int n = dgvNV.CurrentCell.RowIndex;
 
-                txtMaNhanVien.Text = dgvNV.Rows[n].Cells[1].Value.ToString();
                 txtTenNhanVien.Text = dgvNV.Rows[n].Cells[2].Value.ToString();
                 txtSoDienThoai.Text = dgvNV.Rows[n].Cells[3].Value.ToString();
                 txtDiaChi.Text = dgvNV.Rows[n].Cells[4].Value.ToString();
@@ -207,7 +162,6 @@ namespace Nhom2___PTUD___QLST
                 //MessageBox.Show(dgvNV.Rows[n].Cells[5].Value.ToString());
 
                 // cboMaLoaiNhanVien
-                //cboMaLoaiNhanVien.SelectedIndex = int.Parse(dgvNV.Rows[n].Cells[5].Value.ToString());
                 int idLoaiNhanVien = int.Parse(dgvNV.Rows[n].Cells[5].Value.ToString());
                 cboMaLoaiNhanVien.DataSource = bus_lnv.GetListOneLNVByTen(idLoaiNhanVien);
                 cboMaLoaiNhanVien.DisplayMember = "TenLoaiNhanVien";
@@ -232,10 +186,9 @@ namespace Nhom2___PTUD___QLST
         {
             try
             {
-                if (CheckData(txtMaNhanVien.Text, txtTenNhanVien.Text, txtSoDienThoai.Text, txtDiaChi.Text))
+                if (CheckData(txtTenNhanVien.Text, txtSoDienThoai.Text, txtDiaChi.Text))
                 {
-                    bus_nv.AddNV(new DTO_NhanVien(
-                    txtMaNhanVien.Text,
+                    bus_nv.AddNV2(new DTO_NhanVien(
                     txtTenNhanVien.Text,
                     txtSoDienThoai.Text,
                     txtDiaChi.Text,
@@ -267,7 +220,7 @@ namespace Nhom2___PTUD___QLST
                 // Initialize Variables
                 int currentId = int.Parse(dgvNV.CurrentRow.Cells[0].Value.ToString());
 
-                if (CheckData(txtMaNhanVien.Text, txtTenNhanVien.Text, txtSoDienThoai.Text, txtDiaChi.Text))
+                if (CheckData(txtTenNhanVien.Text, txtSoDienThoai.Text, txtDiaChi.Text))
                 {
                     DialogResult dr = MessageBox.Show($"Bạn có chắc muốn xóa: [{txtTenNhanVien.Text}] không?",
                   "Thông báo",
@@ -303,7 +256,7 @@ namespace Nhom2___PTUD___QLST
                 // Initialize Variables
                 int currentId = int.Parse(dgvNV.CurrentRow.Cells[0].Value.ToString());
 
-                if (CheckData(txtMaNhanVien.Text, txtTenNhanVien.Text, txtSoDienThoai.Text, txtDiaChi.Text))
+                if (CheckData(txtTenNhanVien.Text, txtSoDienThoai.Text, txtDiaChi.Text))
                 {
                     DialogResult dr = MessageBox.Show($"Bạn có chắc muốn sửa thông tin: [{txtTenNhanVien.Text}] không?",
                        "Thông báo",
@@ -312,9 +265,8 @@ namespace Nhom2___PTUD___QLST
 
                     if (dr == DialogResult.Yes)
                     {
-                        bus_nv.UpdateNV(new DTO_NhanVien(
+                        bus_nv.UpdateNV2(new DTO_NhanVien(
                         currentId,
-                        txtMaNhanVien.Text,
                         txtTenNhanVien.Text,
                         txtSoDienThoai.Text,
                         txtDiaChi.Text,

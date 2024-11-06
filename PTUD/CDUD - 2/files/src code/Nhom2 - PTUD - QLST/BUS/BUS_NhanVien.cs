@@ -35,5 +35,15 @@ namespace BUS
         {
             dal_nv.DelNV(id);
         }
+
+        public void AddNV2(DTO_NhanVien nv)
+        {
+            dal_nv.AddNV2(nv);
+        }
+
+        public void UpdateNV2(DTO_NhanVien nv)
+        {
+            dal_nv.UpdateNV2(nv);
+        }
     }
 }

@@ -127,7 +127,7 @@ namespace Nhom2___PTUD___QLST
             {
                 if (CheckData(txtTenLoaiNhanVien.Text))
                 {
-                    bus_lnv.AddLNV(new DTO_LoaiNhanVien(txtTenLoaiNhanVien.Text));
+                    bus_lnv.AddLNV2(new DTO_LoaiNhanVien(txtTenLoaiNhanVien.Text));
 
                     Reset();
                 }
@@ -198,7 +198,7 @@ namespace Nhom2___PTUD___QLST
 
                     if (dr == DialogResult.Yes)
                     {
-                        bus_lnv.UpdateLNV(new DTO_LoaiNhanVien(currentId, txtTenLoaiNhanVien.Text));
+                        bus_lnv.UpdateLNV2(new DTO_LoaiNhanVien(currentId, txtTenLoaiNhanVien.Text));
 
                         Reset();
                     }

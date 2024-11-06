@@ -45,5 +45,15 @@ namespace BUS
         {
             dal_lnv.DelLNV(id);
         }
+
+        public void AddLNV2(DTO_LoaiNhanVien loaiNhanVien)
+        {
+            dal_lnv.AddLNV2(loaiNhanVien);
+        }
+
+        public void UpdateLNV2(DTO_LoaiNhanVien loaiNhanVien)
+        {
+            dal_lnv.UpdateLNV2(loaiNhanVien);
+        }
     }
 }

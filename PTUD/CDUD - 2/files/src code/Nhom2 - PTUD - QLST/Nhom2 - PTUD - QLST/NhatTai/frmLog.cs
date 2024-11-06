@@ -33,6 +33,7 @@ namespace Nhom2___PTUD___QLST
             // Diasable
             txtModel.Enabled = false;
             txtModelId.Enabled = false;
+            txtAction.Enabled = false;
             txtDataOlds.Enabled = false;
             txtDataNews.Enabled = false;
             btnThem.Enabled = false;
@@ -47,6 +48,7 @@ namespace Nhom2___PTUD___QLST
             dgvLog.Columns["log_name"].HeaderText = "LogName";
             dgvLog.Columns["model"].HeaderText = "Model";
             dgvLog.Columns["model_id"].HeaderText = "ModelId";
+            dgvLog.Columns["action"].HeaderText = "Action";
             dgvLog.Columns["data_olds"].HeaderText = "DataOlds";
             dgvLog.Columns["data_news"].HeaderText = "DataNews";
         }
@@ -56,13 +58,14 @@ namespace Nhom2___PTUD___QLST
             // Other
             txtModel.Clear();
             txtModelId.Clear();
+            txtAction.Clear();
             txtDataOlds.Clear();
             txtDataNews.Clear();
 
             LoadData();
         }
 
-        public bool CheckData(string model, string model_id, string data_olds, string data_news)
+        public bool CheckData(string model, string model_id, string action, string data_olds, string data_news)
         {
             // Initialize Variables
             int count = 0;
@@ -88,6 +91,19 @@ namespace Nhom2___PTUD___QLST
             else
             {
                 MessageBox.Show($"model id phải nhập số!",
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+
+            // Checked action
+            if (dv.CheckString(action, 100))
+            {
+                count += 1;
+            }
+            else
+            {
+                MessageBox.Show($"action không quá 100 kí tự!",
                     "Thông báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -119,7 +135,7 @@ namespace Nhom2___PTUD___QLST
                     MessageBoxIcon.Warning);
             }
 
-            if (count == 4)
+            if (count == 5)
             {
                 return true;
             }
@@ -172,8 +188,9 @@ namespace Nhom2___PTUD___QLST
 
                 txtModel.Text = dgvLog.Rows[n].Cells[2].Value.ToString();
                 txtModelId.Text = dgvLog.Rows[n].Cells[3].Value.ToString();
-                txtDataOlds.Text = dgvLog.Rows[n].Cells[4].Value.ToString();
-                txtDataNews.Text = dgvLog.Rows[n].Cells[5].Value.ToString();
+                txtAction.Text = dgvLog.Rows[n].Cells[4].Value.ToString();
+                txtDataOlds.Text = dgvLog.Rows[n].Cells[5].Value.ToString();
+                txtDataNews.Text = dgvLog.Rows[n].Cells[6].Value.ToString();
             }
             else
             {
@@ -188,11 +205,12 @@ namespace Nhom2___PTUD___QLST
         {
             try
             {
-                if (CheckData(txtModel.Text, txtModelId.Text, txtDataOlds.Text, txtDataNews.Text))
+                if (CheckData(txtModel.Text, txtModelId.Text, txtAction.Text, txtDataOlds.Text, txtDataNews.Text))
                 {
-                    bus_log.AddLog(new DTO_Log(
+                    bus_log.AddLog2(new DTO_Log(
                         txtModel.Text,
                         int.Parse(txtModelId.Text),
+                        txtAction.Text,
                         txtDataOlds.Text,
                         txtDataNews.Text));
 
@@ -220,7 +238,7 @@ namespace Nhom2___PTUD___QLST
                 // Initialize Variable
                 int currentId = int.Parse(dgvLog.CurrentRow.Cells[0].Value.ToString());
 
-                if (CheckData(txtModel.Text, txtModelId.Text, txtDataOlds.Text, txtDataNews.Text))
+                if (CheckData(txtModel.Text, txtModelId.Text, txtAction.Text, txtDataOlds.Text, txtDataNews.Text))
                 {
                     DialogResult dr = MessageBox.Show($"Bạn có chắc muốn sửa thông tin: [{txtModel.Text}] không?",
                        "Thông báo",
@@ -229,10 +247,11 @@ namespace Nhom2___PTUD___QLST
 
                     if (dr == DialogResult.Yes)
                     {
-                        bus_log.UpdateLog(new DTO_Log(
+                        bus_log.UpdateLog2(new DTO_Log(
                             currentId,
                             txtModel.Text,
                             int.Parse(txtModelId.Text),
+                            txtAction.Text,
                             txtDataOlds.Text,
                             txtDataNews.Text));
 
@@ -261,7 +280,7 @@ namespace Nhom2___PTUD___QLST
                 // Initialize Variable
                 int currentId = int.Parse(dgvLog.CurrentRow.Cells[0].Value.ToString());
 
-                if (CheckData(txtModel.Text, txtModelId.Text, txtDataOlds.Text, txtDataNews.Text))
+                if (CheckData(txtModel.Text, txtModelId.Text, txtAction.Text, txtDataOlds.Text, txtDataNews.Text))
                 {
                     DialogResult dr = MessageBox.Show($"Bạn có chắc muốn xóa: [{txtModel.Text}] không?",
                        "Thông báo",
