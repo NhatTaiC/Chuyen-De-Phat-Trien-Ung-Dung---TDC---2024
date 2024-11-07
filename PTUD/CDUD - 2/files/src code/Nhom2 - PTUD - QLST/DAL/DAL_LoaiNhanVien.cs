@@ -308,5 +308,13 @@ namespace DAL
                     MessageBoxIcon.Warning);
             }
         }
+
+        // Get max(id) in table LoaiNhanVien
+        public int GetMaxIdLNV()
+        {
+            var query = da.Db.LoaiNhanViens.OrderByDescending(lnv => lnv.id).FirstOrDefault();
+
+            return (int)query.id;
+        }
     }
 }

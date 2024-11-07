@@ -55,5 +55,10 @@ namespace BUS
         {
             dal_lnv.UpdateLNV2(loaiNhanVien);
         }
+
+        public int GetMaxIdLNV()
+        {
+            return dal_lnv.GetMaxIdLNV();
+        }
     }
 }

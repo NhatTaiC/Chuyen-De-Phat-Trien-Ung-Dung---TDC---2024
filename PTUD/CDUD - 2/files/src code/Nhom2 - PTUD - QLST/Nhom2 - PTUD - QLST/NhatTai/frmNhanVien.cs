@@ -23,6 +23,9 @@ namespace Nhom2___PTUD___QLST
         BUS_LoaiNhanVien bus_lnv = new BUS_LoaiNhanVien();
         BUS_TaiKhoan bus_tk = new BUS_TaiKhoan();
         DataValidation dv = new DataValidation();
+        BUS_Log bus_log = new BUS_Log();
+        string data_olds = string.Empty;
+        string data_news = string.Empty;
 
         public void LoadData()
         {
@@ -195,6 +198,16 @@ namespace Nhom2___PTUD___QLST
                     int.Parse(cboMaLoaiNhanVien.SelectedValue.ToString()),
                     int.Parse(cboMaTaiKhoan.SelectedValue.ToString())));
 
+                    int model_id = bus_nv.GetMaxIdNV();
+                    data_news = $"TenNhanVien: {txtTenNhanVien.Text} \n" +
+                        $"SoDienThoai: {txtSoDienThoai.Text} \n" +
+                        $"DiaChi: {txtDiaChi.Text} \n" +
+                        $"MaLoaiNhanVien: {cboMaLoaiNhanVien.SelectedValue.ToString()} \n" +
+                        $"MaTaiKhoan: {cboMaTaiKhoan.SelectedValue.ToString()}";
+
+                    // Saved log
+                    bus_log.AddLog3(new DTO_Log("NhanVien", model_id, "Add a new record NhanVien", data_olds, data_news));
+
                     Reset();
                 }
                 else
@@ -219,6 +232,8 @@ namespace Nhom2___PTUD___QLST
             {
                 // Initialize Variables
                 int currentId = int.Parse(dgvNV.CurrentRow.Cells[0].Value.ToString());
+                data_olds = "is_deleted = 0";
+                data_news = "is_deleted = 1";
 
                 if (CheckData(txtTenNhanVien.Text, txtSoDienThoai.Text, txtDiaChi.Text))
                 {
@@ -230,6 +245,9 @@ namespace Nhom2___PTUD___QLST
                     if (dr == DialogResult.Yes)
                     {
                         bus_nv.DelNV(currentId);
+
+                        // Saved log
+                        bus_log.AddLog3(new DTO_Log("NhanVien", currentId, "Delete a record NhanVien", data_olds, data_news));
 
                         Reset();
                     }
@@ -255,6 +273,17 @@ namespace Nhom2___PTUD___QLST
             {
                 // Initialize Variables
                 int currentId = int.Parse(dgvNV.CurrentRow.Cells[0].Value.ToString());
+                data_olds = $"TenNhanVien: {dgvNV.CurrentRow.Cells[2].Value.ToString()} \n" +
+                    $"SoDienThoai: {dgvNV.CurrentRow.Cells[3].Value.ToString()} \n" +
+                    $"DiaChi: {dgvNV.CurrentRow.Cells[4].Value.ToString()} \n" +
+                    $"MaLoaiNhanVien: {dgvNV.CurrentRow.Cells[5].Value.ToString()} \n" +
+                    $"MaTaiKhoan: {dgvNV.CurrentRow.Cells[6].Value.ToString()}";
+
+                data_news = $"TenNhanVien: {txtTenNhanVien.Text} \n" +
+                        $"SoDienThoai: {txtSoDienThoai.Text} \n" +
+                        $"DiaChi: {txtDiaChi.Text} \n" +
+                        $"MaLoaiNhanVien: {cboMaLoaiNhanVien.SelectedValue.ToString()} \n" +
+                        $"MaTaiKhoan: {cboMaTaiKhoan.SelectedValue.ToString()}";
 
                 if (CheckData(txtTenNhanVien.Text, txtSoDienThoai.Text, txtDiaChi.Text))
                 {
@@ -272,6 +301,9 @@ namespace Nhom2___PTUD___QLST
                         txtDiaChi.Text,
                         int.Parse(cboMaLoaiNhanVien.SelectedValue.ToString()),
                         int.Parse(cboMaTaiKhoan.SelectedValue.ToString())));
+
+                        // Saved log
+                        bus_log.AddLog3(new DTO_Log("NhanVien", currentId, "Update a record NhanVien", data_olds, data_news));
 
                         Reset();
                     }

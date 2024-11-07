@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * Chau Nhat Tai
+ * Nhom2 - PTUD2 - QLST
+ * 07/11/2024
+ * frmHoaDon.cs
+ */
 using System.Windows.Forms;
 
 namespace Nhom2___PTUD___QLST.NhatTai
@@ -16,5 +14,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
         {
             InitializeComponent();
         }
+
+        // Initialize Variables
     }
 }

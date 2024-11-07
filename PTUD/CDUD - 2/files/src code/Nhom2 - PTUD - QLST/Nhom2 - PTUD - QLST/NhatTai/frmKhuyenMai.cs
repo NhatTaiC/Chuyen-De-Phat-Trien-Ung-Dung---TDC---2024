@@ -22,6 +22,8 @@ namespace Nhom2___PTUD___QLST
         BUS_KhuyenMai bus_km = new BUS_KhuyenMai();
         DataValidation dv = new DataValidation();
         BUS_Log bus_log = new BUS_Log();
+        string data_olds = string.Empty;
+        string data_news = string.Empty;
 
         public void LoadData()
         {
@@ -149,10 +151,10 @@ namespace Nhom2___PTUD___QLST
                     bus_km.AddKM2(new DTO_KhuyenMai(txtTenKhuyenMai.Text, float.Parse(txtGiaTri.Text)));
 
                     int model_id = bus_km.GetMaxIdKM();
-                    string data_olds = "";
-                    string data_news = $"TenKhuyenMai: {txtTenKhuyenMai.Text} \nGiaTri: {txtGiaTri.Text}";
+                    data_news = $"TenKhuyenMai: {txtTenKhuyenMai.Text} \nGiaTri: {txtGiaTri.Text}";
 
-                    bus_log.AddLog3(new DTO_Log("KhuyenMai", model_id, "Add", data_olds, data_news));
+                    // Saved log
+                    bus_log.AddLog3(new DTO_Log("KhuyenMai", model_id, "Add a new record KhuyenMai", data_olds, data_news));
 
                     Reset();
                 }
@@ -177,8 +179,8 @@ namespace Nhom2___PTUD___QLST
             {
                 // Initialize Variables
                 int currentId = int.Parse(dgvKM.CurrentRow.Cells[0].Value.ToString());
-                string data_olds = $"TenKhuyenMai: {dgvKM.CurrentRow.Cells[2].Value.ToString()} \nGiaTri: {dgvKM.CurrentRow.Cells[3].Value.ToString()}";
-                string data_news = $"TenKhuyenMai: {txtTenKhuyenMai.Text} \nGiaTri: {txtGiaTri.Text}";
+                data_olds = $"TenKhuyenMai: {dgvKM.CurrentRow.Cells[2].Value.ToString()} \nGiaTri: {dgvKM.CurrentRow.Cells[3].Value.ToString()}";
+                data_news = $"TenKhuyenMai: {txtTenKhuyenMai.Text} \nGiaTri: {txtGiaTri.Text}";
 
                 if (CheckData(txtTenKhuyenMai.Text, txtGiaTri.Text))
                 {
@@ -191,7 +193,8 @@ namespace Nhom2___PTUD___QLST
                     {
                         bus_km.UpdateKM2(new DTO_KhuyenMai(currentId, txtTenKhuyenMai.Text, float.Parse(txtGiaTri.Text)));
 
-                        bus_log.AddLog3(new DTO_Log("KhuyenMai", currentId, "Update", data_olds, data_news));
+                        // Saved log
+                        bus_log.AddLog3(new DTO_Log("KhuyenMai", currentId, "Update a record KhuyenMai", data_olds, data_news));
 
                         Reset();
                     }
@@ -217,8 +220,8 @@ namespace Nhom2___PTUD___QLST
             {
                 // Initialize Variables
                 int currentId = int.Parse(dgvKM.CurrentRow.Cells[0].Value.ToString());
-                string data_olds = "is_deleted = 0";
-                string data_news = "is_deleted = 1";
+                data_olds = "is_deleted = 0";
+                data_news = "is_deleted = 1";
 
                 if (CheckData(txtTenKhuyenMai.Text, txtGiaTri.Text))
                 {
@@ -231,7 +234,8 @@ namespace Nhom2___PTUD___QLST
                     {
                         bus_km.DelKM(currentId);
 
-                        bus_log.AddLog3(new DTO_Log("KhuyenMai", currentId, "Delete", data_olds, data_news));
+                        // Saved log
+                        bus_log.AddLog3(new DTO_Log("KhuyenMai", currentId, "Delete a record KhuyenMai", data_olds, data_news));
 
                         Reset();
                     }

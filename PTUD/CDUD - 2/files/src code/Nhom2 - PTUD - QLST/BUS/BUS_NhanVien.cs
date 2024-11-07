@@ -45,5 +45,10 @@ namespace BUS
         {
             dal_nv.UpdateNV2(nv);
         }
+
+        public int GetMaxIdNV()
+        {
+            return dal_nv.GetMaxIdNV();
+        }
     }
 }

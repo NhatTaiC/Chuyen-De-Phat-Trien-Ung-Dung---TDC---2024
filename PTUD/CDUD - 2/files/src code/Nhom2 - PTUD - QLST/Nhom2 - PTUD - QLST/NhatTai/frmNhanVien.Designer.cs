@@ -118,6 +118,7 @@
             this.cboMaTaiKhoan.Location = new System.Drawing.Point(360, 155);
             this.cboMaTaiKhoan.Name = "cboMaTaiKhoan";
             this.cboMaTaiKhoan.Size = new System.Drawing.Size(827, 36);
+            this.cboMaTaiKhoan.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cboMaTaiKhoan.TabIndex = 5;
             // 
             // cboMaLoaiNhanVien
@@ -319,7 +320,7 @@
             this.dgvNV.ColumnHeadersHeight = 25;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -329,6 +330,7 @@
             this.dgvNV.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvNV.Location = new System.Drawing.Point(0, 40);
+            this.dgvNV.MultiSelect = false;
             this.dgvNV.Name = "dgvNV";
             this.dgvNV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvNV.RowHeadersVisible = false;

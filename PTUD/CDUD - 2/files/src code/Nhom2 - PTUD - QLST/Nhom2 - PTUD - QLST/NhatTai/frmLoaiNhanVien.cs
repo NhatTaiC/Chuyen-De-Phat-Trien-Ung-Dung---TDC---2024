@@ -21,6 +21,9 @@ namespace Nhom2___PTUD___QLST
         // Initialize Variables
         BUS_LoaiNhanVien bus_lnv = new BUS_LoaiNhanVien();
         DataValidation dv = new DataValidation();
+        BUS_Log bus_log = new BUS_Log();
+        string data_olds = string.Empty;
+        string data_news = string.Empty;
 
         public void LoadData()
         {
@@ -129,6 +132,13 @@ namespace Nhom2___PTUD___QLST
                 {
                     bus_lnv.AddLNV2(new DTO_LoaiNhanVien(txtTenLoaiNhanVien.Text));
 
+                    int model_id = bus_lnv.GetMaxIdLNV();
+
+                    data_news = $"TenLoaiNhanVien: {txtTenLoaiNhanVien.Text}";
+
+                    // Saved log
+                    bus_log.AddLog3(new DTO_Log("LoaiNhanVien", model_id, "Add a new record LoaiNhanVien", data_olds, data_news));
+
                     Reset();
                 }
                 else
@@ -152,6 +162,8 @@ namespace Nhom2___PTUD___QLST
             {
                 // Initialize Variables
                 int currentId = int.Parse(dgvLNV.CurrentRow.Cells[0].Value.ToString());
+                data_olds = "is_deleted = 0";
+                data_news = "is_deleted = 1";
 
                 if (CheckData(txtTenLoaiNhanVien.Text))
                 {
@@ -163,6 +175,9 @@ namespace Nhom2___PTUD___QLST
                     if (dr == DialogResult.Yes)
                     {
                         bus_lnv.DelLNV(currentId);
+
+                        // Saved log
+                        bus_log.AddLog3(new DTO_Log("LoaiNhanVien", currentId, "Delete a record LoaiNhanVien", data_olds, data_news));
 
                         Reset();
                     }
@@ -188,6 +203,8 @@ namespace Nhom2___PTUD___QLST
             {
                 // Initialize Variables
                 int currentId = int.Parse(dgvLNV.CurrentRow.Cells[0].Value.ToString());
+                data_olds = $"TenLoaiNhanVien: {dgvLNV.CurrentRow.Cells[1].Value.ToString()}";
+                data_news = $"TenLoaiNhanVien: {txtTenLoaiNhanVien.Text}";
 
                 if (CheckData(txtTenLoaiNhanVien.Text))
                 {
@@ -199,6 +216,9 @@ namespace Nhom2___PTUD___QLST
                     if (dr == DialogResult.Yes)
                     {
                         bus_lnv.UpdateLNV2(new DTO_LoaiNhanVien(currentId, txtTenLoaiNhanVien.Text));
+
+                        // Saved log
+                        bus_log.AddLog3(new DTO_Log("LoaiNhanVien", currentId, "Update a record LoaiNhanVien", data_olds, data_news));
 
                         Reset();
                     }

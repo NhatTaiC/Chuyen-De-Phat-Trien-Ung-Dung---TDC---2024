@@ -5,6 +5,7 @@
  * 21/10/2024
  */
 using GUI;
+using Nhom2___PTUD___QLST.NhatTai;
 using Nhom2___PTUD___QLST.VanToan;
 using System.Windows.Forms;
 
@@ -350,6 +351,20 @@ namespace Nhom2___PTUD___QLST
             else
             {
                 ActForm("frmLog");
+            }
+        }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmHoaDon"))
+            {
+                frmHoaDon f = new frmHoaDon();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmHoaDon");
             }
         }
     }

@@ -54,6 +54,21 @@ namespace DTO
             this.quyen = quyen;
         }
 
+        public DTO_TaiKhoan(string tenTaiKhoan, string matKhau, int quyen)
+        {
+            this.tenTaiKhoan = tenTaiKhoan;
+            this.matKhau = matKhau;
+            this.quyen = quyen;
+        }
+
+        public DTO_TaiKhoan(int id, string tenTaiKhoan, string matKhau, int quyen)
+        {
+            this.id = id;
+            this.tenTaiKhoan = tenTaiKhoan;
+            this.matKhau = matKhau;
+            this.quyen = quyen;
+        }
+
         // Properties
         public int Id { get => id; set => id = value; }
         public string MaTaiKhoan { get => maTaiKhoan; set => maTaiKhoan = value; }

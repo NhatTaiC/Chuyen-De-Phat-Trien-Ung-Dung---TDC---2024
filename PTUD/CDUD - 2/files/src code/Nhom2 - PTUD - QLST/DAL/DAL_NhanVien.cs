@@ -338,5 +338,12 @@ namespace DAL
             }
         }
 
+        // Get max(id) in table NhanVien
+        public int GetMaxIdNV()
+        {
+            var query = da.Db.NhanViens.OrderByDescending(nv => nv.id).FirstOrDefault();
+
+            return (int)query.id;
+        }
     }
 }
