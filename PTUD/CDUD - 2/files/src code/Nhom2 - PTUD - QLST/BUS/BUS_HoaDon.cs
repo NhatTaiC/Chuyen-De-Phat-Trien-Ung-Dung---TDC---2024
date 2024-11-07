@@ -16,7 +16,7 @@ namespace BUS
         DAL_HoaDon dal_hd = new DAL_HoaDon();
 
         // Methods
-        public IQueryable GetListNV()
+        public IQueryable GetListHD()
         {
             return dal_hd.GetListHD();
         }

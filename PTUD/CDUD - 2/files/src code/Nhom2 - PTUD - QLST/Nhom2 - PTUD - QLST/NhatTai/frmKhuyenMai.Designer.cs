@@ -61,7 +61,7 @@
             this.gunaGroupBoxFields.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
             this.gunaGroupBoxFields.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaGroupBoxFields.FillColor = System.Drawing.Color.Transparent;
-            this.gunaGroupBoxFields.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGroupBoxFields.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBoxFields.ForeColor = System.Drawing.Color.White;
             this.gunaGroupBoxFields.Location = new System.Drawing.Point(5, 4);
             this.gunaGroupBoxFields.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -101,11 +101,11 @@
             this.txtGiaTri.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtGiaTri.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtGiaTri.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGiaTri.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaTri.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaTri.ForeColor = System.Drawing.Color.Black;
             this.txtGiaTri.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGiaTri.Location = new System.Drawing.Point(599, 39);
-            this.txtGiaTri.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGiaTri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGiaTri.Name = "txtGiaTri";
             this.txtGiaTri.PasswordChar = '\0';
             this.txtGiaTri.PlaceholderText = "";
@@ -126,11 +126,11 @@
             this.txtTenKhuyenMai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenKhuyenMai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTenKhuyenMai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenKhuyenMai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKhuyenMai.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKhuyenMai.ForeColor = System.Drawing.Color.Black;
             this.txtTenKhuyenMai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenKhuyenMai.Location = new System.Drawing.Point(599, 4);
-            this.txtTenKhuyenMai.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenKhuyenMai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenKhuyenMai.Name = "txtTenKhuyenMai";
             this.txtTenKhuyenMai.PasswordChar = '\0';
             this.txtTenKhuyenMai.PlaceholderText = "";
@@ -144,7 +144,7 @@
             this.guna2HtmlLabel6.AutoSize = false;
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(3, 3);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
@@ -158,7 +158,7 @@
             this.guna2HtmlLabel11.AutoSize = false;
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.White;
             this.guna2HtmlLabel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(3, 38);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
@@ -174,12 +174,12 @@
             this.guna2GroupBoxList.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
             this.guna2GroupBoxList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBoxList.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GroupBoxList.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GroupBoxList.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBoxList.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBoxList.Location = new System.Drawing.Point(5, 123);
             this.guna2GroupBoxList.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.guna2GroupBoxList.Name = "guna2GroupBoxList";
-            this.guna2GroupBoxList.Size = new System.Drawing.Size(1190, 471);
+            this.guna2GroupBoxList.Size = new System.Drawing.Size(1190, 468);
             this.guna2GroupBoxList.TabIndex = 15;
             this.guna2GroupBoxList.Text = "Danh sách khuyến mãi";
             this.guna2GroupBoxList.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -196,7 +196,7 @@
             this.dgvKM.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -205,7 +205,7 @@
             this.dgvKM.ColumnHeadersHeight = 25;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -219,7 +219,7 @@
             this.dgvKM.Name = "dgvKM";
             this.dgvKM.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvKM.RowHeadersVisible = false;
-            this.dgvKM.Size = new System.Drawing.Size(1190, 431);
+            this.dgvKM.Size = new System.Drawing.Size(1190, 428);
             this.dgvKM.TabIndex = 0;
             this.dgvKM.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvKM.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -254,57 +254,57 @@
             this.btnThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1200, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1200, 28);
             this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Text = "menuToolStrip";
             // 
             // btnThem
             // 
-            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::Nhom2___PTUD___QLST.Properties.Resources.plus;
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(55, 22);
+            this.btnThem.Size = new System.Drawing.Size(73, 25);
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = global::Nhom2___PTUD___QLST.Properties.Resources.bin;
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(47, 22);
+            this.btnXoa.Size = new System.Drawing.Size(61, 25);
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
-            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = global::Nhom2___PTUD___QLST.Properties.Resources.loop;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(45, 22);
+            this.btnSua.Size = new System.Drawing.Size(59, 25);
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.Image = global::Nhom2___PTUD___QLST.Properties.Resources.reset;
             this.btnLamMoi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(69, 22);
+            this.btnLamMoi.Size = new System.Drawing.Size(96, 25);
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::Nhom2___PTUD___QLST.Properties.Resources.logout;
             this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(56, 22);
+            this.btnThoat.Size = new System.Drawing.Size(74, 25);
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -315,12 +315,12 @@
             this.tableContainer.Controls.Add(this.guna2GroupBoxList, 0, 1);
             this.tableContainer.Controls.Add(this.gunaGroupBoxFields, 0, 0);
             this.tableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableContainer.Location = new System.Drawing.Point(0, 25);
+            this.tableContainer.Location = new System.Drawing.Point(0, 28);
             this.tableContainer.Name = "tableContainer";
             this.tableContainer.RowCount = 2;
             this.tableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableContainer.Size = new System.Drawing.Size(1200, 598);
+            this.tableContainer.Size = new System.Drawing.Size(1200, 595);
             this.tableContainer.TabIndex = 16;
             // 
             // frmKhuyenMai

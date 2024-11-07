@@ -28,7 +28,10 @@ namespace DAL
                             hd.NgayLapHD,
                             hd.GioLapHD,
                             hd.TongTien,
-                            hd.ThanhTien
+                            hd.ThanhTien,
+                            hd.idKhachHang,
+                            hd.idKhuyenMai,
+                            hd.idNhanVien
                         };
             return query;
         }
@@ -107,7 +110,7 @@ namespace DAL
                     hd_update.idKhachHang = hoaDon.IdKhachHang;
                     hd_update.idKhuyenMai = hoaDon.IdKhuyenMai;
                     hd_update.idNhanVien = hoaDon.IdNhanVien;
-                    hd_update.is_deleted = hoaDon.Is_deleted;
+                    hd_update.is_deleted = 0;
                     hd_update.created_by = 0;
                     hd_update.created_at = DateTime.Now;
                     hd_update.updated_by = 0;
