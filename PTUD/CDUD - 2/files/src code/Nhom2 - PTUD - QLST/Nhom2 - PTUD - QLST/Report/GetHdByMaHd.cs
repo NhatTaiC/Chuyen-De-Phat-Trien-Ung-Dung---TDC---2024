@@ -16,14 +16,14 @@ namespace Nhom2___PTUD___QLST.Report {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Demo : ReportClass {
+    public class GetHdByMaHd : ReportClass {
         
-        public Demo() {
+        public GetHdByMaHd() {
         }
         
         public override string ResourceName {
             get {
-                return "Demo.rpt";
+                return "GetHdByMaHd.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Nhom2___PTUD___QLST.Report {
         
         public override string FullResourceName {
             get {
-                return "Nhom2___PTUD___QLST.Report.Demo.rpt";
+                return "Nhom2___PTUD___QLST.Report.GetHdByMaHd.rpt";
             }
             set {
                 // Do nothing
@@ -87,12 +87,20 @@ namespace Nhom2___PTUD___QLST.Report {
                 return this.ReportDefinition.Sections[4];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_maHoaDon {
+            get {
+                return this.DataDefinition.ParameterFields[0];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedDemo : Component, ICachedReport {
+    public class CachedGetHdByMaHd : Component, ICachedReport {
         
-        public CachedDemo() {
+        public CachedGetHdByMaHd() {
         }
         
         [Browsable(false)]
@@ -129,7 +137,7 @@ namespace Nhom2___PTUD___QLST.Report {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Demo rpt = new Demo();
+            GetHdByMaHd rpt = new GetHdByMaHd();
             rpt.Site = this.Site;
             return rpt;
         }

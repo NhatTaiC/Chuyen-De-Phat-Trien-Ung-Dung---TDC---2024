@@ -50,5 +50,20 @@ namespace BUS
         {
             return dal_nv.GetMaxIdNV();
         }
+
+        public IQueryable SearchNvByMaNV(string maNV)
+        {
+            return dal_nv.SearchNvByMaNV(maNV);
+        }
+
+        public IQueryable SearchNvBytenNV(string tenNV)
+        {
+            return dal_nv.SearchNvBytenNV(tenNV);
+        }
+
+        public IQueryable GetListNV2()
+        {
+            return dal_nv.GetListNV2();
+        }
     }
 }

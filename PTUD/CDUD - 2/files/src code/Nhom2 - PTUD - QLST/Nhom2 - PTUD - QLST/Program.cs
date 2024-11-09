@@ -6,7 +6,6 @@
  * program.cs
  * 21/10/2024
  */
-using Nhom2___PTUD___QLST.NhatTai;
 using System;
 using System.Windows.Forms;
 
@@ -35,7 +34,7 @@ namespace Nhom2___PTUD___QLST
             //    fDN.ShowDialog();
             //}
 
-            Application.Run(new frmChiTietHoaDon());
+            Application.Run(new frmMain());
         }
     }
 }

@@ -208,6 +208,10 @@ namespace DAL
 
             // Saved
             da.Db.SubmitChanges();
+
+            MessageBox.Show("Lưu tổng tiền vào hóa đơn thành công!", "Thông báo",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
 
         public IQueryable GetListHD2()
@@ -236,6 +240,81 @@ namespace DAL
                             nv.TenNhanVien
                         };
             return query;
+        }
+
+        public IQueryable SearchHdByMaHD(string maHD)
+        {
+            var query = from hd in da.Db.HoaDons
+                        where hd.MaHoaDon.ToLower().Contains(maHD.ToLower())
+                        select new
+                        {
+                            hd.id,
+                            hd.MaHoaDon,
+                            hd.NgayLapHD,
+                            hd.GioLapHD,
+                            hd.TongTien,
+                            hd.ThanhTien
+                        };
+
+            return query;
+
+        }
+
+        public IQueryable SearchHdByMaHD_Exact(string maHD)
+        {
+            var query = from hd in da.Db.HoaDons
+                        where hd.MaHoaDon.ToLower().Equals(maHD.ToLower())
+                        select new
+                        {
+                            hd.id,
+                            hd.MaHoaDon,
+                            hd.NgayLapHD,
+                            hd.GioLapHD,
+                            hd.TongTien,
+                            hd.ThanhTien
+                        };
+
+            return query;
+
+        }
+
+        public IQueryable GetListHD3()
+        {
+            var query = from hd in da.Db.HoaDons
+                        where hd.is_deleted == 0
+                        select new
+                        {
+                            hd.id,
+                            hd.MaHoaDon,
+                            hd.NgayLapHD,
+                            hd.GioLapHD,
+                            hd.TongTien,
+                            hd.ThanhTien,
+                        };
+
+            return query;
+        }
+
+        // Check id saved in table HoaDon by maHd
+        public bool CheckHd(string maHd)
+        {
+            var query = (from hd in da.Db.HoaDons
+                         where hd.MaHoaDon.ToLower().Equals(maHd.ToLower())
+                         select new
+                         {
+                             hd.id,
+                             hd.NgayLapHD,
+                             hd.GioLapHD,
+                             hd.TongTien,
+                             hd.ThanhTien
+                         }).Count();
+
+            if (query == 1)
+            {
+                return true;
+            }
+            return false;
+
         }
     }
 }

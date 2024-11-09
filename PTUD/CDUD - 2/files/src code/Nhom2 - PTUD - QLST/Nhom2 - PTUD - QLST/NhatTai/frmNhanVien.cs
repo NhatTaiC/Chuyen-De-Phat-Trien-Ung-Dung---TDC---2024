@@ -1,7 +1,7 @@
 ﻿/*
  * PTUD 2 - Nhom 2
  * Chau Nhat Tai
- * program.cs
+ * frmNhanVien.cs
  * 21/10/2024
  */
 using BUS;

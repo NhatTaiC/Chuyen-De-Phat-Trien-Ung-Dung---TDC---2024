@@ -76,5 +76,10 @@ namespace BUS
         {
             return dal_cthd.SearchListCTHDByMaHD(maHD);
         }
+
+        public int GetTotalCashByIdHd(int idHd)
+        {
+            return dal_cthd.GetTotalCashByIdHd(idHd);
+        }
     }
 }

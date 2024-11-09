@@ -52,6 +52,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
             btnLuuCTHD.Enabled = true;
             cboMaHD.Enabled = true;
             cboMaSP.Enabled = true;
+            dgvSP.Enabled = true;
 
             // cboMaHD
             cboMaHD.DataSource = bus_hd.GetListHD();
@@ -84,18 +85,6 @@ namespace Nhom2___PTUD___QLST.NhatTai
         public void Reset()
         {
             LoadData();
-        }
-
-        public int GetTotalCash(int idHd)
-        {
-            var list = bus_cthd.GetListCTHDTheoMaHD2(idHd);
-
-            foreach (var item in list)
-            {
-                tongTien += item.ThanhTien;
-            }
-
-            return tongTien;
         }
 
         public bool CheckData(int idSanPham, string soLuong)
@@ -160,6 +149,10 @@ namespace Nhom2___PTUD___QLST.NhatTai
 
                 // cboMaSP
                 cboMaSP.SelectedIndex = int.Parse(dgvSP.Rows[n].Cells[0].Value.ToString()) - 1;
+
+                // Others
+                txtTimKiemMaHd.Text = string.Empty;
+                txtTimKiemSp.Text = string.Empty;
             }
             else
             {
@@ -188,6 +181,9 @@ namespace Nhom2___PTUD___QLST.NhatTai
                 btnXoa.Enabled = true;
                 cboMaHD.Enabled = false;
                 cboMaSP.Enabled = false;
+                dgvSP.Enabled = false;
+                txtTimKiemMaHd.Text = string.Empty;
+                txtTimKiemSp.Text = string.Empty;
             }
             else
             {
@@ -447,7 +443,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
         {
             if (txtTongTien.Text == "0")
             {
-                txtTongTien.Text = GetTotalCash(cboMaHD.SelectedIndex + 1).ToString();
+                txtTongTien.Text = bus_cthd.GetTotalCashByIdHd(cboMaHD.SelectedIndex + 1).ToString();
             }
             else
             {
@@ -512,7 +508,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
 
         private void btnTimSp_Click(object sender, EventArgs e)
         {
-            if (txtTimKiemSp.Text != null)
+            if (txtTimKiemSp.Text.Trim() != string.Empty)
             {
                 if (cboTimKiemSp.SelectedIndex == 0)
                 {
@@ -549,5 +545,6 @@ namespace Nhom2___PTUD___QLST.NhatTai
                     MessageBoxIcon.Warning);
             }
         }
+
     }
 }

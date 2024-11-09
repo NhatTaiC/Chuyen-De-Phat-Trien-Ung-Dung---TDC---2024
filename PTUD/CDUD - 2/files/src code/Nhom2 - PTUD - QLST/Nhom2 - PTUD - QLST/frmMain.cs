@@ -102,6 +102,12 @@ namespace Nhom2___PTUD___QLST
             {
                 this.Text = $"Màn hình chính";
             }
+
+            // Others
+            logToolStripMenuItem.Enabled = false;
+            logToolStripMenuItem.Visible = false;
+            logToolStripMenuItem1.Enabled = false;
+            logToolStripMenuItem1.Visible = false;
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -379,6 +385,34 @@ namespace Nhom2___PTUD___QLST
             else
             {
                 ActForm("frmChiTietHoaDon");
+            }
+        }
+
+        private void nhânViênToolStripMenuItem1_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmTraCuuNV"))
+            {
+                frmTraCuuNV f = new frmTraCuuNV();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmTraCuuNV");
+            }
+        }
+
+        private void hóaĐơnToolStripMenuItem1_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmTraCuuHD"))
+            {
+                frmTraCuuHD f = new frmTraCuuHD();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmTraCuuHD");
             }
         }
     }

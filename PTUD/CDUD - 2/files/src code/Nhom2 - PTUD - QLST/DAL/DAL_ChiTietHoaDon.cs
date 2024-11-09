@@ -303,5 +303,21 @@ namespace DAL
 
             return query;
         }
+
+        // Tinh tong tien by idHd
+        public int GetTotalCashByIdHd(int idHd)
+        {
+            // Initialize Variables
+            var list = this.GetListCTHDTheoMaHD2(idHd);
+            int totalCash = 0;
+
+            foreach (var item in list)
+            {
+                totalCash += item.ThanhTien;
+            }
+
+            return totalCash;
+
+        }
     }
 }
