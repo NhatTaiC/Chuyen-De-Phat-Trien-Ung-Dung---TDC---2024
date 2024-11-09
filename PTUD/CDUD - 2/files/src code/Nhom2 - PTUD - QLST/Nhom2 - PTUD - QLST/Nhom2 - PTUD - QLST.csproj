@@ -80,17 +80,17 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhatTai\frmChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhatTai\frmChiTietHoaDon.Designer.cs">
+      <DependentUpon>frmChiTietHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhatTai\frmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhatTai\frmHoaDon.Designer.cs">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhatTai\frmHoaDon_Default.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhatTai\frmHoaDon_Default.Designer.cs">
-      <DependentUpon>frmHoaDon_Default.cs</DependentUpon>
     </Compile>
     <Compile Include="NhatTai\frmLog.cs">
       <SubType>Form</SubType>
@@ -226,11 +226,11 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhatTai\frmChiTietHoaDon.resx">
+      <DependentUpon>frmChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhatTai\frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhatTai\frmHoaDon_Default.resx">
-      <DependentUpon>frmHoaDon_Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhatTai\frmLog.resx">
       <DependentUpon>frmLog.cs</DependentUpon>

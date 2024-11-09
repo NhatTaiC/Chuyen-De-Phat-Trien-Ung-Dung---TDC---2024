@@ -4846,6 +4846,8 @@ namespace DAL
 		
 		private System.Nullable<int> _model_id;
 		
+		private string _action;
+		
 		private string _data_olds;
 		
 		private string _data_news;
@@ -4872,6 +4874,8 @@ namespace DAL
     partial void OnmodelChanged();
     partial void Onmodel_idChanging(System.Nullable<int> value);
     partial void Onmodel_idChanged();
+    partial void OnactionChanging(string value);
+    partial void OnactionChanged();
     partial void Ondata_oldsChanging(string value);
     partial void Ondata_oldsChanged();
     partial void Ondata_newsChanging(string value);
@@ -4969,6 +4973,26 @@ namespace DAL
 					this._model_id = value;
 					this.SendPropertyChanged("model_id");
 					this.Onmodel_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_action", DbType="VarChar(100)")]
+		public string action
+		{
+			get
+			{
+				return this._action;
+			}
+			set
+			{
+				if ((this._action != value))
+				{
+					this.OnactionChanging(value);
+					this.SendPropertyChanging();
+					this._action = value;
+					this.SendPropertyChanged("action");
+					this.OnactionChanged();
 				}
 			}
 		}

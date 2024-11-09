@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DAL;
 using DTO;
-using DAL;
+using System.Linq;
 namespace BUS
 {
     public class BUS_SanPham
@@ -32,6 +28,31 @@ namespace BUS
         public void SuaSanPham(DTO_SanPham sanPham)
         {
             dal_sp.SuaSanPham(sanPham);
+        }
+
+        public IQueryable LocSpTheoTen(string key)
+        {
+            return dal_sp.LocSpTheoTen(key);
+        }
+
+        public int GetSoLuongSpTrongKho(int id)
+        {
+            return dal_sp.GetSoLuongSpTrongKho(id);
+        }
+
+        public IQueryable GetListSP()
+        {
+            return dal_sp.GetListSP();
+        }
+
+        public IQueryable SearchSpByTenSP(string tenSp)
+        {
+            return dal_sp.SearchSpByTenSP(tenSp);
+        }
+
+        public IQueryable SearchSpByDVT(string donViTinh)
+        {
+            return dal_sp.SearchSpByDVT(donViTinh);
         }
     }
 }

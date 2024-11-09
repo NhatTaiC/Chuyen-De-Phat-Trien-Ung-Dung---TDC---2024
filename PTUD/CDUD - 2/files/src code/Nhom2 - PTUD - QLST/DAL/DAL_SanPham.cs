@@ -1,10 +1,6 @@
 ﻿using DTO;
 using System;
-using System.Collections.Generic;
-using System.Data.Linq;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -57,7 +53,7 @@ namespace DAL
                     sp.idLoaiHang = sanpham.IdLoaiHang;
                     sp.idNhaCungCap = sanpham.IdNhaCungCap;
                     sp.AnhSanPham = sanpham.AnhSanPham;
-                    sp.created_at = DateTime.Now;                 
+                    sp.created_at = DateTime.Now;
                     sp.created_by = 0;
                     sp.updated_at = DateTime.Now;
                     sp.updated_by = 0;
@@ -144,6 +140,98 @@ namespace DAL
 
         }
 
+        // Loc SanPham theo TenSP
+        public IQueryable LocSpTheoTen(string key)
+        {
+            var query = from sp in da.Db.SanPhams
+                        where sp.TenSanPham.ToLower().Contains(key.ToLower())
+                        select new
+                        {
+                            sp.id,
+                            sp.MaSanPham,
+                            sp.TenSanPham,
+                            sp.DonViTinh,
+                            sp.DonGia,
+                        };
+
+            return query;
+        }
+
+        // GetSoLuongSpTrongKho
+        public int GetSoLuongSpTrongKho(int id)
+        {
+            var query = (from sp in da.Db.SanPhams
+                         join kho in da.Db.KhoHangs
+                         on sp.id equals kho.idSanPham
+                         where sp.is_deleted == 0 && sp.id == id
+                         select new
+                         {
+                             Id = sp.id,
+                             TenSanPham = sp.TenSanPham,
+                             SoLuong = kho.SoLuong
+                         }).FirstOrDefault();
+
+            return (int)query.SoLuong;
+        }
+
+        public IQueryable GetListSP()
+        {
+            var query = from sp in da.Db.SanPhams
+                        join kho in da.Db.KhoHangs
+                        on sp.id equals kho.idSanPham
+                        where sp.is_deleted == 0
+                        select new
+                        {
+                            sp.id,
+                            sp.MaSanPham,
+                            sp.TenSanPham,
+                            sp.DonViTinh,
+                            sp.DonGia,
+                            kho.SoLuong
+                        };
+
+            return query;
+        }
+
+        // Search Sp by tenSp
+        public IQueryable SearchSpByTenSP(string tenSp)
+        {
+            var query = from sp in da.Db.SanPhams
+                        join kho in da.Db.KhoHangs
+                        on sp.id equals kho.idSanPham
+                        where sp.TenSanPham.ToLower().Contains(tenSp.ToLower())
+                        select new
+                        {
+                            sp.id,
+                            sp.MaSanPham,
+                            sp.TenSanPham,
+                            sp.DonViTinh,
+                            sp.DonGia,
+                            kho.SoLuong
+                        };
+
+            return query;
+        }
+
+        // Search Sp by DonViTinh
+        public IQueryable SearchSpByDVT(string donViTinh)
+        {
+            var query = from sp in da.Db.SanPhams
+                        join kho in da.Db.KhoHangs
+                        on sp.id equals kho.idSanPham
+                        where sp.DonViTinh.ToLower().Contains(donViTinh.ToLower())
+                        select new
+                        {
+                            sp.id,
+                            sp.MaSanPham,
+                            sp.TenSanPham,
+                            sp.DonViTinh,
+                            sp.DonGia,
+                            kho.SoLuong
+                        };
+
+            return query;
+        }
 
     }
 }

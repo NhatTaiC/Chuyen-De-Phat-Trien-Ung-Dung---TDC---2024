@@ -220,6 +220,7 @@
       <Column Name="log_name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="model" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="model_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="action" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="data_olds" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="data_news" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int" CanBeNull="true" />

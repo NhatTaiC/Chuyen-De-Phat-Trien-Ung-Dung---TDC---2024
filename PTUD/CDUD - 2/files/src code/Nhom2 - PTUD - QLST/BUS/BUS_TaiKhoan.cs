@@ -60,10 +60,20 @@ namespace BUS
         {
             dal_tk.DelTK(id);
         }
-        //làm mới lại database
-        public void ResetData()
+
+        public void AddTK2(DTO_TaiKhoan taiKhoan)
         {
-            
+            dal_tk.AddTK2(taiKhoan);
+        }
+
+        public void UpdateTK2(DTO_TaiKhoan taiKhoan)
+        {
+            dal_tk.UpdateTK2(taiKhoan);
+        }
+
+        public int GetMaxIdTK()
+        {
+            return dal_tk.GetMaxIdTK();
         }
     }
 }
