@@ -50,5 +50,25 @@ namespace BUS
         {
             return dal_hd.GetListHD2();
         }
+
+        public IQueryable SearchHdByMaHD(string maHD)
+        {
+            return dal_hd.SearchHdByMaHD(maHD);
+        }
+
+        public IQueryable SearchHdByMaHD_Exact(string maHD)
+        {
+            return dal_hd.SearchHdByMaHD_Exact(maHD);
+        }
+
+        public IQueryable GetListHD3()
+        {
+            return dal_hd.GetListHD3();
+        }
+
+        public bool CheckHd(string maHd)
+        {
+            return dal_hd.CheckHd(maHd);
+        }
     }
 }

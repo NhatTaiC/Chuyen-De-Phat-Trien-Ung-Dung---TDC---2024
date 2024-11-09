@@ -52,8 +52,8 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvHD.Columns[1].Visible = true;
             dgvHD.Columns[2].Visible = false;
             dgvHD.Columns[3].Visible = false;
-            dgvHD.Columns[4].Visible = false;
-            dgvHD.Columns[5].Visible = false;
+            dgvHD.Columns[4].Visible = true;
+            dgvHD.Columns[5].Visible = true;
             dgvHD.Columns[6].Visible = false;
             dgvHD.Columns[7].Visible = false;
             dgvHD.Columns[8].Visible = false;

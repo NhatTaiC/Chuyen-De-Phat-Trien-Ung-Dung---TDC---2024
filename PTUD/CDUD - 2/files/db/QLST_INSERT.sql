@@ -1,4 +1,13 @@
-﻿USE QuanLySieuThi;
+﻿/*
+Nhóm 2 - PTUD
+Châu Nhật Tài
+Nguyễn Quốc Lượng
+Lê Văn Toàn
+10/11/2024
+QLST_INSERT.sql
+*/
+
+USE QuanLySieuThi;
 GO
 
 -- 1. TaiKhoan
@@ -249,22 +258,31 @@ GO
 -- 14. HoaDon
 INSERT INTO HoaDon (MaHoaDon, NgayLapHD, GioLapHD, TongTien, ThanhTien, idKhachHang, idKhuyenMai, idNhanVien, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
-('HD001', GETDATE(), GETDATE(), 0, 0, 1, 1, 3, 0, 0, GETDATE(), 0, GETDATE()),
-('HD002', GETDATE(), GETDATE(), 0, 0, 1, 1, 7, 0, 0, GETDATE(), 0, GETDATE()),
-('HD003', GETDATE(), GETDATE(), 0, 0, 1, 1, 2, 0, 0, GETDATE(), 0, GETDATE()),
-('HD004', GETDATE(), GETDATE(), 0, 0, 1, 1, 8, 0, 0, GETDATE(), 0, GETDATE()),
-('HD005', GETDATE(), GETDATE(), 0, 0, 1, 1, 6, 0, 0, GETDATE(), 0, GETDATE()),
-('HD006', GETDATE(), GETDATE(), 0, 0, 1, 1, 9, 0, 0, GETDATE(), 0, GETDATE()),
-('HD007', GETDATE(), GETDATE(), 0, 0, 1, 1, 4, 0, 0, GETDATE(), 0, GETDATE()),
-('HD008', GETDATE(), GETDATE(), 0, 0, 1, 1, 5, 0, 0, GETDATE(), 0, GETDATE()),
-('HD009', GETDATE(), GETDATE(), 0, 0, 1, 1, 1, 0, 0, GETDATE(), 0, GETDATE()),
-('HD010', GETDATE(), GETDATE(), 0, 0, 1, 1, 10, 0, 0, GETDATE(), 0, GETDATE());
+('HD001', GETDATE(), GETDATE(), 3275000, 0, 1, 1, 3, 0, 0, GETDATE(), 0, GETDATE()),
+('HD002', GETDATE(), GETDATE(), 10000, 0, 1, 1, 7, 0, 0, GETDATE(), 0, GETDATE()),
+('HD003', GETDATE(), GETDATE(), 140000, 0, 1, 1, 2, 0, 0, GETDATE(), 0, GETDATE()),
+('HD004', GETDATE(), GETDATE(), 180000, 0, 1, 1, 8, 0, 0, GETDATE(), 0, GETDATE()),
+('HD005', GETDATE(), GETDATE(), 198000, 0, 1, 1, 6, 0, 0, GETDATE(), 0, GETDATE()),
+('HD006', GETDATE(), GETDATE(), 270000, 0, 1, 1, 9, 0, 0, GETDATE(), 0, GETDATE()),
+('HD007', GETDATE(), GETDATE(), 45000, 0, 1, 1, 4, 0, 0, GETDATE(), 0, GETDATE()),
+('HD008', GETDATE(), GETDATE(), 72000, 0, 1, 1, 5, 0, 0, GETDATE(), 0, GETDATE()),
+('HD009', GETDATE(), GETDATE(), 300000, 0, 1, 1, 1, 0, 0, GETDATE(), 0, GETDATE()),
+('HD010', GETDATE(), GETDATE(), 2000000, 0, 1, 1, 10, 0, 0, GETDATE(), 0, GETDATE());
 GO
 
 -- 15. ChiTietHoaDon
 INSERT INTO ChiTietHoaDon (SoLuong, idHoaDon, idSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
 (5, 1, 7, 0, 0, GetDate(), 0, GetDate()),
+(2, 1, 4, 0, 0, GetDate(), 0, GetDate()),
+(7, 1, 1, 0, 0, GetDate(), 0, GetDate()),
+(3, 1, 8, 0, 0, GetDate(), 0, GetDate()),
+(9, 1, 3, 0, 0, GetDate(), 0, GetDate()),
+(6, 1, 5, 0, 0, GetDate(), 0, GetDate()),
+(1, 1, 9, 0, 0, GetDate(), 0, GetDate()),
+(4, 1, 2, 0, 0, GetDate(), 0, GetDate()),
+(10, 1, 6, 0, 0, GetDate(), 0, GetDate()),
+(8, 1, 10, 0, 0, GetDate(), 0, GetDate()),
 (2, 2, 4, 0, 0, GetDate(), 0, GetDate()),
 (7, 3, 1, 0, 0, GetDate(), 0, GetDate()),
 (3, 4, 8, 0, 0, GetDate(), 0, GetDate()),

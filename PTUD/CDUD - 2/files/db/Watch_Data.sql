@@ -1,3 +1,12 @@
+﻿/*
+Nhóm 2 - PTUD
+Châu Nhật Tài
+Nguyễn Quốc Lượng
+Lê Văn Toàn
+10/11/2024
+Watch_Data.sql
+*/
+
 use QuanLySieuThi
 go
 

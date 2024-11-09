@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLog));
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tableFields = new System.Windows.Forms.TableLayoutPanel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -45,7 +46,7 @@
             this.txtAction = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvLog = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.menuToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.btnXoa = new System.Windows.Forms.ToolStripButton();
             this.btnSua = new System.Windows.Forms.ToolStripButton();
@@ -56,7 +57,7 @@
             this.tableFields.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.menuToolStrip.SuspendLayout();
             this.tableContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -162,7 +163,7 @@
             this.txtDataOlds.ForeColor = System.Drawing.Color.Black;
             this.txtDataOlds.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDataOlds.Location = new System.Drawing.Point(774, 5);
-            this.txtDataOlds.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDataOlds.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDataOlds.Name = "txtDataOlds";
             this.txtDataOlds.PasswordChar = '\0';
             this.txtDataOlds.PlaceholderText = "";
@@ -186,7 +187,7 @@
             this.txtDataNews.ForeColor = System.Drawing.Color.Black;
             this.txtDataNews.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDataNews.Location = new System.Drawing.Point(774, 48);
-            this.txtDataNews.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDataNews.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDataNews.Name = "txtDataNews";
             this.txtDataNews.PasswordChar = '\0';
             this.txtDataNews.PlaceholderText = "";
@@ -238,7 +239,7 @@
             this.txtModel.ForeColor = System.Drawing.Color.Black;
             this.txtModel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtModel.Location = new System.Drawing.Point(166, 5);
-            this.txtModel.Margin = new System.Windows.Forms.Padding(5);
+            this.txtModel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtModel.Name = "txtModel";
             this.txtModel.PasswordChar = '\0';
             this.txtModel.PlaceholderText = "";
@@ -262,7 +263,7 @@
             this.txtModelId.ForeColor = System.Drawing.Color.Black;
             this.txtModelId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtModelId.Location = new System.Drawing.Point(166, 48);
-            this.txtModelId.Margin = new System.Windows.Forms.Padding(5);
+            this.txtModelId.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtModelId.Name = "txtModelId";
             this.txtModelId.PasswordChar = '\0';
             this.txtModelId.PlaceholderText = "";
@@ -286,7 +287,7 @@
             this.txtAction.ForeColor = System.Drawing.Color.Black;
             this.txtAction.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAction.Location = new System.Drawing.Point(165, 90);
-            this.txtAction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAction.Margin = new System.Windows.Forms.Padding(4);
             this.txtAction.Name = "txtAction";
             this.txtAction.PasswordChar = '\0';
             this.txtAction.PlaceholderText = "";
@@ -330,7 +331,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLog.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvLog.ColumnHeadersHeight = 25;
+            this.dgvLog.ColumnHeadersHeight = 50;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -347,6 +348,8 @@
             this.dgvLog.Name = "dgvLog";
             this.dgvLog.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvLog.RowHeadersVisible = false;
+            this.dgvLog.RowTemplate.Height = 50;
+            this.dgvLog.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLog.Size = new System.Drawing.Size(1190, 369);
             this.dgvLog.TabIndex = 0;
             this.dgvLog.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -361,30 +364,30 @@
             this.dgvLog.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvLog.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvLog.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvLog.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgvLog.ThemeStyle.HeaderStyle.Height = 50;
             this.dgvLog.ThemeStyle.ReadOnly = false;
             this.dgvLog.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvLog.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvLog.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvLog.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvLog.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvLog.ThemeStyle.RowsStyle.Height = 50;
             this.dgvLog.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvLog.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvLog.Click += new System.EventHandler(this.dgvLog_Click);
             // 
-            // toolStrip1
+            // menuToolStrip
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnThem,
             this.btnXoa,
             this.btnSua,
             this.btnLamMoi,
             this.btnThoat});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1200, 28);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.menuToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuToolStrip.Name = "menuToolStrip";
+            this.menuToolStrip.Size = new System.Drawing.Size(1200, 28);
+            this.menuToolStrip.TabIndex = 0;
+            this.menuToolStrip.Text = "toolStrip1";
             // 
             // btnThem
             // 
@@ -457,9 +460,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 623);
             this.Controls.Add(this.tableContainer);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.menuToolStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -472,8 +476,8 @@
             this.tableFields.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.menuToolStrip.ResumeLayout(false);
+            this.menuToolStrip.PerformLayout();
             this.tableContainer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -485,7 +489,7 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvLog;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip menuToolStrip;
         private System.Windows.Forms.ToolStripButton btnThem;
         private System.Windows.Forms.ToolStripButton btnXoa;
         private System.Windows.Forms.ToolStripButton btnSua;

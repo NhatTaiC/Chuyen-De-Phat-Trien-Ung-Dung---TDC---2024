@@ -345,5 +345,56 @@ namespace DAL
 
             return (int)query.id;
         }
+
+        // Search nv by maNV
+        public IQueryable SearchNvByMaNV(string maNV)
+        {
+            var query = from nv in da.Db.NhanViens
+                        where nv.MaNhanVien.ToLower().Contains(maNV.ToLower()) &&
+                        nv.is_deleted == 0
+                        select new
+                        {
+                            nv.id,
+                            nv.MaNhanVien,
+                            nv.TenNhanVien,
+                            nv.SoDienThoai,
+                            nv.DiaChi
+                        };
+
+            return query;
+        }
+
+        // Search nv by tenNV
+        public IQueryable SearchNvBytenNV(string tenNV)
+        {
+            var query = from nv in da.Db.NhanViens
+                        where nv.TenNhanVien.ToLower().Contains(tenNV.ToLower()) &&
+                        nv.is_deleted == 0
+                        select new
+                        {
+                            nv.id,
+                            nv.MaNhanVien,
+                            nv.TenNhanVien,
+                            nv.SoDienThoai,
+                            nv.DiaChi
+                        };
+
+            return query;
+        }
+
+        public IQueryable GetListNV2()
+        {
+            IQueryable query = from nv in da.Db.NhanViens
+                               where nv.is_deleted == 0
+                               select new
+                               {
+                                   nv.id,
+                                   nv.MaNhanVien,
+                                   nv.TenNhanVien,
+                                   nv.SoDienThoai,
+                                   nv.DiaChi,
+                               };
+            return query;
+        }
     }
 }

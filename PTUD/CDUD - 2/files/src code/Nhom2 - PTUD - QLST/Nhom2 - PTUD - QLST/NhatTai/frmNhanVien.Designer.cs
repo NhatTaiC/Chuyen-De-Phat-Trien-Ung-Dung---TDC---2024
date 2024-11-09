@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tableFields = new System.Windows.Forms.TableLayoutPanel();
             this.cboMaTaiKhoan = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -45,7 +46,7 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvNV = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.menuToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.btnXoa = new System.Windows.Forms.ToolStripButton();
             this.btnSua = new System.Windows.Forms.ToolStripButton();
@@ -56,7 +57,7 @@
             this.tableFields.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNV)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.menuToolStrip.SuspendLayout();
             this.tableContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -337,6 +338,8 @@
             this.dgvNV.Name = "dgvNV";
             this.dgvNV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvNV.RowHeadersVisible = false;
+            this.dgvNV.RowTemplate.Height = 50;
+            this.dgvNV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNV.Size = new System.Drawing.Size(1192, 309);
             this.dgvNV.TabIndex = 0;
             this.dgvNV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -357,24 +360,24 @@
             this.dgvNV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvNV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvNV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvNV.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvNV.ThemeStyle.RowsStyle.Height = 50;
             this.dgvNV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvNV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvNV.Click += new System.EventHandler(this.dgvNV_Click);
             // 
-            // toolStrip1
+            // menuToolStrip
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnThem,
             this.btnXoa,
             this.btnSua,
             this.btnLamMoi,
             this.btnThoat});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1200, 28);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.menuToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuToolStrip.Name = "menuToolStrip";
+            this.menuToolStrip.Size = new System.Drawing.Size(1200, 28);
+            this.menuToolStrip.TabIndex = 0;
+            this.menuToolStrip.Text = "toolStrip1";
             // 
             // btnThem
             // 
@@ -447,10 +450,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 623);
             this.Controls.Add(this.tableContainer);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.menuToolStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmNhanVien";
             this.Text = "Quản lí nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -460,8 +466,8 @@
             this.tableFields.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNV)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.menuToolStrip.ResumeLayout(false);
+            this.menuToolStrip.PerformLayout();
             this.tableContainer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -483,7 +489,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvNV;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip menuToolStrip;
         private System.Windows.Forms.ToolStripButton btnThem;
         private System.Windows.Forms.ToolStripButton btnXoa;
         private System.Windows.Forms.ToolStripButton btnSua;
