@@ -29,9 +29,13 @@ namespace Nhom2___PTUD___QLST
         {
             // Others
             txtTenKhuyenMai.Focus();
+            txtTenKhuyenMai.Text = string.Empty;
+            txtGiaTri.Text = "0";
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+            data_olds = string.Empty;
+            data_news = string.Empty;
 
             // dgvKM
             dgvKM.DataSource = bus_km.GetListKM();
@@ -45,10 +49,6 @@ namespace Nhom2___PTUD___QLST
 
         public void Reset()
         {
-            // Other
-            txtTenKhuyenMai.Clear();
-            txtGiaTri.Clear();
-
             LoadData();
         }
 
@@ -64,7 +64,7 @@ namespace Nhom2___PTUD___QLST
             }
             else
             {
-                MessageBox.Show($"Tên khuyến mãi không dài quá 100 kí tự!",
+                MessageBox.Show($"Tên khuyến mãi không dài quá 100 kí tự và không để trống!",
                     "Thông báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);

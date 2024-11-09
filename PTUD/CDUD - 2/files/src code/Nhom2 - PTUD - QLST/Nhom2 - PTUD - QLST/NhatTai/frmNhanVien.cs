@@ -34,6 +34,11 @@ namespace Nhom2___PTUD___QLST
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+            txtTenNhanVien.Text = string.Empty;
+            txtSoDienThoai.Text = string.Empty;
+            txtDiaChi.Text = string.Empty;
+            data_olds = string.Empty;
+            data_news = string.Empty;
 
             // dgvNV
             dgvNV.DataSource = bus_nv.GetListNV();
@@ -61,10 +66,6 @@ namespace Nhom2___PTUD___QLST
 
         public void Reset()
         {
-            txtTenNhanVien.Clear();
-            txtSoDienThoai.Clear();
-            txtDiaChi.Clear();
-
             LoadData();
         }
 
@@ -166,15 +167,17 @@ namespace Nhom2___PTUD___QLST
 
                 // cboMaLoaiNhanVien
                 int idLoaiNhanVien = int.Parse(dgvNV.Rows[n].Cells[5].Value.ToString());
-                cboMaLoaiNhanVien.DataSource = bus_lnv.GetListOneLNVByTen(idLoaiNhanVien);
-                cboMaLoaiNhanVien.DisplayMember = "TenLoaiNhanVien";
-                cboMaLoaiNhanVien.ValueMember = "Id";
+                //cboMaLoaiNhanVien.DataSource = bus_lnv.GetListOneLNVByTen(idLoaiNhanVien);
+                //cboMaLoaiNhanVien.DisplayMember = "TenLoaiNhanVien";
+                //cboMaLoaiNhanVien.ValueMember = "Id";
+                cboMaLoaiNhanVien.SelectedIndex = idLoaiNhanVien - 1;
 
                 // cboMaTaiKhoan
                 int idMaTaiKhoan = int.Parse(dgvNV.Rows[n].Cells[6].Value.ToString());
                 cboMaTaiKhoan.DataSource = bus_tk.GetListOneTKByTenTK(idMaTaiKhoan);
                 cboMaTaiKhoan.DisplayMember = "TenTaiKhoan";
                 cboMaTaiKhoan.ValueMember = "Id";
+                //cboMaTaiKhoan.SelectedIndex = idMaTaiKhoan - 1;
             }
             else
             {

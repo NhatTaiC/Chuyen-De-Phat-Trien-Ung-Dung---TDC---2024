@@ -199,5 +199,43 @@ namespace DAL
             var query = da.Db.HoaDons.OrderByDescending(hd => hd.id).FirstOrDefault();
             return (int)query.id;
         }
+
+        // UpdateTotalCash from ChiTietHoaDon
+        public void UpdateTotalCash(int idHd, int toTalCash)
+        {
+            var hd_update = da.Db.HoaDons.SingleOrDefault(hd => hd.id == idHd);
+            hd_update.TongTien = toTalCash;
+
+            // Saved
+            da.Db.SubmitChanges();
+        }
+
+        public IQueryable GetListHD2()
+        {
+            var query = from hd in da.Db.HoaDons
+                        join km in da.Db.KhuyenMais
+                        on hd.idKhuyenMai equals km.id
+                        join kh in da.Db.KhachHangs
+                        on hd.idKhachHang equals kh.id
+                        join nv in da.Db.NhanViens
+                        on hd.idNhanVien equals nv.id
+                        where hd.is_deleted == 0
+                        select new
+                        {
+                            hd.id,
+                            hd.MaHoaDon,
+                            hd.NgayLapHD,
+                            hd.GioLapHD,
+                            hd.TongTien,
+                            hd.ThanhTien,
+                            hd.idKhachHang,
+                            hd.idKhuyenMai,
+                            hd.idNhanVien,
+                            kh.TenKhachHang,
+                            km.TenKhuyenMai,
+                            nv.TenNhanVien
+                        };
+            return query;
+        }
     }
 }

@@ -33,9 +33,12 @@ namespace Nhom2___PTUD___QLST
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
-
-            // cboQuyen
+            txtTenTaiKhoan.Text = string.Empty;
+            txtMatKhau.Text = string.Empty;
             cboQuyen.SelectedIndex = 0;
+            quyen = -1;
+            data_olds = string.Empty;
+            data_news = string.Empty;
 
             // dgvTaiKhoan
             dgvTaiKhoan.DataSource = bus_tk.GetListTK();
@@ -51,14 +54,6 @@ namespace Nhom2___PTUD___QLST
 
         public void Reset()
         {
-            // Text
-            txtTenTaiKhoan.Text = string.Empty;
-            txtMatKhau.Clear();
-
-            // cboQuyen
-            cboQuyen.SelectedIndex = 0;
-
-            // LoadData()
             LoadData();
         }
 

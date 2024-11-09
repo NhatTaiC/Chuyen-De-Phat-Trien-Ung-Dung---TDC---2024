@@ -41,7 +41,7 @@
             this.txtTenTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvTaiKhoan = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.menuToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.btnXoa = new System.Windows.Forms.ToolStripButton();
             this.btnSua = new System.Windows.Forms.ToolStripButton();
@@ -52,7 +52,7 @@
             this.tableFields.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.menuToolStrip.SuspendLayout();
             this.tableContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -242,7 +242,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTaiKhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvTaiKhoan.ColumnHeadersHeight = 25;
+            this.dgvTaiKhoan.ColumnHeadersHeight = 50;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -273,7 +273,7 @@
             this.dgvTaiKhoan.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvTaiKhoan.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvTaiKhoan.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvTaiKhoan.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgvTaiKhoan.ThemeStyle.HeaderStyle.Height = 50;
             this.dgvTaiKhoan.ThemeStyle.ReadOnly = false;
             this.dgvTaiKhoan.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvTaiKhoan.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -284,19 +284,19 @@
             this.dgvTaiKhoan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvTaiKhoan.Click += new System.EventHandler(this.dgvTaiKhoan_Click);
             // 
-            // toolStrip1
+            // menuToolStrip
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnThem,
             this.btnXoa,
             this.btnSua,
             this.btnLamMoi,
             this.btnThoat});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1200, 28);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.menuToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuToolStrip.Name = "menuToolStrip";
+            this.menuToolStrip.Size = new System.Drawing.Size(1200, 28);
+            this.menuToolStrip.TabIndex = 0;
+            this.menuToolStrip.Text = "toolStrip1";
             // 
             // btnThem
             // 
@@ -369,7 +369,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 623);
             this.Controls.Add(this.tableContainer);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.menuToolStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -382,8 +382,8 @@
             this.tableFields.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.menuToolStrip.ResumeLayout(false);
+            this.menuToolStrip.PerformLayout();
             this.tableContainer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -401,7 +401,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox cboQuyen;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvTaiKhoan;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip menuToolStrip;
         private System.Windows.Forms.ToolStripButton btnThem;
         private System.Windows.Forms.ToolStripButton btnXoa;
         private System.Windows.Forms.ToolStripButton btnSua;

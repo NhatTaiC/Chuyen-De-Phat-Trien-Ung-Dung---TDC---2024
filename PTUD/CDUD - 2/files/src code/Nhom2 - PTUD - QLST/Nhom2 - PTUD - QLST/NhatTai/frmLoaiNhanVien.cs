@@ -29,9 +29,12 @@ namespace Nhom2___PTUD___QLST
         {
             // Others
             txtTenLoaiNhanVien.Focus();
+            txtTenLoaiNhanVien.Text = string.Empty;
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+            data_olds = string.Empty;
+            data_news = string.Empty;
 
             // dgvLNV
             dgvLNV.DataSource = bus_lnv.GetListLNV();
@@ -44,8 +47,6 @@ namespace Nhom2___PTUD___QLST
 
         public void Reset()
         {
-            txtTenLoaiNhanVien.Text = string.Empty;
-
             LoadData();
         }
 

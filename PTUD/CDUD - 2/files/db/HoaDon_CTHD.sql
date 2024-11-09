@@ -11,4 +11,11 @@ select * from HoaDon
 
 select * from ChiTietHoaDon
 
+select * from SanPham
+
+select * from ChiTietHoaDon
+
+select * from LoaiHang
+
+select * from Log
 go

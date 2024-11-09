@@ -31,7 +31,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
         public void LoadData()
         {
             // dgvHD getList
-            dgvHD.DataSource = bus_hd.GetListHD();
+            dgvHD.DataSource = bus_hd.GetListHD2();
 
             // dgvHD display for
             dgvHD.Columns[0].HeaderText = "Id";
@@ -43,6 +43,9 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvHD.Columns[6].HeaderText = "Mã khách hàng";
             dgvHD.Columns[7].HeaderText = "Mã khuyến mãi";
             dgvHD.Columns[8].HeaderText = "Mã nhân viên";
+            dgvHD.Columns[9].HeaderText = "Tên khách hàng";
+            dgvHD.Columns[10].HeaderText = "Tên khuyến mãi";
+            dgvHD.Columns[11].HeaderText = "Tên nhân viên";
 
             // dgvHD visible
             dgvHD.Columns[0].Visible = false;
@@ -51,6 +54,9 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvHD.Columns[3].Visible = false;
             dgvHD.Columns[4].Visible = false;
             dgvHD.Columns[5].Visible = false;
+            dgvHD.Columns[6].Visible = false;
+            dgvHD.Columns[7].Visible = false;
+            dgvHD.Columns[8].Visible = false;
 
             // cboMaKH
             cboMaKH.DataSource = bus_kh.LayDSKH();
@@ -74,6 +80,8 @@ namespace Nhom2___PTUD___QLST.NhatTai
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+            data_olds = string.Empty;
+            data_news = string.Empty;
         }
 
         public void Reset()

@@ -367,5 +367,19 @@ namespace Nhom2___PTUD___QLST
                 ActForm("frmHoaDon");
             }
         }
+
+        private void chiTiếtHóaĐơnToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmChiTietHoaDon"))
+            {
+                frmChiTietHoaDon f = new frmChiTietHoaDon();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmChiTietHoaDon");
+            }
+        }
     }
 }

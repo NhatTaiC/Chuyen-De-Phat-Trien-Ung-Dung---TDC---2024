@@ -40,5 +40,15 @@ namespace BUS
         {
             return dal_hd.GetMaxIdHD();
         }
+
+        public void UpdateTotalCash(int idHd, int toTalCash)
+        {
+            dal_hd.UpdateTotalCash(idHd, toTalCash);
+        }
+
+        public IQueryable GetListHD2()
+        {
+            return dal_hd.GetListHD2();
+        }
     }
 }

@@ -105,7 +105,7 @@
             this.txtGiaTri.ForeColor = System.Drawing.Color.Black;
             this.txtGiaTri.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGiaTri.Location = new System.Drawing.Point(599, 39);
-            this.txtGiaTri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGiaTri.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaTri.Name = "txtGiaTri";
             this.txtGiaTri.PasswordChar = '\0';
             this.txtGiaTri.PlaceholderText = "";
@@ -130,7 +130,7 @@
             this.txtTenKhuyenMai.ForeColor = System.Drawing.Color.Black;
             this.txtTenKhuyenMai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenKhuyenMai.Location = new System.Drawing.Point(599, 4);
-            this.txtTenKhuyenMai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenKhuyenMai.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKhuyenMai.Name = "txtTenKhuyenMai";
             this.txtTenKhuyenMai.PasswordChar = '\0';
             this.txtTenKhuyenMai.PlaceholderText = "";
@@ -202,7 +202,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvKM.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvKM.ColumnHeadersHeight = 25;
+            this.dgvKM.ColumnHeadersHeight = 50;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,7 +233,7 @@
             this.dgvKM.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvKM.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvKM.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvKM.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgvKM.ThemeStyle.HeaderStyle.Height = 50;
             this.dgvKM.ThemeStyle.ReadOnly = false;
             this.dgvKM.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvKM.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;

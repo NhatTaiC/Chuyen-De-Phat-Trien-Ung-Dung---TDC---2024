@@ -243,6 +243,7 @@
             this.chiTiếtHóaĐơnToolStripMenuItem.Name = "chiTiếtHóaĐơnToolStripMenuItem";
             this.chiTiếtHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.chiTiếtHóaĐơnToolStripMenuItem.Text = "Chi tiết hóa đơn";
+            this.chiTiếtHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.chiTiếtHóaĐơnToolStripMenuItem_Click);
             // 
             // bảngLươngToolStripMenuItem1
             // 
