@@ -21,5 +21,10 @@ namespace BUS
         {
             dal_khohang.UpdateSoLuongSP(idSanPham, soLuong);
         }
+        public void CapNhatSoLuong(int id, int soluong)
+        {
+            dal_khohang.CapNhatSoLuong(id, soluong);
+        }
+
     }
 }
