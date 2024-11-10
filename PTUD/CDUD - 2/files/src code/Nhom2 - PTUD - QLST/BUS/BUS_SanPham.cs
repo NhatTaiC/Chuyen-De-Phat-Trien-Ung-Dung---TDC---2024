@@ -1,5 +1,6 @@
 ﻿using DAL;
 using DTO;
+using System.Collections.Generic;
 using System.Linq;
 namespace BUS
 {
@@ -29,6 +30,15 @@ namespace BUS
         {
             dal_sp.SuaSanPham(sanPham);
         }
+        public List<DTO_SanPhamKhoHang> ListSanPham()
+        {
+            return dal_sp.ListSanPham();
+        }
+        //public List<DTO_SanPhamKhoHang> ListTimKiemSanPhamBangMa(string tukhoa)
+        //{
+        //    return dal_sp.ListTimKiemSanPhamBangMa(tukhoa);
+        //}
+
 
         public IQueryable LocSpTheoTen(string key)
         {
@@ -54,5 +64,6 @@ namespace BUS
         {
             return dal_sp.SearchSpByDVT(donViTinh);
         }
+
     }
 }

@@ -37,5 +37,15 @@ namespace BUS
 		{
 			return dal_kh.SuaKH(kh);
 		}
-	}
+
+        public IQueryable timkiemTheoTen(string ten)
+        {
+			return dal_kh.timkiemTheoTen(ten);
+        }
+
+        public IQueryable timkiemTheoSDT(string sdt)
+        {
+            return dal_kh.timkiemTheoSDT(sdt);
+        }
+    }
 }

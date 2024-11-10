@@ -20,17 +20,26 @@ namespace DAL
 		// LayDSLichLam()
 		public IQueryable LayDSLichLam()
 		{
-			IQueryable temp = from ll in da.Db.LichLams
-							  select new
-							  {
-								  id = ll.id,
-								  MaLichLam = ll.MaLichLam,
-								  NgayLam = ll.NgayLam,
-								  TenNhanVien = ll.idNhanVien,
-								  TenCaLam = ll.idCaLam,
-							  };
-			return temp;
-		}
+            try
+            {
+                return (from b in da.Db.LichLams
+                        join nv in da.Db.NhanViens
+                        on b.idNhanVien equals nv.id
+                        where b.is_deleted == 0
+                        select new
+                        {
+                            b.id,
+							MaLichLam =  b.MaLichLam,
+                            NgayLam = b.NgayLam,
+                            TenNhanVien = nv.TenNhanVien,
+                            TenCaLam = b.idCaLam,
+                        });
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
 		// ThemLichLam()
 		public bool ThemLichLam(DTO_LichLam lichLam)
@@ -38,46 +47,35 @@ namespace DAL
 			try
 			{
 				// Check mã lịch làm có != null hay không?
-				if (lichLam.MaLichLam != string.Empty)
+				if (lichLam != null)
 				{
 					// Check có lịch làm trong DB LichLam hay chưa?
-					var data = da.Db.LichLams.FirstOrDefault(dt => dt.MaLichLam == lichLam.MaLichLam && dt.is_deleted == 0);
+					var query2 = da.Db.LichLams.OrderByDescending(l => l.id).FirstOrDefault();
 
-					if (data == null)
-					{
-						// Tạo đối tượng ll
-						LichLam ll_insert = new LichLam
-						{
-							MaLichLam = lichLam.MaLichLam,
-							NgayLam = lichLam.NgayLam,
-							idNhanVien = lichLam.IdNhanVien,
-							idCaLam = lichLam.IdCaLam,
-							created_at = DateTime.Now,
-							created_by = 0,
-							updated_at = DateTime.Now,
-							updated_by = 0,
-							is_deleted = 0
-						};
+					da.Db.LichLams.InsertOnSubmit(new LichLam {
+						MaLichLam = query2.id < 10 ? "LL0" + (query2.id + 1) : "LL" + (query2.id + 1),
+						NgayLam = lichLam.NgayLam,
+						idNhanVien = lichLam.IdNhanVien,
+						idCaLam = lichLam.IdCaLam,
+						created_at = DateTime.Now,
+						created_by = 0,
+						updated_at = DateTime.Now,
+						updated_by = 0,
+						is_deleted = 0
+					});
 
-						da.Db.LichLams.InsertOnSubmit(ll_insert); // Them ll mới vào DB LichLam
-						da.Db.SubmitChanges(); // Xác nhận thay đổi DB LichLam
 
-						// Thông báo
-						MessageBox.Show($"Thêm lịch làm +{lichLam.MaLichLam}+ thành công!", "Thông báo",
-							MessageBoxButtons.OK, MessageBoxIcon.Information);
-						return true;
-					}
-					else
-					{
-						// Thông báo
-						MessageBox.Show($"lịch làm +{lichLam.MaLichLam}+ đã có trong danh sách khách hàng!", "Thông báo",
-							MessageBoxButtons.OK, MessageBoxIcon.Error);
-					}
+					da.Db.SubmitChanges(); // Xác nhận thay đổi DB LichLam
+
+					// Thông báo
+					MessageBox.Show($"Thêm lịch làm +{lichLam.MaLichLam}+ thành công!", "Thông báo",
+						MessageBoxButtons.OK, MessageBoxIcon.Information);
+					return true;
 				}
 				else
 				{
 					// Thông báo
-					MessageBox.Show("Mã lịch làm không hợp lệ!", "Thông báo",
+					MessageBox.Show($"lịch làm +{lichLam.MaLichLam}+ đã có trong danh sách khách hàng!", "Thông báo",
 						MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
@@ -164,5 +162,40 @@ namespace DAL
 							  };
 			return temp;
 		}
-	}
+
+        //Tìm kiếm theo tên
+        public IQueryable timkiemTheoTen(string ten)
+        {
+            return from b in da.Db.LichLams
+                   join nv in da.Db.NhanViens
+                   on b.idNhanVien equals nv.id
+                   where nv.TenNhanVien.Contains(ten) // Điều kiện tìm kiếm theo tên
+                   select new
+				   {
+					   id = b.id,
+                       MaLichLam = b.MaLichLam,
+                       NgayLam = b.NgayLam,
+                       TenNhanVien = nv.TenNhanVien,
+                       TenCaLam = b.idCaLam,
+				   }; // Trả về đối tượng LichLam
+        }
+
+
+        //Tìm kiếm theo số điện thoại
+        public IQueryable timkiemTheoNgay(DateTime ngay)
+        {
+			return from b in da.Db.LichLams
+                   join nv in da.Db.NhanViens
+                   on b.idNhanVien equals nv.id
+                   where b.NgayLam.Value.Date == ngay.Date
+                   select new
+				   {
+					   id = b.id,
+					   MaLichLam = b.MaLichLam,
+					   NgayLam = b.NgayLam,
+					   TenNhanVien = nv.TenNhanVien,
+					   TenCaLam = b.idCaLam,
+				   };
+        }
+    }
 }

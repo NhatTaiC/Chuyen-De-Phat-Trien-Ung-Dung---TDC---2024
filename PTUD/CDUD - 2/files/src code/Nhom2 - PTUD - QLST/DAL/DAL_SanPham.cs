@@ -1,5 +1,6 @@
 ﻿using DTO;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DAL
@@ -33,6 +34,59 @@ namespace DAL
             }
 
         }
+        //List San phẩm
+       public List<DTO_SanPhamKhoHang> ListSanPham()
+        {
+            try
+            {
+                return (from sp in da.Db.SanPhams
+                        join kho in da.Db.KhoHangs
+                        on sp.id equals kho.idSanPham
+                        where sp.is_deleted == 0
+                        select new DTO_SanPhamKhoHang
+                        {
+                            Id = sp.id,
+                            MaSanPham = sp.MaSanPham,
+                            TenSanPham = sp.TenSanPham,
+                            IdLoaiHang = (int)sp.idLoaiHang,
+                            GiaBan = (double)sp.DonGia,
+                            SoLuong = (int)kho.SoLuong,
+                            AnhSanPham = sp.AnhSanPham
+                        }).ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Có lỗi xảy ra: " + ex.Message);
+            }
+        }
+        //List San phẩm
+        //public List<DTO_SanPhamKhoHang> ListTimKiemSanPhamBangMa(string tukhoa)
+        //{
+
+        //    try
+        //    {
+        //        return (from sp in da.Db.SanPhams
+        //                join kho in da.Db.KhoHangs
+        //                on sp.id equals kho.idSanPham
+        //                where sp.is_deleted == 0 && sp.MaSanPham.Contains(tukhoa)
+        //                select new DTO_SanPhamKhoHang
+        //                {
+        //                    Id = sp.id,
+        //                    MaSanPham = sp.MaSanPham,
+        //                    TenSanPham = sp.TenSanPham,
+        //                    GiaBan = (double)sp.DonGia,
+        //                    SoLuong = (int)kho.SoLuong,
+        //                    AnhSanPham = sp.AnhSanPham
+        //                }).ToList();
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        throw new Exception("Có lỗi xảy ra: " + ex.Message);
+        //    }
+
+        //}
         //thêm sản phẩm
         public void ThemSanPham(DTO_SanPham sanpham)
         {

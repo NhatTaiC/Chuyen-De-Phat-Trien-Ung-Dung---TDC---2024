@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,9 +60,13 @@
     <Compile Include="DTO_LoaiHang.cs" />
     <Compile Include="DTO_PhieuNhap.cs" />
     <Compile Include="DTO_SanPham.cs" />
+    <Compile Include="DTO_SanPhamKhoHang.cs" />
     <Compile Include="DTO_TaiKhoan.cs" />
     <Compile Include="DTO_ThanhTien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

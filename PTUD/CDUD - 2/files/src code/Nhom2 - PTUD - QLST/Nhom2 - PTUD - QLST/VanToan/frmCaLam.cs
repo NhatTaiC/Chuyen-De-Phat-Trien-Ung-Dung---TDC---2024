@@ -36,7 +36,6 @@ namespace GUI
 
 		private void Reset()
 		{
-			txtMaCaLam.Text = string.Empty;
 			txtTenCaLam.Text = string.Empty;
 			txtGioBatDau.Text = string.Empty;
 			txtGioKetThuc.Text = string.Empty;
@@ -56,18 +55,25 @@ namespace GUI
 		{
 			try
 			{
-				if (txtMaCaLam.Text.Length > 0 && txtTenCaLam.Text.Length > 0 && txtGioBatDau.Text.Length >0 && txtGioKetThuc.Text.Length>0)
+				if(txtTenCaLam.Text != "Ca sáng" && txtTenCaLam.Text != "Ca tối" && txtTenCaLam.Text != "Ca chiều")
 				{
-					//thêm ca làm
-					bus_cl.ThemCaLam(new DTO_CaLam(txtMaCaLam.Text, txtTenCaLam.Text, txtGioBatDau.Text, txtGioKetThuc.Text));
-					//làm mới
-					LoadData();
-				}
+                    if (txtTenCaLam.Text.Length > 0 && txtGioBatDau.Text.Length > 0 && txtGioKetThuc.Text.Length > 0)
+                    {
+                        //thêm ca làm
+                        bus_cl.ThemCaLam(new DTO_CaLam(txtTenCaLam.Text, txtGioBatDau.Text, txtGioKetThuc.Text));
+                        //làm mới
+                        LoadData();
+                    }
+                    else
+                    {
+                        //thông báo khi chưa đầy đủ dữ liệu
+                        MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!!", "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
 				else
 				{
-					//thông báo khi chưa đầy đủ dữ liệu
-					MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!!", "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				}
+                    MessageBox.Show("Ca làm đã tồn tại!!", "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }		
 			}
 			catch (Exception ex)
 			{
@@ -81,15 +87,15 @@ namespace GUI
 			try
 			{
 				//Xóa ca lam
-				DialogResult r = MessageBox.Show($"Bạn có chắc muốn xóa ca làm có mã là: +{txtMaCaLam.Text}+ không?", "Thông báo",
+				DialogResult r = MessageBox.Show($"Bạn có chắc muốn xóa ca làm: {txtTenCaLam.Text} không?", "Thông báo",
 				MessageBoxButtons.YesNo,
 				MessageBoxIcon.Warning);
 				if (r == DialogResult.Yes)
 				{
 					if (currentID > 0)
 					{
-						bus_cl.XoaCaLam(currentID);
-						MessageBox.Show("Xóa thành công!", "Thoát", MessageBoxButtons.OK);
+                            bus_cl.XoaCaLam(currentID);
+                            MessageBox.Show("Xóa thành công!", "Thoát", MessageBoxButtons.OK);                       
 					}
 					else
 					{
@@ -109,12 +115,20 @@ namespace GUI
 		{
 			try
 			{	
-				if (txtMaCaLam.Text.Length > 0 && txtTenCaLam.Text.Length > 0 && txtGioBatDau.Text.Length > 0 && txtGioKetThuc.Text.Length > 0)
+				if (txtTenCaLam.Text.Length > 0 && txtGioBatDau.Text.Length > 0 && txtGioKetThuc.Text.Length > 0)
 				{
-					//Sửa ca lam
-					bus_cl.SuaCaLam(new DTO_CaLam(currentID, txtMaCaLam.Text, txtTenCaLam.Text,txtGioBatDau.Text,txtGioKetThuc.Text));
-					//làm mới
-					LoadData();
+                    DialogResult dr = MessageBox.Show($"Bạn có chắc muốn sửa: [{txtTenCaLam.Text}] không?",
+                       "Thông báo",
+                       MessageBoxButtons.YesNo,
+                       MessageBoxIcon.Warning);
+                    if (dr == DialogResult.Yes)
+                    {
+                        //Sửa ca lam
+                        bus_cl.SuaCaLam(new DTO_CaLam(currentID, txtTenCaLam.Text, txtGioBatDau.Text, txtGioKetThuc.Text));
+                        //làm mới
+                        LoadData();
+                    }
+                   
 				}
 				else
 				{
@@ -136,8 +150,6 @@ namespace GUI
 
 			if (n >= 0)
 			{
-				// txtMaCaLam
-				txtMaCaLam.Text = dgvCaLam.Rows[n].Cells["MaCaLam"].Value.ToString();
 
 				// txtTenCaLam
 				txtTenCaLam.Text = dgvCaLam.Rows[n].Cells["TenCaLam"].Value.ToString();
