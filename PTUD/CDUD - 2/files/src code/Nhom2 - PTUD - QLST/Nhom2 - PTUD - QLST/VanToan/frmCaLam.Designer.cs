@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCaLam));
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -83,7 +84,7 @@
             this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel12.Location = new System.Drawing.Point(427, 142);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(95, 21);
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(193, 39);
             this.guna2HtmlLabel12.TabIndex = 15;
             this.guna2HtmlLabel12.Text = "Giờ kết thúc";
             // 
@@ -94,7 +95,7 @@
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(427, 65);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(85, 21);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(170, 39);
             this.guna2HtmlLabel6.TabIndex = 11;
             this.guna2HtmlLabel6.Text = "Tên ca làm";
             // 
@@ -105,7 +106,7 @@
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(427, 106);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(91, 21);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(184, 39);
             this.guna2HtmlLabel11.TabIndex = 13;
             this.guna2HtmlLabel11.Text = "Giờ bắt đầu";
             // 
@@ -123,7 +124,7 @@
             this.txtGioKetThuc.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtGioKetThuc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGioKetThuc.Location = new System.Drawing.Point(552, 135);
-            this.txtGioKetThuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGioKetThuc.Margin = new System.Windows.Forms.Padding(4);
             this.txtGioKetThuc.Name = "txtGioKetThuc";
             this.txtGioKetThuc.PasswordChar = '\0';
             this.txtGioKetThuc.PlaceholderText = "";
@@ -146,7 +147,7 @@
             this.txtGioBatDau.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtGioBatDau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGioBatDau.Location = new System.Drawing.Point(552, 99);
-            this.txtGioBatDau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGioBatDau.Margin = new System.Windows.Forms.Padding(4);
             this.txtGioBatDau.Name = "txtGioBatDau";
             this.txtGioBatDau.PasswordChar = '\0';
             this.txtGioBatDau.PlaceholderText = "";
@@ -169,7 +170,7 @@
             this.txtTenCaLam.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTenCaLam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenCaLam.Location = new System.Drawing.Point(552, 58);
-            this.txtTenCaLam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenCaLam.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenCaLam.Name = "txtTenCaLam";
             this.txtTenCaLam.PasswordChar = '\0';
             this.txtTenCaLam.PlaceholderText = "";
@@ -271,7 +272,7 @@
             this.btnThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1200, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1200, 42);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -280,7 +281,7 @@
             this.btnThem.Image = global::Nhom2___PTUD___QLST.Properties.Resources.plus;
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(61, 24);
+            this.btnThem.Size = new System.Drawing.Size(99, 36);
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -289,7 +290,7 @@
             this.btnXoa.Image = global::Nhom2___PTUD___QLST.Properties.Resources.bin;
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(51, 24);
+            this.btnXoa.Size = new System.Drawing.Size(78, 36);
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -298,7 +299,7 @@
             this.btnSua.Image = global::Nhom2___PTUD___QLST.Properties.Resources.loop;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(50, 24);
+            this.btnSua.Size = new System.Drawing.Size(77, 36);
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -307,7 +308,7 @@
             this.btnLamMoi.Image = global::Nhom2___PTUD___QLST.Properties.Resources.reset;
             this.btnLamMoi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(78, 24);
+            this.btnLamMoi.Size = new System.Drawing.Size(130, 36);
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
@@ -316,22 +317,26 @@
             this.btnThoat.Image = global::Nhom2___PTUD___QLST.Properties.Resources.logout;
             this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(61, 24);
+            this.btnThoat.Size = new System.Drawing.Size(99, 36);
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmCaLam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 623);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.guna2GroupBox3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCaLam";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí ca làm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCaLam_Load);
