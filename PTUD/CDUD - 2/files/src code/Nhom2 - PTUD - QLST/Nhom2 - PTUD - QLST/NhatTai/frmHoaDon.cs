@@ -46,6 +46,8 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvHD.Columns[9].HeaderText = "Tên khách hàng";
             dgvHD.Columns[10].HeaderText = "Tên khuyến mãi";
             dgvHD.Columns[11].HeaderText = "Tên nhân viên";
+            //dgvHD.Columns[4].DefaultCellStyle.Format = "#,###";
+            //dgvHD.Columns[5].DefaultCellStyle.Format = "#,###";
 
             // dgvHD visible
             dgvHD.Columns[0].Visible = false;

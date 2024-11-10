@@ -33,6 +33,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvTim.Columns[0].Visible = false;
             dgvTim.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvTim.Columns[3].DefaultCellStyle.Format = "HH:mm:ss";
+            //dgvTim.Columns[4].DefaultCellStyle.Format = "#,###";
 
             // Others
             txtTim.Text = string.Empty;

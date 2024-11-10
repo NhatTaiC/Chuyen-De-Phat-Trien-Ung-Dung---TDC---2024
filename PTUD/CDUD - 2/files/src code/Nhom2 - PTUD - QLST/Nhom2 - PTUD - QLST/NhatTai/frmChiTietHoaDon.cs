@@ -30,6 +30,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
         int soLuongInput = 0;
         int tongTien = 0;
 
+
         public void LoadData()
         {
             // Others
@@ -79,6 +80,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvSP.Columns[5].HeaderText = "Số lượng";
             dgvSP.Columns[0].Visible = false;
             dgvSP.Columns[1].Visible = false;
+            //dgvSP.Columns[4].DefaultCellStyle.Format = "#,###";
 
         }
 
@@ -212,6 +214,8 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvCTHD.Columns[0].Visible = false;
             dgvCTHD.Columns[6].Visible = false;
             dgvCTHD.Columns[7].Visible = false;
+            //dgvCTHD.Columns[4].DefaultCellStyle.Format = "#,###";
+            //dgvCTHD.Columns[5].DefaultCellStyle.Format = "#,###";
 
             // Others
             txtTongTien.Text = "0";

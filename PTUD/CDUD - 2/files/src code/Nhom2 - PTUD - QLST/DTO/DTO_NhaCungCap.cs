@@ -52,7 +52,22 @@ namespace DTO
 			this.diaChi = diaChi;
 		}
 
-		public int Id { get => id; set => id = value; }
+        public DTO_NhaCungCap(string tenNhaCungCap, string soDienThoai, string diaChi)
+        {
+            this.tenNhaCungCap = tenNhaCungCap;
+            this.soDienThoai = soDienThoai;
+            this.diaChi = diaChi;
+        }
+
+        public DTO_NhaCungCap(int id, string tenNhaCungCap, string soDienThoai, string diaChi)
+        {
+            this.id = id;
+            this.tenNhaCungCap = tenNhaCungCap;
+            this.soDienThoai = soDienThoai;
+            this.diaChi = diaChi;
+        }
+
+        public int Id { get => id; set => id = value; }
 		public string MaNhaCungCap { get => maNhaCungCap; set => maNhaCungCap = value; }
 		public string TenNhaCungCap { get => tenNhaCungCap; set => tenNhaCungCap = value; }
 		public string SoDienThoai { get => soDienThoai; set => soDienThoai = value; }

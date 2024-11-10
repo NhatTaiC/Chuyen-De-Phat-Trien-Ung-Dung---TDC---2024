@@ -18,6 +18,8 @@ namespace GUI
 		public frmKhachHang()
 		{
 			InitializeComponent();
+			string[] arr = { "Tên khách hàng", "Số điện thoại" };
+			cbTimTheo.DataSource = arr;
 		}
 
 		// Initialize Variables
@@ -46,7 +48,6 @@ namespace GUI
 		//Reset
 		private void Reset()
 		{
-			txtMaKhachHang.Text = string.Empty;
 			txtTenKhachHang.Text = string.Empty;
 			txtSDT.Text = string.Empty;
 			txtDiemTichLuy.Text = string.Empty;
@@ -92,11 +93,9 @@ namespace GUI
 			{
 				if (CheckNumberPhone(txtSDT.Text))
 				{
-					if (txtMaKhachHang.Text.Length > 0)
-					{
 						if (txtTenKhachHang.Text.Length > 0)
 						{
-							DTO_KhachHang kh = new DTO_KhachHang(txtMaKhachHang.Text, txtTenKhachHang.Text,
+							DTO_KhachHang kh = new DTO_KhachHang(txtTenKhachHang.Text,
 				txtSDT.Text, int.Parse(txtDiemTichLuy.Text));
 
 							bus_kh.ThemKH(kh);
@@ -107,11 +106,6 @@ namespace GUI
 						{
 							MessageBox.Show("Vui lòng nhập tên khách hàng", "Thồn báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 						}
-					}
-					else
-					{
-						MessageBox.Show("vui lòng nhập mã khách hàng", "Thồn báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					}
 				}
 				else
 				{
@@ -131,7 +125,7 @@ namespace GUI
 		{
 			try
 			{
-				DialogResult r = MessageBox.Show($"Bạn có chắc muốn xóa khách hàng có mã là: +{txtMaKhachHang.Text}+ không?", "Thông báo",
+				DialogResult r = MessageBox.Show($"Bạn có chắc muốn xóa khách hàng có mã là: +{txtTenKhachHang.Text}+ không?", "Thông báo",
 				MessageBoxButtons.YesNo,
 				MessageBoxIcon.Warning);
 				if (r == DialogResult.Yes)
@@ -162,11 +156,10 @@ namespace GUI
 			{
 				if (CheckNumberPhone(txtSDT.Text))
 				{
-					if (txtMaKhachHang.Text.Length > 0)
-					{
+					
 						if (txtTenKhachHang.Text.Length > 0)
 						{
-							DTO_KhachHang kh = new DTO_KhachHang(currentID, txtMaKhachHang.Text, txtTenKhachHang.Text,
+							DTO_KhachHang kh = new DTO_KhachHang(currentID, txtTenKhachHang.Text,
 				txtSDT.Text, int.Parse(txtDiemTichLuy.Text));
 
 							bus_kh.SuaKH(kh);
@@ -177,11 +170,6 @@ namespace GUI
 						{
 							MessageBox.Show("Vui lòng nhập tên khách hàng", "Thồn báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 						}
-					}
-					else
-					{
-						MessageBox.Show("vui lòng nhập mã khách hàng", "Thồn báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					}
 				}
 				else
 				{
@@ -203,9 +191,6 @@ namespace GUI
 
 			if (n >= 0)
 			{
-				// txtMaKhachHang
-				txtMaKhachHang.Text = dgvKhachHang.Rows[n].Cells["MaKH"].Value.ToString();
-
 				// txtTenKhachHang
 				txtTenKhachHang.Text = dgvKhachHang.Rows[n].Cells["TenKH"].Value.ToString();
 
@@ -236,5 +221,35 @@ namespace GUI
 		{
 			this.Close();
 		}
-	}
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+			if(cbTimTheo.SelectedValue.ToString() == "Tên khách hàng")
+			{
+                string n = txtTimKiem.Text.Trim();
+                if (string.IsNullOrEmpty(n))
+                {
+                    LoadData();
+                }
+                else
+                {
+                    dgvKhachHang.DataSource = bus_kh.timkiemTheoTen(n);
+                }
+            }
+			else
+			{
+                string n = txtTimKiem.Text.Trim();
+                if (string.IsNullOrEmpty(n))
+                {
+                    LoadData();
+                }
+                else
+                {
+                    dgvKhachHang.DataSource = bus_kh.timkiemTheoSDT(n);
+                }
+            }
+
+			
+        }
+    }
 }
