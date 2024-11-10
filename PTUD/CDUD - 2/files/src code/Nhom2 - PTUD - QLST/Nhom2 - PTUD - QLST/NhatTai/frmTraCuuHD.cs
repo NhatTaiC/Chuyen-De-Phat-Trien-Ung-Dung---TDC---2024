@@ -76,10 +76,12 @@ namespace Nhom2___PTUD___QLST.NhatTai
         {
             try
             {
+                // Others
+                txtTim.TextChanged -= txtTim_TextChanged;
+
                 if (dgvTim.CurrentCell != null)
                 {
                     // Get row index selected
-                    txtTim.TextChanged -= txtTim_TextChanged;
                     int n = dgvTim.CurrentCell.RowIndex;
 
                     txtTim.Text = dgvTim.Rows[n].Cells[1].Value.ToString();
@@ -94,9 +96,9 @@ namespace Nhom2___PTUD___QLST.NhatTai
             }
             finally
             {
+                // Others
                 txtTim.TextChanged += txtTim_TextChanged;
             }
-            
         }
 
         private void btnIn_Click(object sender, System.EventArgs e)
