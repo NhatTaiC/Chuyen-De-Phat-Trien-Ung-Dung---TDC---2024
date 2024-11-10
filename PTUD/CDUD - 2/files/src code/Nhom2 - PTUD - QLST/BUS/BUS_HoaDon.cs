@@ -73,5 +73,15 @@ namespace BUS
         {
             return dal_hd.CheckHd(maHd);
         }
+
+        public void AddHD2(DTO_HoaDon hoaDon)
+        {
+            dal_hd.AddHD2(hoaDon);
+        }
+
+        public void UpdateTotalCash2(int idHd, int toTalCash)
+        {
+            dal_hd.UpdateTotalCash2(idHd, toTalCash);
+        }
     }
 }
