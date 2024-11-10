@@ -30,7 +30,6 @@ namespace Nhom2___PTUD___QLST.NhatTai
         int soLuongInput = 0;
         int tongTien = 0;
 
-
         public void LoadData()
         {
             // Others
@@ -398,12 +397,18 @@ namespace Nhom2___PTUD___QLST.NhatTai
                             int soLuongCurrent = bus_cthd.GetSoLuongSpInCTHD(cboMaHD.SelectedIndex + 1,
                                 cboMaSP.SelectedIndex + 1);
 
+                            //// Updated SoLuongSp in table CTHD
+                            //bus_cthd.DeleteCTHD(currentId);
+
+                            //// GetSoLuongCurrent in CTHD
+                            //int soLuongUpdate = bus_cthd.GetSoLuongSpInCTHD2(cboMaHD.SelectedIndex + 1,
+                            //    cboMaSP.SelectedIndex + 1);
+
                             // Updated SoLuongSp in table CTHD
-                            bus_cthd.DeleteCTHD(currentId);
+                            bus_cthd.DeleteCTHD2(currentId);
 
                             // GetSoLuongCurrent in CTHD
-                            int soLuongUpdate = bus_cthd.GetSoLuongSpInCTHD2(cboMaHD.SelectedIndex + 1,
-                                cboMaSP.SelectedIndex + 1);
+                            int soLuongUpdate = 0;
 
                             // Get soLuongNew
                             int soLuongNew = soLuongUpdate - soLuongCurrent;
