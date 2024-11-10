@@ -319,5 +319,51 @@ namespace DAL
             return totalCash;
 
         }
+
+        // Remove CTHD by Id
+        public void DeleteCTHD2(int id)
+        {
+            try
+            {
+                // Checked id saved in table ChiTietHoaDon
+                var query = (from cthd in da.Db.ChiTietHoaDons where cthd.id == id select cthd).FirstOrDefault();
+
+                if (query != null)
+                {
+                    //ChiTietHoaDon cthd_update = da.Db.ChiTietHoaDons.SingleOrDefault(cthd => cthd.id == id);
+                    //cthd_update.SoLuong = 0;
+                    //cthd_update.is_deleted = 1;
+                    //cthd_update.created_by = 0;
+                    //cthd_update.created_at = DateTime.Now;
+                    //cthd_update.updated_by = 0;
+                    //cthd_update.updated_at = DateTime.Now;
+
+                    // Remove cthd by id
+                    da.Db.ChiTietHoaDons.DeleteOnSubmit(query);
+
+                    // Saved db
+                    da.Db.SubmitChanges();
+
+                    // Messaged
+                    MessageBox.Show("Xóa chi tiết hoá đơn thành công!", "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Messaged
+                    MessageBox.Show($"Xóa chi tiết hóa đơn không thành công! Vui lòng kiểm tra các thông tin đã nhập chính xác hay không?",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
     }
 }
