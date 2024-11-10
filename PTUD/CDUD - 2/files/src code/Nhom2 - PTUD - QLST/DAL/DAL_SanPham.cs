@@ -1,5 +1,6 @@
 ﻿using DTO;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DAL
@@ -34,9 +35,8 @@ namespace DAL
 
         }
         //List San phẩm
-        public List<DTO_SanPhamKhoHang> ListSanPham()
+       public List<DTO_SanPhamKhoHang> ListSanPham()
         {
-            
             try
             {
                 return (from sp in da.Db.SanPhams
@@ -59,7 +59,6 @@ namespace DAL
 
                 throw new Exception("Có lỗi xảy ra: " + ex.Message);
             }
-
         }
         //List San phẩm
         //public List<DTO_SanPhamKhoHang> ListTimKiemSanPhamBangMa(string tukhoa)
