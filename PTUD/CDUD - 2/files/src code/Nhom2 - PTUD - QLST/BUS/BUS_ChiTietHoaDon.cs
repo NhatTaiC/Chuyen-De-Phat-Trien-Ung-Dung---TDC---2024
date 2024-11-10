@@ -86,5 +86,10 @@ namespace BUS
         {
             dal_cthd.DeleteCTHD2(id);
         }
+
+        public void AddCTHD2(DTO_ChiTietHoaDon chiTietHoaDon)
+        {
+            dal_cthd.AddCTHD2(chiTietHoaDon);
+        }
     }
 }
