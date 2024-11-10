@@ -42,10 +42,16 @@ namespace DTO
 			this.GioKetThuc = gioKetThuc;
 		}
 
-		public DTO_CaLam(int id, string maCaLam, string tenCaLam, string gioBatDau, string gioKetThuc)
+        public DTO_CaLam(string tenCaLam, string gioBatDau, string gioKetThuc)
+        {
+            this.TenCaLam = tenCaLam;
+            this.GioBatDau = gioBatDau;
+            this.GioKetThuc = gioKetThuc;
+        }
+
+        public DTO_CaLam(int id, string tenCaLam, string gioBatDau, string gioKetThuc)
 		{
 			this.Id = id;
-			this.MaCaLam = maCaLam;
 			this.TenCaLam = tenCaLam;
 			this.GioBatDau = gioBatDau;
 			this.GioKetThuc = gioKetThuc;

@@ -43,9 +43,6 @@ namespace GUI
 
 			if (n >= 0)
 			{
-				// txtMaNCC
-				txtNCC.Text = dgvNCC.Rows[n].Cells["MaNCC"].Value.ToString();
-
 				// txtTenNCC
 				txtTenNCC.Text = dgvNCC.Rows[n].Cells["TenNCC"].Value.ToString();
 
@@ -75,7 +72,6 @@ namespace GUI
 		//Func Reset
 		private void Reset()
 		{
-			txtNCC.Text = string.Empty;
 			txtTenNCC.Text = string.Empty;
 			txtSDT.Text = string.Empty;
 			txtDiaChi.Text = string.Empty;
@@ -103,8 +99,7 @@ namespace GUI
 		{
 			try
 			{
-				if (txtNCC.Text.Length > 0)
-				{
+				
 					if (txtTenNCC.Text.Length > 0)
 					{
 						if (CheckNumberPhone(txtSDT.Text))
@@ -112,7 +107,7 @@ namespace GUI
 							if (txtDiaChi.Text.Length > 0)
 							{
 								//thêm NhaCungCap
-								bus_ncc.ThemNCC(new DTO_NhaCungCap(txtNCC.Text, txtTenNCC.Text, txtSDT.Text, txtDiaChi.Text));
+								bus_ncc.ThemNCC(new DTO_NhaCungCap(txtTenNCC.Text, txtSDT.Text, txtDiaChi.Text));
 								//làm mới
 								LoadData();
 							}
@@ -130,12 +125,6 @@ namespace GUI
 					{
 						MessageBox.Show("Vui lòng nhập tên nhà cung cấp!!", "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					}
-				}
-				else
-				{
-					//thông báo khi chưa đầy đủ dữ liệu
-					MessageBox.Show("Vui lòng nhập mã nhà cung cấp!!", "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				}
 			}
 			catch (Exception ex)
 			{
@@ -149,7 +138,7 @@ namespace GUI
 		{
 			try
 			{
-				DialogResult r = MessageBox.Show($"Bạn có chắc muốn nhà cung cấp có mã là: +{txtNCC.Text}+ không?", "Thông báo",
+				DialogResult r = MessageBox.Show($"Bạn có chắc muốn nhà cung cấp có mã là: +{txtTenNCC.Text}+ không?", "Thông báo",
 				MessageBoxButtons.YesNo,
 				MessageBoxIcon.Warning);
 				if (r == DialogResult.Yes)
@@ -178,8 +167,6 @@ namespace GUI
 		{
 			try
 			{
-				if (txtNCC.Text.Length > 0)
-				{
 					if (txtTenNCC.Text.Length > 0)
 					{
 						if (CheckNumberPhone(txtSDT.Text))
@@ -187,7 +174,7 @@ namespace GUI
 							if (txtDiaChi.Text.Length > 0)
 							{
 								//Sửa loại hàng
-								bus_ncc.SuaNCC(new DTO_NhaCungCap(currentID, txtNCC.Text, txtTenNCC.Text, txtSDT.Text, txtDiaChi.Text));
+								bus_ncc.SuaNCC(new DTO_NhaCungCap(currentID, txtTenNCC.Text, txtSDT.Text, txtDiaChi.Text));
 								//làm mới
 								LoadData();
 							}
@@ -205,12 +192,6 @@ namespace GUI
 					{
 						MessageBox.Show("Vui lòng nhập tên nhà cung cấp!!", "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					}
-				}
-				else
-				{
-					//thông báo khi chưa đầy đủ dữ liệu
-					MessageBox.Show("Vui lòng nhập mã nhà cung cấp!!", "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				}
 			}
 			catch (Exception ex)
 			{

@@ -52,8 +52,26 @@ namespace DTO
 			this.IdNhanVien = idNhanVien;
 		}
 
-		// Properties
-		public int Id { get => id; set => id = value; }
+        public DTO_PhieuNhap(DateTime ngayNhap, float thanhTien, int idNhanVien)
+        {
+            this.Id = id;
+            this.MaPhieuNhap = maPhieuNhap;
+            this.NgayNhap = ngayNhap;
+            this.ThanhTien = thanhTien;
+            this.IdNhanVien = idNhanVien;
+        }
+
+        public DTO_PhieuNhap(int id, DateTime ngayNhap, float thanhTien, int idNhanVien)
+        {
+            this.Id = id;
+            this.MaPhieuNhap = maPhieuNhap;
+            this.NgayNhap = ngayNhap;
+            this.ThanhTien = thanhTien;
+            this.IdNhanVien = idNhanVien;
+        }
+
+        // Properties
+        public int Id { get => id; set => id = value; }
 		public string MaPhieuNhap { get => maPhieuNhap; set => maPhieuNhap = value; }
 		public DateTime NgayNhap { get => ngayNhap; set => ngayNhap = value; }
 		public float ThanhTien { get => thanhTien; set => thanhTien = value; }
