@@ -74,20 +74,29 @@ namespace Nhom2___PTUD___QLST.NhatTai
 
         private void dgvTim_Click(object sender, System.EventArgs e)
         {
-            if (dgvTim.CurrentCell != null)
+            try
             {
-                // Get row index selected
-                int n = dgvTim.CurrentCell.RowIndex;
+                if (dgvTim.CurrentCell != null)
+                {
+                    // Get row index selected
+                    txtTim.TextChanged -= txtTim_TextChanged;
+                    int n = dgvTim.CurrentCell.RowIndex;
 
-                txtTim.Text = dgvTim.Rows[n].Cells[1].Value.ToString();
+                    txtTim.Text = dgvTim.Rows[n].Cells[1].Value.ToString();
+                }
+                else
+                {
+                    // Messaged
+                    MessageBox.Show("Vui lòng chọn 1 dòng để xóa hoặc sửa thông tin!", "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                }
             }
-            else
+            finally
             {
-                // Messaged
-                MessageBox.Show("Vui lòng chọn 1 dòng để xóa hoặc sửa thông tin!", "Thông báo",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Warning);
+                txtTim.TextChanged += txtTim_TextChanged;
             }
+            
         }
 
         private void btnIn_Click(object sender, System.EventArgs e)

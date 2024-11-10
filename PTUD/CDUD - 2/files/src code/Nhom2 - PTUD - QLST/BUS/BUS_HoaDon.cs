@@ -20,7 +20,10 @@ namespace BUS
         {
             return dal_hd.GetListHD();
         }
-
+        public string TimMaHoaDon(int id)
+        {
+            return dal_hd.TimMaHoaDon(id);
+        }
         public void AddHD(DTO_HoaDon hoaDon)
         {
             dal_hd.AddHD(hoaDon);

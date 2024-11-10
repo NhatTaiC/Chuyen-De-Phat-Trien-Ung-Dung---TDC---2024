@@ -60,9 +60,9 @@ namespace DAL
                         GioLapHD = DateTime.Now,
                         TongTien = 0,
                         ThanhTien = 0,
-                        idKhachHang = hoaDon.IdKhachHang,
-                        idKhuyenMai = hoaDon.IdKhachHang,
-                        idNhanVien = hoaDon.IdNhanVien,
+                        idKhachHang = hoaDon.IdKhachHang == 0 ? (int?)null : hoaDon.IdKhachHang,
+                        idKhuyenMai = hoaDon.IdKhuyenMai == 0 ? (int?)null : hoaDon.IdKhuyenMai,
+                        idNhanVien = hoaDon.IdNhanVien == 0 ? (int?)null : hoaDon.IdNhanVien,
                         is_deleted = 0,
                         created_by = 0,
                         created_at = DateTime.Now,
@@ -275,6 +275,31 @@ namespace DAL
                         };
 
             return query;
+
+        }
+        //tìm idhoadon bang MaHoaDon
+        public string TimMaHoaDon(int id)
+        {
+            var query = (from hd in da.Db.HoaDons
+                        where hd.id == id
+                        select new
+                        {
+                            hd.id,
+                            hd.MaHoaDon,
+              
+                        }).FirstOrDefault();
+            string maHoaDon = "";
+            if (query == null)
+            {
+                maHoaDon = "";
+            }
+            else
+            {
+              maHoaDon = query.MaHoaDon;
+            }
+            
+
+            return maHoaDon;
 
         }
 
