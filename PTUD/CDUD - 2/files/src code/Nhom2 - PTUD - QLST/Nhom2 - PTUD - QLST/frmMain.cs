@@ -415,5 +415,19 @@ namespace Nhom2___PTUD___QLST
                 ActForm("frmTraCuuHD");
             }
         }
+
+        private void bánHàngToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmBanHang"))
+            {
+                frmBanHang f = new frmBanHang();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmBanHang");
+            }
+        }
     }
 }
