@@ -26,6 +26,10 @@ namespace GUI
         BUS_NhaCungCap bus_nhacungcap = new BUS_NhaCungCap();
         //bus nhà sản phẩm
         BUS_SanPham bus_SanPham = new BUS_SanPham();
+        //bus hóa đơn
+        BUS_HoaDon bus_HoaDon = new BUS_HoaDon();
+        //bus chi tiết hóa đơn
+        BUS_ChiTietHoaDon bus_chitiethoadon = new BUS_ChiTietHoaDon();
         //mảng sản phẩm
         List<DTO_SanPhamKhoHang> sanPhams;
         List<DTO_SanPhamKhoHang> TimKiemMasanPhams;
@@ -42,6 +46,7 @@ namespace GUI
             InitializeComponent();
             sanPhams = bus_SanPham.ListSanPham();
             dgvThongTinHoaDon.Columns["MaSanPham"].Visible = false;
+            dgvThongTinHoaDon.Columns["id"].Visible = false;
             lbThanhTien.Text = "0 VNĐ";
             txtTienDua.MaxLength = 8;
             //TimKiemMasanPhams = ListTimKiemSanPhamBangMa("SP01");
@@ -205,6 +210,7 @@ namespace GUI
                                 newRow.Cells[2].Value = txtSoLuong.Text;
                                 newRow.Cells[3].Value = (giaHientai * float.Parse(txtSoLuong.Text)).ToString("#,###", cul.NumberFormat);
                                 newRow.Cells[4].Value = sanPham.MaSanPham;
+                                newRow.Cells[5].Value = (sanPham.Id);
                                 dgvThongTinHoaDon.Rows.Add(newRow);
                             }
                             //Cập nhật số lượng trong list
@@ -404,7 +410,18 @@ namespace GUI
             lbThanhTien.Text = "0 VNĐ";
 
         }
-
+        //thêm chi tiết hóa đơn thanh toán
+        public void ThemChiTietHoaDon()
+        {
+            for (int i = 0; i < dgvThongTinHoaDon.Rows.Count; i++)
+            {
+                int idhoadon = bus_HoaDon.GetMaxIdHD();
+                int idSanPham =int.Parse(dgvThongTinHoaDon.Rows[i].Cells["id"].Value.ToString());
+                int soLuong = int.Parse(dgvThongTinHoaDon.Rows[i].Cells["SoLuong"].Value.ToString());
+                DTO_ChiTietHoaDon dong = new DTO_ChiTietHoaDon(soLuong,idhoadon,idSanPham);
+                bus_chitiethoadon.AddCTHD(dong);
+            }
+        }
         private void cbLoc_CheckedChanged(object sender, EventArgs e)
         {
             try
@@ -479,6 +496,11 @@ namespace GUI
                 if (resuft == DialogResult.Yes)
                 {
                     MessageBox.Show("Thanh toán thành công!", "Thoát", MessageBoxButtons.OK);
+                    //string maHDCustom = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss").Replace(":","").Replace("/","").Replace(" ","");
+                   //thêm hóa đơn
+                    bus_HoaDon.AddHD(new DTO_HoaDon(1, 1, 1));
+                    //thêm chi tiết hóa đơn
+                    ThemChiTietHoaDon();
                     LamMoi();
                     //làm sạch dgv
                     dgvThongTinHoaDon.Rows.Clear();
@@ -489,10 +511,8 @@ namespace GUI
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
 
         }
     }
