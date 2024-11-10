@@ -42,5 +42,15 @@ namespace BUS
 		{
 			return dal_ll.LayDSNV();
 		}
-	}
+
+		public IQueryable TimKiemTheoTen(string ten)
+		{
+			return dal_ll.timkiemTheoTen(ten);
+		}
+
+        public IQueryable TimKiemTheoNgay(DateTime ngay)
+        {
+            return dal_ll.timkiemTheoNgay(ngay);
+        }
+    }
 }

@@ -1,5 +1,11 @@
-﻿using GUI;
-using Nhom2___PTUD___QLST.VanToan;
+﻿/*
+ * PTUD 2 - Nhom 2
+ * Chau Nhat Tai
+ * Nguyen Quoc Luong
+ * Le Van Toan
+ * program.cs
+ * 21/10/2024
+ */
 using System;
 using System.Windows.Forms;
 
@@ -15,7 +21,20 @@ namespace Nhom2___PTUD___QLST
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPhieuNhap());
+
+            // Open frmFlash
+            //frmFlash f = new frmFlash();
+            //f.ShowDialog();
+
+            //// frmFlash == OK
+            //if (f.DialogResult == DialogResult.OK)
+            //{
+            //    // Open frmDangNhap
+            //    frmDangNhap fDN = new frmDangNhap();
+            //    fDN.ShowDialog();
+            //}
+
+            Application.Run(new frmMain());
         }
     }
 }

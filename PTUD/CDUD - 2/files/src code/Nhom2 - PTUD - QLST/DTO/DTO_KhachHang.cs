@@ -58,8 +58,26 @@ namespace DTO
 			this.Diem = diem;
 		}
 
-		// Properties
-		public int Id { get => id; set => id = value; }
+        public DTO_KhachHang(string tenKhachHang, string soDienThoai, int diem)
+        {
+            this.Id = id;
+            this.MaKhachHang = maKhachHang;
+            this.TenKhachHang = tenKhachHang;
+            this.SoDienThoai = soDienThoai;
+            this.Diem = diem;
+        }
+
+        public DTO_KhachHang(int id,string tenKhachHang, string soDienThoai, int diem)
+        {
+            this.Id = id;
+            this.MaKhachHang = maKhachHang;
+            this.TenKhachHang = tenKhachHang;
+            this.SoDienThoai = soDienThoai;
+            this.Diem = diem;
+        }
+
+        // Properties
+        public int Id { get => id; set => id = value; }
 		public string MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
 		public string TenKhachHang { get => tenKhachHang; set => tenKhachHang = value; }
 		public string SoDienThoai { get => soDienThoai; set => soDienThoai = value; }
