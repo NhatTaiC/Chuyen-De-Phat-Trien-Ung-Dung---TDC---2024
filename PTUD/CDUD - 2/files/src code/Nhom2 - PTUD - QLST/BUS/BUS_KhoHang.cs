@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL;
+﻿using DAL;
 using DTO;
+using System.Linq;
 namespace BUS
 {
     public class BUS_KhoHang
@@ -19,6 +15,11 @@ namespace BUS
         public void SuaKhoHang(DTO_KhoHang khohang)
         {
             dal_khohang.SuaKhoHang(khohang);
+        }
+
+        public void UpdateSoLuongSP(int idSanPham, int soLuong)
+        {
+            dal_khohang.UpdateSoLuongSP(idSanPham, soLuong);
         }
     }
 }

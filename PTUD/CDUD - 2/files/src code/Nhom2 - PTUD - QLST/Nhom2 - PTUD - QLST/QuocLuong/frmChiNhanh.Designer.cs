@@ -69,7 +69,7 @@
             this.btnThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1200, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(1200, 31);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -78,7 +78,7 @@
             this.btnThem.Image = global::Nhom2___PTUD___QLST.Properties.Resources.plus;
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(84, 33);
+            this.btnThem.Size = new System.Drawing.Size(65, 28);
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -87,7 +87,7 @@
             this.btnXoa.Image = global::Nhom2___PTUD___QLST.Properties.Resources.bin;
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(71, 33);
+            this.btnXoa.Size = new System.Drawing.Size(55, 28);
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -96,7 +96,7 @@
             this.btnSua.Image = global::Nhom2___PTUD___QLST.Properties.Resources.loop;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(70, 33);
+            this.btnSua.Size = new System.Drawing.Size(54, 28);
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -105,7 +105,7 @@
             this.btnLamMoi.Image = global::Nhom2___PTUD___QLST.Properties.Resources.reset;
             this.btnLamMoi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(109, 33);
+            this.btnLamMoi.Size = new System.Drawing.Size(82, 28);
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
@@ -114,7 +114,7 @@
             this.btnThoat.Image = global::Nhom2___PTUD___QLST.Properties.Resources.logout;
             this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(85, 33);
+            this.btnThoat.Size = new System.Drawing.Size(65, 28);
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -130,7 +130,7 @@
             this.guna2GroupBox3.Location = new System.Drawing.Point(5, 4);
             this.guna2GroupBox3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.Size = new System.Drawing.Size(1190, 138);
+            this.guna2GroupBox3.Size = new System.Drawing.Size(1190, 140);
             this.guna2GroupBox3.TabIndex = 18;
             this.guna2GroupBox3.Text = "Quản lí chi nhánh";
             this.guna2GroupBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -154,7 +154,7 @@
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel11, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel6, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtTenChiNhanh, 4, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 43);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 43);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -172,7 +172,7 @@
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(3, 3);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(87, 36);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(87, 26);
             this.guna2HtmlLabel5.TabIndex = 9;
             this.guna2HtmlLabel5.Text = "Mã chi nhánh";
             // 
@@ -193,7 +193,7 @@
             this.txtSoDienThoai.ForeColor = System.Drawing.Color.Black;
             this.txtSoDienThoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoDienThoai.Location = new System.Drawing.Point(682, 54);
-            this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.PasswordChar = '\0';
             this.txtSoDienThoai.PlaceholderText = "";
@@ -212,7 +212,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(588, 53);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(87, 31);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(87, 21);
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "Số điện thoại";
             // 
@@ -233,7 +233,7 @@
             this.txtMaChiNhanh.ForeColor = System.Drawing.Color.Black;
             this.txtMaChiNhanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaChiNhanh.Location = new System.Drawing.Point(97, 4);
-            this.txtMaChiNhanh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaChiNhanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaChiNhanh.Name = "txtMaChiNhanh";
             this.txtMaChiNhanh.PasswordChar = '\0';
             this.txtMaChiNhanh.PlaceholderText = "";
@@ -259,7 +259,7 @@
             this.txtDiaChi.ForeColor = System.Drawing.Color.Black;
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.Location = new System.Drawing.Point(97, 54);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "";
@@ -278,7 +278,7 @@
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(3, 53);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             this.guna2HtmlLabel11.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(87, 44);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(87, 41);
             this.guna2HtmlLabel11.TabIndex = 13;
             this.guna2HtmlLabel11.Text = "Địa chỉ";
             // 
@@ -291,7 +291,7 @@
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(588, 3);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(87, 31);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(87, 21);
             this.guna2HtmlLabel6.TabIndex = 11;
             this.guna2HtmlLabel6.Text = "Tên chi nhánh";
             // 
@@ -312,7 +312,7 @@
             this.txtTenChiNhanh.ForeColor = System.Drawing.Color.Black;
             this.txtTenChiNhanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenChiNhanh.Location = new System.Drawing.Point(682, 4);
-            this.txtTenChiNhanh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenChiNhanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenChiNhanh.Name = "txtTenChiNhanh";
             this.txtTenChiNhanh.PasswordChar = '\0';
             this.txtTenChiNhanh.PlaceholderText = "";
@@ -332,10 +332,10 @@
             this.guna2GroupBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(5, 150);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(5, 152);
             this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1190, 431);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1190, 436);
             this.guna2GroupBox1.TabIndex = 19;
             this.guna2GroupBox1.Text = "Danh sách chi nhánh";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -374,7 +374,7 @@
             this.dgvChiNhanh.Name = "dgvChiNhanh";
             this.dgvChiNhanh.RowHeadersVisible = false;
             this.dgvChiNhanh.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvChiNhanh.Size = new System.Drawing.Size(1190, 391);
+            this.dgvChiNhanh.Size = new System.Drawing.Size(1190, 396);
             this.dgvChiNhanh.TabIndex = 0;
             this.dgvChiNhanh.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvChiNhanh.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -406,17 +406,17 @@
             this.tableLayoutPanel2.Controls.Add(this.guna2GroupBox1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.guna2GroupBox3, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 38);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 31);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1200, 585);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1200, 592);
             this.tableLayoutPanel2.TabIndex = 20;
             // 
             // frmChiNhanh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 623);
             this.Controls.Add(this.tableLayoutPanel2);

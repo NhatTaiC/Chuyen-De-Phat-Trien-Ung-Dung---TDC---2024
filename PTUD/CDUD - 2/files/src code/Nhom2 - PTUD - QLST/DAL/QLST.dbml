@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLySieuThi" Class="QLSTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=QuanLySieuThi;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QuanLySieuThiConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=QuanLySieuThi;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QuanLySieuThiConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BangLuong" Member="BangLuongs">
     <Type Name="BangLuong">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaBangLuong" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="ThangNam" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThangNam" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="TongGioCong" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Luong" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="idNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -37,8 +37,8 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaCaLam" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="TenCaLam" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="GioBatDau" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="GioKetThuc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="GioBatDau" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GioKetThuc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="created_by" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
@@ -176,7 +176,7 @@
     <Type Name="LichLam">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaLichLam" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="NgayLam" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NgayLam" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="idNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idCaLam" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -219,6 +219,8 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="log_name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="model" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="model_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="action" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="data_olds" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="data_news" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -233,7 +235,7 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaNhaCungCap" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="TenNhaCungCap" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="SoDienThoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="created_by" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -248,8 +250,8 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="TenNhanVien" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="SoDienThoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="idLoaiNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idTaiKhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -269,7 +271,7 @@
     <Type Name="PhieuNhap">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaPhieuNhap" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="NgayNhap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NgayNhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="ThanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="idNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="is_deleted" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -286,10 +288,10 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaSanPham" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="TenSanPham" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="DonViTinh" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DonViTinh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="DonGia" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="NgaySanXuat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="HanSuDung" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NgaySanXuat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HanSuDung" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="AnhSanPham" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="idLoaiHang" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idNhaCungCap" Type="System.Int32" DbType="Int" CanBeNull="true" />

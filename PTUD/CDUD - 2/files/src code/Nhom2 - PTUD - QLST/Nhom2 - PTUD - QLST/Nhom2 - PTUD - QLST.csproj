@@ -36,6 +36,7 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -45,6 +46,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -80,17 +82,29 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhatTai\frmChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhatTai\frmChiTietHoaDon.Designer.cs">
+      <DependentUpon>frmChiTietHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhatTai\frmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhatTai\frmHoaDon.Designer.cs">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhatTai\frmHoaDon_Default.cs">
+    <Compile Include="NhatTai\frmInHD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhatTai\frmHoaDon_Default.Designer.cs">
-      <DependentUpon>frmHoaDon_Default.cs</DependentUpon>
+    <Compile Include="NhatTai\frmInHD.Designer.cs">
+      <DependentUpon>frmInHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhatTai\frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhatTai\frmLog.Designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
     </Compile>
     <Compile Include="NhatTai\frmKhuyenMai.cs">
       <SubType>Form</SubType>
@@ -115,6 +129,18 @@
     </Compile>
     <Compile Include="NhatTai\frmTaiKhoan.Designer.cs">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhatTai\frmTraCuuHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhatTai\frmTraCuuHD.Designer.cs">
+      <DependentUpon>frmTraCuuHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhatTai\frmTraCuuNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhatTai\frmTraCuuNV.Designer.cs">
+      <DependentUpon>frmTraCuuNV.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -166,10 +192,10 @@
     <Compile Include="QuocLuong\frmSanPham.Designer.cs">
       <DependentUpon>frmSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\Demo.cs">
+    <Compile Include="Report\GetHdByMaHd.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Demo.rpt</DependentUpon>
+      <DependentUpon>GetHdByMaHd.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="VanToan\frmCaLam.cs">
@@ -226,11 +252,17 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhatTai\frmChiTietHoaDon.resx">
+      <DependentUpon>frmChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhatTai\frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhatTai\frmHoaDon_Default.resx">
-      <DependentUpon>frmHoaDon_Default.cs</DependentUpon>
+    <EmbeddedResource Include="NhatTai\frmInHD.resx">
+      <DependentUpon>frmInHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhatTai\frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhatTai\frmKhuyenMai.resx">
       <DependentUpon>frmKhuyenMai.cs</DependentUpon>
@@ -243,6 +275,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhatTai\frmTaiKhoan.resx">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhatTai\frmTraCuuHD.resx">
+      <DependentUpon>frmTraCuuHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhatTai\frmTraCuuNV.resx">
+      <DependentUpon>frmTraCuuNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -275,9 +313,9 @@
     <EmbeddedResource Include="QuocLuong\frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Demo.rpt">
+    <EmbeddedResource Include="Report\GetHdByMaHd.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Demo.cs</LastGenOutput>
+      <LastGenOutput>GetHdByMaHd.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="VanToan\frmCaLam.resx">
       <DependentUpon>frmCaLam.cs</DependentUpon>

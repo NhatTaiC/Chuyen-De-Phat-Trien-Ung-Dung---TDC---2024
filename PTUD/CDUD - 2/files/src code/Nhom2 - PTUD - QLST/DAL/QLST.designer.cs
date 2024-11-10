@@ -90,7 +90,7 @@ namespace DAL
     #endregion
 		
 		public QLSTDataContext() : 
-				base(global::DAL.Properties.Settings.Default.QuanLySieuThiConnectionString2, mappingSource)
+				base(global::DAL.Properties.Settings.Default.QuanLySieuThiConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -379,7 +379,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThangNam", DbType="Date")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThangNam", DbType="DateTime")]
 		public System.Nullable<System.DateTime> ThangNam
 		{
 			get
@@ -1069,7 +1069,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioBatDau", DbType="VarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioBatDau", DbType="NVarChar(100)")]
 		public string GioBatDau
 		{
 			get
@@ -1089,7 +1089,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioKetThuc", DbType="VarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioKetThuc", DbType="NVarChar(100)")]
 		public string GioKetThuc
 		{
 			get
@@ -4059,7 +4059,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLam", DbType="Date")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLam", DbType="DateTime")]
 		public System.Nullable<System.DateTime> NgayLam
 		{
 			get
@@ -4844,6 +4844,10 @@ namespace DAL
 		
 		private string _model;
 		
+		private System.Nullable<int> _model_id;
+		
+		private string _action;
+		
 		private string _data_olds;
 		
 		private string _data_news;
@@ -4868,6 +4872,10 @@ namespace DAL
     partial void Onlog_nameChanged();
     partial void OnmodelChanging(string value);
     partial void OnmodelChanged();
+    partial void Onmodel_idChanging(System.Nullable<int> value);
+    partial void Onmodel_idChanged();
+    partial void OnactionChanging(string value);
+    partial void OnactionChanged();
     partial void Ondata_oldsChanging(string value);
     partial void Ondata_oldsChanged();
     partial void Ondata_newsChanging(string value);
@@ -4945,6 +4953,46 @@ namespace DAL
 					this._model = value;
 					this.SendPropertyChanged("model");
 					this.OnmodelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_model_id", DbType="Int")]
+		public System.Nullable<int> model_id
+		{
+			get
+			{
+				return this._model_id;
+			}
+			set
+			{
+				if ((this._model_id != value))
+				{
+					this.Onmodel_idChanging(value);
+					this.SendPropertyChanging();
+					this._model_id = value;
+					this.SendPropertyChanged("model_id");
+					this.Onmodel_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_action", DbType="VarChar(100)")]
+		public string action
+		{
+			get
+			{
+				return this._action;
+			}
+			set
+			{
+				if ((this._action != value))
+				{
+					this.OnactionChanging(value);
+					this.SendPropertyChanging();
+					this._action = value;
+					this.SendPropertyChanged("action");
+					this.OnactionChanged();
 				}
 			}
 		}
@@ -5230,7 +5278,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoDienThoai", DbType="VarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoDienThoai", DbType="VarChar(10)")]
 		public string SoDienThoai
 		{
 			get
@@ -5559,7 +5607,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoDienThoai", DbType="VarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoDienThoai", DbType="VarChar(10)")]
 		public string SoDienThoai
 		{
 			get
@@ -5579,7 +5627,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(100)")]
 		public string DiaChi
 		{
 			get
@@ -6039,7 +6087,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayNhap", DbType="Date")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayNhap", DbType="DateTime")]
 		public System.Nullable<System.DateTime> NgayNhap
 		{
 			get
@@ -6435,7 +6483,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonViTinh", DbType="NVarChar(30)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonViTinh", DbType="NVarChar(100)")]
 		public string DonViTinh
 		{
 			get
@@ -6475,7 +6523,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgaySanXuat", DbType="Date")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgaySanXuat", DbType="DateTime")]
 		public System.Nullable<System.DateTime> NgaySanXuat
 		{
 			get
@@ -6495,7 +6543,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HanSuDung", DbType="Date")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HanSuDung", DbType="DateTime")]
 		public System.Nullable<System.DateTime> HanSuDung
 		{
 			get

@@ -35,5 +35,20 @@ namespace BUS
         {
             dal_km.DelKM(id);
         }
+
+        public void AddKM2(DTO_KhuyenMai khuyenMai)
+        {
+            dal_km.AddKM2(khuyenMai);
+        }
+
+        public void UpdateKM2(DTO_KhuyenMai khuyenMai)
+        {
+            dal_km.UpdateKM2(khuyenMai);
+        }
+
+        public int GetMaxIdKM()
+        {
+            return dal_km.GetMaxIdKM();
+        }
     }
 }

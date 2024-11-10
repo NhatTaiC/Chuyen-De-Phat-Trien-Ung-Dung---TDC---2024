@@ -43,11 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO_CaLam.cs" />
+    <Compile Include="DTO_ChiTietHoaDon.cs" />
     <Compile Include="DTO_ChiTietPhieuNhap.cs" />
+    <Compile Include="DTO_HoaDon.cs" />
     <Compile Include="DTO_KhachHang.cs" />
     <Compile Include="DTO_KhuyenMai.cs" />
     <Compile Include="DTO_LichLam.cs" />
     <Compile Include="DTO_LoaiNhanVien.cs" />
+    <Compile Include="DTO_Log.cs" />
     <Compile Include="DTO_NhaCungCap.cs" />
     <Compile Include="DTO_NhanVien.cs" />
     <Compile Include="DTO_BangLuong.cs" />
@@ -59,6 +62,7 @@
     <Compile Include="DTO_SanPham.cs" />
     <Compile Include="DTO_SanPhamKhoHang.cs" />
     <Compile Include="DTO_TaiKhoan.cs" />
+    <Compile Include="DTO_ThanhTien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
