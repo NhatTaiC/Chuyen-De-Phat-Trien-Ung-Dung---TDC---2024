@@ -445,12 +445,17 @@ namespace GUI
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            if(dgvThongTinHoaDon.Rows.Count == 0)
+            {
+                MessageBox.Show("Thông tin hóa đơn rỗng. Vui lòng kiểm tra lại!", "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             DialogResult resuft = MessageBox.Show("Bạn có chắc không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resuft == DialogResult.Yes)
             {
                 dgvThongTinHoaDon.Rows.Clear();
                 thanhTien = 0;
                 lbThanhTien.Text = "0 VNĐ";
+                LamMoi();
             }
         }
 
