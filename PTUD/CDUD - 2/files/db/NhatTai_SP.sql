@@ -7,38 +7,41 @@ Lê Văn Toàn
 NhatTai_SP.sql
 */
 
-use QuanLySieuThi
-go
+USE QuanLySieuThi;
+GO
 
-create proc sp_GetHdByMaHd(@maHoaDon varchar(30))
-as
-	select
-	hd.id as Id,
-	hd.MaHoaDon as MaHoaDon,
-	sp.TenSanPham as TenSanPham,
-	cthd.SoLuong as SoLuong,
-	sp.DonGia as DonGia,
-	(cthd.SoLuong * sp.DonGia) as ThanhTien,
-	hd.TongTien as TongTienHoaDon,
-	hd.NgayLapHD as NgayLapHD,
-	kh.TenKhachHang as TenKhachHang,
-	km.TenKhuyenMai as TenKhuyenMai,
-	nv.TenNhanVien as TenNhanVien
-		from HoaDon as hd
-			join ChiTietHoaDon as cthd
-			on hd.id = cthd.idHoaDon
-			join SanPham as sp
-			on cthd.idSanPham = sp.id
-			join KhoHang as kho
-			on sp.id = kho.idSanPham
-			join NhanVien as nv
-			on hd.idNhanVien = nv.id
-			join KhachHang as kh
-			on hd.idKhachHang = kh.id
-			join KhuyenMai as km
-			on hd.idKhuyenMai = km.id
-			where hd.MaHoaDon = @maHoaDon
-go
 
--- exec sp_GetHdByMaHd 'HD001'
--- drop proc sp_GetHdByMaHd
+CREATE PROCEDURE sp_GetHdByMaHd(@maHoaDon VARCHAR(30))
+AS
+BEGIN
+	WITH InvoiceDetails AS (
+		SELECT
+			ROW_NUMBER() OVER (ORDER BY hd.id) AS STT,
+			hd.id AS Id,
+			hd.MaHoaDon AS MaHoaDon,
+			sp.TenSanPham AS TenSanPham,
+			cthd.SoLuong AS SoLuong,
+			sp.DonGia AS DonGia,
+			(cthd.SoLuong * sp.DonGia) AS ThanhTien,
+			hd.TongTien AS TongTienHoaDon,
+			hd.NgayLapHD AS NgayLapHD,
+			kh.TenKhachHang AS TenKhachHang,
+			km.TenKhuyenMai AS TenKhuyenMai,
+			nv.TenNhanVien AS TenNhanVien	
+		FROM HoaDon AS hd
+			JOIN ChiTietHoaDon AS cthd ON hd.id = cthd.idHoaDon
+			JOIN SanPham AS sp ON cthd.idSanPham = sp.id
+			JOIN KhoHang AS kho ON sp.id = kho.idSanPham
+			JOIN NhanVien AS nv ON hd.idNhanVien = nv.id
+			JOIN KhachHang AS kh ON hd.idKhachHang = kh.id
+			JOIN KhuyenMai AS km ON hd.idKhuyenMai = km.id
+		WHERE hd.MaHoaDon = @maHoaDon
+	)
+	SELECT *,
+		MAX(STT) OVER () AS MaxSTT
+	FROM InvoiceDetails a;
+END;
+GO
+
+-- EXEC sp_GetHdByMaHd 'HD001'
+-- DROP PROC sp_GetHdByMaHd
