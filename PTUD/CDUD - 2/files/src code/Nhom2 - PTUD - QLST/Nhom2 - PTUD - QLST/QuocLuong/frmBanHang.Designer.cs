@@ -69,9 +69,9 @@
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GroupBox4.SuspendLayout();
             this.guna2GroupBox5.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
@@ -116,7 +116,7 @@
             this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox5.Location = new System.Drawing.Point(143, 114);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox5.Name = "guna2TextBox5";
             this.guna2TextBox5.PasswordChar = '\0';
             this.guna2TextBox5.PlaceholderText = "";
@@ -132,7 +132,7 @@
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(3, 122);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(185, 29);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(116, 20);
             this.guna2HtmlLabel7.TabIndex = 11;
             this.guna2HtmlLabel7.Text = "Tên khách hàng:";
             // 
@@ -150,7 +150,7 @@
             this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox6.Location = new System.Drawing.Point(143, 62);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox6.Name = "guna2TextBox6";
             this.guna2TextBox6.PasswordChar = '\0';
             this.guna2TextBox6.PlaceholderText = "";
@@ -166,7 +166,7 @@
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(3, 70);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(150, 29);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(99, 20);
             this.guna2HtmlLabel8.TabIndex = 9;
             this.guna2HtmlLabel8.Text = "Số điện thoại:";
             // 
@@ -200,7 +200,7 @@
             this.cbLoc.ForeColor = System.Drawing.Color.Black;
             this.cbLoc.Location = new System.Drawing.Point(3, 111);
             this.cbLoc.Name = "cbLoc";
-            this.cbLoc.Size = new System.Drawing.Size(76, 36);
+            this.cbLoc.Size = new System.Drawing.Size(53, 25);
             this.cbLoc.TabIndex = 13;
             this.cbLoc.Text = "Lọc";
             this.cbLoc.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -235,7 +235,7 @@
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(3, 70);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(168, 29);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(110, 20);
             this.guna2HtmlLabel10.TabIndex = 9;
             this.guna2HtmlLabel10.Text = "Loại sản phẩm:";
             // 
@@ -337,7 +337,7 @@
             this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel12.Location = new System.Drawing.Point(282, 122);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(47, 29);
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(32, 20);
             this.guna2HtmlLabel12.TabIndex = 15;
             this.guna2HtmlLabel12.Text = "Giá:";
             // 
@@ -373,7 +373,7 @@
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(277, 62);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(112, 29);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(73, 20);
             this.guna2HtmlLabel11.TabIndex = 13;
             this.guna2HtmlLabel11.Text = "Số lượng:";
             // 
@@ -410,7 +410,7 @@
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(11, 122);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(165, 29);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(105, 20);
             this.guna2HtmlLabel6.TabIndex = 11;
             this.guna2HtmlLabel6.Text = "Tên sản phẩm:";
             // 
@@ -446,7 +446,7 @@
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(11, 61);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(149, 29);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(97, 20);
             this.guna2HtmlLabel5.TabIndex = 9;
             this.guna2HtmlLabel5.Text = "Mã sản phẩm";
             // 
@@ -559,7 +559,7 @@
             this.txtTienThua.ForeColor = System.Drawing.Color.Black;
             this.txtTienThua.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienThua.Location = new System.Drawing.Point(277, 359);
-            this.txtTienThua.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTienThua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTienThua.Name = "txtTienThua";
             this.txtTienThua.PasswordChar = '\0';
             this.txtTienThua.PlaceholderText = "";
@@ -584,7 +584,7 @@
             this.txtTienDua.ForeColor = System.Drawing.Color.Black;
             this.txtTienDua.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienDua.Location = new System.Drawing.Point(277, 317);
-            this.txtTienDua.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTienDua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTienDua.Name = "txtTienDua";
             this.txtTienDua.PasswordChar = '\0';
             this.txtTienDua.PlaceholderText = "";
@@ -603,7 +603,7 @@
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(161, 367);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(113, 29);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(73, 20);
             this.guna2HtmlLabel4.TabIndex = 4;
             this.guna2HtmlLabel4.Text = "Tiền thừa:";
             // 
@@ -614,7 +614,7 @@
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(161, 325);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(163, 29);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(104, 20);
             this.guna2HtmlLabel3.TabIndex = 3;
             this.guna2HtmlLabel3.Text = "Tiền khách trả:";
             // 
@@ -625,7 +625,7 @@
             this.lbThanhTien.ForeColor = System.Drawing.Color.DarkOrange;
             this.lbThanhTien.Location = new System.Drawing.Point(277, 280);
             this.lbThanhTien.Name = "lbThanhTien";
-            this.lbThanhTien.Size = new System.Drawing.Size(151, 42);
+            this.lbThanhTien.Size = new System.Drawing.Size(99, 27);
             this.lbThanhTien.TabIndex = 2;
             this.lbThanhTien.Text = "30,000 VNĐ";
             // 
@@ -636,7 +636,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(162, 287);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(125, 29);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(78, 20);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Thành tiền:";
             // 
@@ -733,6 +733,12 @@
             this.MaSanPham.MinimumWidth = 8;
             this.MaSanPham.Name = "MaSanPham";
             // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 8;
+            this.id.Name = "id";
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -767,23 +773,21 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(636, 145);
             this.tableLayoutPanel2.TabIndex = 24;
             // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 8;
-            this.id.Name = "id";
-            // 
             // frmBanHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1284, 623);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmBanHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh toán";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmBanHang_Load);

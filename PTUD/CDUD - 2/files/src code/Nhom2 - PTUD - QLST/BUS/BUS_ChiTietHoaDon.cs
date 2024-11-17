@@ -81,5 +81,15 @@ namespace BUS
         {
             return dal_cthd.GetTotalCashByIdHd(idHd);
         }
+
+        public void DeleteCTHD2(int id)
+        {
+            dal_cthd.DeleteCTHD2(id);
+        }
+
+        public void AddCTHD2(DTO_ChiTietHoaDon chiTietHoaDon)
+        {
+            dal_cthd.AddCTHD2(chiTietHoaDon);
+        }
     }
 }
