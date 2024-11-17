@@ -365,5 +365,55 @@ namespace DAL
                     MessageBoxIcon.Warning);
             }
         }
+
+        public void AddCTHD2(DTO_ChiTietHoaDon chiTietHoaDon)
+        {
+            try
+            {
+                // Checked chiTietHoaDon is saved in table ChiTietHoaDon?
+                var query = (from cthd in da.Db.ChiTietHoaDons
+                             where cthd.idHoaDon == chiTietHoaDon.IdHoaDon &&
+                             cthd.idSanPham == chiTietHoaDon.IdSanPham
+                             select cthd).FirstOrDefault();
+
+
+                if (query == null)
+                {
+                    // Added new record ChiTietHoaDon
+                    da.Db.ChiTietHoaDons.InsertOnSubmit(new ChiTietHoaDon
+                    {
+                        SoLuong = chiTietHoaDon.SoLuong,
+                        idHoaDon = chiTietHoaDon.IdHoaDon,
+                        idSanPham = chiTietHoaDon.IdSanPham,
+                        is_deleted = 0,
+                        created_by = 0,
+                        created_at = DateTime.Now,
+                        updated_by = 0,
+                        updated_at = DateTime.Now
+                    });
+
+                    // Saved db
+                    da.Db.SubmitChanges();
+
+                    //// Messaged
+                    //MessageBox.Show("Thêm chi tiết hoá đơn mới thành công!", "Thông báo",
+                    //MessageBoxButtons.OK,
+                    //MessageBoxIcon.Information);
+                }
+                //else
+                //{
+                //    // Messaged
+                //    MessageBox.Show("Thêm không thành công! Đã có dữ liệu sản phẩm (ẩn) trong chi tiết hóa đơn mới.", "Thông báo",
+                //    MessageBoxButtons.OK,
+                //    MessageBoxIcon.Warning);
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
     }
 }
