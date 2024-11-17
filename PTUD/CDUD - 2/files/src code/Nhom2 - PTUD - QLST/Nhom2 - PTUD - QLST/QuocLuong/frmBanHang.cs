@@ -426,12 +426,14 @@ namespace GUI
                 bus_chitiethoadon.AddCTHD(dong);
                 bus_khohang.CapNhatSoLuong(idSanPham, soLuong);            
             }
-            //in hóa đơn
-            //string maHoaDonMoiNhat = bus_HoaDon.TimMaHoaDon(bus_HoaDon.GetMaxIdHD());
-            //frmInHD f = new frmInHD(maHoaDonMoiNhat);
+          
+            string maHoaDonMoiNhat = bus_HoaDon.TimMaHoaDon(bus_HoaDon.GetMaxIdHD());
+            //cap nhat tong tien          
             int totalCTHD = bus_chitiethoadon.GetTotalCashByIdHd(idhoadon);
             bus_HoaDon.UpdateTotalCash(idhoadon, totalCTHD);
-            //f.ShowDialog();
+            //in hóa đơn
+            frmInHD f = new frmInHD(maHoaDonMoiNhat);
+            f.ShowDialog();
 
         }
         private void cbLoc_CheckedChanged(object sender, EventArgs e)

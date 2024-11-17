@@ -7,6 +7,7 @@
  * 21/10/2024
  */
 using GUI;
+using Nhom2___PTUD___QLST.NhatTai;
 using System;
 using System.Windows.Forms;
 
@@ -35,7 +36,7 @@ namespace Nhom2___PTUD___QLST
             //    fDN.ShowDialog();
             //}
 
-            Application.Run(new frmCaLam());
+            Application.Run(new frmBanHang());
         }
     }
 }
