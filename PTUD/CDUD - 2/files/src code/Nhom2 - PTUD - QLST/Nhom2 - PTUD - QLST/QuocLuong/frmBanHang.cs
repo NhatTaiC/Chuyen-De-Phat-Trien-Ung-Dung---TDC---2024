@@ -1,6 +1,8 @@
 ﻿using BUS;
 using DTO;
+using Microsoft.VisualBasic;
 using NguyenQuocLuong_21211tt4642;
+using Nhom2___PTUD___QLST;
 using Nhom2___PTUD___QLST.NhatTai;
 using System;
 using System.Collections.Generic;
@@ -40,6 +42,18 @@ namespace GUI
         int idHienTai = 0;
         //thanh tiền
         double thanhTien = 0;
+        // bus khach hàng
+        BUS_KhachHang bus_KhachHang = new BUS_KhachHang();
+        //khach hàng
+        DTO_KhachHang khachhang;
+        //DTO Nhan vien
+        DTO_NhanVien nhanvien;
+        //bus Khuyen mai
+        BUS_KhuyenMai bus_khuyenmai;
+
+        public static bool CheckMaKhuyenMai { get; internal set; }
+        public static int idKhuyenMai { get; internal set; }
+
         public frmBanHang()
         {
             InitializeComponent();
@@ -48,14 +62,18 @@ namespace GUI
             dgvThongTinHoaDon.Columns["id"].Visible = false;
             lbThanhTien.Text = "0 VNĐ";
             txtTienDua.MaxLength = 8;
+            nhanvien = frmMain.nhanVien;
+            //khachhang = bus_KhachHang.LayKhachHang("0123456744");
             //TimKiemMasanPhams = ListTimKiemSanPhamBangMa("SP01");
         }
 
 
         private void frmBanHang_Load(object sender, EventArgs e)
         {
+            
             try
             {
+                //MessageBox.Show(khachhang.TenKhachHang);
                 //gọi gàm load combobox
                 LoadCbLoaiSanPham();
                 //LoadNhaCungCap();
@@ -520,22 +538,38 @@ namespace GUI
                 {
                     throw new Exception("Vui lòng nhập đủ số tiền!!!");
                 }
-                DialogResult resuft = MessageBox.Show("Hãy xác nhận lại!", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (resuft == DialogResult.Yes)
-                {
-                    MessageBox.Show("Thanh toán thành công!", "Thoát", MessageBoxButtons.OK);
-                    //string maHDCustom = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss").Replace(":","").Replace("/","").Replace(" ","");
-                    //thêm hóa đơn
-                    bus_HoaDon.AddHD2(new DTO_HoaDon(1, 1, 1));
-                    //thêm chi tiết hóa đơn
-                    ThemChiTietHoaDon();
+                if (khachhang != null) {
+                    MessageBox.Show("Bạn thanh toán có tích điểm");
+                    DialogResult resuft = MessageBox.Show("Bạn có mã khuyến mãi không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resuft == DialogResult.Yes)
+                    {
 
-                    LamMoi();
-                    //làm sạch dgv
-                    dgvThongTinHoaDon.Rows.Clear();
-                    //đặt lại thành tiền sau khi thanh toán thành công
-                    lbThanhTien.Text = "0 VNĐ";
+                        frmApDungMaKhuyenMai frmApDungMaKM = new frmApDungMaKhuyenMai();
+                        frmApDungMaKM.ShowDialog();
+                        ThanhToanCoKhuyenMaiCoKhachHang(idKhuyenMai, khachhang.Id);
+                    }
+                    else
+                    {
+                        ThanhToanKhongCoKhuyenMaiCoKhachHang(khachhang.Id);
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Bạn thanh toán không có tích điểm");
+                    DialogResult resuft = MessageBox.Show("Bạn có mã khuyến mãi không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resuft == DialogResult.Yes)
+                    {
+
+                        frmApDungMaKhuyenMai frmApDungMaKM = new frmApDungMaKhuyenMai();
+                        frmApDungMaKM.ShowDialog();
+                        ThanhToanCoKhuyenMaiCoKhachHang(idKhuyenMai, 1);
+                    }
+                    else
+                    {
+                        ThanhToan();
+                    }
+                }
+               
 
             }
             catch (Exception ex)
@@ -543,6 +577,140 @@ namespace GUI
                 MessageBox.Show(ex.Message, "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void txtSoDienThoai_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtSoDienThoai_MouseLeave(object sender, EventArgs e)
+        {
+            khachhang = bus_KhachHang.LayKhachHang(txtSoDienThoai.Text);
+            //MessageBox.Show(khachhang.TenKhachHang);
+            if (khachhang != null)
+            {
+                txtTenKhachHang.Text = khachhang.TenKhachHang;
+            }
+            else
+            {
+                txtTenKhachHang.Text = "";
+            }
+        }
+        private void ThanhToanCoKhuyenMaiKhongCoKhachHang(int idKhuyenMai)
+        {
+            if (nhanvien != null)
+            {
+                bus_HoaDon.AddHD2(new DTO_HoaDon(1, idKhuyenMai, nhanvien.Id));
+            }
+            else
+            {
+                bus_HoaDon.AddHD2(new DTO_HoaDon(1, idKhuyenMai, 1));
+            }
+            MessageBox.Show("Thanh toán thành công!", "Thoát", MessageBoxButtons.OK);
+            //string maHDCustom = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss").Replace(":","").Replace("/","").Replace(" ","");
+            //thêm hóa đơn
+
+            //thêm chi tiết hóa đơn
+            ThemChiTietHoaDon();
+
+            LamMoi();
+            //làm sạch dgv
+            dgvThongTinHoaDon.Rows.Clear();
+            //đặt lại thành tiền sau khi thanh toán thành công
+            lbThanhTien.Text = "0 VNĐ";
+        }
+        private void ThanhToanCoKhuyenMaiCoKhachHang(int idKhuyenMai,int idKhachHang)
+        {
+            if (nhanvien != null)
+            {
+                bus_HoaDon.AddHD2(new DTO_HoaDon(idKhachHang, idKhuyenMai, nhanvien.Id));
+            }
+            else
+            {
+                bus_HoaDon.AddHD2(new DTO_HoaDon(idKhachHang, idKhuyenMai, 1));
+            }
+            MessageBox.Show("Thanh toán thành công!", "Thoát", MessageBoxButtons.OK);
+            //string maHDCustom = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss").Replace(":","").Replace("/","").Replace(" ","");
+            //thêm hóa đơn
+
+            //thêm chi tiết hóa đơn
+            ThemChiTietHoaDon();
+
+            LamMoi();
+            //làm sạch dgv
+            dgvThongTinHoaDon.Rows.Clear();
+            //đặt lại thành tiền sau khi thanh toán thành công
+            lbThanhTien.Text = "0 VNĐ";
+        }
+        private void ThanhToan()
+        {
+            if (nhanvien != null)
+            {
+                bus_HoaDon.AddHD2(new DTO_HoaDon(1, 1, nhanvien.Id));
+            }
+            else
+            {
+                bus_HoaDon.AddHD2(new DTO_HoaDon(1, 1, 1));
+            }
+            MessageBox.Show("Thanh toán thành công!", "Thoát", MessageBoxButtons.OK);
+            //string maHDCustom = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss").Replace(":","").Replace("/","").Replace(" ","");
+            //thêm hóa đơn
+
+            //thêm chi tiết hóa đơn
+            ThemChiTietHoaDon();
+
+            LamMoi();
+            //làm sạch dgv
+            dgvThongTinHoaDon.Rows.Clear();
+            //đặt lại thành tiền sau khi thanh toán thành công
+            lbThanhTien.Text = "0 VNĐ";
+        }
+        private void ThanhToanKhongCoKhachHangCoKhuyenMai(int idKhuyenMai)
+        {
+            if (nhanvien != null)
+            {
+                bus_HoaDon.AddHD2(new DTO_HoaDon(1,idKhuyenMai, nhanvien.Id));
+            }
+            else
+            {
+                bus_HoaDon.AddHD2(new DTO_HoaDon(1, idKhuyenMai, 1));
+            }
+            MessageBox.Show("Thanh toán thành công!", "Thoát", MessageBoxButtons.OK);
+            //string maHDCustom = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss").Replace(":","").Replace("/","").Replace(" ","");
+            //thêm hóa đơn
+
+            //thêm chi tiết hóa đơn
+            ThemChiTietHoaDon();
+
+            LamMoi();
+            //làm sạch dgv
+            dgvThongTinHoaDon.Rows.Clear();
+            //đặt lại thành tiền sau khi thanh toán thành công
+            lbThanhTien.Text = "0 VNĐ";
+        }
+        private void ThanhToanKhongCoKhuyenMaiCoKhachHang(int idKhachHang)
+        {
+            if (nhanvien != null)
+            {
+                bus_HoaDon.AddHD2(new DTO_HoaDon(idKhachHang,1 , nhanvien.Id));
+            }
+            else
+            {
+                bus_HoaDon.AddHD2(new DTO_HoaDon(idKhachHang,1 , 1));
+            }
+            MessageBox.Show("Thanh toán thành công!", "Thoát", MessageBoxButtons.OK);
+            //string maHDCustom = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss").Replace(":","").Replace("/","").Replace(" ","");
+            //thêm hóa đơn
+
+            //thêm chi tiết hóa đơn
+            ThemChiTietHoaDon();
+
+            LamMoi();
+            //làm sạch dgv
+            dgvThongTinHoaDon.Rows.Clear();
+            //đặt lại thành tiền sau khi thanh toán thành công
+            lbThanhTien.Text = "0 VNĐ";
         }
     }
 }

@@ -50,5 +50,9 @@ namespace BUS
         {
             return dal_km.GetMaxIdKM();
         }
+        public int getIdKhuyenMai(string maKM)
+        {
+            return dal_km.getIdKhuyenMai(maKM);
+        }
     }
 }

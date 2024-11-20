@@ -40,6 +40,7 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -155,6 +156,12 @@
     </Compile>
     <Compile Include="QuocLuong\CardItem.Designer.cs">
       <DependentUpon>CardItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuocLuong\frmApDungMaKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuocLuong\frmApDungMaKhuyenMai.Designer.cs">
+      <DependentUpon>frmApDungMaKhuyenMai.cs</DependentUpon>
     </Compile>
     <Compile Include="QuocLuong\frmBangLuong.cs">
       <SubType>Form</SubType>
@@ -300,6 +307,9 @@
     </Compile>
     <EmbeddedResource Include="QuocLuong\CardItem.resx">
       <DependentUpon>CardItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuocLuong\frmApDungMaKhuyenMai.resx">
+      <DependentUpon>frmApDungMaKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuocLuong\frmBangLuong.resx">
       <DependentUpon>frmBangLuong.cs</DependentUpon>

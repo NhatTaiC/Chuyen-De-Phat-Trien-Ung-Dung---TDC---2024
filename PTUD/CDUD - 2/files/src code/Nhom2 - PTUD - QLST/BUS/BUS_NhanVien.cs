@@ -20,6 +20,10 @@ namespace BUS
         {
             return dal_nv.GetListNV();
         }
+        public DTO_NhanVien getNhanVien(int idTaiKhoan)
+        {
+            return dal_nv.getNhanVien(idTaiKhoan);
+        }
 
         public void AddNV(DTO_NhanVien nv)
         {

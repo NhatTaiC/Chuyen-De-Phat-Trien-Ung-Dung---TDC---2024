@@ -411,6 +411,15 @@ namespace DAL
         {
             var hd_update = da.Db.HoaDons.SingleOrDefault(hd => hd.id == idHd);
             hd_update.TongTien = toTalCash;
+            if(hd_update.idKhuyenMai == 1)
+            {
+                hd_update.ThanhTien = toTalCash;
+            }
+            else
+            {
+                var khuyenmai = da.Db.KhuyenMais.SingleOrDefault(d=>d.id == hd_update.idKhuyenMai);
+                hd_update.ThanhTien = toTalCash - (toTalCash * (float)(khuyenmai.GiaTri / 100));
+            }
 
             // Saved
             da.Db.SubmitChanges();

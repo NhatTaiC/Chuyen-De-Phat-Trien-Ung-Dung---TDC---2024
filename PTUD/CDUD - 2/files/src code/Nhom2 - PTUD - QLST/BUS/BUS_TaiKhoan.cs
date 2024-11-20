@@ -20,6 +20,11 @@ namespace BUS
         {
             return dal_tk.CheckTaiKhoan(taiKhoan, matKhau);
         }
+        public int getIdTaiKhoan(string taiKhoan, string matKhau)
+        {
+            
+            return dal_tk.getIdTaiKhoan(taiKhoan,matKhau);
+        }
 
         public int GetRole(string taiKhoan, string matKhau)
         {

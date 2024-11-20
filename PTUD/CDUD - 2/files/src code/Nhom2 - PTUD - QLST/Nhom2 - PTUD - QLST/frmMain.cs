@@ -4,9 +4,11 @@
  * frmMain.cs
  * 21/10/2024
  */
+using DTO;
 using GUI;
 using Nhom2___PTUD___QLST.NhatTai;
 using Nhom2___PTUD___QLST.VanToan;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace Nhom2___PTUD___QLST
@@ -22,16 +24,25 @@ namespace Nhom2___PTUD___QLST
         private string tk = string.Empty;
         private int q = 0;
         private Form frmOld = null;
+        public static DTO_NhanVien nhanVien = null;
 
-        public frmMain(string taiKhoan, int quyen)
+        public DTO_NhanVien NhanVien { get => nhanVien; set => nhanVien = value; }
+
+        public frmMain(string taiKhoan, int quyen, DTO_NhanVien nhanVien)
         {
             this.tk = taiKhoan;
+            this.NhanVien = nhanVien;
             this.q = quyen;
             InitializeComponent();
+        }
+        public static DTO_NhanVien getNhanVien()
+        {
+            return nhanVien;
         }
 
         public bool CheckFormExit(string name)
         {
+            
             foreach (Form item in MdiChildren)
             {
                 if (item.Name == name)
@@ -41,6 +52,7 @@ namespace Nhom2___PTUD___QLST
             }
             return false;
         }
+       
 
         public void ActForm(string name)
         {
@@ -93,6 +105,7 @@ namespace Nhom2___PTUD___QLST
 
         private void frmMain_Load(object sender, System.EventArgs e)
         {
+            MessageBox.Show(NhanVien.TenNV);
             // Check taikhoan da dc gui qua frmMain chua?
             if (tk != string.Empty)
             {

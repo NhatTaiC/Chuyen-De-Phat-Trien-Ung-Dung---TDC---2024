@@ -31,8 +31,30 @@ namespace DAL
                               };
             return temp;
         }
+        public DTO_KhachHang LayKhachHang(string sodienthoai)
+        {
+            var linqKH = da.Db.KhachHangs.FirstOrDefault(kh => kh.SoDienThoai == sodienthoai);
+            if (linqKH == null)
+            {
 
-        // ThemKH()
+                return null;
+            }
+
+            DTO_KhachHang khachhang = new DTO_KhachHang
+            {
+                Id = linqKH.id,
+                TenKhachHang = linqKH.TenKhachHang,
+                MaKhachHang = linqKH.MaKhachHang,
+                SoDienThoai = linqKH.SoDienThoai,
+                Diem = (double)linqKH.Diem,
+                Created_at = DateTime.Now,
+                Created_by = 0,
+                Updated_at = DateTime.Now,
+                Update_by = 0,
+                Is_deleted = 0
+            };
+            return khachhang;
+        }
         public bool ThemKH(DTO_KhachHang khachHang)
         {
             try
@@ -132,37 +154,39 @@ namespace DAL
                 MessageBox.Show(ex.Message);
                 throw;
             }
+
             return false;
         }
 
-        //Tìm kiếm theo tên
-        public IQueryable timkiemTheoTen(string ten)
-        {
-            return da.Db.KhachHangs
-                .Where(kh => kh.TenKhachHang.Contains(ten))
-                .Select(kh => new
-                {
-                    id = kh.id,
-                    MaKH = kh.MaKhachHang,
-                    TenKH = kh.TenKhachHang,
-                    SDT = kh.SoDienThoai,
-                    Diem = kh.Diem
-                });
-        }
+            //Tìm kiếm theo tên
+            public IQueryable timkiemTheoTen(string ten)
+            {
+                return da.Db.KhachHangs
+                    .Where(kh => kh.TenKhachHang.Contains(ten))
+                    .Select(kh => new
+                    {
+                        id = kh.id,
+                        MaKH = kh.MaKhachHang,
+                        TenKH = kh.TenKhachHang,
+                        SDT = kh.SoDienThoai,
+                        Diem = kh.Diem
+                    });
+            }
 
-        //Tìm kiếm theo số điện thoại
-        public IQueryable timkiemTheoSDT(string sdt)
-        {
-            return da.Db.KhachHangs
-                .Where(kh => kh.SoDienThoai.Contains(sdt))
-                .Select(kh => new
-                {
-                    id = kh.id,
-                    MaKH = kh.MaKhachHang,
-                    TenKH = kh.TenKhachHang,
-                    SDT = kh.SoDienThoai,
-                    Diem = kh.Diem
-                });
+            //Tìm kiếm theo số điện thoại
+            public IQueryable timkiemTheoSDT(string sdt)
+            {
+                return da.Db.KhachHangs
+                    .Where(kh => kh.SoDienThoai.Contains(sdt))
+                    .Select(kh => new
+                    {
+                        id = kh.id,
+                        MaKH = kh.MaKhachHang,
+                        TenKH = kh.TenKhachHang,
+                        SDT = kh.SoDienThoai,
+                        Diem = kh.Diem
+                    });
+            }
         }
     }
-}
+
