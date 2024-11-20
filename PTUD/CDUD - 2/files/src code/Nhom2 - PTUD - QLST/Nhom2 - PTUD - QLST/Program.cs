@@ -7,6 +7,7 @@
  * 21/10/2024
  */
 using GUI;
+using Nhom2___PTUD___QLST.QuocLuong;
 using System;
 using System.Windows.Forms;
 
@@ -24,18 +25,18 @@ namespace Nhom2___PTUD___QLST
             Application.SetCompatibleTextRenderingDefault(false);
 
              //Open frmFlash
-            frmFlash f = new frmFlash();
-            f.ShowDialog();
+            //frmFlash f = new frmFlash();
+            //f.ShowDialog();
 
-            // frmFlash == OK
-            if (f.DialogResult == DialogResult.OK)
-            {
-                // Open frmDangNhap
-                frmDangNhap fDN = new frmDangNhap();
-                fDN.ShowDialog();
-            }
+            //// frmFlash == OK
+            //if (f.DialogResult == DialogResult.OK)
+            //{
+            //    // Open frmDangNhap
+            //    frmDangNhap fDN = new frmDangNhap();
+            //    fDN.ShowDialog();
+            //}
 
-            //Application.Run(new frmBanHang());
+            Application.Run(new frm_DoanhThuTheoNam());
         }
     }
 }
