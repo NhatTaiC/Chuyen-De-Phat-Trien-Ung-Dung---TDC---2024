@@ -11,7 +11,7 @@ USE QuanLySieuThi;
 GO
 
 
-CREATE PROCEDURE sp_GetHdByMaHd(@maHoaDon VARCHAR(30))
+CREATE PROCEDURE sp_GetHdByMaHd(@maHoaDon VARCHAR(30) = 'HD001')
 AS
 BEGIN
 	WITH InvoiceDetails AS (
@@ -24,6 +24,8 @@ BEGIN
 			sp.DonGia AS DonGia,
 			(cthd.SoLuong * sp.DonGia) AS ThanhTien,
 			hd.TongTien AS TongTienHoaDon,
+			ROUND(((km.GiaTri) / 100) * hd.TongTien, 0) as TienKhuyenMai,
+			hd.TongTien - ROUND(((km.GiaTri) / 100) * hd.TongTien, 0) as TienPhaiTra,
 			hd.NgayLapHD AS NgayLapHD,
 			kh.TenKhachHang AS TenKhachHang,
 			km.TenKhuyenMai AS TenKhuyenMai,

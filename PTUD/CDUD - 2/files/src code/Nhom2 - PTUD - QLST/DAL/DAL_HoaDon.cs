@@ -209,6 +209,9 @@ namespace DAL
             var hd_update = da.Db.HoaDons.SingleOrDefault(hd => hd.id == idHd);
             hd_update.TongTien = toTalCash;
 
+            var query = da.Db.KhuyenMais.SingleOrDefault(km => km.id == hd_update.idKhuyenMai);
+            hd_update.ThanhTien = toTalCash - ((query.GiaTri / 100) * toTalCash);
+
             // Saved
             da.Db.SubmitChanges();
 
@@ -411,6 +414,18 @@ namespace DAL
         {
             var hd_update = da.Db.HoaDons.SingleOrDefault(hd => hd.id == idHd);
             hd_update.TongTien = toTalCash;
+            if(hd_update.idKhuyenMai == 1)
+            {
+                hd_update.ThanhTien = toTalCash;
+            }
+            else
+            {
+                var khuyenmai = da.Db.KhuyenMais.SingleOrDefault(d=>d.id == hd_update.idKhuyenMai);
+                hd_update.ThanhTien = toTalCash - (toTalCash * (float)(khuyenmai.GiaTri / 100));
+            }
+
+            var query = da.Db.KhuyenMais.SingleOrDefault(km => km.id == hd_update.idKhuyenMai);
+            hd_update.ThanhTien = toTalCash - ((query.GiaTri / 100) * toTalCash);
 
             // Saved
             da.Db.SubmitChanges();
@@ -418,6 +433,13 @@ namespace DAL
             //MessageBox.Show("Lưu tổng tiền vào hóa đơn thành công!", "Thông báo",
             //    MessageBoxButtons.OK,
             //    MessageBoxIcon.Information);
+        }
+
+        public string SearchHDById(int idHD)
+        {
+            var query = da.Db.HoaDons.SingleOrDefault(h => h.id == idHD);
+
+            return query.MaHoaDon;
         }
     }
 }

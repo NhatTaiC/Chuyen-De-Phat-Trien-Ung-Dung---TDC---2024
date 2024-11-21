@@ -9,11 +9,11 @@
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedHeight": 272,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -24,9 +24,9 @@
               "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\Program.cs",
               "ToolTip": "D:\\GitHub\\NhatTaiC\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\Program.cs",
               "RelativeToolTip": "Nhom2 - PTUD - QLST\\Program.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAACQAAAAtAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAuwCMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T15:42:08.802Z",
+              "WhenOpened": "2024-11-21T17:28:04.527Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -57,7 +57,7 @@
           ]
         },
         {
-          "DockedWidth": 1378,
+          "DockedHeight": 272,
           "SelectedChildIndex": -1,
           "Children": [
             {

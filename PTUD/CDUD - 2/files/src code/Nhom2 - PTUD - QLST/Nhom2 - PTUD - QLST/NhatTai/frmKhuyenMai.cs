@@ -41,7 +41,7 @@ namespace Nhom2___PTUD___QLST
             dgvKM.DataSource = bus_km.GetListKM();
             dgvKM.Columns["id"].Visible = false;
             dgvKM.Columns["id"].HeaderText = "Id";
-            dgvKM.Columns["MaKhuyenMai"].Visible = false;
+            dgvKM.Columns["MaKhuyenMai"].Visible = true;
             dgvKM.Columns["MaKhuyenMai"].HeaderText = "Mã khuyến mãi";
             dgvKM.Columns["TenKhuyenMai"].HeaderText = "Tên khuyến mãi";
             dgvKM.Columns["GiaTri"].HeaderText = "Giá trị";

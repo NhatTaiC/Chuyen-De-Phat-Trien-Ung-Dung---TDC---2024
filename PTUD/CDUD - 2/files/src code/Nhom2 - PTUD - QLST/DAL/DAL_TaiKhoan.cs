@@ -29,6 +29,13 @@ namespace DAL
             }
             return false;
         }
+        public int getIdTaiKhoan(string taiKhoan, string matKhau)
+        {
+            var query = (from tk in da.Db.TaiKhoans
+                        where tk.TenTaiKhoan == taiKhoan && tk.MatKhau == matKhau && tk.is_deleted == 0
+                        select tk).FirstOrDefault();
+            return query.id;
+        }
 
         public IQueryable GetListTK()
         {
