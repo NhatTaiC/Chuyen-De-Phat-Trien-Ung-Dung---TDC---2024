@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DTO;
+using Nhom2___PTUD___QLST.QuocLuong;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -308,5 +309,18 @@ namespace GUI
                 this.Close();
             }
 		}
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            if(currentIDBangLuong != 0)
+            {
+                frmBaoCaoBangLuong frm = new frmBaoCaoBangLuong(currentIDBangLuong);
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vui chọn bảng lương!!", "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

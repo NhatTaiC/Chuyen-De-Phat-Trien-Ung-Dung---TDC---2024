@@ -17,7 +17,16 @@ namespace DAL
         DatabaseAccess da = new DatabaseAccess();
 
         // Methods
-        public IQueryable GetListKM()
+        public int getIdKhuyenMai(string maKM)
+        {
+            var query = da.Db.KhuyenMais.FirstOrDefault(dl => dl.MaKhuyenMai == maKM);
+            if(query == null)
+            {
+                return 0;
+            }
+            return query.id;
+        }
+            public IQueryable GetListKM()
         {
             IQueryable query = from km in da.Db.KhuyenMais
                                where km.is_deleted == 0

@@ -439,5 +439,21 @@ namespace DAL
                                };
             return query;
         }
+        //get nhan vien
+        public DTO_NhanVien getNhanVien(int idTaiKhoan)
+        {
+            var nhanvien = da.Db.NhanViens.FirstOrDefault(nv=>nv.id == idTaiKhoan);
+            DTO_NhanVien dto_NhanVien = new DTO_NhanVien
+            {
+                Id = nhanvien.id,
+                TenNV = nhanvien.TenNhanVien,
+                SoDT = nhanvien.SoDienThoai,
+                DiaChi = nhanvien.DiaChi,
+                IdLNV = (int)nhanvien.idLoaiNhanVien,
+                IdTK = (int)nhanvien.idLoaiNhanVien
+
+            };
+            return dto_NhanVien;
+        }
     }
 }
