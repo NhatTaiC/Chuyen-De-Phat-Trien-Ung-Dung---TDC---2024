@@ -70,6 +70,7 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnIn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -115,11 +116,13 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 4;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.82481F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.99459F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.65544F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.52516F));
+            this.tableLayoutPanel4.ColumnCount = 5;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.btnIn, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.cbLoc, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.cbLocBangLuong, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2HtmlLabel4, 0, 0);
@@ -144,9 +147,9 @@
             this.cbLoc.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLoc.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoc.ForeColor = System.Drawing.Color.Black;
-            this.cbLoc.Location = new System.Drawing.Point(367, 11);
+            this.cbLoc.Location = new System.Drawing.Point(293, 3);
             this.cbLoc.Name = "cbLoc";
-            this.cbLoc.Size = new System.Drawing.Size(122, 32);
+            this.cbLoc.Size = new System.Drawing.Size(74, 40);
             this.cbLoc.TabIndex = 26;
             this.cbLoc.Text = "Lọc";
             this.cbLoc.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -168,9 +171,9 @@
             this.cbLocBangLuong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLocBangLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbLocBangLuong.ItemHeight = 30;
-            this.cbLocBangLuong.Location = new System.Drawing.Point(101, 7);
+            this.cbLocBangLuong.Location = new System.Drawing.Point(83, 7);
             this.cbLocBangLuong.Name = "cbLocBangLuong";
-            this.cbLocBangLuong.Size = new System.Drawing.Size(260, 36);
+            this.cbLocBangLuong.Size = new System.Drawing.Size(204, 36);
             this.cbLocBangLuong.TabIndex = 27;
             this.cbLocBangLuong.SelectedIndexChanged += new System.EventHandler(this.cbLocBangLuong_SelectedIndexChanged);
             // 
@@ -181,9 +184,9 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(3, 23);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(3, 14);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(92, 20);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(118, 29);
             this.guna2HtmlLabel4.TabIndex = 24;
             this.guna2HtmlLabel4.Text = "Nhân viên:";
             // 
@@ -201,9 +204,9 @@
             this.btnLamMoi.ForeColor = System.Drawing.Color.White;
             this.btnLamMoi.Image = global::Nhom2___PTUD___QLST.Properties.Resources.reset;
             this.btnLamMoi.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLamMoi.Location = new System.Drawing.Point(495, 3);
+            this.btnLamMoi.Location = new System.Drawing.Point(373, 3);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(122, 40);
+            this.btnLamMoi.Size = new System.Drawing.Size(118, 40);
             this.btnLamMoi.TabIndex = 24;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
@@ -410,7 +413,7 @@
             this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel12.Location = new System.Drawing.Point(361, 110);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(70, 18);
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(101, 27);
             this.guna2HtmlLabel12.TabIndex = 34;
             this.guna2HtmlLabel12.Text = "Mã lịch làm";
             // 
@@ -421,7 +424,7 @@
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(361, 181);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(40, 18);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(58, 27);
             this.guna2HtmlLabel11.TabIndex = 33;
             this.guna2HtmlLabel11.Text = "Lương";
             // 
@@ -432,7 +435,7 @@
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(10, 251);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(63, 18);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(91, 27);
             this.guna2HtmlLabel10.TabIndex = 32;
             this.guna2HtmlLabel10.Text = "Nhân viên";
             // 
@@ -443,7 +446,7 @@
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel9.Location = new System.Drawing.Point(7, 172);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(69, 18);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(98, 27);
             this.guna2HtmlLabel9.TabIndex = 31;
             this.guna2HtmlLabel9.Text = "Ngày nhập";
             // 
@@ -454,7 +457,7 @@
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(7, 103);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(92, 18);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(133, 27);
             this.guna2HtmlLabel6.TabIndex = 30;
             this.guna2HtmlLabel6.Text = "Mã bảng lương";
             // 
@@ -675,7 +678,7 @@
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(23, 110);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(110, 20);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(170, 29);
             this.guna2HtmlLabel8.TabIndex = 9;
             this.guna2HtmlLabel8.Text = "Mã bảng lương";
             // 
@@ -686,7 +689,7 @@
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(23, 188);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(81, 20);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(128, 29);
             this.guna2HtmlLabel7.TabIndex = 11;
             this.guna2HtmlLabel7.Text = "Ngày nhập:";
             // 
@@ -697,7 +700,7 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(371, 110);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(72, 20);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(110, 29);
             this.guna2HtmlLabel2.TabIndex = 16;
             this.guna2HtmlLabel2.Text = "Giờ công:";
             // 
@@ -708,7 +711,7 @@
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(371, 188);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(55, 20);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(83, 29);
             this.guna2HtmlLabel3.TabIndex = 19;
             this.guna2HtmlLabel3.Text = "Lương:";
             // 
@@ -719,7 +722,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(23, 273);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(75, 20);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(118, 29);
             this.guna2HtmlLabel1.TabIndex = 15;
             this.guna2HtmlLabel1.Text = "Nhân viên:";
             // 
@@ -730,13 +733,31 @@
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(0, 0);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(65, 20);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(100, 29);
             this.guna2HtmlLabel5.TabIndex = 26;
             this.guna2HtmlLabel5.Text = "Lịch làm:";
             // 
+            // btnIn
+            // 
+            this.btnIn.BorderRadius = 3;
+            this.btnIn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnIn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnIn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.ForeColor = System.Drawing.Color.White;
+            this.btnIn.Image = global::Nhom2___PTUD___QLST.Properties.Resources.printer;
+            this.btnIn.Location = new System.Drawing.Point(497, 3);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(99, 40);
+            this.btnIn.TabIndex = 35;
+            this.btnIn.Text = "In";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
             // frmBangLuong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 623);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -802,5 +823,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2Button btnIn;
     }
 }

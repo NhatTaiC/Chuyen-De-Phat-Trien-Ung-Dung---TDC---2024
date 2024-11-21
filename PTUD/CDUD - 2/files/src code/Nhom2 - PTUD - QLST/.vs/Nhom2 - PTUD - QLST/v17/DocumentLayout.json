@@ -3,32 +3,64 @@
   "WorkspaceRootPath": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\report\\rpt_doanhthutheonam.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
-      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\report\\rpt_doanhthutheonam.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\report\\rpt_baocaobangluongtheomabangluong.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\report\\rpt_baocaobangluongtheomabangluong.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frmbangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frmbangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frmsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frmsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frmapdungmakhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frmapdungmakhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frmbangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frmbangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\nhom2 - ptud - qlst\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frmchinhanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frmchinhanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frmbaocaodoanhthutheothang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frmbaocaodoanhthutheothang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frmbaocaobangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frmbaocaobangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frmbanhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frmbanhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frm_doanhthutheonam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frm_doanhthutheonam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frm_doanhthutheonam.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frm_doanhthutheonam.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frm_doanhthutheonam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frm_doanhthutheonam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frmbaocaobangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frmbaocaobangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E18C83C1-32A8-4714-A20F-F5C7E5C8C90C}|BUS\\BUS.csproj|D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\bus\\bus_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E18C83C1-32A8-4714-A20F-F5C7E5C8C90C}|BUS\\BUS.csproj|solutionrelative:bus\\bus_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frmbaocaodoanhthutheothang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frmbaocaodoanhthutheothang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E21D61B-E577-46BE-948C-E5912B867582}|DAL\\DAL.csproj|D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\dal\\dal_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E21D61B-E577-46BE-948C-E5912B867582}|DAL\\DAL.csproj|solutionrelative:dal\\dal_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|d:\\chuyende\\chuyen-de-phat-trien-ung-dung---tdc---2024.git\\ptud\\cdud - 2\\files\\src code\\nhom2 - ptud - qlst\\nhom2 - ptud - qlst\\quocluong\\frm_doanhthutheonam.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{806A554E-B030-408B-A2DF-FF85274B15B6}|Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST.csproj|solutionrelative:nhom2 - ptud - qlst\\quocluong\\frm_doanhthutheonam.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 272,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,91 +102,188 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frm_DoanhThuTheoNam.cs",
-              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs",
-              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs",
-              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs",
-              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvw8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T18:33:41.592Z",
+              "DocumentIndex": 0,
+              "Title": "rpt_BaoCaoBangLuongTheoMaBangLuong.rpt",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\Report\\rpt_BaoCaoBangLuongTheoMaBangLuong.rpt",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\Report\\rpt_BaoCaoBangLuongTheoMaBangLuong.rpt",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\Report\\rpt_BaoCaoBangLuongTheoMaBangLuong.rpt",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\Report\\rpt_BaoCaoBangLuongTheoMaBangLuong.rpt",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASDSURBVEhLtVVNTBx1FP/N98eyM/uBsLRACU0k0BYWsXw1xhAPHjQqpmptm/TQ2IMnDQcTTzXGmp5MqpFqNGkPjdWoSSvGxlStAYvaAlVLe1iIfC/QAmXZXZbdmR3fzE5QYKFe\u002Bpt5M29m3tf/vf97gwcKy7IYl11FadmOyt176hvdxy2RtbLZWzf/6psY/3vYfXV/tO8/eDR6J5ZdiCXvS5Mz94yPz14YUD0Fuqu\u002BAax7XwOPIkIvkPOS5pHh9UjwqhLxEhuuC9d98c3VOUEUZVd9DfI62AyUUtiHcxLPciwCfgWhQp398NOvrm8vrXjYFV3F/3ZgZcmqw5ALIvuRZRj4NBWF/gI01NdVHz9x6rwgiFJOMIf7OiBbyJK1LIXt3B2iJyIbHkWARqkrDBQwDQ314a8vXYs7H1xs6sA27JB7OKcd/eo3C4ZhIraUQsYwIPIcykM\u002BMAzD5SzksIWDXCrs1FgUrJ0SmwaTt9A50YmEkQTDslAVCYosQCby0kpYdu3OZ2V9e7GslWiSN8S77xzk8mwT8W5aFo1FXEx8Sw4\u002Bwsmhk4inl2DSezttdspsnfXgT3zSfeaP4aWRkemle8PdpyOekkdqDNPOuLsKip6umDXuoj/Th218CVTI\u002BGDifSTMJF4v70BQDJKsLbcR3KGXX5x8oqE43FoTOKKUNLcNxUJNv/wZFZPLKwgFyJTEUuQx9KZ/g8LJCHB\u002B9Mz2YHplGoOJm0gay2jW9oGzWAgCj5HJOZw70/mWax9cdW3rTCJl9prpxOWm6oJAVZlWGZnl5B8G7uK7q2OYTcyhr6gLFmMgyAfhZT34OXoFE7EJmBkTAwv9yBoWmv2tkEQeo\u002BsddP940TCNTFxU9el4Cj0BDyO1VOutgqhgfIHH4NQMhlM9GBP6McwM4zZzG4PXBjF3Yw7WUBbKqIxdehgNRXvhoe4em5pf48DZRd93fYZT73ak3nnz6FRqxYiUF6t4sk7CvhoNIlOO5d\u002BfQjQiYyQzgiEjgoXoPDCehTAl4KWyI3gm9AKWl9N5i7y6TZdiC5ieHLU\u002BP/ueqVN3FtEIqK9gEdQUiGwl2Ov7Yc0Wg6EBbKUsCGkB7eEDeL7xIHSvBkkS7B5wrf2LvH3A04xRabllhTwtmwMrqBDMKqQvt8OIBqFaKg41HsPhx16BX9Ph99FKRSHvLsrrwI6Eo4aRRBaaTPuU5cEpPoiJOjAXDuPV8Bt47tEDZNwHn88LUbCNU/R5PGzayXbzxCkV0UVS5UUoHgVFRTpqy6rxeEUbzR4/fLptXKQ5RfJO72xRg//CLtZyykBvxEDcVODXPdgZklFVquDZJorar1HkOqWFjJNsbhjaio76GmxwYEeRpv3ddWMFv04EULHtIbRUKairoKI2sNgZzNJg46lOXK7LbbI73iTK42C17Mdee5vZU9\u002BqFu7YdTzLKR1pUwD9uFBApPJpaOIKAl7OmZpUJFdrI/oHx/B0W\u002B1q4OsctCj089hLE3E3Fdr5RnyGUpBKrWTSX547bS3M33Hkt0L3T5fOu\u002ByDBvAPpv4NXXCfjRcAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-21T15:50:13.828Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "frmSanPham.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmSanPham.cs",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frmSanPham.cs",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmSanPham.cs [Design]",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frmSanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:31:09.744Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmBangLuong.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBangLuong.cs",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBangLuong.cs",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBangLuong.cs [Design]",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBangLuong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:28:57.601Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\Program.cs",
               "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\Program.cs",
               "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\Program.cs",
               "RelativeToolTip": "Nhom2 - PTUD - QLST\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAxwB8AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T18:30:32.227Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "frmBangLuong.cs",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBangLuong.cs",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBangLuong.cs",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBangLuong.cs",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBangLuong.cs",
+              "ViewState": "AgIAACwBAAAAAAAAAAAswEEBAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:29:44.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmApDungMaKhuyenMai.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmApDungMaKhuyenMai.cs",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frmApDungMaKhuyenMai.cs",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmApDungMaKhuyenMai.cs [Design]",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frmApDungMaKhuyenMai.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:30:34.445Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmChiNhanh.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmChiNhanh.cs",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frmChiNhanh.cs",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmChiNhanh.cs [Design]",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frmChiNhanh.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:31:05.159Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmBaoCaoDoanhthuTheoThang.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoDoanhthuTheoThang.cs",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoDoanhthuTheoThang.cs",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoDoanhthuTheoThang.cs [Design]",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoDoanhthuTheoThang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:31:00.407Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmBanHang.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBanHang.cs",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBanHang.cs",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBanHang.cs [Design]",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBanHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:30:51.852Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmBaoCaoBangLuong.cs [Design]",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoBangLuong.cs",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoBangLuong.cs",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoBangLuong.cs [Design]",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoBangLuong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:04:34.501Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frm_DoanhThuTheoNam.cs",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwB4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T13:06:07.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "frm_DoanhThuTheoNam.cs [Design]",
               "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs",
               "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs",
               "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs [Design]",
               "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T18:22:19.916Z",
+              "WhenOpened": "2024-11-21T14:01:45.036Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "rpt_DoanhThuTheoNam.rpt",
-              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\Report\\rpt_DoanhThuTheoNam.rpt",
-              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\Report\\rpt_DoanhThuTheoNam.rpt",
-              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\Report\\rpt_DoanhThuTheoNam.rpt",
-              "RelativeToolTip": "Nhom2 - PTUD - QLST\\Report\\rpt_DoanhThuTheoNam.rpt",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASDSURBVEhLtVVNTBx1FP/N98eyM/uBsLRACU0k0BYWsXw1xhAPHjQqpmptm/TQ2IMnDQcTTzXGmp5MqpFqNGkPjdWoSSvGxlStAYvaAlVLe1iIfC/QAmXZXZbdmR3fzE5QYKFe\u002Bpt5M29m3tf/vf97gwcKy7IYl11FadmOyt176hvdxy2RtbLZWzf/6psY/3vYfXV/tO8/eDR6J5ZdiCXvS5Mz94yPz14YUD0Fuqu\u002BAax7XwOPIkIvkPOS5pHh9UjwqhLxEhuuC9d98c3VOUEUZVd9DfI62AyUUtiHcxLPciwCfgWhQp398NOvrm8vrXjYFV3F/3ZgZcmqw5ALIvuRZRj4NBWF/gI01NdVHz9x6rwgiFJOMIf7OiBbyJK1LIXt3B2iJyIbHkWARqkrDBQwDQ314a8vXYs7H1xs6sA27JB7OKcd/eo3C4ZhIraUQsYwIPIcykM\u002BMAzD5SzksIWDXCrs1FgUrJ0SmwaTt9A50YmEkQTDslAVCYosQCby0kpYdu3OZ2V9e7GslWiSN8S77xzk8mwT8W5aFo1FXEx8Sw4\u002Bwsmhk4inl2DSezttdspsnfXgT3zSfeaP4aWRkemle8PdpyOekkdqDNPOuLsKip6umDXuoj/Th218CVTI\u002BGDifSTMJF4v70BQDJKsLbcR3KGXX5x8oqE43FoTOKKUNLcNxUJNv/wZFZPLKwgFyJTEUuQx9KZ/g8LJCHB\u002B9Mz2YHplGoOJm0gay2jW9oGzWAgCj5HJOZw70/mWax9cdW3rTCJl9prpxOWm6oJAVZlWGZnl5B8G7uK7q2OYTcyhr6gLFmMgyAfhZT34OXoFE7EJmBkTAwv9yBoWmv2tkEQeo\u002BsddP940TCNTFxU9el4Cj0BDyO1VOutgqhgfIHH4NQMhlM9GBP6McwM4zZzG4PXBjF3Yw7WUBbKqIxdehgNRXvhoe4em5pf48DZRd93fYZT73ak3nnz6FRqxYiUF6t4sk7CvhoNIlOO5d\u002BfQjQiYyQzgiEjgoXoPDCehTAl4KWyI3gm9AKWl9N5i7y6TZdiC5ieHLU\u002BP/ueqVN3FtEIqK9gEdQUiGwl2Ov7Yc0Wg6EBbKUsCGkB7eEDeL7xIHSvBkkS7B5wrf2LvH3A04xRabllhTwtmwMrqBDMKqQvt8OIBqFaKg41HsPhx16BX9Ph99FKRSHvLsrrwI6Eo4aRRBaaTPuU5cEpPoiJOjAXDuPV8Bt47tEDZNwHn88LUbCNU/R5PGzayXbzxCkV0UVS5UUoHgVFRTpqy6rxeEUbzR4/fLptXKQ5RfJO72xRg//CLtZyykBvxEDcVODXPdgZklFVquDZJorar1HkOqWFjJNsbhjaio76GmxwYEeRpv3ddWMFv04EULHtIbRUKairoKI2sNgZzNJg46lOXK7LbbI73iTK42C17Mdee5vZU9\u002BqFu7YdTzLKR1pUwD9uFBApPJpaOIKAl7OmZpUJFdrI/oHx/B0W\u002B1q4OsctCj089hLE3E3Fdr5RnyGUpBKrWTSX547bS3M33Hkt0L3T5fOu\u002ByDBvAPpv4NXXCfjRcAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-11-20T17:59:00.972Z",
+              "DocumentIndex": 12,
+              "Title": "frmBaoCaoBangLuong.cs",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoBangLuong.cs",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoBangLuong.cs",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoBangLuong.cs",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoBangLuong.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwB4AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:06:54.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 13,
+              "Title": "frmBaoCaoDoanhthuTheoThang.cs",
+              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoDoanhthuTheoThang.cs",
+              "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoDoanhthuTheoThang.cs",
+              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoDoanhthuTheoThang.cs",
+              "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frmBaoCaoDoanhthuTheoThang.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAuwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T13:29:59.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "frm_DoanhThuTheoNam.Designer.cs",
               "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.Designer.cs",
               "RelativeDocumentMoniker": "Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.Designer.cs",
               "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.Designer.cs",
               "RelativeToolTip": "Nhom2 - PTUD - QLST\\QuocLuong\\frm_DoanhThuTheoNam.Designer.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAADwv1UAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAYwKEAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T18:43:05.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DAL_KhachHang.cs",
-              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\DAL\\DAL_KhachHang.cs",
-              "RelativeDocumentMoniker": "DAL\\DAL_KhachHang.cs",
-              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\DAL\\DAL_KhachHang.cs",
-              "RelativeToolTip": "DAL\\DAL_KhachHang.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAwDMAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:26:12.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BUS_KhachHang.cs",
-              "DocumentMoniker": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\BUS\\BUS_KhachHang.cs",
-              "RelativeDocumentMoniker": "BUS\\BUS_KhachHang.cs",
-              "ToolTip": "D:\\chuyende\\Chuyen-De-Phat-Trien-Ung-Dung---TDC---2024.git\\PTUD\\CDUD - 2\\files\\src code\\Nhom2 - PTUD - QLST\\BUS\\BUS_KhachHang.cs",
-              "RelativeToolTip": "BUS\\BUS_KhachHang.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:41:45.574Z",
+              "WhenOpened": "2024-11-21T13:05:29.014Z",
               "EditorCaption": ""
             }
           ]

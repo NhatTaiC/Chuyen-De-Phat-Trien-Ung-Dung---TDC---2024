@@ -10,34 +10,31 @@ using System.Windows.Forms;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using Nhom2___PTUD___QLST.Report;
+
 namespace Nhom2___PTUD___QLST.QuocLuong
 {
-    public partial class frm_DoanhThuTheoNam : Form
+    public partial class frmBaoCaoBangLuong : Form
     {
-        public frm_DoanhThuTheoNam()
-        {
+        private int idBangLuong;
+        public frmBaoCaoBangLuong(int idBangLuong)
+        { 
             InitializeComponent();
-            cbNam.SelectedIndex = 0;
+            this.idBangLuong = idBangLuong;
         }
 
-        private void frm_DoanhThuTheoNam_Load(object sender, EventArgs e)
+        private void frmBaoCaoBangLuong_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnTraCuu_Click(object sender, EventArgs e)
-        {
-            rpt_DoanhThuTheoNam rpt = new rpt_DoanhThuTheoNam();
+            rpt_BaoCaoBangLuongTheoMaBangLuong rpt = new rpt_BaoCaoBangLuongTheoMaBangLuong();
             //tạo tham số
             ParameterValues paraNam = new ParameterValues();
 
             ParameterDiscreteValue valNam = new ParameterDiscreteValue();
 
-            valNam.Value = int.Parse(cbNam.Text);
+            valNam.Value = this.idBangLuong;
 
             paraNam.Add(valNam);
 
-            rpt.DataDefinition.ParameterFields["@nam"].ApplyCurrentValues(paraNam);
+            rpt.DataDefinition.ParameterFields["@idBangLuong"].ApplyCurrentValues(paraNam);
             crystalReportViewer1.ReportSource = rpt;
         }
     }

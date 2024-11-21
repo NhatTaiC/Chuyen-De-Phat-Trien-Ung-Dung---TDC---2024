@@ -75,6 +75,7 @@
             this.btnTraCuu.Size = new System.Drawing.Size(150, 45);
             this.btnTraCuu.TabIndex = 1;
             this.btnTraCuu.Text = "Tra cứu";
+            this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
             // 
             // crystalReportViewer1
             // 

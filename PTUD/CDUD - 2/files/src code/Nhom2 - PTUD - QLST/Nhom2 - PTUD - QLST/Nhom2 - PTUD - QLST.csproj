@@ -175,6 +175,18 @@
     <Compile Include="QuocLuong\frmBanHang.Designer.cs">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuocLuong\frmBaoCaoBangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuocLuong\frmBaoCaoBangLuong.Designer.cs">
+      <DependentUpon>frmBaoCaoBangLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuocLuong\frmBaoCaoDoanhthuTheoThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuocLuong\frmBaoCaoDoanhthuTheoThang.Designer.cs">
+      <DependentUpon>frmBaoCaoDoanhthuTheoThang.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuocLuong\frmChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,10 +229,22 @@
       <DependentUpon>GetHdByMaHd.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\rpt_BaoCaoBangLuongTheoMaBangLuong.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_BaoCaoBangLuongTheoMaBangLuong.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\rpt_DoanhThuTheoNam.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rpt_DoanhThuTheoNam.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rpt_DoanhThuTheoThang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_DoanhThuTheoThang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="VanToan\frmCaLam.cs">
@@ -329,6 +353,12 @@
     <EmbeddedResource Include="QuocLuong\frmBanHang.resx">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuocLuong\frmBaoCaoBangLuong.resx">
+      <DependentUpon>frmBaoCaoBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuocLuong\frmBaoCaoDoanhthuTheoThang.resx">
+      <DependentUpon>frmBaoCaoDoanhthuTheoThang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuocLuong\frmChiNhanh.resx">
       <DependentUpon>frmChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,9 +378,17 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>GetHdByMaHd.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpt_BaoCaoBangLuongTheoMaBangLuong.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_BaoCaoBangLuongTheoMaBangLuong.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\rpt_DoanhThuTheoNam.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_DoanhThuTheoNam.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpt_DoanhThuTheoThang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_DoanhThuTheoThang.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="VanToan\frmCaLam.resx">
       <DependentUpon>frmCaLam.cs</DependentUpon>
