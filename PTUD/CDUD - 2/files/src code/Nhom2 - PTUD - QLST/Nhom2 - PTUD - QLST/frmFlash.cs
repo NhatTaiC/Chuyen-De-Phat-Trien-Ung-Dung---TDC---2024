@@ -7,8 +7,8 @@
 */
 using System;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 namespace Nhom2___PTUD___QLST
 {
     public partial class frmFlash : Form
@@ -22,13 +22,13 @@ namespace Nhom2___PTUD___QLST
         private void frmFlashForm_Load(object sender, EventArgs e)
         {
             backupdataBase();
-            
+
         }
         private void backupdataBase()
         {
             string sqlConnectionString = @"Data Source=.\sqlexpress;Initial Catalog=master;Integrated Security=True;";
             string databaseName = "QuanLySieuThi";
-            string scriptFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db", "QLST_Scripts.sql");
+            string scriptFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db", "QLST_Backup.sql");
 
             // Kiểm tra xem cơ sở dữ liệu đã tồn tại chưa
             using (SqlConnection conn = new SqlConnection(sqlConnectionString))
