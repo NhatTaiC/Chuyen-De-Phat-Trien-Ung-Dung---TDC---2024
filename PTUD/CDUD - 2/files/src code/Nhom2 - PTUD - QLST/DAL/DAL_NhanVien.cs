@@ -299,7 +299,50 @@ namespace DAL
                     // Init NhanVien
                     NhanVien nv_update = da.Db.NhanViens.Single(nv => nv.id == nhanVien.Id);
 
+                    // Get max(id) in table NhanVien
+                    var query2 = da.Db.NhanViens.OrderByDescending(nv => nv.id).FirstOrDefault();
+
+                    // Get string MaNhanVien
+                    string maNV = string.Empty;
+                    switch (nhanVien.IdLNV)
+                    {
+                        case 1:
+                            maNV = "QL";
+                            break;
+                        case 2:
+                            maNV = "NV";
+                            break;
+                        case 3:
+                            maNV = "GD";
+                            break;
+                        case 4:
+                            maNV = "TP";
+                            break;
+                        case 5:
+                            maNV = "PP";
+                            break;
+                        case 6:
+                            maNV = "CV";
+                            break;
+                        case 7:
+                            maNV = "TTS";
+                            break;
+                        case 8:
+                            maNV = "NVKD";
+                            break;
+                        case 9:
+                            maNV = "KS";
+                            break;
+                        case 10:
+                            maNV = "HTKT";
+                            break;
+                        default:
+                            maNV = "NV";
+                            break;
+                    }
+
                     // Updated nv_update
+                    nv_update.MaNhanVien = query2.id < 10 ? maNV + "00" + (query2.id + 1) : maNV + "0" + (query2.id + 1);
                     nv_update.TenNhanVien = nhanVien.TenNV;
                     nv_update.SoDienThoai = nhanVien.SoDT;
                     nv_update.DiaChi = nhanVien.DiaChi;

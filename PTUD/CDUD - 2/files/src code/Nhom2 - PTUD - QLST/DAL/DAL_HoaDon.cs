@@ -209,6 +209,9 @@ namespace DAL
             var hd_update = da.Db.HoaDons.SingleOrDefault(hd => hd.id == idHd);
             hd_update.TongTien = toTalCash;
 
+            var query = da.Db.KhuyenMais.SingleOrDefault(km => km.id == hd_update.idKhuyenMai);
+            hd_update.ThanhTien = toTalCash - ((query.GiaTri / 100) * toTalCash);
+
             // Saved
             da.Db.SubmitChanges();
 
@@ -412,12 +415,22 @@ namespace DAL
             var hd_update = da.Db.HoaDons.SingleOrDefault(hd => hd.id == idHd);
             hd_update.TongTien = toTalCash;
 
+            var query = da.Db.KhuyenMais.SingleOrDefault(km => km.id == hd_update.idKhuyenMai);
+            hd_update.ThanhTien = toTalCash - ((query.GiaTri / 100) * toTalCash);
+
             // Saved
             da.Db.SubmitChanges();
 
             //MessageBox.Show("Lưu tổng tiền vào hóa đơn thành công!", "Thông báo",
             //    MessageBoxButtons.OK,
             //    MessageBoxIcon.Information);
+        }
+
+        public string SearchHDById(int idHD)
+        {
+            var query = da.Db.HoaDons.SingleOrDefault(h => h.id == idHD);
+
+            return query.MaHoaDon;
         }
     }
 }

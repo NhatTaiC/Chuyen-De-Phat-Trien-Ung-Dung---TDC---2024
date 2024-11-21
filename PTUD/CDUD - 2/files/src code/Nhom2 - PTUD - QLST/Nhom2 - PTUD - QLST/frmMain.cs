@@ -108,6 +108,12 @@ namespace Nhom2___PTUD___QLST
             logToolStripMenuItem.Visible = false;
             logToolStripMenuItem1.Enabled = false;
             logToolStripMenuItem1.Visible = false;
+            nhânViênToolStripMenuItem1.Enabled = false;
+            nhânViênToolStripMenuItem1.Visible = false;
+            //hóaĐơnToolStripMenuItem.Enabled = false;
+            //hóaĐơnToolStripMenuItem.Visible = false;
+            chiTiếtHóaĐơnToolStripMenuItem.Enabled = false;
+            chiTiếtHóaĐơnToolStripMenuItem.Visible = false;
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -427,6 +433,20 @@ namespace Nhom2___PTUD___QLST
             else
             {
                 ActForm("frmBanHang");
+            }
+        }
+
+        private void hóaĐơnChiTiếtToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmHoaDonChiTiet"))
+            {
+                frmHoaDonChiTiet f = new frmHoaDonChiTiet();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmHoaDonChiTiet");
             }
         }
     }

@@ -43,7 +43,7 @@ namespace Nhom2___PTUD___QLST
             // dgvTaiKhoan
             dgvTaiKhoan.DataSource = bus_tk.GetListTK();
             dgvTaiKhoan.Columns["id"].Visible = false;
-            dgvTaiKhoan.Columns["MaTaiKhoan"].Visible = false;
+            dgvTaiKhoan.Columns["MaTaiKhoan"].Visible = true;
             dgvTaiKhoan.Columns[0].HeaderText = "Id";
             dgvTaiKhoan.Columns[1].HeaderText = "Mã tài khoản";
             dgvTaiKhoan.Columns[2].HeaderText = "Tên tài khoản";
