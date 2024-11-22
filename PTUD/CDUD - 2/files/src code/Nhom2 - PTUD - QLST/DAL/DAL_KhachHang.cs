@@ -159,37 +159,35 @@ namespace DAL
             return false;
         }
 
-            //Tìm kiếm theo tên
-            public IQueryable timkiemTheoTen(string ten)
-            {
-                return da.Db.KhachHangs
-                    .Where(kh => kh.TenKhachHang.Contains(ten))
-                    .Select(kh => new
-                    {
-                        id = kh.id,
-                        MaKH = kh.MaKhachHang,
-                        TenKH = kh.TenKhachHang,
-                        SDT = kh.SoDienThoai,
-                        Diem = kh.Diem
-                    });
-            }
-
-            //Tìm kiếm theo số điện thoại
-            public IQueryable timkiemTheoSDT(string sdt)
-            {
-                return da.Db.KhachHangs
-                    .Where(kh => kh.SoDienThoai.Contains(sdt))
-                    .Select(kh => new
-                    {
-                        id = kh.id,
-                        MaKH = kh.MaKhachHang,
-                        TenKH = kh.TenKhachHang,
-                        SDT = kh.SoDienThoai,
-                        Diem = kh.Diem
-                    });
-            }
+        //Tìm kiếm theo tên
+        public IQueryable timkiemTheoTen(string ten)
+        {
+            return da.Db.KhachHangs
+                .Where(kh => kh.TenKhachHang.Contains(ten))
+                .Select(kh => new
+                {
+                    id = kh.id,
+                    MaKH = kh.MaKhachHang,
+                    TenKH = kh.TenKhachHang,
+                    SDT = kh.SoDienThoai,
+                    Diem = kh.Diem
+                });
         }
 
+        //Tìm kiếm theo số điện thoại
+        public IQueryable timkiemTheoSDT(string sdt)
+        {
+            return da.Db.KhachHangs
+                .Where(kh => kh.SoDienThoai.Contains(sdt))
+                .Select(kh => new
+                {
+                    id = kh.id,
+                    MaKH = kh.MaKhachHang,
+                    TenKH = kh.TenKhachHang,
+                    SDT = kh.SoDienThoai,
+                    Diem = kh.Diem
+                });
+        }
         public void DellKH(int id)
         {
             try
@@ -216,6 +214,7 @@ namespace DAL
 
                     // Saved db
                     da.Db.SubmitChanges();
+
                     nameCL = lnv_update.TenKhachHang;
 
                     // Messaged
@@ -242,4 +241,6 @@ namespace DAL
             }
         }
     }
+
+}
 
