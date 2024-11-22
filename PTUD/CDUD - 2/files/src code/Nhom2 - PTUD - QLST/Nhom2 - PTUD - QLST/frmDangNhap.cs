@@ -50,17 +50,24 @@ namespace Nhom2___PTUD___QLST
             // Verify Account
             if (bus_tk.CheckTaiKhoan(taiKhoan, matKhau))
             {
-                int quyen = bus_tk.GetRole(taiKhoan, matKhau);
-                int Idtk = bus_TaiKhoan.getIdTaiKhoan(taiKhoan, matKhau);
-                nvLogin = bus_NhanVien.getNhanVien(Idtk);
-                // Mở frmMain
-                frmMain f = new frmMain(taiKhoan, quyen,nvLogin);
-                f.ShowDialog();
-
-                //Truyen nhan vien
-
-                // Đóng frmDangNhap
-                this.Close();
+                try
+                {
+                    //this.FormClosing -= frmDangNhap_FormClosing;
+                    int quyen = bus_tk.GetRole(taiKhoan, matKhau);
+                    int Idtk = bus_TaiKhoan.getIdTaiKhoan(taiKhoan, matKhau);
+                    nvLogin = bus_NhanVien.getNhanVien(Idtk);
+                    // Đóng frmDangNhap
+                    this.Close();
+                    // Mở frmMain //Truyen nhan vien  
+                    frmMain f = new frmMain(taiKhoan, quyen, nvLogin);
+                    f.ShowDialog();
+                }
+                finally
+                {
+                    //this.FormClosing += FrmDangNhap_FormClosing;
+                }
+                
+              
             }
             else
             {
@@ -70,17 +77,22 @@ namespace Nhom2___PTUD___QLST
             }
         }
 
+        private void FrmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
         // frmDangNhap_FormClosing
         private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Bạn có chắc muốn thoát form không?", "Thông báo",
-                MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Warning);
+            //DialogResult dr = MessageBox.Show("Bạn có chắc muốn thoát form không?", "Thông báo",
+            //    MessageBoxButtons.OKCancel,
+            //    MessageBoxIcon.Warning);
 
-            if (dr == DialogResult.Cancel)
-            {
-                e.Cancel = true;
-            }
+            //if (dr == DialogResult.Cancel)
+            //{
+            //    e.Cancel = true;
+            //}
         }
     }
 }

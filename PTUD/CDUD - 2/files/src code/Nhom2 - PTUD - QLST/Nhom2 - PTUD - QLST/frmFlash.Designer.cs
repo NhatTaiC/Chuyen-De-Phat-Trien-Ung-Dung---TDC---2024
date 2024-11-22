@@ -43,7 +43,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(434, 209);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(525, 210);
+            this.label1.Size = new System.Drawing.Size(786, 318);
             this.label1.TabIndex = 0;
             this.label1.Text = "Project: Quản Lý Siêu Thị\r\nPhiên bản: 1.0\r\nThực hiện: Nhóm 2\r\n+++++ Đang Tải Dữ L" +
     "iệu +++++\r\n\r\n\r\n";
@@ -67,7 +67,7 @@
             // 
             // frmFlash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 623);
             this.Controls.Add(this.pictureBox1);
@@ -79,6 +79,7 @@
             this.Name = "frmFlash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmFlashForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmFlash_FormClosing);
             this.Load += new System.EventHandler(this.frmFlashForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
