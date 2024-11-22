@@ -35,6 +35,7 @@ namespace Nhom2___PTUD___QLST
             this.q = quyen;
             InitializeComponent();
         }
+
         public static DTO_NhanVien getNhanVien()
         {
             return nhanVien;
