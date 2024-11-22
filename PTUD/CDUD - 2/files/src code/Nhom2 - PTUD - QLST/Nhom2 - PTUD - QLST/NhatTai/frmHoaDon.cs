@@ -48,12 +48,15 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvHD.Columns[11].HeaderText = "Tên nhân viên";
             //dgvHD.Columns[4].DefaultCellStyle.Format = "#,###";
             //dgvHD.Columns[5].DefaultCellStyle.Format = "#,###";
+            dgvHD.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvHD.Columns[3].DefaultCellStyle.Format = "HH:mm:ss";
+
 
             // dgvHD visible
             dgvHD.Columns[0].Visible = false;
             dgvHD.Columns[1].Visible = true;
-            dgvHD.Columns[2].Visible = false;
-            dgvHD.Columns[3].Visible = false;
+            dgvHD.Columns[2].Visible = true;
+            dgvHD.Columns[3].Visible = true;
             dgvHD.Columns[4].Visible = true;
             dgvHD.Columns[5].Visible = true;
             dgvHD.Columns[6].Visible = false;
