@@ -1,0 +1,261 @@
+Thiet ke DB cho UD QLST
+Ngay: 26/09/2024
+Review By NhatTai
+
+===== Data Tables =====
+1. TaiKhoan - Tai
+id:int:pk,
+maTaiKhoan:varchar(30):null,
+tenTaiKhoan:varchar(100):notNull,
+matKhau:varchar(30):notNull,
+quyen:int:notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+2. LoaiNhanVien - Tai
+id:int:pk,
+maLoaiNhanVien:varchar(30):null,
+tenLoaiNhanVien:nvarchar(100):notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+3. NhanVien - Tai
+id:int:pk,
+maNhanVien:varchar(30):null,
+tenNhanVien:nvarchar(100):notNull,
+soDienThoai:varchar(10):notNull, 
+diaChi:nvarchar(100):notNull, 
+laoDong:nvarchar(100):notNull, (Fulltime/Parttime)
+idLoaiNhanVien:int:fk,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+4. LoaiHang - Luong
+id:int:pk,
+maLoaiHang:varchar(30):null,
+tenLoaiHang:nvarchar(100)notNull, 
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+5. NhaCungCap - Toan
+id:int:pk,
+maNhaCungCap:varchar(30):null,
+tenNhaCungCap:nvarchar(100):notNull,
+soDienThoai:varchar(10):notNull,
+diaChi:nvarchar(100):notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+6. SanPham - Luong
+id:int:pk,
+maSanPham:varchar(30):null, 
+tenSanPham:nvarchar(100):notNull,
+donViTinh:nvarchar(100):notNull, 
+donGia:float:notNull,
+ngaySanXuat:date:notNull,
+hanSuDung:date:notNull,
+anhSanPham:varbinary:notNull,
+idLoaiHang:int:fk, 
+idNhaCungCap:int:fk,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+7. KhoHang - Luong
+id:int:pk,
+idSanPham:int:fk,
+soLuong:int:notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+8. KhachHang - Toan
+id:int:pk,
+maKhachHang:varchar(30):null, 
+tenKhachHang:nvarchar(100):notNull,
+soDienThoai:varchar(10):notNull, 
+diaChi:nvarchar(100):notNull,
+diemTichLuy:float:notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+9. PhieuNhap - Toan
+id:int:pk,
+maPhieuNhap:varchar(30):null,
+idNhanVien:int:fk,
+ngayNhap:date:notNull, 
+thanhTien:float:notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+10. ChiTietPhieuNhap - Toan
+id:int:pk,
+soLuong:int:notNull,
+donGia:float:notNull,
+idPhieuNhap:int:fk, 
+idSanPham:int:fk,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+11. CaLam - Toan
+id:int:pk,
+maCaLam:varchar(30):null,
+tenCaLam:nvarchar(100):notNull,
+gioBatDau:nvarchar(100):notNull,
+gioKetThuc:nvarchar(100):notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+12. LichLam - Toan
+id:int:pk,
+maLichLam:varchar(30):null,
+ngayLam:date:notNull, 
+idNhanVien:int:fk,
+idCaLam:int:fk,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+13. KhuyenMai - Tai
+id:int:pk,
+maKhuyenMai:varchar(30):null,
+tenKhuyenMai:nvarchar(100):notNull,
+giaTri:float:notNull,
+dieuKien:float:notNull, 
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+14. HoaDon - Tai
+id:int:pk,
+maHoaDon:varchar(30):null,
+ngayLapHD:datetime:notNull, 
+gioLapHD:datetime:notNull, 
+tongTien:float:notNull,
+thanhTien:float:notNull,
+idKhachHang:int:fk,
+idNhanVien:int:fk,
+idKhuyenMai:int:fk,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+15. ChiTietHoaDon - Tai
+id:int:pk,
+soLuong:int:notNull, 
+idHoaDon:int:fk,
+idSanPham:int:fk, 
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+16. BangLuong - Luong
+id:int:pk,
+maBangLuong:varchar(30):null, 
+ngayLanhLuong:date:notNull,
+tongGioLam:float:notNull,
+luong:float:notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+17. ChiTietBangLuong - Luong
+id:int:pk,
+maChiTietLuong:varchar(30):null,
+ngay:date:notNull,
+soGioLamThucTe:float:notNull, 
+idNhanVien:int:fk,
+idBangLuong:int:fk,
+idLichLam:int:fk,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+18. ChiNhanh - Luong
+id:int:pk,
+maChiNhanh:varchar(30):null,
+tenChiNhanh:nvarchar(100):notNull,
+diaChi:nvarchar(100):notNull,
+soDienThoai:varchar(10):notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+19. Log - Tai
+id:int:pk,
+log_name:nvarchar(100):notNull,
+model:nvarchar(100):notNull, 
+model_id:int:notNull,
+data_olds:nvarchar(100):notNull, 
+data_news:nvarchar(100):notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+
+====== The End ======
