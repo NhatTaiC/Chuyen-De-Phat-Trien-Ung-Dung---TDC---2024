@@ -7,8 +7,8 @@
 using DTO;
 using GUI;
 using Nhom2___PTUD___QLST.NhatTai;
+using Nhom2___PTUD___QLST.QuocLuong;
 using Nhom2___PTUD___QLST.VanToan;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace Nhom2___PTUD___QLST
@@ -42,7 +42,7 @@ namespace Nhom2___PTUD___QLST
 
         public bool CheckFormExit(string name)
         {
-            
+
             foreach (Form item in MdiChildren)
             {
                 if (item.Name == name)
@@ -52,7 +52,7 @@ namespace Nhom2___PTUD___QLST
             }
             return false;
         }
-       
+
 
         public void ActForm(string name)
         {
@@ -105,7 +105,7 @@ namespace Nhom2___PTUD___QLST
 
         private void frmMain_Load(object sender, System.EventArgs e)
         {
-            MessageBox.Show(NhanVien.TenNV);
+            //MessageBox.Show(NhanVien.TenNV);
             // Check taikhoan da dc gui qua frmMain chua?
             if (tk != string.Empty)
             {
@@ -121,6 +121,12 @@ namespace Nhom2___PTUD___QLST
             logToolStripMenuItem.Visible = false;
             logToolStripMenuItem1.Enabled = false;
             logToolStripMenuItem1.Visible = false;
+            nhânViênToolStripMenuItem1.Enabled = false;
+            nhânViênToolStripMenuItem1.Visible = false;
+            //hóaĐơnToolStripMenuItem.Enabled = false;
+            //hóaĐơnToolStripMenuItem.Visible = false;
+            chiTiếtHóaĐơnToolStripMenuItem.Enabled = false;
+            chiTiếtHóaĐơnToolStripMenuItem.Visible = false;
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -440,6 +446,48 @@ namespace Nhom2___PTUD___QLST
             else
             {
                 ActForm("frmBanHang");
+            }
+        }
+
+        private void hóaĐơnChiTiếtToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmHoaDonChiTiet"))
+            {
+                frmHoaDonChiTiet f = new frmHoaDonChiTiet();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmHoaDonChiTiet");
+            }
+        }
+
+        private void doanhThuTheoThángToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmBaoCaoDoanhthuTheoThang"))
+            {
+                frmBaoCaoDoanhthuTheoThang f = new frmBaoCaoDoanhthuTheoThang();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmBaoCaoDoanhthuTheoThang");
+            }
+        }
+
+        private void doanhThuTheoNămToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frm_DoanhThuTheoNam"))
+            {
+                frm_DoanhThuTheoNam f = new frm_DoanhThuTheoNam();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frm_DoanhThuTheoNam");
             }
         }
     }

@@ -30,11 +30,10 @@
         {
             this.cbNam = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnTraCuu = new Guna.UI2.WinForms.Guna2Button();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Nam = new System.Windows.Forms.Label();
-            this.rpt_DoanhThuTheoNam1 = new Nhom2___PTUD___QLST.Report.rpt_DoanhThuTheoNam();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -57,9 +56,10 @@
             "2022",
             "2023",
             "2024"});
-            this.cbNam.Location = new System.Drawing.Point(106, 3);
+            this.cbNam.Location = new System.Drawing.Point(141, 4);
+            this.cbNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbNam.Name = "cbNam";
-            this.cbNam.Size = new System.Drawing.Size(172, 36);
+            this.cbNam.Size = new System.Drawing.Size(228, 36);
             this.cbNam.TabIndex = 0;
             // 
             // btnTraCuu
@@ -70,55 +70,45 @@
             this.btnTraCuu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTraCuu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTraCuu.ForeColor = System.Drawing.Color.White;
-            this.btnTraCuu.Location = new System.Drawing.Point(284, 3);
+            this.btnTraCuu.Location = new System.Drawing.Point(378, 4);
+            this.btnTraCuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTraCuu.Name = "btnTraCuu";
-            this.btnTraCuu.Size = new System.Drawing.Size(150, 45);
+            this.btnTraCuu.Size = new System.Drawing.Size(200, 56);
             this.btnTraCuu.TabIndex = 1;
             this.btnTraCuu.Text = "Tra cứu";
             this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
-            // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 73);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.rpt_DoanhThuTheoNam1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(794, 374);
-            this.crystalReportViewer1.TabIndex = 2;
-            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.crystalReportViewer1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.crystalReportViewer1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.55556F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.44444F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1067, 562);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 253F));
             this.tableLayoutPanel2.Controls.Add(this.btnTraCuu, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.Nam, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cbNam, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(471, 64);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(628, 79);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // Nam
@@ -126,20 +116,33 @@
             this.Nam.AutoSize = true;
             this.Nam.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Nam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nam.Location = new System.Drawing.Point(3, 0);
+            this.Nam.Location = new System.Drawing.Point(4, 0);
+            this.Nam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Nam.Name = "Nam";
-            this.Nam.Size = new System.Drawing.Size(97, 64);
+            this.Nam.Size = new System.Drawing.Size(129, 79);
             this.Nam.TabIndex = 2;
             this.Nam.Text = "Năm";
             this.Nam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 90);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1061, 469);
+            this.crystalReportViewer1.TabIndex = 5;
+            // 
             // frm_DoanhThuTheoNam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 562);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_DoanhThuTheoNam";
             this.Text = "frm_DoanhThuTheoNam";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -155,10 +158,10 @@
 
         private Guna.UI2.WinForms.Guna2ComboBox cbNam;
         private Guna.UI2.WinForms.Guna2Button btnTraCuu;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label Nam;
-        private Report.rpt_DoanhThuTheoNam rpt_DoanhThuTheoNam1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        //private Report.rpt_DoanhThuTheoNam rpt_DoanhThuTheoNam1;
     }
 }

@@ -20,10 +20,12 @@ namespace BUS
         {
             return dal_hd.GetListHD();
         }
+
         public string TimMaHoaDon(int id)
         {
             return dal_hd.TimMaHoaDon(id);
         }
+
         public void AddHD(DTO_HoaDon hoaDon)
         {
             dal_hd.AddHD(hoaDon);
@@ -82,6 +84,11 @@ namespace BUS
         public void UpdateTotalCash2(int idHd, int toTalCash)
         {
             dal_hd.UpdateTotalCash2(idHd, toTalCash);
+        }
+
+        public string SearchHDById(int idHD)
+        {
+            return dal_hd.SearchHDById(idHD);
         }
     }
 }
