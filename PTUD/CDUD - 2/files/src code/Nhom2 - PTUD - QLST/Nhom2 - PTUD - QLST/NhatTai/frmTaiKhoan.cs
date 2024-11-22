@@ -119,15 +119,16 @@ namespace Nhom2___PTUD___QLST
 
         private void btnThem_Click(object sender, System.EventArgs e)
         {
-            // cboQuyen
-            if (cboQuyen.SelectedIndex == 0)
-            {
-                quyen = 0;
-            }
-            else
-            {
-                quyen = 1;
-            }
+            //// cboQuyen
+            //if (cboQuyen.SelectedIndex == 0)
+            //{
+            //    quyen = 0;
+            //}
+            //else
+            //{
+            //    quyen = 1;
+            //}
+            quyen = 1;
 
             // Added new taikhoan
             try
@@ -201,15 +202,16 @@ namespace Nhom2___PTUD___QLST
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            // cboQuyen
-            if (cboQuyen.SelectedIndex == 0)
-            {
-                quyen = 0;
-            }
-            else
-            {
-                quyen = 1;
-            }
+            //// cboQuyen
+            //if (cboQuyen.SelectedIndex == 0)
+            //{
+            //    quyen = 0;
+            //}
+            //else
+            //{
+            //    quyen = 1;
+            //}
+            quyen = 1;
 
             // Initialize Variables
             int currentId = int.Parse(dgvTaiKhoan.CurrentRow.Cells[0].Value.ToString());
@@ -274,17 +276,19 @@ namespace Nhom2___PTUD___QLST
                 txtTenTaiKhoan.Text = dgvTaiKhoan.Rows[n].Cells[2].Value.ToString();
                 txtMatKhau.Text = dgvTaiKhoan.Rows[n].Cells[3].Value.ToString();
 
-                // cboQuyen
-                if (dgvTaiKhoan.Rows[n].Cells[4].Value.ToString() == "0")
-                {
-                    quyen = 0;
-                    cboQuyen.SelectedIndex = 0;
-                }
-                else
-                {
-                    quyen = 1;
-                    cboQuyen.SelectedIndex = 1;
-                }
+                //// cboQuyen
+                //if (dgvTaiKhoan.Rows[n].Cells[4].Value.ToString() == "0")
+                //{
+                //    quyen = 0;
+                //    cboQuyen.SelectedIndex = 0;
+                //}
+                //else
+                //{
+                //    quyen = 1;
+                //    cboQuyen.SelectedIndex = 1;
+                //}
+                quyen = 1;
+                cboQuyen.SelectedIndex = 0;
             }
             else
             {

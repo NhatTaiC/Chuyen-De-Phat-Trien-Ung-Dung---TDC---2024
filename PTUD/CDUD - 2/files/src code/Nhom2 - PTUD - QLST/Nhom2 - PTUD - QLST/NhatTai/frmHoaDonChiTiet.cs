@@ -755,7 +755,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
                     Reset();
 
                     // cboMaHD
-                    cboMaHD.SelectedIndex = model_id - 1;
+                    cboMaHD.SelectedIndex = cboMaHD.Items.Count - 1;
                 }
             }
             catch (Exception ex)

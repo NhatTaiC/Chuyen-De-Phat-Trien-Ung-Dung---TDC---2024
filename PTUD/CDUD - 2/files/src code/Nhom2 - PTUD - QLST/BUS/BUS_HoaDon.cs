@@ -90,5 +90,10 @@ namespace BUS
         {
             return dal_hd.SearchHDById(idHD);
         }
+
+        public int getHdByHoaDon3Id(int idKH, int idKM, int idNV)
+        {
+            return dal_hd.getHdByHoaDon3Id(idKH, idKM, idNV);
+        }
     }
 }
