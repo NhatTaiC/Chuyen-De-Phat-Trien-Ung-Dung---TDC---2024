@@ -45,6 +45,7 @@
             this.btnThoat = new System.Windows.Forms.ToolStripButton();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.btnIn = new System.Windows.Forms.ToolStripButton();
             this.guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoHang)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -95,7 +96,7 @@
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(433, 195);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(112, 31);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(91, 26);
             this.guna2HtmlLabel11.TabIndex = 13;
             this.guna2HtmlLabel11.Text = "Số lượng";
             // 
@@ -106,7 +107,7 @@
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(431, 112);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(165, 31);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(137, 26);
             this.guna2HtmlLabel6.TabIndex = 11;
             this.guna2HtmlLabel6.Text = "Tên sản phẩm";
             // 
@@ -201,11 +202,12 @@
             this.btnThem,
             this.btnXoa,
             this.btnSua,
+            this.btnIn,
             this.btnLamMoi,
             this.btnThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1200, 34);
+            this.toolStrip1.Size = new System.Drawing.Size(1200, 31);
             this.toolStrip1.TabIndex = 14;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -214,7 +216,7 @@
             this.btnThem.Image = global::Nhom2___PTUD___QLST.Properties.Resources.plus;
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(84, 29);
+            this.btnThem.Size = new System.Drawing.Size(74, 28);
             this.btnThem.Text = "Thêm";
             // 
             // btnXoa
@@ -222,7 +224,7 @@
             this.btnXoa.Image = global::Nhom2___PTUD___QLST.Properties.Resources.bin;
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(71, 29);
+            this.btnXoa.Size = new System.Drawing.Size(63, 28);
             this.btnXoa.Text = "Xóa";
             // 
             // btnSua
@@ -230,7 +232,7 @@
             this.btnSua.Image = global::Nhom2___PTUD___QLST.Properties.Resources.loop;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(70, 29);
+            this.btnSua.Size = new System.Drawing.Size(62, 28);
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -239,7 +241,7 @@
             this.btnLamMoi.Image = global::Nhom2___PTUD___QLST.Properties.Resources.reset;
             this.btnLamMoi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(109, 29);
+            this.btnLamMoi.Size = new System.Drawing.Size(95, 28);
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
@@ -248,7 +250,7 @@
             this.btnThoat.Image = global::Nhom2___PTUD___QLST.Properties.Resources.logout;
             this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(85, 29);
+            this.btnThoat.Size = new System.Drawing.Size(75, 28);
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -280,9 +282,18 @@
             this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
             this.guna2MessageDialog1.Text = null;
             // 
+            // btnIn
+            // 
+            this.btnIn.Image = global::Nhom2___PTUD___QLST.Properties.Resources.printer;
+            this.btnIn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(49, 28);
+            this.btnIn.Text = "In";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
             // frmKhoHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 623);
             this.Controls.Add(this.guna2GroupBox1);
@@ -322,5 +333,6 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2ComboBox cbSanPham;
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
+        private System.Windows.Forms.ToolStripButton btnIn;
     }
 }

@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhaCungCap));
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -82,7 +83,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(428, 174);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(55, 21);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(67, 26);
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "Địa chỉ";
             // 
@@ -93,7 +94,7 @@
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(428, 119);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(103, 21);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(127, 26);
             this.guna2HtmlLabel11.TabIndex = 13;
             this.guna2HtmlLabel11.Text = "Số điện thoại";
             // 
@@ -111,7 +112,7 @@
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.Location = new System.Drawing.Point(579, 168);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "";
@@ -134,7 +135,7 @@
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.Location = new System.Drawing.Point(579, 113);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "";
@@ -157,7 +158,7 @@
             this.txtTenNCC.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTenNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenNCC.Location = new System.Drawing.Point(579, 52);
-            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNCC.Name = "txtTenNCC";
             this.txtTenNCC.PasswordChar = '\0';
             this.txtTenNCC.PlaceholderText = "";
@@ -173,7 +174,7 @@
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(426, 59);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(140, 21);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(173, 26);
             this.guna2HtmlLabel6.TabIndex = 11;
             this.guna2HtmlLabel6.Text = "Tên nhà cung cấp";
             // 
@@ -228,6 +229,7 @@
             this.dgvNCC.Location = new System.Drawing.Point(0, 40);
             this.dgvNCC.Name = "dgvNCC";
             this.dgvNCC.RowHeadersVisible = false;
+            this.dgvNCC.RowHeadersWidth = 51;
             this.dgvNCC.Size = new System.Drawing.Size(1201, 325);
             this.dgvNCC.TabIndex = 0;
             this.dgvNCC.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -255,6 +257,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnThem,
             this.btnXoa,
@@ -263,7 +266,7 @@
             this.btnThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1200, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1200, 27);
             this.toolStrip1.TabIndex = 24;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -272,7 +275,7 @@
             this.btnThem.Image = global::Nhom2___PTUD___QLST.Properties.Resources.plus;
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(57, 22);
+            this.btnThem.Size = new System.Drawing.Size(70, 24);
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -281,7 +284,7 @@
             this.btnXoa.Image = global::Nhom2___PTUD___QLST.Properties.Resources.bin;
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(47, 22);
+            this.btnXoa.Size = new System.Drawing.Size(59, 24);
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -290,7 +293,7 @@
             this.btnSua.Image = global::Nhom2___PTUD___QLST.Properties.Resources.loop;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(46, 22);
+            this.btnSua.Size = new System.Drawing.Size(58, 24);
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -299,7 +302,7 @@
             this.btnLamMoi.Image = global::Nhom2___PTUD___QLST.Properties.Resources.reset;
             this.btnLamMoi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(74, 22);
+            this.btnLamMoi.Size = new System.Drawing.Size(91, 24);
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
@@ -308,21 +311,25 @@
             this.btnThoat.Image = global::Nhom2___PTUD___QLST.Properties.Resources.logout;
             this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(57, 22);
+            this.btnThoat.Size = new System.Drawing.Size(71, 24);
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmNhaCungCap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 623);
+            this.ControlBox = false;
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.guna2GroupBox3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmNhaCungCap";
             this.Text = "Quản lí nhà cung cấp";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

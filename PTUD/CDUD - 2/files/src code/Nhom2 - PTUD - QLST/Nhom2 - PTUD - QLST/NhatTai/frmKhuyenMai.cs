@@ -20,19 +20,28 @@ namespace Nhom2___PTUD___QLST
 
         // Initialize Variables
         BUS_KhuyenMai bus_km = new BUS_KhuyenMai();
+        DataValidation dv = new DataValidation();
+        BUS_Log bus_log = new BUS_Log();
+        string data_olds = string.Empty;
+        string data_news = string.Empty;
 
         public void LoadData()
         {
             // Others
-            txtMaKhuyenMai.Focus();
+            txtTenKhuyenMai.Focus();
+            txtTenKhuyenMai.Text = string.Empty;
+            txtGiaTri.Text = "0";
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+            data_olds = string.Empty;
+            data_news = string.Empty;
 
             // dgvKM
             dgvKM.DataSource = bus_km.GetListKM();
             dgvKM.Columns["id"].Visible = false;
             dgvKM.Columns["id"].HeaderText = "Id";
+            dgvKM.Columns["MaKhuyenMai"].Visible = false;
             dgvKM.Columns["MaKhuyenMai"].HeaderText = "Mã khuyến mãi";
             dgvKM.Columns["TenKhuyenMai"].HeaderText = "Tên khuyến mãi";
             dgvKM.Columns["GiaTri"].HeaderText = "Giá trị";
@@ -40,91 +49,41 @@ namespace Nhom2___PTUD___QLST
 
         public void Reset()
         {
-            // Other
-            txtMaKhuyenMai.Clear();
-            txtTenKhuyenMai.Clear();
-            txtGiaTri.Clear();
-
             LoadData();
         }
 
-        public bool CheckData(string maKhuyenMai, string tenKhuyenMai, string giaTri)
+        public bool CheckData(string tenKhuyenMai, string giaTri)
         {
             // Initialize Variables
             int count = 0;
 
-            // Checked maKhuyenMai
-            if (CheckString(maKhuyenMai, 30))
-            {
-                count += 1;
-            }
-            else
-            {
-                MessageBox.Show($"Mã khuyến mãi: [{maKhuyenMai}] không quá 30 kí tự!",
-                    "Thông báo",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-            }
-
             // Checked tenKhuyenMai
-            if (CheckString(tenKhuyenMai, 100))
+            if (dv.CheckString(tenKhuyenMai, 100))
             {
                 count += 1;
             }
             else
             {
-                MessageBox.Show($"Tên khuyến mãi: [{tenKhuyenMai}] không quá 100 kí tự!",
+                MessageBox.Show($"Tên khuyến mãi không dài quá 100 kí tự và không để trống!",
                     "Thông báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
 
             // Checked soDT
-            if (CheckNumber(giaTri))
+            if (dv.CheckNumber2(giaTri, giaTri.Length))
             {
                 count += 1;
             }
             else
             {
-                MessageBox.Show($"Giá trị: [{giaTri}] phải nhập số!",
+                MessageBox.Show($"Giá trị phải nhập số, không dài quá 3 kí tự, giá trị từ 1 -> 100!",
                     "Thông báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
 
-            if (count == 3)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public bool CheckNumber(string name)
-        {
-            if (name == null)
-            {
-                return false;
-            }
-
-            if (name.Length > 20)
-            {
-                return false;
-            }
-
-            for (int i = 0; i < name.Length; i++)
-            {
-                if (name[i] >= 'a' && name[i] <= 'z' || name[i] >= 'A' && name[i] <= 'Z')
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        public bool CheckString(string name, int strlength)
-        {
-            if (name != string.Empty && name.Length <= strlength)
+            if (count == 2)
             {
                 return true;
             }
@@ -170,7 +129,7 @@ namespace Nhom2___PTUD___QLST
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
 
-                txtMaKhuyenMai.Text = dgvKM.Rows[n].Cells[1].Value.ToString();
+                //txtMaKhuyenMai.Text = dgvKM.Rows[n].Cells[1].Value.ToString();
                 txtTenKhuyenMai.Text = dgvKM.Rows[n].Cells[2].Value.ToString();
                 txtGiaTri.Text = dgvKM.Rows[n].Cells[3].Value.ToString();
             }
@@ -187,9 +146,15 @@ namespace Nhom2___PTUD___QLST
         {
             try
             {
-                if (CheckData(txtMaKhuyenMai.Text, txtTenKhuyenMai.Text, txtGiaTri.Text))
+                if (CheckData(txtTenKhuyenMai.Text, txtGiaTri.Text))
                 {
-                    bus_km.AddKM(new DTO_KhuyenMai(txtMaKhuyenMai.Text, txtTenKhuyenMai.Text, float.Parse(txtGiaTri.Text)));
+                    bus_km.AddKM2(new DTO_KhuyenMai(txtTenKhuyenMai.Text, float.Parse(txtGiaTri.Text)));
+
+                    int model_id = bus_km.GetMaxIdKM();
+                    data_news = $"TenKhuyenMai: {txtTenKhuyenMai.Text} \nGiaTri: {txtGiaTri.Text}";
+
+                    // Saved log
+                    bus_log.AddLog3(new DTO_Log("KhuyenMai", model_id, "Add a new record KhuyenMai", data_olds, data_news));
 
                     Reset();
                 }
@@ -214,8 +179,10 @@ namespace Nhom2___PTUD___QLST
             {
                 // Initialize Variables
                 int currentId = int.Parse(dgvKM.CurrentRow.Cells[0].Value.ToString());
+                data_olds = $"TenKhuyenMai: {dgvKM.CurrentRow.Cells[2].Value.ToString()} \nGiaTri: {dgvKM.CurrentRow.Cells[3].Value.ToString()}";
+                data_news = $"TenKhuyenMai: {txtTenKhuyenMai.Text} \nGiaTri: {txtGiaTri.Text}";
 
-                if (CheckData(txtMaKhuyenMai.Text, txtTenKhuyenMai.Text, txtGiaTri.Text))
+                if (CheckData(txtTenKhuyenMai.Text, txtGiaTri.Text))
                 {
                     DialogResult dr = MessageBox.Show($"Bạn có chắc muốn sửa thông tin: [{txtTenKhuyenMai.Text}] không?",
                        "Thông báo",
@@ -224,7 +191,10 @@ namespace Nhom2___PTUD___QLST
 
                     if (dr == DialogResult.Yes)
                     {
-                        bus_km.UpdateKM(new DTO_KhuyenMai(currentId, txtMaKhuyenMai.Text, txtTenKhuyenMai.Text, float.Parse(txtGiaTri.Text)));
+                        bus_km.UpdateKM2(new DTO_KhuyenMai(currentId, txtTenKhuyenMai.Text, float.Parse(txtGiaTri.Text)));
+
+                        // Saved log
+                        bus_log.AddLog3(new DTO_Log("KhuyenMai", currentId, "Update a record KhuyenMai", data_olds, data_news));
 
                         Reset();
                     }
@@ -250,8 +220,10 @@ namespace Nhom2___PTUD___QLST
             {
                 // Initialize Variables
                 int currentId = int.Parse(dgvKM.CurrentRow.Cells[0].Value.ToString());
+                data_olds = "is_deleted = 0";
+                data_news = "is_deleted = 1";
 
-                if (CheckData(txtMaKhuyenMai.Text, txtTenKhuyenMai.Text, txtGiaTri.Text))
+                if (CheckData(txtTenKhuyenMai.Text, txtGiaTri.Text))
                 {
                     DialogResult dr = MessageBox.Show($"Bạn có chắc muốn xoá: [{txtTenKhuyenMai.Text}] không?",
                        "Thông báo",
@@ -261,6 +233,9 @@ namespace Nhom2___PTUD___QLST
                     if (dr == DialogResult.Yes)
                     {
                         bus_km.DelKM(currentId);
+
+                        // Saved log
+                        bus_log.AddLog3(new DTO_Log("KhuyenMai", currentId, "Delete a record KhuyenMai", data_olds, data_news));
 
                         Reset();
                     }

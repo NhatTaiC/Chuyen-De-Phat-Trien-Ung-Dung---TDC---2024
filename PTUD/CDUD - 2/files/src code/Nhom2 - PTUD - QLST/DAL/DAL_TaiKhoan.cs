@@ -245,5 +245,121 @@ namespace DAL
                     MessageBoxIcon.Warning);
             }
         }
+
+        // AddTK not have maTK
+        public void AddTK2(DTO_TaiKhoan taiKhoan)
+        {
+            try
+            {
+                // Checked new record taikhoan saved in db TaiKhoan
+                var query = (from tk in da.Db.TaiKhoans
+                             where tk.MaTaiKhoan == taiKhoan.MaTaiKhoan
+                             select tk).FirstOrDefault();
+
+                // Add new record taikhoan in dbTaiKhoan
+                if (query == null)
+                {
+                    // Get max(id) in table TaiKhoan
+                    var query2 = da.Db.TaiKhoans.OrderByDescending(tk => tk.id).FirstOrDefault();
+
+                    da.Db.TaiKhoans.InsertOnSubmit(new TaiKhoan
+                    {
+                        MaTaiKhoan = query2.id < 10 ? "TK00" + (query2.id + 1) : "TK0" + (query2.id + 1),
+                        TenTaiKhoan = taiKhoan.TenTaiKhoan,
+                        MatKhau = taiKhoan.MatKhau,
+                        Quyen = taiKhoan.Quyen,
+                        is_deleted = 0,
+                        created_at = DateTime.Now,
+                        created_by = 0,
+                        updated_at = DateTime.Now,
+                        updated_by = 0,
+                    });
+
+                    // Saved db
+                    da.Db.SubmitChanges();
+
+                    // Messaged
+                    MessageBox.Show("Thêm tài khoản mới thành công!",
+                       "Thông báo",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Messaged
+                    MessageBox.Show("Thêm không thành công! Tài khoản đã có trong dữ liệu.",
+                       "Thông báo",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Messaged
+                MessageBox.Show(ex.Message, "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
+        // UpdateTK2 not have maTK
+        public void UpdateTK2(DTO_TaiKhoan taiKhoan)
+        {
+            try
+            {
+                // Initialize Variables
+                string nameTK = string.Empty;
+
+                // Checked DTO_TaiKhoan != null
+                if (taiKhoan != null)
+                {
+                    // Init TaiKhoan obj
+                    TaiKhoan tk_update = da.Db.TaiKhoans.Single(t => t.id == taiKhoan.Id);
+
+                    // Updated tk_update
+                    tk_update.TenTaiKhoan = taiKhoan.TenTaiKhoan;
+                    tk_update.MatKhau = taiKhoan.MatKhau;
+                    tk_update.Quyen = taiKhoan.Quyen;
+                    tk_update.is_deleted = taiKhoan.Is_deleted;
+                    tk_update.created_by = 0;
+                    tk_update.created_at = DateTime.Now;
+                    tk_update.updated_by = 0;
+                    tk_update.updated_at = DateTime.Now;
+
+                    // Saved db
+                    da.Db.SubmitChanges();
+                    nameTK = taiKhoan.TenTaiKhoan;
+
+                    // Messaged
+                    MessageBox.Show($"Sửa thông tin tài khoản: [{nameTK}] thành công!",
+                     "Thông báo",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Messaged
+                    MessageBox.Show($"Sửa thông tin tài khoản: [{nameTK}] không thành công! Vui lòng kiểm tra các thông tin đã nhập chính xác hay không?",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Messaged
+                MessageBox.Show(ex.Message, "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
+        // Get max(id) in table TaiKhoan
+        public int GetMaxIdTK()
+        {
+            var query = da.Db.TaiKhoans.OrderByDescending(tk => tk.id).FirstOrDefault();
+
+            return (int)query.id;
+        }
     }
 }

@@ -37,5 +37,10 @@ namespace BUS
 		{
 			return dal_ncc.SuaNCC(ncc);
 		}
+
+		public void DellNCC(int id)
+		{
+			dal_ncc.DellNCC(id);
+		}
 	}
 }

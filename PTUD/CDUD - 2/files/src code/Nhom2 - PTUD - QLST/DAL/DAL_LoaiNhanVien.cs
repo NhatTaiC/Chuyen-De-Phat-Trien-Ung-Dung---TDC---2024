@@ -204,5 +204,117 @@ namespace DAL
                     MessageBoxIcon.Warning);
             }
         }
+
+        // AddLNV2 not have maLNV
+        public void AddLNV2(DTO_LoaiNhanVien loaiNhanVien)
+        {
+            try
+            {
+                // Checked new record loainhanvien saved in db LoaiNhanVien
+                var query = (from lnv in da.Db.LoaiNhanViens
+                             where lnv.MaLoaiNhanVien == loaiNhanVien.MaLoaiNV
+                             select lnv).FirstOrDefault();
+
+                // Added new record loainhanvien
+                if (query == null)
+                {
+                    // Checked max(id) record in table LoaiNhanVien
+                    var query2 = da.Db.LoaiNhanViens.OrderByDescending(lnv => lnv.id).FirstOrDefault();
+
+                    da.Db.LoaiNhanViens.InsertOnSubmit(new LoaiNhanVien
+                    {
+                        MaLoaiNhanVien = query2.id < 10 ? "LNV00" + (query2.id + 1) : "LNV0" + (query2.id + 1),
+                        TenLoaiNhanVien = loaiNhanVien.TenLoaiNV,
+                        is_deleted = 0,
+                        created_at = DateTime.Now,
+                        created_by = 0,
+                        updated_at = DateTime.Now,
+                        updated_by = 0,
+                    });
+
+                    // Saved db
+                    da.Db.SubmitChanges();
+
+                    // Messaged
+                    MessageBox.Show("Thêm loại nhân viên mới thành công!",
+                       "Thông báo",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Messaged
+                    MessageBox.Show("Thêm không thành công! Loại nhân viên mới đã có trong dữ liệu.",
+                       "Thông báo",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Messaged
+                MessageBox.Show(ex.Message, "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
+        // UpdateLNV2 not have maLNV
+        public void UpdateLNV2(DTO_LoaiNhanVien loaiNhanVien)
+        {
+            try
+            {
+                // Initialize Variables
+                string nameLNV = string.Empty;
+
+                // Checked loainhanvien != null
+                if (loaiNhanVien != null)
+                {
+                    // Init LoaiNhanVien
+                    LoaiNhanVien lnv_update = da.Db.LoaiNhanViens.Single(lnv => lnv.id == loaiNhanVien.Id);
+
+                    // Updated lnv_update
+                    lnv_update.TenLoaiNhanVien = loaiNhanVien.TenLoaiNV;
+                    lnv_update.is_deleted = loaiNhanVien.Is_deleted;
+                    lnv_update.created_by = 0;
+                    lnv_update.created_at = DateTime.Now;
+                    lnv_update.updated_by = 0;
+                    lnv_update.updated_at = DateTime.Now;
+
+                    // Saved db
+                    da.Db.SubmitChanges();
+                    nameLNV = loaiNhanVien.TenLoaiNV;
+
+                    // Messaged
+                    MessageBox.Show($"Sửa thông tin loại nhân viên: [{nameLNV}] thành công!",
+                     "Thông báo",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Messaged
+                    MessageBox.Show($"Sửa thông tin loại nhân viên: [{nameLNV}] không thành công! Vui lòng kiểm tra các thông tin đã nhập chính xác hay không?",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Messaged
+                MessageBox.Show(ex.Message, "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
+        // Get max(id) in table LoaiNhanVien
+        public int GetMaxIdLNV()
+        {
+            var query = da.Db.LoaiNhanViens.OrderByDescending(lnv => lnv.id).FirstOrDefault();
+
+            return (int)query.id;
+        }
     }
 }

@@ -47,5 +47,10 @@ namespace BUS
         {
             return dal_kh.timkiemTheoSDT(sdt);
         }
+
+		public void DellKH(int id)
+		{
+			dal_kh.DellKH(id);
+		}
     }
 }

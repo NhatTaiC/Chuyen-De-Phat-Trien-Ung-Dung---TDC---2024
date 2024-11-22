@@ -20,18 +20,26 @@ namespace Nhom2___PTUD___QLST
 
         // Initialize Variables
         BUS_LoaiNhanVien bus_lnv = new BUS_LoaiNhanVien();
+        DataValidation dv = new DataValidation();
+        BUS_Log bus_log = new BUS_Log();
+        string data_olds = string.Empty;
+        string data_news = string.Empty;
 
         public void LoadData()
         {
             // Others
-            txtMaLNV.Focus();
+            txtTenLoaiNhanVien.Focus();
+            txtTenLoaiNhanVien.Text = string.Empty;
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+            data_olds = string.Empty;
+            data_news = string.Empty;
 
             // dgvLNV
             dgvLNV.DataSource = bus_lnv.GetListLNV();
             dgvLNV.Columns["id"].Visible = false;
+            dgvLNV.Columns["MaLoaiNhanVien"].Visible = false;
             dgvLNV.Columns["Id"].HeaderText = "Id";
             dgvLNV.Columns["MaLoaiNhanVien"].HeaderText = "Mã loại nhân viên";
             dgvLNV.Columns["TenLoaiNhanVien"].HeaderText = "Tên loại nhân viên";
@@ -39,32 +47,16 @@ namespace Nhom2___PTUD___QLST
 
         public void Reset()
         {
-            txtMaLNV.Clear();
-            txtTenLoaiNhanVien.Text = string.Empty;
-
             LoadData();
         }
 
-        public bool CheckData(string maLNV, string tenLNV)
+        public bool CheckData(string tenLNV)
         {
             // Initialize Variables
             int count = 0;
 
-            // Checked maLNV
-            if (CheckString(maLNV, 30))
-            {
-                count += 1;
-            }
-            else
-            {
-                MessageBox.Show($"Mã loại nhân viên: [{maLNV}] không quá 30 kí tự!",
-                   "Thông báo",
-                   MessageBoxButtons.OK,
-                   MessageBoxIcon.Warning);
-            }
-
             // Checked tenLNV
-            if (CheckString(tenLNV, 100))
+            if (dv.CheckString(tenLNV, 100))
             {
                 count += 1;
             }
@@ -76,16 +68,7 @@ namespace Nhom2___PTUD___QLST
                    MessageBoxIcon.Warning);
             }
 
-            if (count == 2)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public bool CheckString(string name, int strlength)
-        {
-            if (name != string.Empty && name.Length <= strlength)
+            if (count == 1)
             {
                 return true;
             }
@@ -131,7 +114,6 @@ namespace Nhom2___PTUD___QLST
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
 
-                txtMaLNV.Text = dgvLNV.Rows[n].Cells[1].Value.ToString();
                 txtTenLoaiNhanVien.Text = dgvLNV.Rows[n].Cells[2].Value.ToString();
             }
             else
@@ -147,9 +129,16 @@ namespace Nhom2___PTUD___QLST
         {
             try
             {
-                if (CheckData(txtMaLNV.Text, txtTenLoaiNhanVien.Text))
+                if (CheckData(txtTenLoaiNhanVien.Text))
                 {
-                    bus_lnv.AddLNV(new DTO_LoaiNhanVien(txtMaLNV.Text, txtTenLoaiNhanVien.Text));
+                    bus_lnv.AddLNV2(new DTO_LoaiNhanVien(txtTenLoaiNhanVien.Text));
+
+                    int model_id = bus_lnv.GetMaxIdLNV();
+
+                    data_news = $"TenLoaiNhanVien: {txtTenLoaiNhanVien.Text}";
+
+                    // Saved log
+                    bus_log.AddLog3(new DTO_Log("LoaiNhanVien", model_id, "Add a new record LoaiNhanVien", data_olds, data_news));
 
                     Reset();
                 }
@@ -174,8 +163,10 @@ namespace Nhom2___PTUD___QLST
             {
                 // Initialize Variables
                 int currentId = int.Parse(dgvLNV.CurrentRow.Cells[0].Value.ToString());
+                data_olds = "is_deleted = 0";
+                data_news = "is_deleted = 1";
 
-                if (CheckData(txtMaLNV.Text, txtTenLoaiNhanVien.Text))
+                if (CheckData(txtTenLoaiNhanVien.Text))
                 {
                     DialogResult dr = MessageBox.Show($"Bạn có chắc muốn xóa: [{txtTenLoaiNhanVien.Text}] không?",
                         "Thông báo",
@@ -185,6 +176,9 @@ namespace Nhom2___PTUD___QLST
                     if (dr == DialogResult.Yes)
                     {
                         bus_lnv.DelLNV(currentId);
+
+                        // Saved log
+                        bus_log.AddLog3(new DTO_Log("LoaiNhanVien", currentId, "Delete a record LoaiNhanVien", data_olds, data_news));
 
                         Reset();
                     }
@@ -210,8 +204,10 @@ namespace Nhom2___PTUD___QLST
             {
                 // Initialize Variables
                 int currentId = int.Parse(dgvLNV.CurrentRow.Cells[0].Value.ToString());
+                data_olds = $"TenLoaiNhanVien: {dgvLNV.CurrentRow.Cells[1].Value.ToString()}";
+                data_news = $"TenLoaiNhanVien: {txtTenLoaiNhanVien.Text}";
 
-                if (CheckData(txtMaLNV.Text, txtTenLoaiNhanVien.Text))
+                if (CheckData(txtTenLoaiNhanVien.Text))
                 {
                     DialogResult dr = MessageBox.Show($"Bạn có chắc muốn sửa thông tin: [{txtTenLoaiNhanVien.Text}] không?",
                        "Thông báo",
@@ -220,7 +216,10 @@ namespace Nhom2___PTUD___QLST
 
                     if (dr == DialogResult.Yes)
                     {
-                        bus_lnv.UpdateLNV(new DTO_LoaiNhanVien(currentId, txtMaLNV.Text, txtTenLoaiNhanVien.Text));
+                        bus_lnv.UpdateLNV2(new DTO_LoaiNhanVien(currentId, txtTenLoaiNhanVien.Text));
+
+                        // Saved log
+                        bus_log.AddLog3(new DTO_Log("LoaiNhanVien", currentId, "Update a record LoaiNhanVien", data_olds, data_news));
 
                         Reset();
                     }

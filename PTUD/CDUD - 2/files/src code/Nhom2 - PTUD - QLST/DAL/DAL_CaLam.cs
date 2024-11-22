@@ -20,6 +20,7 @@ namespace DAL
         public IQueryable LayDSCaLam()
         {
             IQueryable temp = from cl in da.Db.CaLams
+                              where cl.is_deleted == 0
                               select new
                               {
                                   id = cl.id,
@@ -131,6 +132,58 @@ namespace DAL
                 throw;
             }
             return false;
+        }
+
+        public void XoaCL(int id)
+        {
+            try
+            {
+                // Initialize Variables
+                string nameCL = string.Empty;
+
+                // Checked id lnv saved in db lnv?
+                var query = (from lnv in da.Db.CaLams
+                             where lnv.id == id
+                             select lnv).Count();
+
+                if (query == 1)
+                {
+                    // Init LoaiNhanVien
+                    CaLam lnv_update = da.Db.CaLams.Single(lnv => lnv.id == id);
+
+                    // Updated is_deleted = 1 for loainhanvien -> hidden item (avoid conflict FK)
+                    lnv_update.is_deleted = 1;
+                    lnv_update.created_by = 0;
+                    lnv_update.created_at = DateTime.Now;
+                    lnv_update.updated_by = 0;
+                    lnv_update.updated_at = DateTime.Now;
+
+                    // Saved db
+                    da.Db.SubmitChanges();
+                    nameCL = lnv_update.TenCaLam;
+
+                    // Messaged
+                    MessageBox.Show($"Xóa ca làm: [{nameCL}] thành công!",
+                     "Thông báo",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Messaged
+                    MessageBox.Show($"Xóa ca làm: [{nameCL}] không thành công! Vui lòng kiểm tra các thông tin đã nhập chính xác hay không?",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Messaged
+                MessageBox.Show(ex.Message, "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
         }
     }
 }

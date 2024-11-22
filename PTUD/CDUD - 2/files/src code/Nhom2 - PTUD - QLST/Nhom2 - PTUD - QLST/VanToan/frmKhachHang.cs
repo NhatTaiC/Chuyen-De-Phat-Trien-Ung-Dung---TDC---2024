@@ -24,8 +24,11 @@ namespace GUI
 
 		// Initialize Variables
 		BUS_KhachHang bus_kh = new BUS_KhachHang();
+		BUS_Log bus_log = new BUS_Log();
+        string data_olds = string.Empty;
+        string data_news = string.Empty;
 
-		int currentID = -1;
+        int currentID = -1;
 
 		private void LoadData()
 		{
@@ -123,31 +126,45 @@ namespace GUI
 		// btnXoa_click
 		private void btnXoa_Click(object sender, EventArgs e)
 		{
-			try
-			{
-				DialogResult r = MessageBox.Show($"Bạn có chắc muốn xóa khách hàng có mã là: +{txtTenKhachHang.Text}+ không?", "Thông báo",
-				MessageBoxButtons.YesNo,
-				MessageBoxIcon.Warning);
-				if (r == DialogResult.Yes)
-				{
-					if (currentID > 0)
-					{
-						bus_kh.XoaKH(currentID);
-						MessageBox.Show("Xóa thành công!", "Thoát", MessageBoxButtons.OK);
-					}
-					else
-					{
-						MessageBox.Show("Vui lòng chọn 1 dòng dữ liệu để xóa", "Thoát", MessageBoxButtons.OK);
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				//thông báo khi có lỗi xảy ra
-				MessageBox.Show(ex.Message, "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-			LoadData();
-		}
+            try
+            {
+                // Initialize Variables
+                int currentId = int.Parse(dgvKhachHang.CurrentRow.Cells[0].Value.ToString());
+                data_olds = "is_deleted = 0";
+                data_news = "is_deleted = 1";
+
+                if (CheckNumberPhone(txtSDT.Text) && CheckNumber(txtDiemTichLuy.Text))
+                {
+                    DialogResult dr = MessageBox.Show($"Bạn có chắc muốn xóa: [{txtTenKhachHang.Text}] không?",
+                        "Thông báo",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+
+                    if (dr == DialogResult.Yes)
+                    {
+                        bus_kh.DellKH(currentId);
+
+                        // Saved log
+                        bus_log.AddLog3(new DTO_Log("KhachHang", currentId, "Delete a record KhachHang", data_olds, data_news));
+
+                        Reset();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng nhập dữ liệu hợp lệ!", "Thông báo",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+            LoadData();
+        }
 
 		//btnSua_click
 		private void btnSua_Click(object sender, EventArgs e)

@@ -5,6 +5,7 @@
  * 21/10/2024
  */
 using GUI;
+using Nhom2___PTUD___QLST.NhatTai;
 using Nhom2___PTUD___QLST.VanToan;
 using System.Windows.Forms;
 
@@ -101,6 +102,12 @@ namespace Nhom2___PTUD___QLST
             {
                 this.Text = $"Màn hình chính";
             }
+
+            // Others
+            logToolStripMenuItem.Enabled = false;
+            logToolStripMenuItem.Visible = false;
+            logToolStripMenuItem1.Enabled = false;
+            logToolStripMenuItem1.Visible = false;
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -350,6 +357,76 @@ namespace Nhom2___PTUD___QLST
             else
             {
                 ActForm("frmLog");
+            }
+        }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmHoaDon"))
+            {
+                frmHoaDon f = new frmHoaDon();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmHoaDon");
+            }
+        }
+
+        private void chiTiếtHóaĐơnToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmChiTietHoaDon"))
+            {
+                frmChiTietHoaDon f = new frmChiTietHoaDon();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmChiTietHoaDon");
+            }
+        }
+
+        private void nhânViênToolStripMenuItem1_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmTraCuuNV"))
+            {
+                frmTraCuuNV f = new frmTraCuuNV();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmTraCuuNV");
+            }
+        }
+
+        private void hóaĐơnToolStripMenuItem1_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmTraCuuHD"))
+            {
+                frmTraCuuHD f = new frmTraCuuHD();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmTraCuuHD");
+            }
+        }
+
+        private void bánHàngToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckFormExit("frmBanHang"))
+            {
+                frmBanHang f = new frmBanHang();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                ActForm("frmBanHang");
             }
         }
     }

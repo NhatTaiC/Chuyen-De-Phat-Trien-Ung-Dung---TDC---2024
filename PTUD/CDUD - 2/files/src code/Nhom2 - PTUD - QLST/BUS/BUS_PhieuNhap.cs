@@ -49,5 +49,10 @@ namespace BUS
 
 			return dal_pn.LayDSNV();
 		}
+
+		public void DellPN(int id)
+		{
+			dal_pn.DellPN(id);
+		}
 	}
 }
