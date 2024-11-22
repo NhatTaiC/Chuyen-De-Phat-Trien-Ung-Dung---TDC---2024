@@ -1,4 +1,13 @@
-﻿USE QuanLySieuThi;
+﻿/*
+Nhóm 2 - PTUD
+Châu Nhật Tài
+Nguyễn Quốc Lượng
+Lê Văn Toàn
+10/11/2024
+QLST_INSERT.sql
+*/
+
+USE QuanLySieuThi;
 GO
 
 -- 1. TaiKhoan
@@ -233,6 +242,7 @@ GO
 -- 13. KhuyenMai
 INSERT INTO KhuyenMai (MaKhuyenMai, TenKhuyenMai, GiaTri, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES 
+('KM000', N'Không khuyến mãi', 0, 0, 0, GETDATE(), 0, GETDATE()),
 ('KM001', N'Giảm giá 10%', 10.0, 0, 0, GETDATE(), 0, GETDATE()),
 ('KM002', N'Giảm giá 20%', 20.0, 0, 0, GETDATE(), 0, GETDATE()),
 ('KM003', N'Khuyến mãi đặc biệt', 30.0, 0, 0, GETDATE(), 0, GETDATE()),
@@ -248,31 +258,40 @@ GO
 -- 14. HoaDon
 INSERT INTO HoaDon (MaHoaDon, NgayLapHD, GioLapHD, TongTien, ThanhTien, idKhachHang, idKhuyenMai, idNhanVien, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
-('HD001', GETDATE(), GETDATE(), 0, 0, 1, 5, 3, 0, 0, GETDATE(), 0, GETDATE()),
-('HD002', GETDATE(), GETDATE(), 0, 0, 1, 6, 7, 0, 0, GETDATE(), 0, GETDATE()),
-('HD003', GETDATE(), GETDATE(), 0, 0, 1, 4, 2, 0, 0, GETDATE(), 0, GETDATE()),
-('HD004', GETDATE(), GETDATE(), 0, 0, 1, 9, 8, 0, 0, GETDATE(), 0, GETDATE()),
-('HD005', GETDATE(), GETDATE(), 0, 0, 1, 3, 6, 0, 0, GETDATE(), 0, GETDATE()),
-('HD006', GETDATE(), GETDATE(), 0, 0, 1, 1, 9, 0, 0, GETDATE(), 0, GETDATE()),
-('HD007', GETDATE(), GETDATE(), 0, 0, 1, 10, 4, 0, 0, GETDATE(), 0, GETDATE()),
-('HD008', GETDATE(), GETDATE(), 0, 0, 1, 2, 5, 0, 0, GETDATE(), 0, GETDATE()),
-('HD009', GETDATE(), GETDATE(), 0, 0, 1, 8, 1, 0, 0, GETDATE(), 0, GETDATE()),
-('HD010', GETDATE(), GETDATE(), 0, 0, 1, 7, 10, 0, 0, GETDATE(), 0, GETDATE());
+('HD001', GETDATE(), GETDATE(), 3275000, 0, 1, 1, 3, 0, 0, GETDATE(), 0, GETDATE()),
+('HD002', GETDATE(), GETDATE(), 10000, 0, 1, 1, 7, 0, 0, GETDATE(), 0, GETDATE()),
+('HD003', GETDATE(), GETDATE(), 140000, 0, 1, 1, 2, 0, 0, GETDATE(), 0, GETDATE()),
+('HD004', GETDATE(), GETDATE(), 180000, 0, 1, 1, 8, 0, 0, GETDATE(), 0, GETDATE()),
+('HD005', GETDATE(), GETDATE(), 198000, 0, 1, 1, 6, 0, 0, GETDATE(), 0, GETDATE()),
+('HD006', GETDATE(), GETDATE(), 270000, 0, 1, 1, 9, 0, 0, GETDATE(), 0, GETDATE()),
+('HD007', GETDATE(), GETDATE(), 45000, 0, 1, 1, 4, 0, 0, GETDATE(), 0, GETDATE()),
+('HD008', GETDATE(), GETDATE(), 72000, 0, 1, 1, 5, 0, 0, GETDATE(), 0, GETDATE()),
+('HD009', GETDATE(), GETDATE(), 300000, 0, 1, 1, 1, 0, 0, GETDATE(), 0, GETDATE()),
+('HD010', GETDATE(), GETDATE(), 2000000, 0, 1, 1, 10, 0, 0, GETDATE(), 0, GETDATE());
 GO
 
 -- 15. ChiTietHoaDon
 INSERT INTO ChiTietHoaDon (SoLuong, idHoaDon, idSanPham, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
-(5, 3, 7, 0, 0, GetDate(), 0, GetDate()),
+(5, 1, 7, 0, 0, GetDate(), 0, GetDate()),
 (2, 1, 4, 0, 0, GetDate(), 0, GetDate()),
-(7, 4, 1, 0, 0, GetDate(), 0, GetDate()),
-(3, 6, 8, 0, 0, GetDate(), 0, GetDate()),
-(9, 2, 3, 0, 0, GetDate(), 0, GetDate()),
-(6, 7, 5, 0, 0, GetDate(), 0, GetDate()),
-(1, 5, 9, 0, 0, GetDate(), 0, GetDate()),
+(7, 1, 1, 0, 0, GetDate(), 0, GetDate()),
+(3, 1, 8, 0, 0, GetDate(), 0, GetDate()),
+(9, 1, 3, 0, 0, GetDate(), 0, GetDate()),
+(6, 1, 5, 0, 0, GetDate(), 0, GetDate()),
+(1, 1, 9, 0, 0, GetDate(), 0, GetDate()),
+(4, 1, 2, 0, 0, GetDate(), 0, GetDate()),
+(10, 1, 6, 0, 0, GetDate(), 0, GetDate()),
+(8, 1, 10, 0, 0, GetDate(), 0, GetDate()),
+(2, 2, 4, 0, 0, GetDate(), 0, GetDate()),
+(7, 3, 1, 0, 0, GetDate(), 0, GetDate()),
+(3, 4, 8, 0, 0, GetDate(), 0, GetDate()),
+(9, 5, 3, 0, 0, GetDate(), 0, GetDate()),
+(6, 6, 5, 0, 0, GetDate(), 0, GetDate()),
+(1, 7, 9, 0, 0, GetDate(), 0, GetDate()),
 (4, 8, 2, 0, 0, GetDate(), 0, GetDate()),
-(10, 10, 6, 0, 0, GetDate(), 0, GetDate()),
-(8, 9, 10, 0, 0, GetDate(), 0, GetDate());
+(10, 9, 6, 0, 0, GetDate(), 0, GetDate()),
+(8, 10, 10, 0, 0, GetDate(), 0, GetDate());
 GO
 
 -- 16. BangLuong
@@ -373,16 +392,16 @@ VALUES
 GO
 
 -- 19. Log
-INSERT INTO Log (log_name, model, model_id, data_olds, data_news, is_deleted, created_by, created_at, updated_by, updated_at)
+INSERT INTO Log (log_name, model, model_id, action, data_olds, data_news, is_deleted, created_by, created_at, updated_by, updated_at)
 VALUES
-('LOG_NAME_01', 'MODEL_01', 1, 'DATA_OLDS_01', 'DATA_NEWS_01', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_02', 'MODEL_02', 2, 'DATA_OLDS_02', 'DATA_NEWS_02', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_03', 'MODEL_03', 3, 'DATA_OLDS_03', 'DATA_NEWS_03', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_04', 'MODEL_04', 4, 'DATA_OLDS_04', 'DATA_NEWS_04', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_05', 'MODEL_05', 5, 'DATA_OLDS_05', 'DATA_NEWS_05', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_06', 'MODEL_06', 6, 'DATA_OLDS_06', 'DATA_NEWS_06', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_07', 'MODEL_07', 7, 'DATA_OLDS_07', 'DATA_NEWS_07', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_08', 'MODEL_08', 8, 'DATA_OLDS_08', 'DATA_NEWS_08', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_09', 'MODEL_09', 9, 'DATA_OLDS_09', 'DATA_NEWS_09', 0, 0, GETDATE(), 0, GETDATE()),
-('LOG_NAME_10', 'MODEL_10', 10, 'DATA_OLDS_10', 'DATA_NEWS_10', 0, 0, GETDATE(), 0, GETDATE());
+('LOG_NAME_01', 'MODEL_01', 1, 'TEST', 'DATA_OLDS_01', 'DATA_NEWS_01', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_02', 'MODEL_02', 2, 'TEST', 'DATA_OLDS_02', 'DATA_NEWS_02', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_03', 'MODEL_03', 3, 'TEST', 'DATA_OLDS_03', 'DATA_NEWS_03', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_04', 'MODEL_04', 4, 'TEST', 'DATA_OLDS_04', 'DATA_NEWS_04', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_05', 'MODEL_05', 5, 'TEST', 'DATA_OLDS_05', 'DATA_NEWS_05', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_06', 'MODEL_06', 6, 'TEST', 'DATA_OLDS_06', 'DATA_NEWS_06', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_07', 'MODEL_07', 7, 'TEST', 'DATA_OLDS_07', 'DATA_NEWS_07', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_08', 'MODEL_08', 8, 'TEST', 'DATA_OLDS_08', 'DATA_NEWS_08', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_09', 'MODEL_09', 9, 'TEST', 'DATA_OLDS_09', 'DATA_NEWS_09', 0, 0, GETDATE(), 0, GETDATE()),
+('LOG_NAME_10', 'MODEL_10', 10, 'TEST', 'DATA_OLDS_10', 'DATA_NEWS_10', 0, 0, GETDATE(), 0, GETDATE());
 GO

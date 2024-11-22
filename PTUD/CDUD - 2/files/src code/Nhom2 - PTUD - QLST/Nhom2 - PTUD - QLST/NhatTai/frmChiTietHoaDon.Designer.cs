@@ -100,7 +100,7 @@
             this.btnThem.Image = global::Nhom2___PTUD___QLST.Properties.Resources.plus;
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(103, 36);
+            this.btnThem.Size = new System.Drawing.Size(89, 36);
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -110,7 +110,7 @@
             this.btnXoa.Image = global::Nhom2___PTUD___QLST.Properties.Resources.bin;
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(88, 36);
+            this.btnXoa.Size = new System.Drawing.Size(77, 36);
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -120,7 +120,7 @@
             this.btnSua.Image = global::Nhom2___PTUD___QLST.Properties.Resources.loop;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(84, 36);
+            this.btnSua.Size = new System.Drawing.Size(75, 36);
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -130,7 +130,7 @@
             this.btnTimHd.Image = global::Nhom2___PTUD___QLST.Properties.Resources.research;
             this.btnTimHd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTimHd.Name = "btnTimHd";
-            this.btnTimHd.Size = new System.Drawing.Size(170, 36);
+            this.btnTimHd.Size = new System.Drawing.Size(144, 36);
             this.btnTimHd.Text = "Tìm hóa đơn";
             this.btnTimHd.Click += new System.EventHandler(this.btnTimHd_Click);
             // 
@@ -140,7 +140,7 @@
             this.btnTimSp.Image = global::Nhom2___PTUD___QLST.Properties.Resources.research;
             this.btnTimSp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTimSp.Name = "btnTimSp";
-            this.btnTimSp.Size = new System.Drawing.Size(183, 36);
+            this.btnTimSp.Size = new System.Drawing.Size(154, 36);
             this.btnTimSp.Text = "Tìm sản phẩm";
             this.btnTimSp.Click += new System.EventHandler(this.btnTimSp_Click);
             // 
@@ -150,7 +150,7 @@
             this.btnLamMoi.Image = global::Nhom2___PTUD___QLST.Properties.Resources.reset;
             this.btnLamMoi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(135, 36);
+            this.btnLamMoi.Size = new System.Drawing.Size(112, 36);
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
@@ -160,7 +160,7 @@
             this.btnThoat.Image = global::Nhom2___PTUD___QLST.Properties.Resources.logout;
             this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(104, 36);
+            this.btnThoat.Size = new System.Drawing.Size(90, 36);
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -363,7 +363,7 @@
             this.txtSoLuong.ForeColor = System.Drawing.Color.Black;
             this.txtSoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoLuong.Location = new System.Drawing.Point(447, 67);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.PasswordChar = '\0';
             this.txtSoLuong.PlaceholderText = "";
@@ -387,7 +387,7 @@
             this.txtTongTien.ForeColor = System.Drawing.Color.Black;
             this.txtTongTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTongTien.Location = new System.Drawing.Point(447, 98);
-            this.txtTongTien.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTongTien.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.PasswordChar = '\0';
             this.txtTongTien.PlaceholderText = "";
@@ -432,7 +432,7 @@
             this.txtTimKiemSp.ForeColor = System.Drawing.Color.Black;
             this.txtTimKiemSp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiemSp.Location = new System.Drawing.Point(447, 129);
-            this.txtTimKiemSp.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTimKiemSp.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTimKiemSp.Name = "txtTimKiemSp";
             this.txtTimKiemSp.PasswordChar = '\0';
             this.txtTimKiemSp.PlaceholderText = "";
@@ -456,7 +456,7 @@
             this.txtTimKiemMaHd.ForeColor = System.Drawing.Color.Black;
             this.txtTimKiemMaHd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiemMaHd.Location = new System.Drawing.Point(447, 160);
-            this.txtTimKiemMaHd.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTimKiemMaHd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTimKiemMaHd.Name = "txtTimKiemMaHd";
             this.txtTimKiemMaHd.PasswordChar = '\0';
             this.txtTimKiemMaHd.PlaceholderText = "";
@@ -670,7 +670,7 @@
             // 
             // frmChiTietHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 623);
             this.Controls.Add(this.tableContainer);

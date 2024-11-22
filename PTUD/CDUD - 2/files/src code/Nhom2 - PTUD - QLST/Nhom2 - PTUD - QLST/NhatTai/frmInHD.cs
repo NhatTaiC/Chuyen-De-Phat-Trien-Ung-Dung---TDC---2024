@@ -1,5 +1,6 @@
-﻿using CrystalDecisions.Shared;
-using Nhom2___PTUD___QLST.Report;
+﻿using Nhom2___PTUD___QLST.Report;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 using System.Windows.Forms;
 
 namespace Nhom2___PTUD___QLST.NhatTai

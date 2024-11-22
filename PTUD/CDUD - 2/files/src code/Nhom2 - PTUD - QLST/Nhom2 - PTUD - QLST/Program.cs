@@ -23,7 +23,7 @@ namespace Nhom2___PTUD___QLST
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Open frmFlash
+            ////Open frmFlash
             //frmFlash f = new frmFlash();
             //f.ShowDialog();
 

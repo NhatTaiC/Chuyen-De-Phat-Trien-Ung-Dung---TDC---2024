@@ -12,10 +12,13 @@ namespace BUS
 	{
 		// Fields
 		private DAL_KhachHang dal_kh = new DAL_KhachHang();
-
-		//Method
-		// LayDSKH()
-		public IQueryable LayDSKH()
+		public DTO_KhachHang LayKhachHang(string sodienthoai)
+		{
+			return dal_kh.LayKhachHang(sodienthoai);
+		}
+            //Method
+            // LayDSKH()
+            public IQueryable LayDSKH()
 		{
 			return dal_kh.LayDSKH();
 		}

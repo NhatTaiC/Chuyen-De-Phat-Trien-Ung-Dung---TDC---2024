@@ -11,21 +11,23 @@ namespace DTO
     public class DTO_NhanVien
     {
         // Fields
-        private int id;
-        private string maNV;
-        private string tenNV;
-        private string soDT;
-        private string diaChi;
-        private int idLNV;
-        private int idTK;
-        private int is_deleted;
-        private int created_by;
-        private DateTime created_at;
-        private int updated_by;
-        private DateTime updated_at;
+        private int id { get; set; }
+        private string maNV { get; set; }
+        private string tenNV { get; set; }
+        private string soDT { get; set; }
+        private string diaChi { get; set; }
+        private int idLNV { get; set; }
+        private int idTK { get; set; }
+        private int is_deleted { get; set; }
+        private int created_by { get; set; }
+        private DateTime created_at { get; set; }
+        private int updated_by { get; set; }
+        private DateTime updated_at { get; set; }
 
         // Constructors
-        public DTO_NhanVien(int id, string maNV, string tenNV, string soDT, string diaChi, int idLNV, int idTK, int is_deleted, int created_by, DateTime created_at, int updated_by, DateTime updated_at)
+        public DTO_NhanVien()
+        { }
+            public DTO_NhanVien(int id, string maNV, string tenNV, string soDT, string diaChi, int idLNV, int idTK, int is_deleted, int created_by, DateTime created_at, int updated_by, DateTime updated_at)
         {
             this.id = id;
             this.maNV = maNV;

@@ -39,7 +39,7 @@ namespace Nhom2___PTUD___QLST
             // dgvLNV
             dgvLNV.DataSource = bus_lnv.GetListLNV();
             dgvLNV.Columns["id"].Visible = false;
-            dgvLNV.Columns["MaLoaiNhanVien"].Visible = false;
+            dgvLNV.Columns["MaLoaiNhanVien"].Visible = true;
             dgvLNV.Columns["Id"].HeaderText = "Id";
             dgvLNV.Columns["MaLoaiNhanVien"].HeaderText = "Mã loại nhân viên";
             dgvLNV.Columns["TenLoaiNhanVien"].HeaderText = "Tên loại nhân viên";

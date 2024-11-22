@@ -45,7 +45,7 @@ namespace Nhom2___PTUD___QLST
             dgvNV.Columns["id"].Visible = false;
             dgvNV.Columns["idLoaiNhanVien"].Visible = false;
             dgvNV.Columns["idTaiKhoan"].Visible = false;
-            dgvNV.Columns["MaNhanVien"].Visible = false;
+            dgvNV.Columns["MaNhanVien"].Visible = true;
             dgvNV.Columns["MaNhanVien"].HeaderText = "Mã nhân viên";
             dgvNV.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
             dgvNV.Columns["SoDienThoai"].HeaderText = "Số điện thoại";

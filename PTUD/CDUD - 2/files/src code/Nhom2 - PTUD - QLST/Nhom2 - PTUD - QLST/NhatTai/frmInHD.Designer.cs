@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInHD));
             this.crvInHd = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.GetHdByMaHd1 = new Nhom2___PTUD___QLST.Report.GetHdByMaHd();
             this.SuspendLayout();
             // 
             // crvInHd
@@ -40,12 +41,13 @@
             this.crvInHd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvInHd.Location = new System.Drawing.Point(0, 0);
             this.crvInHd.Name = "crvInHd";
+            this.crvInHd.ReportSource = this.GetHdByMaHd1;
             this.crvInHd.Size = new System.Drawing.Size(1333, 623);
             this.crvInHd.TabIndex = 0;
             // 
             // frmInHD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 623);
             this.Controls.Add(this.crvInHd);
@@ -68,5 +70,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvInHd;
+        private Report.GetHdByMaHd GetHdByMaHd1;
     }
 }

@@ -60,8 +60,11 @@ namespace DAL
                         GioLapHD = DateTime.Now,
                         TongTien = 0,
                         ThanhTien = 0,
+                        //idKhachHang = hoaDon.IdKhachHang == 0 ? (int?)null : hoaDon.IdKhachHang,
+                        //idKhuyenMai = hoaDon.IdKhuyenMai == 0 ? (int?)null : hoaDon.IdKhuyenMai,
+                        //idNhanVien = hoaDon.IdNhanVien == 0 ? (int?)null : hoaDon.IdNhanVien,
                         idKhachHang = hoaDon.IdKhachHang,
-                        idKhuyenMai = hoaDon.IdKhachHang,
+                        idKhuyenMai = hoaDon.IdKhuyenMai,
                         idNhanVien = hoaDon.IdNhanVien,
                         is_deleted = 0,
                         created_by = 0,
@@ -206,6 +209,9 @@ namespace DAL
             var hd_update = da.Db.HoaDons.SingleOrDefault(hd => hd.id == idHd);
             hd_update.TongTien = toTalCash;
 
+            var query = da.Db.KhuyenMais.SingleOrDefault(km => km.id == hd_update.idKhuyenMai);
+            hd_update.ThanhTien = toTalCash - ((query.GiaTri / 100) * toTalCash);
+
             // Saved
             da.Db.SubmitChanges();
 
@@ -277,6 +283,31 @@ namespace DAL
             return query;
 
         }
+        //tìm idhoadon bang MaHoaDon
+        public string TimMaHoaDon(int id)
+        {
+            var query = (from hd in da.Db.HoaDons
+                         where hd.id == id
+                         select new
+                         {
+                             hd.id,
+                             hd.MaHoaDon,
+
+                         }).FirstOrDefault();
+            string maHoaDon = "";
+            if (query == null)
+            {
+                maHoaDon = "";
+            }
+            else
+            {
+                maHoaDon = query.MaHoaDon;
+            }
+
+
+            return maHoaDon;
+
+        }
 
         public IQueryable GetListHD3()
         {
@@ -315,6 +346,100 @@ namespace DAL
             }
             return false;
 
+        }
+
+        // AddHD2 not have MaHoaDon, NgayLapHD, GioLapHD, TongTien, ThanhTien
+        public void AddHD2(DTO_HoaDon hoaDon)
+        {
+            try
+            {
+                // Checked hoaDon is saved in table HoaDon?
+                var query = (from hd in da.Db.HoaDons
+                             where hd.id == hoaDon.Id
+                             select hd).FirstOrDefault();
+
+
+                if (query == null)
+                {
+                    // Get max(id) in table HoaDon
+                    var query2 = da.Db.HoaDons.OrderByDescending(hd => hd.id).FirstOrDefault();
+
+                    // Added new record HoaDon
+                    da.Db.HoaDons.InsertOnSubmit(new HoaDon
+                    {
+                        MaHoaDon = query2.id < 10 ? "HD00" + (query2.id + 1) : "HD0" + (query2.id + 1),
+                        NgayLapHD = DateTime.Now,
+                        GioLapHD = DateTime.Now,
+                        TongTien = 0,
+                        ThanhTien = 0,
+                        //idKhachHang = hoaDon.IdKhachHang == 0 ? (int?)null : hoaDon.IdKhachHang,
+                        //idKhuyenMai = hoaDon.IdKhuyenMai == 0 ? (int?)null : hoaDon.IdKhuyenMai,
+                        //idNhanVien = hoaDon.IdNhanVien == 0 ? (int?)null : hoaDon.IdNhanVien,
+                        idKhachHang = hoaDon.IdKhachHang,
+                        idKhuyenMai = hoaDon.IdKhuyenMai,
+                        idNhanVien = hoaDon.IdNhanVien,
+                        is_deleted = 0,
+                        created_by = 0,
+                        created_at = DateTime.Now,
+                        updated_by = 0,
+                        updated_at = DateTime.Now
+                    });
+
+                    // Saved db
+                    da.Db.SubmitChanges();
+
+                    //// Messaged
+                    //MessageBox.Show("Thêm hoá đơn mới thành công!", "Thông báo",
+                    //MessageBoxButtons.OK,
+                    //MessageBoxIcon.Information);
+                }
+                //else
+                //{
+                //    // Messaged
+                //    MessageBox.Show("Thêm không thành công! Hóa đơn mới đã có trong dữ liệu.", "Thông báo",
+                //    MessageBoxButtons.OK,
+                //    MessageBoxIcon.Warning);
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
+        // UpdateTotalCash2 from ChiTietHoaDon
+        public void UpdateTotalCash2(int idHd, int toTalCash)
+        {
+            var hd_update = da.Db.HoaDons.SingleOrDefault(hd => hd.id == idHd);
+            hd_update.TongTien = toTalCash;
+            if(hd_update.idKhuyenMai == 1)
+            {
+                hd_update.ThanhTien = toTalCash;
+            }
+            else
+            {
+                var khuyenmai = da.Db.KhuyenMais.SingleOrDefault(d=>d.id == hd_update.idKhuyenMai);
+                hd_update.ThanhTien = toTalCash - (toTalCash * (float)(khuyenmai.GiaTri / 100));
+            }
+
+            var query = da.Db.KhuyenMais.SingleOrDefault(km => km.id == hd_update.idKhuyenMai);
+            hd_update.ThanhTien = toTalCash - ((query.GiaTri / 100) * toTalCash);
+
+            // Saved
+            da.Db.SubmitChanges();
+
+            //MessageBox.Show("Lưu tổng tiền vào hóa đơn thành công!", "Thông báo",
+            //    MessageBoxButtons.OK,
+            //    MessageBoxIcon.Information);
+        }
+
+        public string SearchHDById(int idHD)
+        {
+            var query = da.Db.HoaDons.SingleOrDefault(h => h.id == idHD);
+
+            return query.MaHoaDon;
         }
     }
 }

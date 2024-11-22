@@ -69,7 +69,7 @@
             this.btnLamMoi.Image = global::Nhom2___PTUD___QLST.Properties.Resources.reset;
             this.btnLamMoi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(135, 36);
+            this.btnLamMoi.Size = new System.Drawing.Size(112, 36);
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
@@ -79,7 +79,7 @@
             this.btnThoat.Image = global::Nhom2___PTUD___QLST.Properties.Resources.logout;
             this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(104, 36);
+            this.btnThoat.Size = new System.Drawing.Size(90, 36);
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -147,7 +147,6 @@
             this.dgvTim.Name = "dgvTim";
             this.dgvTim.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvTim.RowHeadersVisible = false;
-            this.dgvTim.RowHeadersWidth = 51;
             this.dgvTim.RowTemplate.Height = 50;
             this.dgvTim.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTim.Size = new System.Drawing.Size(1327, 422);
@@ -235,7 +234,7 @@
             this.txtTim.ForeColor = System.Drawing.Color.Black;
             this.txtTim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTim.Location = new System.Drawing.Point(448, 6);
-            this.txtTim.Margin = new System.Windows.Forms.Padding(6);
+            this.txtTim.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtTim.Name = "txtTim";
             this.txtTim.PasswordChar = '\0';
             this.txtTim.PlaceholderText = "";
@@ -268,7 +267,7 @@
             // 
             // frmTraCuuNV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 623);
             this.Controls.Add(this.tableContainer);
