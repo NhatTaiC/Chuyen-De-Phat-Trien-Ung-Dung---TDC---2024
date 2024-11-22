@@ -21,6 +21,7 @@ namespace GUI
 			cbTimKiem.DataSource = arr;
             dtpNgay.CustomFormat = "dd/MM/yyyy";
 			dtpNgayLam.CustomFormat = "dd/MM/yyyy";
+			
         }
 
 		BUS_LichLam bus_ll = new BUS_LichLam();
@@ -42,8 +43,9 @@ namespace GUI
 			dgvLichLam.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
 			dgvLichLam.Columns["TenCaLam"].HeaderText = "Tên ca làm";
 			dgvLichLam.Columns["id"].Visible = false;
+            dgvLichLam.Columns["ten"].Visible = false;
 
-			cbMaCaLam.DataSource = bus_cl.LayDSCaLam();
+            cbMaCaLam.DataSource = bus_cl.LayDSCaLam();
 			cbMaCaLam.DisplayMember = "TenCaLam";
 			cbMaCaLam.ValueMember = "id";
 
@@ -160,7 +162,7 @@ namespace GUI
 
 				//txtMaCaLam
 				//cbMaCaLam.Text = dgvLichLam.Rows[n].Cells["TenCaLam"].Value.ToString();
-				cbMaCaLam.SelectedIndex = int.Parse(dgvLichLam.Rows[n].Cells["TenCaLam"].Value.ToString());
+				cbMaCaLam.SelectedIndex = int.Parse(dgvLichLam.Rows[n].Cells["Ten"].Value.ToString())-1;
 
 				//ID
 				currentID = int.Parse(dgvLichLam.Rows[n].Cells["id"].Value.ToString());
