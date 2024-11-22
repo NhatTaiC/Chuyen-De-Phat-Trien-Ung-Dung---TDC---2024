@@ -29,11 +29,12 @@ namespace DAL
             }
             return false;
         }
+
         public int getIdTaiKhoan(string taiKhoan, string matKhau)
         {
             var query = (from tk in da.Db.TaiKhoans
-                        where tk.TenTaiKhoan == taiKhoan && tk.MatKhau == matKhau && tk.is_deleted == 0
-                        select tk).FirstOrDefault();
+                         where tk.TenTaiKhoan == taiKhoan && tk.MatKhau == matKhau
+                         select tk).FirstOrDefault();
             return query.id;
         }
 
@@ -66,6 +67,7 @@ namespace DAL
         public IQueryable GetListAllTKByTenTK()
         {
             IQueryable query = from tk in da.Db.TaiKhoans
+                               where tk.is_deleted == 0
                                select new
                                {
                                    Id = tk.id,

@@ -414,13 +414,13 @@ namespace DAL
         {
             var hd_update = da.Db.HoaDons.SingleOrDefault(hd => hd.id == idHd);
             hd_update.TongTien = toTalCash;
-            if(hd_update.idKhuyenMai == 1)
+            if (hd_update.idKhuyenMai == 1)
             {
                 hd_update.ThanhTien = toTalCash;
             }
             else
             {
-                var khuyenmai = da.Db.KhuyenMais.SingleOrDefault(d=>d.id == hd_update.idKhuyenMai);
+                var khuyenmai = da.Db.KhuyenMais.SingleOrDefault(d => d.id == hd_update.idKhuyenMai);
                 hd_update.ThanhTien = toTalCash - (toTalCash * (float)(khuyenmai.GiaTri / 100));
             }
 
@@ -440,6 +440,23 @@ namespace DAL
             var query = da.Db.HoaDons.SingleOrDefault(h => h.id == idHD);
 
             return query.MaHoaDon;
+        }
+
+        // GetHdBy idKH, idKM, idNV
+        public int getHdByHoaDon3Id(int idKH, int idKM, int idNV)
+        {
+            var query = (from hd in da.Db.HoaDons
+                         where hd.idKhachHang == idKH &&
+                         hd.idKhuyenMai == idKM &&
+                         hd.idNhanVien == idNV &&
+                         hd.is_deleted == 0 &&
+                         hd.TongTien == 0 &&
+                         hd.ThanhTien == 0
+                         select hd)
+                         .OrderByDescending(hd => hd.id)
+                         .FirstOrDefault();
+
+            return (int)query.id;
         }
     }
 }

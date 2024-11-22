@@ -299,9 +299,6 @@ namespace DAL
                     // Init NhanVien
                     NhanVien nv_update = da.Db.NhanViens.Single(nv => nv.id == nhanVien.Id);
 
-                    // Get max(id) in table NhanVien
-                    var query2 = da.Db.NhanViens.OrderByDescending(nv => nv.id).FirstOrDefault();
-
                     // Get string MaNhanVien
                     string maNV = string.Empty;
                     switch (nhanVien.IdLNV)
@@ -342,7 +339,7 @@ namespace DAL
                     }
 
                     // Updated nv_update
-                    nv_update.MaNhanVien = query2.id < 10 ? maNV + "00" + (query2.id + 1) : maNV + "0" + (query2.id + 1);
+                    nv_update.MaNhanVien = nv_update.id < 10 ? maNV + "00" + (nv_update.id) : maNV + "0" + (nv_update.id);
                     nv_update.TenNhanVien = nhanVien.TenNV;
                     nv_update.SoDienThoai = nhanVien.SoDT;
                     nv_update.DiaChi = nhanVien.DiaChi;
@@ -442,7 +439,7 @@ namespace DAL
         //get nhan vien
         public DTO_NhanVien getNhanVien(int idTaiKhoan)
         {
-            var nhanvien = da.Db.NhanViens.FirstOrDefault(nv=>nv.id == idTaiKhoan);
+            var nhanvien = da.Db.NhanViens.FirstOrDefault(nv => nv.id == idTaiKhoan);
             DTO_NhanVien dto_NhanVien = new DTO_NhanVien
             {
                 Id = nhanvien.id,

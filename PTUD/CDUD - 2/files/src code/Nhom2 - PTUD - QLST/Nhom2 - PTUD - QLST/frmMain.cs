@@ -35,6 +35,7 @@ namespace Nhom2___PTUD___QLST
             this.q = quyen;
             InitializeComponent();
         }
+
         public static DTO_NhanVien getNhanVien()
         {
             return nhanVien;
@@ -52,7 +53,6 @@ namespace Nhom2___PTUD___QLST
             }
             return false;
         }
-
 
         public void ActForm(string name)
         {
@@ -127,6 +127,18 @@ namespace Nhom2___PTUD___QLST
             //hóaĐơnToolStripMenuItem.Visible = false;
             chiTiếtHóaĐơnToolStripMenuItem.Enabled = false;
             chiTiếtHóaĐơnToolStripMenuItem.Visible = false;
+
+            // Role
+            if (q == 0)
+            {
+                quảnLíToolStripMenuItem.Visible = true;
+                quảnLíToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                quảnLíToolStripMenuItem.Visible = false;
+                quảnLíToolStripMenuItem.Enabled = false;
+            }
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, System.EventArgs e)
