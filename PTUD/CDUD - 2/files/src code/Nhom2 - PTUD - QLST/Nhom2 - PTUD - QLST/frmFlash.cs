@@ -21,7 +21,7 @@ namespace Nhom2___PTUD___QLST
         // frmFlashForm_Load
         private void frmFlashForm_Load(object sender, EventArgs e)
         {
-            backupdataBase();
+           
 
         }
         private void backupdataBase()
@@ -83,6 +83,11 @@ namespace Nhom2___PTUD___QLST
         {
             DialogResult = DialogResult.OK;
             timer1.Enabled = false;
+        }
+
+        private void frmFlash_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            backupdataBase();
         }
     }
 }
