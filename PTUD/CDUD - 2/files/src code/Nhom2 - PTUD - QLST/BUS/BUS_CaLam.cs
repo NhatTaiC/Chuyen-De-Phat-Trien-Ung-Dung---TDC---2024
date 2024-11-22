@@ -37,5 +37,11 @@ namespace BUS
 		{
 			return dal_cl.SuaCaLam(caLam);
 		}
+
+		//XoaCL
+		public void DellCL(int id)
+		{
+			dal_cl.XoaCL(id);
+		}
 	}
 }

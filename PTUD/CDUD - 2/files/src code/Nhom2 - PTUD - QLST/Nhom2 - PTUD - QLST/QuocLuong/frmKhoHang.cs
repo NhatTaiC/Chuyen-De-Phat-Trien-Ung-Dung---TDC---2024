@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
+using Nhom2___PTUD___QLST.VanToan;
 namespace GUI
 {
     public partial class frmKhoHang : Form
@@ -120,5 +121,11 @@ namespace GUI
 		{
 			LamMoi();
 		}
-	}
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            frmVanToan frm = new frmVanToan();
+            frm.ShowDialog();
+        }
+    }
 }

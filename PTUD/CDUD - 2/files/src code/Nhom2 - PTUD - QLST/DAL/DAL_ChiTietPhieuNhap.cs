@@ -20,67 +20,74 @@ namespace DAL
 		public IQueryable LayDSChiTietPhieuNhap()
 		{
 			IQueryable temp = from cl in da.Db.ChiTietPhieuNhaps
+							  join pn in da.Db.PhieuNhaps
+							  on cl.idPhieuNhap equals pn.id
+							  join sp in da.Db.SanPhams
+							  on cl.idSanPham equals sp.id
+							  where cl.is_deleted == 0
 							  select new
 							  {
 								  id = cl.id,
 								  SoLuong = cl.SoLuong,
 								  DonGia = cl.DonGia,
-								  idPhieuNhap = cl.idPhieuNhap,
-								  idSanPham = cl.idSanPham,
+								  idPhieuNhap = pn.MaPhieuNhap,
+								  idSanPham = sp.TenSanPham,
+								  idpn = cl.idPhieuNhap,
+								  idsp = cl.idSanPham
 							  };
 			return temp;
 		}
 
 		// ThemCaLam()
-		public bool ThemCTPN(DTO_ChiTietPhieuNhap ctpn)
+		public void ThemCTPN(DTO_ChiTietPhieuNhap ctpn)
 		{
 			try
-			{
-				// Check khachHang.MaKH có != null hay không?
-				
-					//Check có KH trong DB KH hay chưa?
-					var data = da.Db.ChiTietPhieuNhaps.FirstOrDefault(dt => dt.id == ctpn.Id && dt.is_deleted == 0);
+            {
+                // Checked chiTietHoaDon is saved in table ChiTietHoaDon?
+                var query = (from cthd in da.Db.ChiTietPhieuNhaps
+                             where cthd.idPhieuNhap == ctpn.IdPhieuNhap &&
+                             cthd.idSanPham == ctpn.IdSanPham
+                             select cthd).FirstOrDefault();
 
-					if (data == null)
-					{
-						// Tạo đối tượng KH
-						ChiTietPhieuNhap ctpn_insert = new ChiTietPhieuNhap
-						{
-							SoLuong = ctpn.SoLuong,
-							DonGia = ctpn.DonGia,
-							idPhieuNhap = ctpn.IdPhieuNhap,
-							idSanPham = ctpn.IdSanPham,
-							created_at = DateTime.Now,
-							created_by = 0,
-							updated_at = DateTime.Now,
-							updated_by = 0,
-							is_deleted = 0
-						};
 
-						da.Db.ChiTietPhieuNhaps.InsertOnSubmit(ctpn_insert); // Them KH mới vào DB KH
-						da.Db.SubmitChanges(); // Xác nhận thay đổi DB KH
+                if (query == null)
+                {
+                    // Added new record ChiTietHoaDon
+                    da.Db.ChiTietPhieuNhaps.InsertOnSubmit(new ChiTietPhieuNhap
+                    {
+                        SoLuong = ctpn.SoLuong,
+						DonGia = ctpn.DonGia,
+                        idPhieuNhap = ctpn.IdPhieuNhap,
+                        idSanPham = ctpn.IdSanPham,
+                        is_deleted = 0,
+                        created_by = 0,
+                        created_at = DateTime.Now,
+                        updated_by = 0,
+                        updated_at = DateTime.Now
+                    });
 
-						// Thông báo
-						MessageBox.Show($"thêm sản phẩm +{ctpn.IdSanPham}+ thành công!", "Thông báo",
-							MessageBoxButtons.OK, MessageBoxIcon.Information);
-						return true;
-					}
-					else
-					{
-						// Thông báo
-						MessageBox.Show($"Sản phẩm +{ctpn.IdSanPham}+ đã có trong danh sách chi tiết!", "Thông báo",
-							MessageBoxButtons.OK, MessageBoxIcon.Error);
-					}
-				
-			}
-			catch (Exception ex)
-			{
-				// Throw Exception
-				MessageBox.Show(ex.Message);
-				throw;
+                    // Saved db
+                    da.Db.SubmitChanges();
 
-			}
-			return false;
+                    // Messaged
+                    MessageBox.Show("Thêm chi tiết hoá đơn mới thành công!", "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Messaged
+                    MessageBox.Show("Thêm không thành công! Đã có dữ liệu sản phẩm (ẩn) trong chi tiết hóa đơn mới.", "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
 		}
 
 		// XoaCaLam()
@@ -176,5 +183,86 @@ namespace DAL
 							  };
 			return a;
 		}
-	}
+
+        public void DellPN(int idChiTietPhieuNhap)
+        {
+            var chiTiet = da.Db.ChiTietPhieuNhaps.SingleOrDefault(ct => ct.id == idChiTietPhieuNhap);
+
+            if (chiTiet != null)
+            {
+                // Lấy phiếu nhập liên quan
+                var phieuNhap = da.Db.PhieuNhaps.SingleOrDefault(pn => pn.id == chiTiet.idPhieuNhap);
+
+                if (phieuNhap != null)
+                {
+                    // Trừ tổng tiền trong phiếu nhập
+                    phieuNhap.ThanhTien -= chiTiet.SoLuong * chiTiet.DonGia;
+                }
+
+                // Xóa chi tiết phiếu nhập
+                da.Db.ChiTietPhieuNhaps.DeleteOnSubmit(chiTiet);
+                da.Db.SubmitChanges();
+            }
+            else
+            {
+                throw new Exception("Không tìm thấy bản ghi cần xóa.");
+            }
+        }
+
+
+        public bool CheckCTHDByIdpnIdSp(int idpn, int idsp)
+        {
+            var query = (from ctpn in da.Db.ChiTietPhieuNhaps
+                         where ctpn.idPhieuNhap == idpn
+                         && ctpn.idSanPham == idsp
+                         && ctpn.is_deleted == 0
+                         select ctpn).Count();
+
+            if (query == 1)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public int GetSoLuongSpInCTPN(int idpn, int idsp)
+        {
+            var query = (from ctpn in da.Db.ChiTietPhieuNhaps
+                         where ctpn.idPhieuNhap == idpn &&
+                         ctpn.idSanPham == idsp &&
+                         ctpn.is_deleted == 0
+                         select ctpn).FirstOrDefault();
+
+            return (int)query.SoLuong;
+        }
+
+        public void UpdateSoLuongSpInCTPN(int soLuong, int idpn, int idsp)
+        {
+            var ctpn_update = da.Db.ChiTietPhieuNhaps.SingleOrDefault(cthd => cthd.idPhieuNhap == idpn && cthd.idSanPham == idsp && cthd.is_deleted==0);
+            
+			if(ctpn_update == null)
+			{
+				MessageBox.Show("rỗng");
+			}
+			else
+			{
+                ctpn_update.SoLuong += soLuong;
+            }
+            // Saved
+            da.Db.SubmitChanges();
+        }
+
+        public void UpdateThanhTien(int idPhieuNhap, float thanhTienMoi)
+        {
+            var phieuNhap = da.Db.PhieuNhaps.SingleOrDefault(pn => pn.id == idPhieuNhap && pn.is_deleted == 0);
+            if (phieuNhap != null)
+            {
+                phieuNhap.ThanhTien += thanhTienMoi;
+
+                // Lưu thay đổi vào cơ sở dữ liệu
+                da.Db.SubmitChanges();
+            }
+        }
+
+    }
 }
