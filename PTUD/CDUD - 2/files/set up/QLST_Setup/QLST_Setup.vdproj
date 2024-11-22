@@ -27,14 +27,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_70C1F3B15FDABA33069A3C488E86C2C4"
-        "OwnerKey" = "8:_8737BC75426D4C06A23844F6BC18FC2A"
+        "MsmKey" = "8:_6BC3C934BD0D4800B2BED1AF50D0195E"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_774728B55A0744D2AC42CA5B7DC0ADF4"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_70C1F3B15FDABA33069A3C488E86C2C4"
+        "OwnerKey" = "8:_8737BC75426D4C06A23844F6BC18FC2A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -100,7 +100,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_70C1F3B15FDABA33069A3C488E86C2C4"
+        "OwnerKey" = "8:_47F970B092D8CEBC9660ACC9642A1119"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -136,12 +136,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_47F970B092D8CEBC9660ACC9642A1119"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_AA85E01BECF1C29B2C3F44FA4EB31283"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -149,6 +143,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7C825F1FDB530CE3DA82B2A7CE99DEE1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_70C1F3B15FDABA33069A3C488E86C2C4"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -169,6 +169,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -185,6 +193,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -276,6 +292,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6BC3C934BD0D4800B2BED1AF50D0195E"
+            {
+            "SourcePath" = "8:..\\..\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\bin\\Debug\\db\\QLST_Backup.sql"
+            "TargetName" = "8:QLST_Backup.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_09FB6B7649F74970BC8376A5265056E4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_70C1F3B15FDABA33069A3C488E86C2C4"
             {
             "AssemblyRegister" = "3:1"
@@ -305,26 +341,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_774728B55A0744D2AC42CA5B7DC0ADF4"
-            {
-            "SourcePath" = "8:..\\..\\src code\\Nhom2 - PTUD - QLST\\Nhom2 - PTUD - QLST\\bin\\Debug\\db\\QLST_Backup.sql"
-            "TargetName" = "8:QLST_Backup.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_09FB6B7649F74970BC8376A5265056E4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7C825F1FDB530CE3DA82B2A7CE99DEE1"

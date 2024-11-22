@@ -2,13 +2,6 @@
 using DTO;
 using Nhom2___PTUD___QLST.QuocLuong;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
@@ -53,7 +46,7 @@ namespace GUI
 
                 MessageBox.Show(ex.Message, "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
 
         }
         //load cb lich làm
@@ -112,7 +105,7 @@ namespace GUI
             //ẩn cột
             dgvChiTietBangLuong.Columns["id"].Visible = false;
             dgvChiTietBangLuong.Columns["idBangLuong"].Visible = false;
-            
+
         }
         //lay danh sách chi tiết bảng lương có điều kiện
         private void LoadDSChiTietBangLuong(int idBangLuong)
@@ -257,6 +250,11 @@ namespace GUI
                 {
                     if (txtMaPhieuNhap.Text.Length > 0 && txtGioCong.Text.Length > 0)
                     {
+                        int gioCong = int.Parse(txtGioCong.Text);
+                        if (gioCong > 15)
+                        {
+                            throw new Exception("Giờ công 1 ngày không quá 15 tiếng!");
+                        }
                         bus_chitietbangluong.ThemChiTietbangLuong(new DTO_ChiTietBangLuong(float.Parse(txtGioCong.Text), currentIDBangLuong, int.Parse(cbLichLam.SelectedValue.ToString()), dtNgayNhap.Value));
                         MessageBox.Show("Thêm thành công!!");
                         LamMoi();
@@ -301,18 +299,18 @@ namespace GUI
             }
         }
 
-		private void btnThoat_Click(object sender, EventArgs e)
-		{
-            DialogResult rs = MessageBox.Show("Bạn chắc thoát không?","Thoát",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-            if (rs == DialogResult.Yes) 
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn chắc thoát không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
             {
                 this.Close();
             }
-		}
+        }
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            if(currentIDBangLuong != 0)
+            if (currentIDBangLuong != 0)
             {
                 frmBaoCaoBangLuong frm = new frmBaoCaoBangLuong(currentIDBangLuong);
                 frm.ShowDialog();
