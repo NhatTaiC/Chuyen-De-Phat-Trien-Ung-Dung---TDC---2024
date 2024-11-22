@@ -235,6 +235,12 @@
       <DependentUpon>GetHdByMaHd.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\LoiNhuanTheoThang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoiNhuanTheoThang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\rpt_BaoCaoBangLuongTheoMaBangLuong.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -251,6 +257,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rpt_DoanhThuTheoThang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ThongKeSPTrongKho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongKeSPTrongKho.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="VanToan\frmCaLam.cs">
@@ -288,6 +300,12 @@
     </Compile>
     <Compile Include="VanToan\frmPhieuNhap.Designer.cs">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VanToan\frmThongKeLoiNhuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VanToan\frmThongKeLoiNhuan.Designer.cs">
+      <DependentUpon>frmThongKeLoiNhuan.cs</DependentUpon>
     </Compile>
     <Compile Include="VanToan\frmVanToan.cs">
       <SubType>Form</SubType>
@@ -387,6 +405,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>GetHdByMaHd.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\LoiNhuanTheoThang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LoiNhuanTheoThang.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\rpt_BaoCaoBangLuongTheoMaBangLuong.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_BaoCaoBangLuongTheoMaBangLuong.cs</LastGenOutput>
@@ -398,6 +420,10 @@
     <EmbeddedResource Include="Report\rpt_DoanhThuTheoThang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_DoanhThuTheoThang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ThongKeSPTrongKho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ThongKeSPTrongKho.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="VanToan\frmCaLam.resx">
       <DependentUpon>frmCaLam.cs</DependentUpon>
@@ -416,6 +442,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VanToan\frmPhieuNhap.resx">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VanToan\frmThongKeLoiNhuan.resx">
+      <DependentUpon>frmThongKeLoiNhuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VanToan\frmVanToan.resx">
+      <DependentUpon>frmVanToan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -52,5 +52,10 @@ namespace BUS
         {
             return dal_ll.timkiemTheoNgay(ngay);
         }
+
+		public void DellLL(int id)
+		{
+			dal_ll.DellLL(id);
+		}
     }
 }

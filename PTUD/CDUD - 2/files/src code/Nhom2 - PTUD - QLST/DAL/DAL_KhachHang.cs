@@ -21,6 +21,7 @@ namespace DAL
         public IQueryable LayDSKH()
         {
             IQueryable temp = from kh in da.Db.KhachHangs
+                              where kh.is_deleted == 0
                               select new
                               {
                                   id = kh.id,
@@ -158,35 +159,88 @@ namespace DAL
             return false;
         }
 
-            //Tìm kiếm theo tên
-            public IQueryable timkiemTheoTen(string ten)
-            {
-                return da.Db.KhachHangs
-                    .Where(kh => kh.TenKhachHang.Contains(ten))
-                    .Select(kh => new
-                    {
-                        id = kh.id,
-                        MaKH = kh.MaKhachHang,
-                        TenKH = kh.TenKhachHang,
-                        SDT = kh.SoDienThoai,
-                        Diem = kh.Diem
-                    });
-            }
+        //Tìm kiếm theo tên
+        public IQueryable timkiemTheoTen(string ten)
+        {
+            return da.Db.KhachHangs
+                .Where(kh => kh.TenKhachHang.Contains(ten))
+                .Select(kh => new
+                {
+                    id = kh.id,
+                    MaKH = kh.MaKhachHang,
+                    TenKH = kh.TenKhachHang,
+                    SDT = kh.SoDienThoai,
+                    Diem = kh.Diem
+                });
+        }
 
-            //Tìm kiếm theo số điện thoại
-            public IQueryable timkiemTheoSDT(string sdt)
+        //Tìm kiếm theo số điện thoại
+        public IQueryable timkiemTheoSDT(string sdt)
+        {
+            return da.Db.KhachHangs
+                .Where(kh => kh.SoDienThoai.Contains(sdt))
+                .Select(kh => new
+                {
+                    id = kh.id,
+                    MaKH = kh.MaKhachHang,
+                    TenKH = kh.TenKhachHang,
+                    SDT = kh.SoDienThoai,
+                    Diem = kh.Diem
+                });
+        }
+        public void DellKH(int id)
+        {
+            try
             {
-                return da.Db.KhachHangs
-                    .Where(kh => kh.SoDienThoai.Contains(sdt))
-                    .Select(kh => new
-                    {
-                        id = kh.id,
-                        MaKH = kh.MaKhachHang,
-                        TenKH = kh.TenKhachHang,
-                        SDT = kh.SoDienThoai,
-                        Diem = kh.Diem
-                    });
+                // Initialize Variables
+                string nameCL = string.Empty;
+
+                // Checked id lnv saved in db lnv?
+                var query = (from lnv in da.Db.KhachHangs
+                             where lnv.id == id
+                             select lnv).Count();
+
+                if (query == 1)
+                {
+                    // Init LoaiNhanVien
+                    KhachHang lnv_update = da.Db.KhachHangs.Single(lnv => lnv.id == id);
+
+                    // Updated is_deleted = 1 for loainhanvien -> hidden item (avoid conflict FK)
+                    lnv_update.is_deleted = 1;
+                    lnv_update.created_by = 0;
+                    lnv_update.created_at = DateTime.Now;
+                    lnv_update.updated_by = 0;
+                    lnv_update.updated_at = DateTime.Now;
+
+                    // Saved db
+                    da.Db.SubmitChanges();
+
+                    nameCL = lnv_update.TenKhachHang;
+
+                    // Messaged
+                    MessageBox.Show($"Xóa khách hàng: [{nameCL}] thành công!",
+                     "Thông báo",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Messaged
+                    MessageBox.Show($"Xóa khách hàng: [{nameCL}] không thành công! Vui lòng kiểm tra các thông tin đã nhập chính xác hay không?",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Messaged
+                MessageBox.Show(ex.Message, "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
         }
     }
+
+}
 

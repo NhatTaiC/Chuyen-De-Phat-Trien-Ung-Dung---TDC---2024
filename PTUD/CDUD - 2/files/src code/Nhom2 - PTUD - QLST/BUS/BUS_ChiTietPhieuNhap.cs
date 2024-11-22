@@ -21,9 +21,9 @@ namespace BUS
 		}
 
 		// ThemCaLam()
-		public bool ThemChiTietPhieuNhap(DTO_ChiTietPhieuNhap ctpn)
+		public void ThemChiTietPhieuNhap(DTO_ChiTietPhieuNhap ctpn)
 		{
-			return dal_ctpn.ThemCTPN(ctpn);
+			dal_ctpn.ThemCTPN(ctpn);
 		}
 
 		// XoaNCC()
@@ -52,5 +52,30 @@ namespace BUS
 		{
 			return dal_ctpn.LayDSSP1(maSP);
 		}
-	}
+
+		public void DellPN(int id)
+		{
+			dal_ctpn.DellPN(id);
+		}
+
+        public bool CheckCTHDByIdpnIdSp(int idpn, int idsp)
+		{
+			return dal_ctpn.CheckCTHDByIdpnIdSp(idpn, idsp);
+		}
+
+        public int GetSoLuongSpInCTPN(int idpn, int idsp)
+		{
+			return dal_ctpn.GetSoLuongSpInCTPN(idpn, idsp);
+		}
+
+        public void UpdateSoLuongSpInCTPN(int soLuong, int idpn, int idsp)
+		{
+			dal_ctpn.UpdateSoLuongSpInCTPN(soLuong, idpn, idsp);
+		}
+
+        public void UpdateThanhTien(int idPhieuNhap, float thanhTienMoi)
+		{
+			dal_ctpn.UpdateThanhTien(idPhieuNhap, thanhTienMoi);
+		}
+    }
 }

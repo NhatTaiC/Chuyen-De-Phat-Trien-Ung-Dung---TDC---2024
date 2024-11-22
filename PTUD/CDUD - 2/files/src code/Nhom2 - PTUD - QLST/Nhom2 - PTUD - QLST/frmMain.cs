@@ -490,5 +490,11 @@ namespace Nhom2___PTUD___QLST
                 ActForm("frm_DoanhThuTheoNam");
             }
         }
+
+        private void lợiNhuậnTheoThángToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            frmThongKeLoiNhuan frm = new frmThongKeLoiNhuan();
+            frm.ShowDialog();
+        }
     }
 }
