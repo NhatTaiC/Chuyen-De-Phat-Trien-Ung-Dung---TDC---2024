@@ -129,7 +129,7 @@ namespace DAL
                 var kh = da.Db.KhachHangs.FirstOrDefault(dt => dt.id == khachHang.Id);
                 if (kh != null)
                 {
-                    kh.MaKhachHang = khachHang.MaKhachHang;
+                    //kh.MaKhachHang = khachHang.MaKhachHang;
                     kh.TenKhachHang = khachHang.TenKhachHang;
                     kh.SoDienThoai = khachHang.SoDienThoai;
                     kh.Diem = khachHang.Diem;

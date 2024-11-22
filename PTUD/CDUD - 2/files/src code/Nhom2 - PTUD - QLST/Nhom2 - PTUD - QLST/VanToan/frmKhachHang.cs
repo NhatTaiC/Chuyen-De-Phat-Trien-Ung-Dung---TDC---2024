@@ -176,7 +176,7 @@ namespace GUI
 					
 						if (txtTenKhachHang.Text.Length > 0)
 						{
-							DTO_KhachHang kh = new DTO_KhachHang(currentID, txtTenKhachHang.Text,
+							DTO_KhachHang kh = new DTO_KhachHang(currentID,txtTenKhachHang.Text,
 				txtSDT.Text, int.Parse(txtDiemTichLuy.Text));
 
 							bus_kh.SuaKH(kh);
