@@ -35,7 +35,7 @@ namespace DAL
 
         }
         //List San phẩm
-       public List<DTO_SanPhamKhoHang> ListSanPham()
+        public List<DTO_SanPhamKhoHang> ListSanPham()
         {
             try
             {
@@ -60,7 +60,7 @@ namespace DAL
                 throw new Exception("Có lỗi xảy ra: " + ex.Message);
             }
         }
-       
+
         //List San phẩm
         //public List<DTO_SanPhamKhoHang> ListTimKiemSanPhamBangMa(string tukhoa)
         //{
@@ -108,6 +108,7 @@ namespace DAL
                     sp.idLoaiHang = sanpham.IdLoaiHang;
                     sp.idNhaCungCap = sanpham.IdNhaCungCap;
                     sp.AnhSanPham = sanpham.AnhSanPham;
+                    sp.is_deleted = 0;
                     sp.created_at = DateTime.Now;
                     sp.created_by = 0;
                     sp.updated_at = DateTime.Now;

@@ -1,9 +1,6 @@
 ﻿using DTO;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -33,11 +30,11 @@ namespace DAL
                             b.idNhanVien
                         });
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-           
+
         }
         //ds bảng lương co dieu kien
         public IQueryable LayDSBangLuong(int idNhanVien)
@@ -64,7 +61,7 @@ namespace DAL
 
                 throw new Exception(ex.Message);
             }
-           
+
         }
         public void ThemBangLuong(DTO_BangLuong bangluong)
         {
@@ -79,6 +76,7 @@ namespace DAL
                         ThangNam = bangluong.ThangNam,
                         Luong = bangluong.Luong,
                         TongGioCong = bangluong.TongGioCong,
+                        idNhanVien = bangluong.IdNhanVien,
                         is_deleted = 0,
                         created_at = DateTime.Now,
                         updated_at = DateTime.Now,
@@ -87,15 +85,15 @@ namespace DAL
                     });
                     da.Db.SubmitChanges();
                 }
-                else 
+                else
                 {
                     throw new Exception("Mã bảng lương đã tồn tại");
                 }
-                    
+
             }
             catch (Exception ex)
             {
-                throw new Exception("Có lỗi xảy ra: "+ex.Message);
+                throw new Exception("Có lỗi xảy ra: " + ex.Message);
             }
         }
         public IQueryable DSNhanVien()

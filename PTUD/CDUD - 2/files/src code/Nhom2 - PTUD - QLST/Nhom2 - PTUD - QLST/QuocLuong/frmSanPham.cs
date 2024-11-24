@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-using BUS;
+﻿using BUS;
 using DTO;
-using System.Collections;
+using System;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 namespace GUI
 {
     public partial class frmSanPham : Form
@@ -34,7 +27,7 @@ namespace GUI
         {
             try
             {
-                 guna2GroupBox3.Text = string.Empty;
+                guna2GroupBox3.Text = string.Empty;
                 //mặc định combobox select dữ liệu đầu
                 //cbNhaCungCap.SelectedIndex = 0;
                 //cbMaNhomHang.SelectedIndex = 0;
@@ -48,7 +41,7 @@ namespace GUI
                 dtpHanSuDung.CustomFormat = "dd/MM/yyyy";
                 dtpNgaySanXuat.CustomFormat = "dd/MM/yyyy";
                 dtpHanSuDung.MinDate = dtpNgaySanXuat.Value;
-                
+
             }
             catch (Exception ex)
             {
@@ -180,6 +173,8 @@ namespace GUI
             txtDonViTinh.Clear();
             txtDonGia.Clear();
             txtMaSanPham.Focus();
+            imageData = null;
+
             //reset image
             imgSanPham.Image = null;
             //load lại danh sách sản phẩm
@@ -255,7 +250,7 @@ namespace GUI
                 //thông báo khi có lỗi xảy ra
                 MessageBox.Show(ex.Message, "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
         //hàm ép binray sang ảnh
         public static Image ConvertToImage(System.Data.Linq.Binary iBinary)
@@ -275,7 +270,7 @@ namespace GUI
             DialogResult rs = MessageBox.Show("Bạn có chắc xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
-                if(currentID != 0)
+                if (currentID != 0)
                 {
                     bus_sanpham.XoaSanPham(currentID);
                     LamMoi();
@@ -287,7 +282,7 @@ namespace GUI
                     MessageBox.Show("Vui lòng chọn dữ liệu cần xóa!!", "Thoát", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -301,7 +296,7 @@ namespace GUI
               && imageData != null)
                 {
                     //thêm loại hàng
-                    bus_sanpham.SuaSanPham(new DTO_SanPham(currentID,txtMaSanPham.Text,
+                    bus_sanpham.SuaSanPham(new DTO_SanPham(currentID, txtMaSanPham.Text,
                                                              txtTenSanPham.Text,
                                                                 txtDonViTinh.Text,
                                                                 float.Parse(txtDonGia.Text),
@@ -328,19 +323,19 @@ namespace GUI
             }
         }
 
-		private void btnThoat_Click(object sender, EventArgs e)
-		{
-			DialogResult rs = MessageBox.Show("Bạn chắc thoát không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-			if (rs == DialogResult.Yes)
-			{
-				this.Close();
-			}
-		}
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn chắc thoát không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
 
-		private void btnLamMoi_Click(object sender, EventArgs e)
-		{
-			LamMoi();
-		}
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            LamMoi();
+        }
 
         private void dtpNgaySanXuat_ValueChanged(object sender, EventArgs e)
         {

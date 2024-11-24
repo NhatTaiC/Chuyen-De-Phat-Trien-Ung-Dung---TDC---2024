@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
+﻿using DTO;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DTO;
 namespace DAL
 {
     public class DAL_LoaiHang
@@ -16,8 +12,9 @@ namespace DAL
         //danh sách loại hàng
         public IQueryable LayDSLoaiHang()
         {
-            return from lh in da.Db.LoaiHangs 
-                   where lh.is_deleted == 0 select new {lh.id, lh.MaLoaiHang, lh.TenLoaiHang };
+            return from lh in da.Db.LoaiHangs
+                   where lh.is_deleted == 0
+                   select new { lh.id, lh.MaLoaiHang, lh.TenLoaiHang };
         }
         //thêm loại hàng
         public void ThemLoaiHang(DTO_LoaiHang loaihangdto)
@@ -26,20 +23,21 @@ namespace DAL
             {
                 //kiểm tra mã loại hàng có tồn tại chưa
                 var data = da.Db.LoaiHangs.FirstOrDefault(dt => dt.MaLoaiHang == loaihangdto.MaLoaiHang && dt.is_deleted == 0);
-                if(data == null)
+                if (data == null)
                 {
                     //loại hàng được thêm
-                    if(loaihangdto.MaLoaiHang.Length > 30)
+                    if (loaihangdto.MaLoaiHang.Length > 30)
                     {
                         throw new Exception("Mã loại hàng không quá 30 kí tự!");
                     }
                     if (loaihangdto.TenLoaiHang.Length > 50)
                     {
                         throw new Exception("Tên loại hàng không quá 50 kí tự!");
-                    }             
+                    }
                     LoaiHang lh = new LoaiHang();
                     lh.MaLoaiHang = loaihangdto.MaLoaiHang;
                     lh.TenLoaiHang = loaihangdto.TenLoaiHang;
+                    lh.is_deleted = 0;
                     lh.created_at = DateTime.Now;
                     lh.updated_at = DateTime.Now;
                     lh.created_by = 0;
@@ -59,7 +57,7 @@ namespace DAL
             {
                 throw new Exception("Có lỗi xảy ra: " + ex.Message);
             }
-            
+
         }
         //xóa loại hàng
         public void XoaLoaiHang(int id)
@@ -73,7 +71,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                
+
                 throw new Exception("Có lỗi xảy ra: " + ex.Message);
             }
         }
