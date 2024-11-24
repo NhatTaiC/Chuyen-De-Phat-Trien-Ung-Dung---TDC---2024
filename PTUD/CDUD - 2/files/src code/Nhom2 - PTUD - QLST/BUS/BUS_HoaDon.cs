@@ -95,5 +95,15 @@ namespace BUS
         {
             return dal_hd.getHdByHoaDon3Id(idKH, idKM, idNV);
         }
+
+        public IQueryable GetListHD4()
+        {
+            return dal_hd.GetListHD4();
+        }
+
+        public int GetHdByMaHD(string maHD)
+        {
+            return dal_hd.GetHdByMaHD(maHD);
+        }
     }
 }
