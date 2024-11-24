@@ -56,6 +56,7 @@ namespace DTO
             this.idKhuyenMai = idKhuyenMai;
             this.idNhanVien = idNhanVien;
         }
+
         public DTO_HoaDon(string maHoaDon, DateTime ngayLapHD, DateTime gioLapHD, float tongTien, float thanhTien, int idKhachHang, int idKhuyenMai, int idNhanVien)
         {
             this.maHoaDon = maHoaDon;

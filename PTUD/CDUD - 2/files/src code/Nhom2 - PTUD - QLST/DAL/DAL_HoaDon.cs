@@ -458,5 +458,29 @@ namespace DAL
 
             return (int)query.id;
         }
+
+        public IQueryable GetListHD4()
+        {
+            var query = from hd in da.Db.HoaDons
+                        where hd.is_deleted == 0
+                        select new
+                        {
+                            hd.id,
+                            hd.MaHoaDon,
+                        };
+            return query;
+        }
+
+        public int GetHdByMaHD(string maHD)
+        {
+            var query = da.Db.HoaDons.SingleOrDefault(hd => hd.MaHoaDon.ToLower().Equals(maHD.ToLower()));
+
+            if (query == null)
+            {
+                return 1;
+            }
+
+            return (int)query.id;
+        }
     }
 }

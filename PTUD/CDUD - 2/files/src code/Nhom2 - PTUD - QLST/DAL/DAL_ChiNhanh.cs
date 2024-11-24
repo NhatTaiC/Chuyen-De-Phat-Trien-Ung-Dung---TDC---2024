@@ -1,9 +1,6 @@
 ﻿using DTO;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -18,7 +15,7 @@ namespace DAL
             //load kho hàng
             return from cn in da.Db.ChiNhanhs
                    where cn.is_deleted == 0
-                   select new {cn.id,cn.MaChiNhanh,cn.TenChiNhanh,cn.DiaChi,cn.SoDienThoai};
+                   select new { cn.id, cn.MaChiNhanh, cn.TenChiNhanh, cn.DiaChi, cn.SoDienThoai };
         }
         //thêm chi nhánh
         public void ThemChiNhanh(DTO_ChiNhanh chiNhanh)
@@ -26,9 +23,9 @@ namespace DAL
             try
             {
                 var data = da.Db.ChiNhanhs.SingleOrDefault(cn => cn.MaChiNhanh == chiNhanh.MaChiNhanh);
-                if (data == null) 
+                if (data == null)
                 {
-                    if(chiNhanh.SoDienThoai.Length < 10 || chiNhanh.SoDienThoai.Length > 11)
+                    if (chiNhanh.SoDienThoai.Length < 10 || chiNhanh.SoDienThoai.Length > 11)
                     {
                         throw new Exception("Số diên thoại không hợp lệ!");
                     }
@@ -40,7 +37,7 @@ namespace DAL
                     {
                         throw new Exception("Tên chi nhánh không quá 50 kí tự!");
                     }
-                    if(chiNhanh.DiaChi.Length > 50)
+                    if (chiNhanh.DiaChi.Length > 50)
                     {
                         throw new Exception("Địa chỉ nhánh không quá 50 kí tự!");
                     }
@@ -49,6 +46,7 @@ namespace DAL
                     chi.TenChiNhanh = chiNhanh.TenChiNhanh;
                     chi.SoDienThoai = chiNhanh.SoDienThoai;
                     chi.DiaChi = chiNhanh.DiaChi;
+                    chi.is_deleted = 0;
                     chi.created_at = DateTime.Now;
                     chi.updated_at = DateTime.Now;
                     chi.created_by = 0;
@@ -60,13 +58,13 @@ namespace DAL
                 {
                     throw new Exception("Thêm thất bại! Mã chi nhánh đã tồn tại");
                 }
-                
+
             }
             catch (Exception ex)
             {
                 throw new Exception("có lỗi xảy ra: " + ex.Message);
             }
-            
+
         }
         //xóa chi nhánh
         public void XoaChiNhanh(int id)

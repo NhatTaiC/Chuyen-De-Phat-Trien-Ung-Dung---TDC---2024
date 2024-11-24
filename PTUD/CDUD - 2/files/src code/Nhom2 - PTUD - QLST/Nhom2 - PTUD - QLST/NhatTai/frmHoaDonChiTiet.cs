@@ -166,7 +166,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvCTHD.Enabled = true;
 
             // cboMaHD
-            cboMaHD.DataSource = bus_hd.GetListHD();
+            cboMaHD.DataSource = bus_hd.GetListHD4();
             cboMaHD.DisplayMember = "MaHoaDon";
             cboMaHD.ValueMember = "id";
             cboMaHD.SelectedIndex = 0;
@@ -366,11 +366,8 @@ namespace Nhom2___PTUD___QLST.NhatTai
 
         private void cboMaHD_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            // Initialize Variables
-            int cboMaHD_SelectedValue = cboMaHD.SelectedIndex + 1;
-
             // dgvCTHD
-            dgvCTHD.DataSource = bus_cthd.GetListCTHDTheoMaHD(cboMaHD_SelectedValue);
+            dgvCTHD.DataSource = bus_cthd.GetListCTHDTheoMaHD(bus_hd.GetHdByMaHD(cboMaHD.Text));
             dgvCTHD.Columns[0].HeaderText = "Id CTHD";
             dgvCTHD.Columns[1].HeaderText = "Mã hóa đơn";
             dgvCTHD.Columns[2].HeaderText = "Tên sản phẩm";
@@ -755,7 +752,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
                     Reset();
 
                     // cboMaHD
-                    cboMaHD.SelectedIndex = cboMaHD.Items.Count - 1;
+                    cboMaHD.SelectedValue = model_id;
                 }
             }
             catch (Exception ex)
