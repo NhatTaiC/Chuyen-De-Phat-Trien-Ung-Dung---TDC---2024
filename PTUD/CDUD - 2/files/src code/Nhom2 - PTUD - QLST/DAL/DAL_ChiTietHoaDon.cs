@@ -416,6 +416,27 @@ namespace DAL
             }
         }
 
+        public IQueryable GetListCTHDTheoMaHD3()
+        {
+            var query = from cthd in da.Db.ChiTietHoaDons
+                        join hd in da.Db.HoaDons
+                        on cthd.idHoaDon equals hd.id
+                        join sp in da.Db.SanPhams
+                        on cthd.idSanPham equals sp.id
+                        where cthd.is_deleted == 0
+                        select new
+                        {
+                            cthd.id,
+                            hd.MaHoaDon,
+                            sp.TenSanPham,
+                            cthd.SoLuong,
+                            sp.DonGia,
+                            ThanhTien = cthd.SoLuong * sp.DonGia,
+                            cthd.idHoaDon,
+                            cthd.idSanPham,
+                        };
 
+            return query;
+        }
     }
 }
