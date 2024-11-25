@@ -465,8 +465,8 @@ namespace DAL
                         where hd.is_deleted == 0
                         select new
                         {
-                            hd.id,
-                            hd.MaHoaDon,
+                            id = hd.id,
+                            MaHoaDon = hd.MaHoaDon,
                         };
             return query;
         }
