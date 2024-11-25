@@ -91,5 +91,10 @@ namespace BUS
         {
             dal_cthd.AddCTHD2(chiTietHoaDon);
         }
+
+        public IQueryable GetListCTHDTheoMaHD3()
+        {
+            return dal_cthd.GetListCTHDTheoMaHD3();
+        }
     }
 }

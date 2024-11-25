@@ -60,6 +60,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
             cboMaNV.ValueMember = "id";
             cboMaNV.SelectedIndex = 0;
 
+
             // DeactiveControlsCTHD
             DeactiveControlsCTHD();
 
@@ -107,6 +108,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvCTHD.Enabled = false;
             dgvSP.DataSource = false;
             dgvCTHD.DataSource = false;
+
         }
 
         public void ResetFirst()
@@ -177,7 +179,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
             cboMaSP.ValueMember = "id";
             cboMaSP.SelectedIndex = 0;
 
-            // cboSanPham
+            // cboTimKiemSp
             cboTimKiemSp.SelectedIndex = 0;
 
             // dgvSP
@@ -192,6 +194,8 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvSP.Columns[1].Visible = false;
             //dgvSP.Columns[4].DefaultCellStyle.Format = "#,###";
 
+            // dgvCTHD
+            dgvCTHD.DataSource = false;
         }
 
         public void LoadDataByMaHd(int idMaHd)
@@ -225,7 +229,7 @@ namespace Nhom2___PTUD___QLST.NhatTai
             cboMaHD.DataSource = bus_hd.GetListHD();
             cboMaHD.DisplayMember = "MaHoaDon";
             cboMaHD.ValueMember = "id";
-            cboMaHD.SelectedIndex = idMaHd;
+            cboMaHD.SelectedIndex = idMaHd - 1;
 
             // cboMaSP
             cboMaSP.DataSource = bus_sp.GetListSP();
@@ -247,6 +251,20 @@ namespace Nhom2___PTUD___QLST.NhatTai
             dgvSP.Columns[0].Visible = false;
             dgvSP.Columns[1].Visible = false;
             //dgvSP.Columns[4].DefaultCellStyle.Format = "#,###";
+
+            //dgvCTHD
+            dgvCTHD.DataSource = bus_cthd.GetListCTHDTheoMaHD(idMaHd);
+            dgvCTHD.Columns[0].HeaderText = "Id CTHD";
+            dgvCTHD.Columns[1].HeaderText = "Mã hóa đơn";
+            dgvCTHD.Columns[2].HeaderText = "Tên sản phẩm";
+            dgvCTHD.Columns[3].HeaderText = "Số lượng";
+            dgvCTHD.Columns[4].HeaderText = "Đơn giá";
+            dgvCTHD.Columns[5].HeaderText = "Thành tiền";
+            dgvCTHD.Columns[6].HeaderText = "Id hóa đơn";
+            dgvCTHD.Columns[7].HeaderText = "Id sản phẩm";
+            dgvCTHD.Columns[0].Visible = false;
+            dgvCTHD.Columns[6].Visible = false;
+            dgvCTHD.Columns[7].Visible = false;
 
         }
 
@@ -339,10 +357,12 @@ namespace Nhom2___PTUD___QLST.NhatTai
             {
                 // Get row index selected
                 int n = dgvCTHD.CurrentCell.RowIndex;
+                //int idHd = int.Parse(dgvCTHD.Rows[n].Cells[6].Value.ToString());
+                int idSp = int.Parse(dgvCTHD.Rows[n].Cells[7].Value.ToString()) - 1;
 
                 // cboMaHD
-                cboMaHD.SelectedIndex = int.Parse(dgvCTHD.Rows[n].Cells[6].Value.ToString()) - 1;
-                cboMaSP.SelectedIndex = int.Parse(dgvCTHD.Rows[n].Cells[7].Value.ToString()) - 1;
+                //cboMaHD.SelectedIndex = index_cboMaHd;
+                cboMaSP.SelectedIndex = idSp;
                 txtSoLuong.Text = dgvCTHD.Rows[n].Cells[3].Value.ToString();
 
                 // Others
@@ -366,8 +386,11 @@ namespace Nhom2___PTUD___QLST.NhatTai
 
         private void cboMaHD_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            // dgvCTHD
-            dgvCTHD.DataSource = bus_cthd.GetListCTHDTheoMaHD(bus_hd.GetHdByMaHD(cboMaHD.Text));
+            // Initialize Variables
+            int idMaHd = cboMaHD.SelectedIndex + 1;
+
+            //dgvCTHD
+            dgvCTHD.DataSource = bus_cthd.GetListCTHDTheoMaHD(idMaHd);
             dgvCTHD.Columns[0].HeaderText = "Id CTHD";
             dgvCTHD.Columns[1].HeaderText = "Mã hóa đơn";
             dgvCTHD.Columns[2].HeaderText = "Tên sản phẩm";
@@ -391,33 +414,37 @@ namespace Nhom2___PTUD___QLST.NhatTai
         {
             try
             {
-                if (CheckData(cboMaSP.SelectedIndex + 1, txtSoLuong.Text))
+                // Initialize Variables
+                int idHd = int.Parse(cboMaHD.SelectedValue.ToString());
+                int idSp = int.Parse(cboMaSP.SelectedValue.ToString());
+
+                if (CheckData(idSp, txtSoLuong.Text))
                 {
                     // Checked idSp, idHd saved in CTHD
-                    if (!bus_cthd.CheckCTHDByIdHdIdSp(cboMaHD.SelectedIndex + 1, cboMaSP.SelectedIndex + 1))
+                    if (!bus_cthd.CheckCTHDByIdHdIdSp(idHd, idSp))
                     {
                         // Added new record ChiTietHoaDon
                         bus_cthd.AddCTHD(new DTO_ChiTietHoaDon(int.Parse(txtSoLuong.Text),
-                            cboMaHD.SelectedIndex + 1,
-                            cboMaSP.SelectedIndex + 1));
+                            idHd,
+                            idSp));
 
                         // Get soLuongInput
                         soLuongInput = int.Parse(txtSoLuong.Text);
 
                         // Updated SoLuongSp in table KhoHang
-                        bus_kh.UpdateSoLuongSP(cboMaSP.SelectedIndex + 1, soLuongInput);
+                        bus_kh.UpdateSoLuongSP(idSp, soLuongInput);
 
                         // Added new record Log
                         int model_id = bus_cthd.GetMaxIdCTHD();
                         data_news = $"SoLuong: {txtSoLuong.Text}\n" +
-                            $"idMaHD: {(cboMaHD.SelectedIndex + 1).ToString()}\n" +
-                            $"idMaSP: {(cboMaSP.SelectedIndex + 1).ToString()}";
+                            $"idMaHD: {idHd}\n" +
+                            $"idMaSP: {idSp}";
 
                         // Saved log
                         bus_log.AddLog3(new DTO_Log("CTHD", model_id, "Add a new record ChiTietHoaDon", data_olds, data_news));
 
                         // LoadDataByMaHd
-                        LoadDataByMaHd(cboMaHD.SelectedIndex);
+                        LoadDataByMaHd(idHd);
 
                     }
                     else
@@ -429,34 +456,34 @@ namespace Nhom2___PTUD___QLST.NhatTai
                             MessageBoxIcon.Warning);
 
                         // Get SoLuongOld in CTHD
-                        int soLuongOld = bus_cthd.GetSoLuongSpInCTHD(cboMaHD.SelectedIndex + 1,
-                            cboMaSP.SelectedIndex + 1);
+                        int soLuongOld = bus_cthd.GetSoLuongSpInCTHD(idHd,
+                            idSp);
 
                         // Updated SoLuongSp in table CTHD
                         bus_cthd.UpdateSoLuongSpInCTHD(int.Parse(txtSoLuong.Text),
-                            cboMaHD.SelectedIndex + 1,
-                            cboMaSP.SelectedIndex + 1);
+                            idHd,
+                            idSp);
 
                         // Get SoLuongSpInput
                         soLuongInput = int.Parse(txtSoLuong.Text);
 
                         // Updated SoLuongSp in table KhoHang
-                        bus_kh.UpdateSoLuongSP(cboMaSP.SelectedIndex + 1, soLuongInput);
+                        bus_kh.UpdateSoLuongSP(idSp, soLuongInput);
 
                         // Added new record Log
                         int model_id = bus_cthd.GetMaxIdCTHD();
                         data_news = $"SoLuong: {soLuongOld}\n" +
-                            $"idMaHD: {(cboMaHD.SelectedIndex + 1).ToString()}\n" +
-                            $"idMaSP: {(cboMaSP.SelectedIndex + 1).ToString()}";
+                            $"idMaHD: {idHd}\n" +
+                            $"idMaSP: {idSp}";
                         data_news = $"SoLuong: {soLuongInput}\n" +
-                            $"idMaHD: {(cboMaHD.SelectedIndex + 1).ToString()}\n" +
-                            $"idMaSP: {(cboMaSP.SelectedIndex + 1).ToString()}";
+                            $"idMaHD: {idHd}\n" +
+                            $"idMaSP: {idSp}";
 
                         // Saved log
                         bus_log.AddLog3(new DTO_Log("CTHD", model_id, "Update SoLuong a record ChiTietHoaDon", data_olds, data_news));
 
                         // LoadDataByMaHd
-                        LoadDataByMaHd(cboMaHD.SelectedIndex);
+                        LoadDataByMaHd(idHd);
                     }
                 }
                 else
@@ -478,10 +505,14 @@ namespace Nhom2___PTUD___QLST.NhatTai
         {
             try
             {
-                if (CheckData(cboMaSP.SelectedIndex + 1, txtSoLuong.Text))
+                // Initialize Variables
+                int idHd = int.Parse(cboMaHD.SelectedValue.ToString());
+                int idSp = int.Parse(cboMaSP.SelectedValue.ToString());
+
+                if (CheckData(idSp, txtSoLuong.Text))
                 {
                     // Checked idSp, idHd saved in CTHD
-                    if (bus_cthd.CheckCTHDByIdHdIdSp(cboMaHD.SelectedIndex + 1, cboMaSP.SelectedIndex + 1))
+                    if (bus_cthd.CheckCTHDByIdHdIdSp(idHd, idSp))
                     {
                         int currentId = int.Parse(dgvCTHD.CurrentRow.Cells[0].Value.ToString());
 
@@ -493,38 +524,38 @@ namespace Nhom2___PTUD___QLST.NhatTai
                         if (dr == DialogResult.Yes)
                         {
                             // GetSoLuongCurrent in CTHD
-                            int soLuongCurrent = bus_cthd.GetSoLuongSpInCTHD(cboMaHD.SelectedIndex + 1,
-                                cboMaSP.SelectedIndex + 1);
+                            int soLuongCurrent = bus_cthd.GetSoLuongSpInCTHD(idHd,
+                                idSp);
 
                             // Updated SoLuongSp in table CTHD
                             bus_cthd.UpdateCTHD(new DTO_ChiTietHoaDon(currentId, int.Parse(txtSoLuong.Text),
-                                cboMaHD.SelectedIndex + 1,
-                                cboMaSP.SelectedIndex + 1));
+                                idHd,
+                                idSp));
 
                             // GetSoLuongCurrent in CTHD
-                            int soLuongUpdate = bus_cthd.GetSoLuongSpInCTHD(cboMaHD.SelectedIndex + 1,
-                                cboMaSP.SelectedIndex + 1);
+                            int soLuongUpdate = bus_cthd.GetSoLuongSpInCTHD(idHd,
+                                idSp);
 
                             // Get soLuongNew
                             int soLuongNew = soLuongUpdate - soLuongCurrent;
 
                             // Updated SoLuongSp in table KhoHang
-                            bus_kh.UpdateSoLuongSP(cboMaSP.SelectedIndex + 1, soLuongNew);
+                            bus_kh.UpdateSoLuongSP(idSp, soLuongNew);
 
                             // Added new record Log
                             int model_id = bus_cthd.GetMaxIdCTHD();
                             data_olds = $"SoLuong: {soLuongCurrent}\n" +
-                                $"idMaHD: {(cboMaHD.SelectedIndex + 1).ToString()}\n" +
-                                $"idMaSP: {(cboMaSP.SelectedIndex + 1).ToString()}";
+                                $"idMaHD: {idHd}\n" +
+                                $"idMaSP: {idSp}";
                             data_news = $"SoLuong: {soLuongUpdate}\n" +
-                                $"idMaHD: {(cboMaHD.SelectedIndex + 1).ToString()}\n" +
-                                $"idMaSP: {(cboMaSP.SelectedIndex + 1).ToString()}";
+                                $"idMaHD: {idHd}\n" +
+                                $"idMaSP: {idSp}";
 
                             // Saved log
                             bus_log.AddLog3(new DTO_Log("CTHD", model_id, "Update a record ChiTietHoaDon", data_olds, data_news));
 
                             // LoadDataByMaHd
-                            LoadDataByMaHd(cboMaHD.SelectedIndex);
+                            LoadDataByMaHd(idHd);
                         }
                     }
 
@@ -548,10 +579,14 @@ namespace Nhom2___PTUD___QLST.NhatTai
         {
             try
             {
-                if (CheckData(cboMaSP.SelectedIndex + 1, txtSoLuong.Text))
+                // Initialize Variables
+                int idHd = int.Parse(cboMaHD.SelectedValue.ToString());
+                int idSp = int.Parse(cboMaSP.SelectedValue.ToString());
+
+                if (CheckData(idSp, txtSoLuong.Text))
                 {
                     // Checked idSp, idHd saved in CTHD
-                    if (bus_cthd.CheckCTHDByIdHdIdSp(cboMaHD.SelectedIndex + 1, cboMaSP.SelectedIndex + 1))
+                    if (bus_cthd.CheckCTHDByIdHdIdSp(idHd, idSp))
                     {
                         int currentId = int.Parse(dgvCTHD.CurrentRow.Cells[0].Value.ToString());
 
@@ -563,8 +598,8 @@ namespace Nhom2___PTUD___QLST.NhatTai
                         if (dr == DialogResult.Yes)
                         {
                             // GetSoLuongCurrent in CTHD
-                            int soLuongCurrent = bus_cthd.GetSoLuongSpInCTHD(cboMaHD.SelectedIndex + 1,
-                                cboMaSP.SelectedIndex + 1);
+                            int soLuongCurrent = bus_cthd.GetSoLuongSpInCTHD(idHd,
+                                idSp);
 
                             //// Updated SoLuongSp in table CTHD
                             //bus_cthd.DeleteCTHD(currentId);
@@ -586,18 +621,19 @@ namespace Nhom2___PTUD___QLST.NhatTai
                             bus_kh.UpdateSoLuongSP(cboMaSP.SelectedIndex + 1, soLuongNew);
 
                             // Added new record Log
-                            int model_id = bus_cthd.GetMaxIdCTHD();
+                            int model_id = currentId;
                             data_olds = $"SoLuong: {soLuongCurrent}\n" +
-                                $"idMaHD: {(cboMaHD.SelectedIndex + 1).ToString()}\n" +
-                                $"idMaSP: {(cboMaSP.SelectedIndex + 1).ToString()}";
+                                $"idMaHD: {idHd}\n" +
+                                $"idMaSP: {idSp}";
                             data_news = $"SoLuong: {soLuongUpdate}\n" +
-                                $"idMaHD: {(cboMaHD.SelectedIndex + 1).ToString()}\n" +
-                                $"idMaSP: {(cboMaSP.SelectedIndex + 1).ToString()}";
+                                $"idMaHD: {idHd}\n" +
+                                $"idMaSP: {idSp}";
 
                             // Saved log
                             bus_log.AddLog3(new DTO_Log("CTHD", model_id, "Delete a record ChiTietHoaDon", data_olds, data_news));
 
-                            Reset();
+                            // LoadDataByMaHd
+                            LoadDataByMaHd(idHd);
                         }
                     }
 
@@ -659,29 +695,25 @@ namespace Nhom2___PTUD___QLST.NhatTai
 
         private void btnTimHd_Click(object sender, EventArgs e)
         {
-            if (dv.IsValidString2(txtTimKiemMaHd.Text))
-            {
-                // dgvCTHD
-                dgvCTHD.DataSource = bus_cthd.SearchListCTHDByMaHD(txtTimKiemMaHd.Text);
-                dgvCTHD.Columns[0].HeaderText = "Id CTHD";
-                dgvCTHD.Columns[1].HeaderText = "Mã hóa đơn";
-                dgvCTHD.Columns[2].HeaderText = "Tên sản phẩm";
-                dgvCTHD.Columns[3].HeaderText = "Số lượng";
-                dgvCTHD.Columns[4].HeaderText = "Đơn giá";
-                dgvCTHD.Columns[5].HeaderText = "Thành tiền";
-                dgvCTHD.Columns[6].HeaderText = "Id hóa đơn";
-                dgvCTHD.Columns[7].HeaderText = "Id sản phẩm";
-                dgvCTHD.Columns[0].Visible = false;
-                dgvCTHD.Columns[6].Visible = false;
-                dgvCTHD.Columns[7].Visible = false;
-            }
-            else
-            {
-                MessageBox.Show($"Nội dung tìm kiếm không để trống!",
-                    "Thông báo",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-            }
+            // dgvCTHD
+            dgvCTHD.DataSource = bus_cthd.GetListCTHDTheoMaHD(int.Parse(cboMaHD.SelectedValue.ToString()));
+            dgvCTHD.Columns[0].HeaderText = "Id CTHD";
+            dgvCTHD.Columns[1].HeaderText = "Mã hóa đơn";
+            dgvCTHD.Columns[2].HeaderText = "Tên sản phẩm";
+            dgvCTHD.Columns[3].HeaderText = "Số lượng";
+            dgvCTHD.Columns[4].HeaderText = "Đơn giá";
+            dgvCTHD.Columns[5].HeaderText = "Thành tiền";
+            dgvCTHD.Columns[6].HeaderText = "Id hóa đơn";
+            dgvCTHD.Columns[7].HeaderText = "Id sản phẩm";
+            dgvCTHD.Columns[0].Visible = false;
+            dgvCTHD.Columns[6].Visible = false;
+            dgvCTHD.Columns[7].Visible = false;
+            //dgvCTHD.Columns[4].DefaultCellStyle.Format = "#,###";
+            //dgvCTHD.Columns[5].DefaultCellStyle.Format = "#,###";
+
+            // Others
+            txtTongTien.Text = "0";
+            tongTien = 0;
         }
 
         private void btnTimSp_Click(object sender, EventArgs e)
@@ -794,6 +826,31 @@ namespace Nhom2___PTUD___QLST.NhatTai
                       MessageBoxButtons.OK,
                       MessageBoxIcon.Warning);
             }
+        }
+
+        private void cboMaHD_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            //MessageBox.Show($"{int.Parse(cboMaHD.SelectedValue.ToString())}");
+
+            //dgvCTHD
+            dgvCTHD.DataSource = bus_cthd.GetListCTHDTheoMaHD(int.Parse(cboMaHD.SelectedValue.ToString()));
+            dgvCTHD.Columns[0].HeaderText = "Id CTHD";
+            dgvCTHD.Columns[1].HeaderText = "Mã hóa đơn";
+            dgvCTHD.Columns[2].HeaderText = "Tên sản phẩm";
+            dgvCTHD.Columns[3].HeaderText = "Số lượng";
+            dgvCTHD.Columns[4].HeaderText = "Đơn giá";
+            dgvCTHD.Columns[5].HeaderText = "Thành tiền";
+            dgvCTHD.Columns[6].HeaderText = "Id hóa đơn";
+            dgvCTHD.Columns[7].HeaderText = "Id sản phẩm";
+            dgvCTHD.Columns[0].Visible = false;
+            dgvCTHD.Columns[6].Visible = false;
+            dgvCTHD.Columns[7].Visible = false;
+            //dgvCTHD.Columns[4].DefaultCellStyle.Format = "#,###";
+            //dgvCTHD.Columns[5].DefaultCellStyle.Format = "#,###";
+
+            // Others
+            txtTongTien.Text = "0";
+            tongTien = 0;
         }
     }
 }
